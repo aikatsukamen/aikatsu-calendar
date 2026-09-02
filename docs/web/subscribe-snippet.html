@@ -101,7 +101,8 @@
     </button>
 
 <!-- ===== [MODAL] <div class="page"> を閉じた直後（</body> の手前）に貼る ===== -->
-<div class="sub-modal" id="subModal" role="dialog" aria-modal="true" aria-labelledby="subModalTitle" hidden>
+<div class="sub-modal" id="subModal" role="dialog" aria-modal="true" aria-labelledby="subModalTitle"
+     data-feed-base="calendar/" hidden>
   <div class="sub-modal-panel" id="subModalPanel">
     <div class="sub-modal-head">
       <h2 class="sub-modal-title" id="subModalTitle">カレンダーを購読する</h2>
@@ -180,8 +181,9 @@
 (function(){
   "use strict";
 
-  // .ics の配信先。GitHub Pages のパスに合わせる。
-  var FEED_BASE = "https://aikatsu-info.github.io/aikatsu-calendar/calendar/";
+  // .ics の配信先。ドメインはどこにも書かない。
+  // モーダルの data-feed-base（既定 "calendar/"）をページ自身のURL基準で解決するので、
+  // 本家・フォーク・独自ドメイン・ローカルサーバのいずれでもそのまま正しい先を指す。
 
   // build_ics.py の FEEDS と対応。増やす場合は両方に足すこと。
   var FEEDS = [
@@ -210,6 +212,8 @@
   if(!btn || !modal) return;
 
   var lastFocused = null;
+
+  var FEED_BASE = new URL(modal.getAttribute("data-feed-base") || "calendar/", location.href).href;
 
   function httpsUrl(feed){ return FEED_BASE + feed.slug + ".ics"; }
   function webcalUrl(feed){ return httpsUrl(feed).replace(/^https?:/, "webcal:"); }

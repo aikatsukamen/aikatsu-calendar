@@ -135,7 +135,9 @@
     右上の「カレンダー購読」ボタンから、購読モーダルの挙動を確認できます。<br>
     本番では <code>&lt;!-- SUBSCRIBE:CSS --&gt;</code> / <code>&lt;!-- SUBSCRIBE:HTML --&gt;</code> / <code>&lt;!-- SUBSCRIBE:JS --&gt;</code>
     の3ブロックを <code>aikatsu_calendar.html</code> に貼り付けます（詳細は <code>docs/HANDOFF.md</code>）。<br>
-    リンク先の .ics はまだ存在しないため、押しても 404 になります。
+    購読URLはページ自身のURLから <code>calendar/</code> を解決して作ります（ドメインは埋め込みません）。
+    <code>file://</code> で直接開くと <code>file:///…</code> のURLになるため、
+    実際のリンクを試すときは <code>python3 -m http.server</code> 越しに開いてください。
   </div>
 
   <header class="top">
@@ -166,7 +168,8 @@
 </div>
 
 <!-- SUBSCRIBE:MODAL:START -->
-<div class="sub-modal" id="subModal" role="dialog" aria-modal="true" aria-labelledby="subModalTitle" hidden>
+<div class="sub-modal" id="subModal" role="dialog" aria-modal="true" aria-labelledby="subModalTitle"
+     data-feed-base="calendar/" hidden>
   <div class="sub-modal-panel" id="subModalPanel">
     <div class="sub-modal-head">
       <h2 class="sub-modal-title" id="subModalTitle">カレンダーを購読する</h2>
@@ -241,13 +244,20 @@
 </div>
 <!-- SUBSCRIBE:MODAL:END -->
 
+<!-- デモ専用: このファイルは web/ にあるため、1つ上の calendar/ を見るように上書きする。
+     マーカー外なので本体には転記されない。 -->
+<script>
+  document.getElementById("subModal").setAttribute("data-feed-base", "../calendar/");
+</script>
+
 <!-- SUBSCRIBE:JS:START -->
 <script>
 (function(){
   "use strict";
 
-  // .ics の配信先。GitHub Pages のパスに合わせる。
-  var FEED_BASE = "https://aikatsu-info.github.io/aikatsu-calendar/calendar/";
+  // .ics の配信先。ドメインはどこにも書かない。
+  // モーダルの data-feed-base（既定 "calendar/"）をページ自身のURL基準で解決するので、
+  // 本家・フォーク・独自ドメイン・ローカルサーバのいずれでもそのまま正しい先を指す。
 
   // build_ics.py の FEEDS と対応。増やす場合は両方に足すこと。
   var FEEDS = [
@@ -276,6 +286,8 @@
   if(!btn || !modal) return;
 
   var lastFocused = null;
+
+  var FEED_BASE = new URL(modal.getAttribute("data-feed-base") || "calendar/", location.href).href;
 
   function httpsUrl(feed){ return FEED_BASE + feed.slug + ".ics"; }
   function webcalUrl(feed){ return httpsUrl(feed).replace(/^https?:/, "webcal:"); }

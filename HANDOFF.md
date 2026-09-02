@@ -1,10 +1,10 @@
 # HANDOFF: iCalendar(.ics) 配信と購読UIの追加
 
-このファイルは、`aikatsu-info/aikatsu-calendar` を開発している Claude に
-そのまま渡すことを想定した実装指示書です。
-動作確認済みの変換スクリプト・購読UI・
-**すでに適用済みのリポジトリ一式（`docs/`）と差分パッチ（`aikatsu-calendar-ics.patch`）** が入っています。
-そのまま取り込むこともできますし、下の説明を読んで自分で入れ直しても構いません。
+このファイルは、`aikatsu-info/aikatsu-calendar` を開発している Claude に向けた実装指示書です。
+`aikatsu-info/aikatsu-calendar` に .ics 配信と購読UIを追加し、**動作確認まで済ませた状態**を
+`docs/` に置いています（GitHub Pages の配信ルートにしているため。本家ではリポジトリ直下にあたる）。
+以下に出てくるパスはすべて `docs/` 配下のものです。
+ファイルをそのまま取り込むこともできますし、下の説明を読んで自分で入れ直しても構いません。
 
 ---
 
@@ -18,6 +18,27 @@ GitHub Pages で配信してください。あわせてサイト上に**購読�
 
 ---
 
+## 変更点（`docs/` の中身）
+
+| ファイル | 変更 |
+|---|---|
+| `aikatsu_calendar.html` | +292行（**追加のみ**。既存コードの整形・並べ替えはしていない）。CSS／購読ボタン／モーダル／JS |
+| `tools/build_ics.py` | 追加。`data/items.json` → `.ics` 変換（Python標準ライブラリのみ） |
+| `tools/check_sync.py` | 追加。HTML内 `ITEMS` と `data/items.json` の整合チェック |
+| `tools/apply_subscribe_ui.py` | 追加。購読UIを本体HTMLに差し込む（冪等） |
+| `tools/extract_snippet.py` | 追加。デモから貼り付け用スニペットを生成 |
+| `web/subscribe-demo.html` | 追加。購読UIの編集元・単体デモ |
+| `web/subscribe-snippet.html` | 追加。貼り付け用に切り出したもの |
+| `calendar/*.ics` + `feeds.json` | 追加。生成物9本 |
+| `.github/workflows/build-ics.yml` | 追加。データ更新時に自動生成＋コミット（定期実行なし） |
+| `README.md` / `CLAUDE.md` | 購読URL、運用上の注意、周年の表現、ドメインを埋め込まない方針を追記 |
+| `robots.txt` | `Disallow: /web/` を追加 |
+| `HANDOFF.md` / `data-format.md` | このファイルと、データ形式の調査メモ |
+
+`data/items.json` と `aikatsu_calendar.html` の `ITEMS` には**手を入れていません**。
+
+---
+
 ## 1. 前提として把握しておいてほしいこと
 
 - このリポジトリはビルドプロセスを持たない素の静的サイトで、Pages はリポジトリ直下から配信されている。
@@ -26,7 +47,7 @@ GitHub Pages で配信してください。あわせてサイト上に**購読�
 - `aikatsu_calendar.html` の `ITEMS` と `data/items.json` は**自動同期されない複製**（CLAUDE.md 記載の通り）。
   .ics は `data/items.json` から生成するので、**json 側の更新漏れがそのまま購読者への情報漏れになる**。
   同梱の `tools/check_sync.py` を CI で先に走らせて落とすこと。
-- データの日付には3パターンある（詳細は同梱の `docs/data-format.md`）:
+- データの日付には3パターンある（詳細は同梱の `data-format.md`）:
   1. `eventDate` あり = 単発
   2. `eventDate: null` + `recur: "MM-DD"` = 毎年繰り返し（誕生日67・周年7）
   3. `eventDate: null` + `recur` なし = **日付未定**（26件）
@@ -40,25 +61,39 @@ GitHub Pages で配信してください。あわせてサイト上に**購読�
 
 ### 2-1. `tools/build_ics.py` を追加する
 
-`tools/build_ics.py` をそのまま `tools/build_ics.py` として配置してください。
+`tools/build_ics.py` をそのまま配置してください。
 Python 3 標準ライブラリのみで動きます。動作確認済み（378件 → 352 VEVENT）。
 
 ```
 python3 tools/build_ics.py --input data/items.json --outdir calendar
 ```
 
+`--base-url` / `--site-url` に既定値はありません。**省略すると .ics にドメインは一切入りません**
+（`SOURCE` を出力せず、`feeds.json` のURLは相対パス、`DESCRIPTION` 末尾のサイトURLも省略）。
+渡した場合だけ絶対URLが入ります。ワークフローはリポジトリ情報から自動で組み立てるので、
+フォークでも正しい値になります。
+
+```
+python3 tools/build_ics.py --input data/items.json --outdir calendar \
+  --base-url https://<owner>.github.io/<repo>/calendar \
+  --site-url https://<owner>.github.io/<repo>/
+```
+
+`--uid-domain` の既定値だけは固定のドメイン文字列ですが、これは**配信先ではなく識別子の名前空間**です。
+実在する必要はなく、配信先が変わっても変更しません（変えると購読者の予定が壊れます）。
+
 このスクリプトの設計上の決定事項（変更する場合はここを意識してください）:
 
-| 項目         | 決定                                                                                         | 理由                                                                                   |
-| ------------ | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| イベント種別 | すべて終日（`DTSTART;VALUE=DATE`、`DTEND` は翌日）                                           | データに時刻の情報がない                                                               |
-| `UID`        | `<id>@aikatsu-calendar.aikatsu-info.github.io`                                               | **一度公開したら絶対に変えない**。変えると購読者側で重複または消失が起きる             |
-| `DTSTAMP`    | データ中の最新 `addedAt`/`published` から生成（実行時刻を使わない）                          | 実行のたびに全行差分が出るのを防ぐ。生成結果が決定的になる                             |
-| 誕生日       | `RRULE:FREQ=YEARLY`（基準年 2013 固定）                                                      | ファイルが小さく、将来の年も自動で出る                                                 |
-| 周年         | `RRULE:FREQ=YEARLY`（`DTSTART` = `foundingYear` の当日）。タイトルは `<startWord>開始記念日` | 下の「周年の表現」を参照                                                               |
-| 日付未定26件 | **既定でスキップ**                                                                           | カレンダー上に置くべき日付が存在しない。`--undated=published` で公開日に置くことも可能 |
-| `TRANSP`     | `TRANSPARENT`                                                                                | 購読者の「予定あり」判定を汚さない                                                     |
-| 更新間隔     | `REFRESH-INTERVAL:PT6H` / `X-PUBLISHED-TTL:PT6H`                                             | クライアントへの再取得ヒント（あくまでヒント）                                         |
+| 項目 | 決定 | 理由 |
+|---|---|---|
+| イベント種別 | すべて終日（`DTSTART;VALUE=DATE`、`DTEND` は翌日） | データに時刻の情報がない |
+| `UID` | `<id>@aikatsu-calendar.aikatsu-info.github.io` | **一度公開したら絶対に変えない**。変えると購読者側で重複または消失が起きる。URLではなく識別子の名前空間なので、フォークでも独自ドメインでも変えない |
+| `DTSTAMP` | データ中の最新 `addedAt`/`published` から生成（実行時刻を使わない） | 実行のたびに全行差分が出るのを防ぐ。生成結果が決定的になる |
+| 誕生日 | `RRULE:FREQ=YEARLY`（基準年 2013 固定） | ファイルが小さく、将来の年も自動で出る |
+| 周年 | `RRULE:FREQ=YEARLY`（`DTSTART` = `foundingYear` の当日）。タイトルは `<startWord>開始記念日` | 下の「周年の表現」を参照 |
+| 日付未定26件 | **既定でスキップ** | カレンダー上に置くべき日付が存在しない。`--undated=published` で公開日に置くことも可能 |
+| `TRANSP` | `TRANSPARENT` | 購読者の「予定あり」判定を汚さない |
+| 更新間隔 | `REFRESH-INTERVAL:PT6H` / `X-PUBLISHED-TTL:PT6H` | クライアントへの再取得ヒント（あくまでヒント） |
 
 出力するフィードは9本（`FEEDS` 定数）:
 `aikatsu-all` / `aikatsu-nobirthday` / `aikatsu-goods` / `aikatsu-event` /
@@ -97,7 +132,7 @@ RRULE 化により `anniversary` は 7件 → 7 VEVENT（展開案なら42）に
 
 ### 2-3. `.github/workflows/build-ics.yml` を追加する
 
-同名ファイルを配置してください。`data/items.json` などが push されたら
+`.github/workflows/build-ics.yml` をそのまま配置してください。`data/items.json` などが push されたら
 `check_sync.py` → `build_ics.py` を走らせ、`calendar/` に差分があればコミットします。
 `paths` に `calendar/**` を含めていないので自己ループしません。
 誕生日・周年はどちらも `RRULE:FREQ=YEARLY` なので、データが変わらない限り再生成は不要です
@@ -110,8 +145,7 @@ RRULE 化により `anniversary` は 7件 → 7 VEVENT（展開案なら42）に
 
 ### 2-4. 購読UIを `aikatsu_calendar.html` に組み込む
 
-**すでに適用済みの `aikatsu_calendar.html` が `docs/` に入っています。**
-そのまま差し替えるか、`aikatsu-calendar-ics.patch` を当ててください。
+**このリポジトリの `aikatsu_calendar.html` は適用済みです。** そのまま差し替えられます。
 手で入れ直す場合は `tools/apply_subscribe_ui.py` を使えます（冪等・既存コードの整形はしません）。
 
 ```
@@ -121,12 +155,12 @@ python3 tools/apply_subscribe_ui.py --html aikatsu_calendar.html --demo web/subs
 `aikatsu_calendar.html` は `<html>` / `<head>` / `<body>` を持たない素のフラグメントなので、
 挿入位置は次の4か所です（`web/subscribe-snippet.html` に切り出し済み）。
 
-| ブロック               | 貼り付け位置                                                          |
-| ---------------------- | --------------------------------------------------------------------- |
-| `[CSS]`                | 既存 `<style>` の `</style>` 直後（`<div class="today-bar">` の手前） |
-| `[HTML]`（購読ボタン） | `<div class="tabs-row">` の中、`<div class="tabs">…</div>` の直後     |
-| `[MODAL]`              | `.page` の閉じ `</div>`（`site-copyright` の次の行）の直後            |
-| `[JS]`                 | ファイル末尾（既存の2つの `<script>` の後ろ）                         |
+| ブロック | 貼り付け位置 |
+|---|---|
+| `[CSS]` | 既存 `<style>` の `</style>` 直後（`<div class="today-bar">` の手前） |
+| `[HTML]`（購読ボタン） | `<div class="tabs-row">` の中、`<div class="tabs">…</div>` の直後 |
+| `[MODAL]` | `.page` の閉じ `</div>`（`site-copyright` の次の行）の直後 |
+| `[JS]` | ファイル末尾（既存の2つの `<script>` の後ろ） |
 
 UIの仕様:
 
@@ -146,7 +180,13 @@ UIの仕様:
 
 組み込み時の注意:
 
-- JS の `FEED_BASE` と `FEEDS` は `build_ics.py` の `FEEDS` と対応しています。片方だけ変えないこと。
+- JS の `FEEDS` は `build_ics.py` の `FEEDS` と対応しています。片方だけ変えないこと。
+- **購読UIのコードにドメインは一切書かれていません。**
+  モーダルの `data-feed-base`（既定 `calendar/`）をページ自身のURL基準で解決するので、
+  本家・フォーク・独自ドメイン・ローカルサーバのいずれでもそのまま正しい先を指します。
+  `.ics` の置き場所を変えるときは `data-feed-base` の値だけ直してください。
+  ここをドメイン決め打ちに戻すと、フォーク先などで 404 のURLを購読させてしまい、
+  Googleカレンダーは「カレンダーを追加できません。URL を確認してください。」で弾きます。
 - スニペットは本体の CSS 変数（`--accent` / `--surface` / `--line` など）だけを使っているので、
   `:root[data-theme]` によるライト/ダーク切り替えに自動追従します。
   デモ側の `:root` ブロックはコピーしないでください（`apply_subscribe_ui.py` はコピーしません）。
@@ -176,7 +216,7 @@ UIの仕様:
 - [ ] サイト上の購読ボタン → モーダル → 各ボタンとコピーが期待通り動くこと（ライト/ダーク両方）
 - [ ] 既存機能（カレンダー表示・トピックス・検索・シェア）に影響がないこと
 
-依頼側で確認済みの項目（`docs/` の状態）:
+このリポジトリの状態で確認済みの項目:
 Chromium(headless) でライト/ダーク・PC(1000px)/モバイル(390px) 表示、
 モーダル開閉・Esc・フィード切り替え・生成されるURL、
 JSエラーなし、要素IDの重複なし、HTMLのタグ対応、3つの `<script>` ブロックの構文、

@@ -8,7 +8,7 @@ X-WR-CALDESC:シリーズの周年記念日
 X-WR-TIMEZONE:Asia/Tokyo
 REFRESH-INTERVAL;VALUE=DURATION:PT6H
 X-PUBLISHED-TTL:PT6H
-SOURCE;VALUE=URI:https://aikatsu-info.github.io/aikatsu-calendar/calendar/a
+SOURCE;VALUE=URI:https://aikatsukamen.github.io/aikatsu-calendar/calendar/a
  ikatsu-anniversary.ics
 BEGIN:VEVENT
 UID:anv01@aikatsu-calendar.aikatsu-info.github.io
@@ -22,7 +22,7 @@ DESCRIPTION:2012年10月8日に放送が始まった『アイカツ！』
  日（毎年）\n情報公開日: 2026-07-30\n情報源: アイカツ！
  ポータル\n\nhttps://www.aikatsu.net/portal/series/\n\n― アイカツ
  ！情報カレンダー（非公式ファンメイド）\nhttps://aikatsu
- -info.github.io/aikatsu-calendar/
+ kamen.github.io/aikatsu-calendar/
 URL:https://www.aikatsu.net/portal/series/
 CATEGORIES:周年
 LAST-MODIFIED:20260730T000000Z
@@ -41,7 +41,7 @@ DESCRIPTION:大空あかりが主人公の『アイカツ！』第3シー
  た。\n\n区分: 周年\n日程表記: 10月2日（毎年）\n情報公
  開日: 2026-07-30\n情報源: アイカツ！ポータル\n\nhttps://www.
  aikatsu.net/portal/akari10th/\n\n― アイカツ！情報カレンダー
- （非公式ファンメイド）\nhttps://aikatsu-info.github.io/aikatsu-
+ （非公式ファンメイド）\nhttps://aikatsukamen.github.io/aikatsu-
  calendar/
 URL:https://www.aikatsu.net/portal/akari10th/
 CATEGORIES:周年
@@ -61,7 +61,7 @@ DESCRIPTION:2016年4月7日に放送が始まった『アイカツスター
  : 4月7日（毎年）\n情報公開日: 2026-07-30\n情報源: アイカ
  ツ！ポータル\n\nhttps://www.aikatsu.net/portal/idol/aikatsustars-01.
  html\n\n― アイカツ！情報カレンダー（非公式ファンメ
- イド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+ イド）\nhttps://aikatsukamen.github.io/aikatsu-calendar/
 URL:https://www.aikatsu.net/portal/idol/aikatsustars-01.html
 CATEGORIES:周年
 LAST-MODIFIED:20260730T000000Z
@@ -80,7 +80,7 @@ DESCRIPTION:2018年4月5日に放送が始まった『アイカツフレン
  : 4月5日（毎年）\n情報公開日: 2026-07-30\n情報源: アイカ
  ツ！ポータル\n\nhttps://www.aikatsu.net/portal/idol/aikatsufriends-0
  1.html\n\n― アイカツ！情報カレンダー（非公式ファンメ
- イド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+ イド）\nhttps://aikatsukamen.github.io/aikatsu-calendar/
 URL:https://www.aikatsu.net/portal/idol/aikatsufriends-01.html
 CATEGORIES:周年
 LAST-MODIFIED:20260730T000000Z
@@ -99,7 +99,7 @@ DESCRIPTION:2019年10月5日に放送が始まった『アイカツオン
  程表記: 10月5日（毎年）\n情報公開日: 2026-07-30\n情報源: 
  アイカツ！ポータル\n\nhttps://www.aikatsu.net/portal/idol/aikatsu
  onparade.html\n\n― アイカツ！情報カレンダー（非公式フ
- ァンメイド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+ ァンメイド）\nhttps://aikatsukamen.github.io/aikatsu-calendar/
 URL:https://www.aikatsu.net/portal/idol/aikatsuonparade.html
 CATEGORIES:周年
 LAST-MODIFIED:20260730T000000Z
@@ -118,7 +118,7 @@ DESCRIPTION:2021年1月10日に放送が始まった『アイカツプラ
  表記: 1月10日（毎年）\n情報公開日: 2026-07-30\n情報源: ア
  イカツ！ポータル\n\nhttps://www.aikatsu.net/portal/idol/aikatsupla
  net.html\n\n― アイカツ！情報カレンダー（非公式ファン
- メイド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+ メイド）\nhttps://aikatsukamen.github.io/aikatsu-calendar/
 URL:https://www.aikatsu.net/portal/idol/aikatsuplanet.html
 CATEGORIES:周年
 LAST-MODIFIED:20260730T000000Z
@@ -137,7 +137,7 @@ DESCRIPTION:2024年7月27日に配信を開始した『アイカツアカ
  表記: 7月27日（毎年）\n情報公開日: 2026-07-30\n情報源: ア
  イカツ！ポータル\n\nhttps://www.aikatsu.net/portal/idol/aikatsuaca
  demy.html\n\n― アイカツ！情報カレンダー（非公式ファン
- メイド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+ メイド）\nhttps://aikatsukamen.github.io/aikatsu-calendar/
 URL:https://www.aikatsu.net/portal/idol/aikatsuacademy.html
 CATEGORIES:周年
 LAST-MODIFIED:20260730T000000Z

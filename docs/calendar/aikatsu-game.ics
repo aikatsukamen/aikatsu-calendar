@@ -8,7 +8,7 @@ X-WR-CALDESC:『アイカツ！アンコール』関連の予定
 X-WR-TIMEZONE:Asia/Tokyo
 REFRESH-INTERVAL;VALUE=DURATION:PT6H
 X-PUBLISHED-TTL:PT6H
-SOURCE;VALUE=URI:https://aikatsu-info.github.io/aikatsu-calendar/calendar/a
+SOURCE;VALUE=URI:https://aikatsukamen.github.io/aikatsu-calendar/calendar/a
  ikatsu-game.ics
 BEGIN:VEVENT
 UID:20260725-05@aikatsu-calendar.aikatsu-info.github.io
@@ -24,7 +24,7 @@ DESCRIPTION:バンダイのデータカードダス新筐体『アイカツ
  アイカツ！アンコール\n日程表記: 2026年10月より順次稼
  働\n情報公開日: 2026-05-01\n情報源: ファミ通.com\n\nhttps://w
  ww.famitsu.com/article/202605/73710\n\n― アイカツ！情報カレン
- ダー（非公式ファンメイド）\nhttps://aikatsu-info.github.io/ai
+ ダー（非公式ファンメイド）\nhttps://aikatsukamen.github.io/ai
  katsu-calendar/
 URL:https://www.famitsu.com/article/202605/73710
 CATEGORIES:アイカツ！アンコール
@@ -46,7 +46,7 @@ DESCRIPTION:DCD新作『アイカツ！アンコール』のキービジュ
  ！アンコール\n日程表記: 6月15日\n情報公開日: 2026-06-15\n
  情報源: X @aikatsu_dcd\n\nhttps://x.com/aikatsu_dcd/status/206632481274
  2488536\n\n― アイカツ！情報カレンダー（非公式ファン
- メイド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+ メイド）\nhttps://aikatsukamen.github.io/aikatsu-calendar/
 URL:https://x.com/aikatsu_dcd/status/2066324812742488536
 CATEGORIES:アイカツ！アンコール
 LAST-MODIFIED:20260725T000000Z
@@ -64,7 +64,7 @@ DESCRIPTION:DCD『アイカツ！アンコール』のキービジュアル
  ール\n日程表記: 7月10日 公開\n情報公開日: 2026-07-10\n情
  報源: X @aikatsu_dcd\n\nhttps://x.com/aikatsu_dcd/status/207538451131631
  6346\n\n― アイカツ！情報カレンダー（非公式ファンメ
- イド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+ イド）\nhttps://aikatsukamen.github.io/aikatsu-calendar/
 URL:https://x.com/aikatsu_dcd/status/2075384511316316346
 CATEGORIES:アイカツ！アンコール
 LAST-MODIFIED:20260725T000000Z
@@ -86,7 +86,7 @@ DESCRIPTION:2026年10月の稼働開始に向けて、新作カードのデ
  7/6・7/13 順次公開\n情報公開日: 2026-07-13\n情報源: X @aikats
  u_dcd\n\nhttps://x.com/aikatsu_dcd/status/2076471849291264025\n\n― ア
  イカツ！情報カレンダー（非公式ファンメイド）\nhttps:
- //aikatsu-info.github.io/aikatsu-calendar/
+ //aikatsukamen.github.io/aikatsu-calendar/
 URL:https://x.com/aikatsu_dcd/status/2076471849291264025
 CATEGORIES:アイカツ！アンコール
 LAST-MODIFIED:20260725T000000Z
@@ -106,7 +106,7 @@ DESCRIPTION:アイカツパスを使って「かみがた」「めのいろ
  ンコール\n日程表記: 7月17日 公開\n情報公開日: 2026-07-17\
  n情報源: X @aikatsu_dcd\n\nhttps://x.com/aikatsu_dcd/status/20779212260
  18980056\n\n― アイカツ！情報カレンダー（非公式ファン
- メイド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+ メイド）\nhttps://aikatsukamen.github.io/aikatsu-calendar/
 URL:https://x.com/aikatsu_dcd/status/2077921226018980056
 CATEGORIES:アイカツ！アンコール
 LAST-MODIFIED:20260725T000000Z
@@ -127,7 +127,7 @@ DESCRIPTION:カードショップでのデジタルカード販売、アイ
  n日程表記: 7月31日(金) 23:59 利用終了\n情報公開日: 2026-07
  -31\n情報源: X @aikatsu_acad\n\nhttps://x.com/aikatsu_acad\n\n― ア
  イカツ！情報カレンダー（非公式ファンメイド）\nhttps:
- //aikatsu-info.github.io/aikatsu-calendar/
+ //aikatsukamen.github.io/aikatsu-calendar/
 URL:https://x.com/aikatsu_acad
 CATEGORIES:アイカツ！アンコール
 LAST-MODIFIED:20260731T000000Z
@@ -149,7 +149,7 @@ DESCRIPTION:所持デジタルカードを画像（png）と音声データ
  公開日: 2026-03-28\n情報源: アイカツアカデミー！公式サ
  イト\n\nhttps://aikatsu-academy.com/2026/08/03/demica-dl-release/\n\n―
   アイカツ！情報カレンダー（非公式ファンメイド）\nht
- tps://aikatsu-info.github.io/aikatsu-calendar/
+ tps://aikatsukamen.github.io/aikatsu-calendar/
 URL:https://aikatsu-academy.com/2026/08/03/demica-dl-release/
 CATEGORIES:アイカツ！アンコール
 LAST-MODIFIED:20260803T000000Z
@@ -171,7 +171,7 @@ DESCRIPTION:所持デジタルカードを画像（png）と音声データ
  ム閲覧終了）\n情報公開日: 2026-03-28\n情報源: アイカツ
  アカデミー！公式サイト\n\nhttps://aikatsu-academy.com/2026/08/0
  3/demica-dl-release/\n\n― アイカツ！情報カレンダー（非公
- 式ファンメイド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+ 式ファンメイド）\nhttps://aikatsukamen.github.io/aikatsu-calendar/
 URL:https://aikatsu-academy.com/2026/08/03/demica-dl-release/
 CATEGORIES:アイカツ！アンコール
 LAST-MODIFIED:20260803T000000Z
@@ -195,7 +195,7 @@ DESCRIPTION:DCD『アイカツ！アンコール』がTOKYOおもちゃシ
  月29日(土) 9:00〜17:00 開催開始（〜8月30日）\n情報公開日
  : 2026-08-07\n情報源: X @aikatsu_dcd\n\nhttps://x.com/aikatsu_dcd\n\n
  ― アイカツ！情報カレンダー（非公式ファンメイド）\
- nhttps://aikatsu-info.github.io/aikatsu-calendar/
+ nhttps://aikatsukamen.github.io/aikatsu-calendar/
 URL:https://x.com/aikatsu_dcd
 CATEGORIES:アイカツ！アンコール
 LAST-MODIFIED:20260807T000000Z
@@ -216,7 +216,7 @@ DESCRIPTION:DCD『アイカツ！アンコール』TOKYOおもちゃショ
  : 8月30日(日) 9:00〜16:00 開催終了\n情報公開日: 2026-08-07\n
  情報源: X @aikatsu_dcd\n\nhttps://x.com/aikatsu_dcd\n\n― アイカツ
  ！情報カレンダー（非公式ファンメイド）\nhttps://aikatsu
- -info.github.io/aikatsu-calendar/
+ kamen.github.io/aikatsu-calendar/
 URL:https://x.com/aikatsu_dcd
 CATEGORIES:アイカツ！アンコール
 LAST-MODIFIED:20260807T000000Z
@@ -242,7 +242,7 @@ DESCRIPTION:10月稼働開始に向けて公式サイトをリニューア
  公式サイトリニューアル・FAQ公開\n情報公開日: 2026-08-27
  \n情報源: でんふぁみこがめん\n\nhttps://news.denfaminicogamer.
  jp/news/2608273v\n\n― アイカツ！情報カレンダー（非公式
- ファンメイド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+ ファンメイド）\nhttps://aikatsukamen.github.io/aikatsu-calendar/
 URL:https://news.denfaminicogamer.jp/news/2608273v
 CATEGORIES:アイカツ！アンコール
 LAST-MODIFIED:20260827T000000Z
@@ -262,7 +262,7 @@ DESCRIPTION:データカードダス『アイカツ！アンコール』の
   8月27日 コラボCM公開\n情報公開日: 2026-08-27\n情報源: X @a
  ikatsu_dcd\n\nhttps://x.com/aikatsu_dcd/status/2092779243054985331\n\n― 
  アイカツ！情報カレンダー（非公式ファンメイド）\nhtt
- ps://aikatsu-info.github.io/aikatsu-calendar/
+ ps://aikatsukamen.github.io/aikatsu-calendar/
 URL:https://x.com/aikatsu_dcd/status/2092779243054985331
 CATEGORIES:アイカツ！アンコール
 LAST-MODIFIED:20260827T000000Z
@@ -282,7 +282,7 @@ DESCRIPTION:2026年10月スタートのデータカードダス『アイカ
  日 プロモーションビデオ公開\n情報公開日: 2026-08-27\n情
  報源: X @aikatsu_dcd\n\nhttps://x.com/aikatsu_dcd/status/209285751660266
  3004\n\n― アイカツ！情報カレンダー（非公式ファンメ
- イド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+ イド）\nhttps://aikatsukamen.github.io/aikatsu-calendar/
 URL:https://x.com/aikatsu_dcd/status/2092857516602663004
 CATEGORIES:アイカツ！アンコール
 LAST-MODIFIED:20260827T000000Z
@@ -303,7 +303,7 @@ DESCRIPTION:データカードダス『アイカツ！アンコール』が
  ール\n日程表記: 10月8日(木) 稼働開始\n情報公開日: 2026-0
  9-01\n情報源: 電撃オンライン\n\nhttps://dengekionline.com/articl
  e/202605/73714\n\n― アイカツ！情報カレンダー（非公式フ
- ァンメイド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+ ァンメイド）\nhttps://aikatsukamen.github.io/aikatsu-calendar/
 URL:https://dengekionline.com/article/202605/73714
 CATEGORIES:アイカツ！アンコール
 LAST-MODIFIED:20260901T000000Z
@@ -323,7 +323,7 @@ DESCRIPTION:公式サイトのHP更新で、初心者向けの「アイカ
  も公開された。\n\n区分: アイカツ！アンコール\n日程表
  記: 9月1日 公開\n情報公開日: 2026-09-01\n情報源: X @aikatsu_d
  cd\n\nhttps://dcd.aikatsu.com/encore/\n\n― アイカツ！情報カレ
- ンダー（非公式ファンメイド）\nhttps://aikatsu-info.github.io
+ ンダー（非公式ファンメイド）\nhttps://aikatsukamen.github.io
  /aikatsu-calendar/
 URL:https://dcd.aikatsu.com/encore/
 CATEGORIES:アイカツ！アンコール
@@ -344,7 +344,7 @@ DESCRIPTION:公式サイトのHP更新で、「アイカツパスを作ろ
  アイカツ！アンコール\n日程表記: 9月1日 公開\n情報公
  開日: 2026-09-01\n情報源: X @aikatsu_dcd\n\nhttps://dcd.aikatsu.com/e
  ncore/\n\n― アイカツ！情報カレンダー（非公式ファンメ
- イド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+ イド）\nhttps://aikatsukamen.github.io/aikatsu-calendar/
 URL:https://dcd.aikatsu.com/encore/
 CATEGORIES:アイカツ！アンコール
 LAST-MODIFIED:20260901T000000Z

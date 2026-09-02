@@ -6,7 +6,7 @@
       "name": "アイカツ！情報カレンダー",
       "description": "アイカツ！シリーズのイベント・グッズ・配信・誕生日・周年をまとめた非公式カレンダー",
       "file": "aikatsu-all.ics",
-      "url": "https://aikatsu-info.github.io/aikatsu-calendar/calendar/aikatsu-all.ics",
+      "url": "https://aikatsukamen.github.io/aikatsu-calendar/calendar/aikatsu-all.ics",
       "items": 378,
       "events": 352
     },
@@ -15,7 +15,7 @@
       "name": "アイカツ！情報カレンダー（誕生日・周年なし）",
       "description": "誕生日・周年を除いた、イベント／グッズ／配信などの予定のみ",
       "file": "aikatsu-nobirthday.ics",
-      "url": "https://aikatsu-info.github.io/aikatsu-calendar/calendar/aikatsu-nobirthday.ics",
+      "url": "https://aikatsukamen.github.io/aikatsu-calendar/calendar/aikatsu-nobirthday.ics",
       "items": 304,
       "events": 278
     },
@@ -24,7 +24,7 @@
       "name": "アイカツ！グッズ",
       "description": "グッズの発売日・予約開始／締切",
       "file": "aikatsu-goods.ics",
-      "url": "https://aikatsu-info.github.io/aikatsu-calendar/calendar/aikatsu-goods.ics",
+      "url": "https://aikatsukamen.github.io/aikatsu-calendar/calendar/aikatsu-goods.ics",
       "items": 187,
       "events": 177
     },
@@ -33,7 +33,7 @@
       "name": "アイカツ！イベント",
       "description": "ライブ・上映会・POP UP SHOP などのイベント",
       "file": "aikatsu-event.ics",
-      "url": "https://aikatsu-info.github.io/aikatsu-calendar/calendar/aikatsu-event.ics",
+      "url": "https://aikatsukamen.github.io/aikatsu-calendar/calendar/aikatsu-event.ics",
       "items": 81,
       "events": 70
     },
@@ -42,7 +42,7 @@
       "name": "アイカツ！アニメ・映像",
       "description": "アニメ・映像関連の予定",
       "file": "aikatsu-anime.ics",
-      "url": "https://aikatsu-info.github.io/aikatsu-calendar/calendar/aikatsu-anime.ics",
+      "url": "https://aikatsukamen.github.io/aikatsu-calendar/calendar/aikatsu-anime.ics",
       "items": 8,
       "events": 5
     },
@@ -51,7 +51,7 @@
       "name": "アイカツ！アンコール",
       "description": "『アイカツ！アンコール』関連の予定",
       "file": "aikatsu-game.ics",
-      "url": "https://aikatsu-info.github.io/aikatsu-calendar/calendar/aikatsu-game.ics",
+      "url": "https://aikatsukamen.github.io/aikatsu-calendar/calendar/aikatsu-game.ics",
       "items": 17,
       "events": 16
     },
@@ -60,7 +60,7 @@
       "name": "アイカツ！配信",
       "description": "配信番組・一挙配信などの予定",
       "file": "aikatsu-stream.ics",
-      "url": "https://aikatsu-info.github.io/aikatsu-calendar/calendar/aikatsu-stream.ics",
+      "url": "https://aikatsukamen.github.io/aikatsu-calendar/calendar/aikatsu-stream.ics",
       "items": 11,
       "events": 10
     },
@@ -69,7 +69,7 @@
       "name": "アイカツ！誕生日",
       "description": "キャラクターの誕生日（毎年繰り返し）",
       "file": "aikatsu-birthday.ics",
-      "url": "https://aikatsu-info.github.io/aikatsu-calendar/calendar/aikatsu-birthday.ics",
+      "url": "https://aikatsukamen.github.io/aikatsu-calendar/calendar/aikatsu-birthday.ics",
       "items": 67,
       "events": 67
     },
@@ -78,7 +78,7 @@
       "name": "アイカツ！周年",
       "description": "シリーズの周年記念日",
       "file": "aikatsu-anniversary.ics",
-      "url": "https://aikatsu-info.github.io/aikatsu-calendar/calendar/aikatsu-anniversary.ics",
+      "url": "https://aikatsukamen.github.io/aikatsu-calendar/calendar/aikatsu-anniversary.ics",
       "items": 7,
       "events": 7
     }

@@ -8,7 +8,7 @@ X-WR-CALDESC:配信番組・一挙配信などの予定
 X-WR-TIMEZONE:Asia/Tokyo
 REFRESH-INTERVAL;VALUE=DURATION:PT6H
 X-PUBLISHED-TTL:PT6H
-SOURCE;VALUE=URI:https://aikatsu-info.github.io/aikatsu-calendar/calendar/a
+SOURCE;VALUE=URI:https://aikatsukamen.github.io/aikatsu-calendar/calendar/a
  ikatsu-stream.ics
 BEGIN:VEVENT
 UID:20260619-01@aikatsu-calendar.aikatsu-info.github.io
@@ -25,7 +25,7 @@ DESCRIPTION:エリオントがMCを務める生配信番組「オールア
  情報公開日: 2026-06-19\n情報源: アイカツアカデミー！公
  式サイト\n\nhttps://aikatsu-academy.com/2026/06/19/streaming_hour/\n\n
  ― アイカツ！情報カレンダー（非公式ファンメイド）\
- nhttps://aikatsu-info.github.io/aikatsu-calendar/
+ nhttps://aikatsukamen.github.io/aikatsu-calendar/
 URL:https://aikatsu-academy.com/2026/06/19/streaming_hour/
 CATEGORIES:配信
 LAST-MODIFIED:20260619T000000Z
@@ -43,7 +43,7 @@ DESCRIPTION:配信部によるプレゼンテーションライブの映像
  日 公開\n情報公開日: 2026-07-09\n情報源: アイカツ！ポー
  タル\n\nhttps://www.aikatsu.net/portal/topics/topics.php?id=23868\n\n―
   アイカツ！情報カレンダー（非公式ファンメイド）\nht
- tps://aikatsu-info.github.io/aikatsu-calendar/
+ tps://aikatsukamen.github.io/aikatsu-calendar/
 URL:https://www.aikatsu.net/portal/topics/topics.php?id=23868
 CATEGORIES:配信
 LAST-MODIFIED:20260725T000000Z
@@ -63,7 +63,7 @@ DESCRIPTION:アイカツアカデミー！「2nd Anniversary LIVE」ライ
  表記: 8月16日(日) 19:30 購入締切\n情報公開日: 2026-07-18\n
  情報源: X @aikatsu_acad\n\nhttps://x.com/aikatsu_acad\n\n― アイカ
  ツ！情報カレンダー（非公式ファンメイド）\nhttps://aika
- tsu-info.github.io/aikatsu-calendar/
+ tsukamen.github.io/aikatsu-calendar/
 URL:https://x.com/aikatsu_acad
 CATEGORIES:配信
 LAST-MODIFIED:20260725T000000Z
@@ -83,7 +83,7 @@ DESCRIPTION:紅林珠璃の誕生日を記念し、彼女のアイドル活
  分: 配信\n日程表記: 7月31日(金) 20時 プレミア公開\n情報
  公開日: 2026-07-31\n情報源: X @aikatsu_anime\n\nhttps://x.com/aikats
  u_anime\n\n― アイカツ！情報カレンダー（非公式ファン
- メイド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+ メイド）\nhttps://aikatsukamen.github.io/aikatsu-calendar/
 URL:https://x.com/aikatsu_anime
 CATEGORIES:配信
 LAST-MODIFIED:20260731T000000Z
@@ -102,7 +102,7 @@ DESCRIPTION:配信視聴チケット販売中の「アイカツアカデミ
  生番組で紹介。\n\n区分: 配信\n日程表記: 8月2日(日) 20:00
  〜 生配信\n情報公開日: 2026-07-27\n情報源: X @aikatsu_acad\n\n
  https://x.com/aikatsu_acad\n\n― アイカツ！情報カレンダー（
- 非公式ファンメイド）\nhttps://aikatsu-info.github.io/aikatsu-cal
+ 非公式ファンメイド）\nhttps://aikatsukamen.github.io/aikatsu-cal
  endar/
 URL:https://x.com/aikatsu_acad
 CATEGORIES:配信
@@ -122,7 +122,7 @@ DESCRIPTION:各配信サービスにて、劇場公開作品の期間限定
  : 2026年2月1日(日) 配信開始\n情報公開日: 2026-01-26\n情報
  源: アイカツ！×プリパラ THE MOVIE 公式サイト\n\nhttps://ai
  katsu-pripara-10movie.jp/\n\n― アイカツ！情報カレンダー（
- 非公式ファンメイド）\nhttps://aikatsu-info.github.io/aikatsu-cal
+ 非公式ファンメイド）\nhttps://aikatsukamen.github.io/aikatsu-cal
  endar/
 URL:https://aikatsu-pripara-10movie.jp/
 CATEGORIES:配信
@@ -143,7 +143,7 @@ DESCRIPTION:ABEMA「アニメ毎週200作品無料祭」第3週『平成ガ
  n日程表記: 8月16日(日) 深夜2時30分〜（ABEMA）\n情報公開
  日: 2026-08-14\n情報源: 電ファミニコゲーマー\n\nhttps://news
  .denfaminicogamer.jp/news/260814v\n\n― アイカツ！情報カレンダ
- ー（非公式ファンメイド）\nhttps://aikatsu-info.github.io/aikat
+ ー（非公式ファンメイド）\nhttps://aikatsukamen.github.io/aikat
  su-calendar/
 URL:https://news.denfaminicogamer.jp/news/260814v
 CATEGORIES:配信
@@ -164,7 +164,7 @@ DESCRIPTION:本日より開催のTOKYOおもちゃショー2026『アイカ
  表記: 8月27日 新PV公開\n情報公開日: 2026-08-27\n情報源: X @
  aikatsu_acad\n\nhttps://x.com/aikatsu_acad/status/2092796781193228616\n\n
  ― アイカツ！情報カレンダー（非公式ファンメイド）\
- nhttps://aikatsu-info.github.io/aikatsu-calendar/
+ nhttps://aikatsukamen.github.io/aikatsu-calendar/
 URL:https://x.com/aikatsu_acad/status/2092796781193228616
 CATEGORIES:配信
 LAST-MODIFIED:20260827T000000Z
@@ -184,7 +184,7 @@ DESCRIPTION:9月5日開催の「大絶響祭 2026 SUMMER 万里一空」を
  。\n\n区分: 配信\n日程表記: 8月30日(日) 19:00〜 配信\n情
  報公開日: 2026-08-24\n情報源: X @aikatsu_acad\n\nhttps://x.com/aika
  tsu_acad/status/2091869888352825636\n\n― アイカツ！情報カレン
- ダー（非公式ファンメイド）\nhttps://aikatsu-info.github.io/ai
+ ダー（非公式ファンメイド）\nhttps://aikatsukamen.github.io/ai
  katsu-calendar/
 URL:https://x.com/aikatsu_acad/status/2091869888352825636
 CATEGORIES:配信
@@ -207,7 +207,7 @@ DESCRIPTION:「オールアイカツ！ストリーミングアワー」第
  \n区分: 配信\n日程表記: 10月7日(水) 20:00〜 生配信\n情報
  公開日: 2026-09-01\n情報源: アイカツ！ポータル\n\nhttps://w
  ww.aikatsu.net/portal/topics/topics.php?id=23752\n\n― アイカツ！情
- 報カレンダー（非公式ファンメイド）\nhttps://aikatsu-info.
+ 報カレンダー（非公式ファンメイド）\nhttps://aikatsukamen.
  github.io/aikatsu-calendar/
 URL:https://www.aikatsu.net/portal/topics/topics.php?id=23752
 CATEGORIES:配信

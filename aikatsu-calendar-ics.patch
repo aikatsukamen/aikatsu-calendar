@@ -1,9 +1,9 @@
 diff --git a/.github/workflows/build-ics.yml b/.github/workflows/build-ics.yml
 new file mode 100644
-index 0000000..1516126
+index 0000000..d01b613
 --- /dev/null
 +++ b/.github/workflows/build-ics.yml
-@@ -0,0 +1,58 @@
+@@ -0,0 +1,67 @@
 +# data/items.json から .ics を生成して calendar/ にコミットするワークフロー（提案）
 +#
 +# - paths に calendar/** を含めていないので、このジョブ自身のコミットでは再実行されない。
@@ -48,8 +48,17 @@ index 0000000..1516126
 +      - name: Check items.json / HTML sync
 +        run: python3 tools/check_sync.py --html aikatsu_calendar.html --json data/items.json
 +
++      # 配信URL（feeds.json と SOURCE プロパティ）はリポジトリから組み立てるので、
++      # フォークでもそのまま正しい値になる。
++      # UID のドメインは意図的に固定（--uid-domain の既定値）。フォークで変えないこと。
 +      - name: Build .ics
-+        run: python3 tools/build_ics.py --input data/items.json --outdir calendar
++        run: |
++          OWNER=$(echo "${{ github.repository_owner }}" | tr 'A-Z' 'a-z')
++          REPO="${{ github.event.repository.name }}"
++          BASE="https://$OWNER.github.io/$REPO"
++          python3 tools/build_ics.py \
++            --input data/items.json --outdir calendar \
++            --base-url "$BASE/calendar" --site-url "$BASE/"
 +
 +      - name: Commit if changed
 +        run: |
@@ -63,10 +72,10 @@ index 0000000..1516126
 +          git commit -m "chore: rebuild iCalendar feeds"
 +          git push
 diff --git a/CLAUDE.md b/CLAUDE.md
-index da391ef..e7a4604 100644
+index da391ef..22ad6a4 100644
 --- a/CLAUDE.md
 +++ b/CLAUDE.md
-@@ -63,3 +63,48 @@
+@@ -63,3 +63,57 @@
  ### 収録範囲についての方針
  
  2013〜2021年頃の旧世代ガシャポン（初代アイカツ！〜アイカツフレンズ！時代）も、ユーザーの意向により**全て収録済み**（2026-08-02に25件追加）。gashapon.jpの検索結果に出てくる商品は年代を問わず全件カレンダー化する方針。今後も同様に、検索結果でヒットする商品は年代の新旧を問わず追加してよい。
@@ -79,7 +88,8 @@ index da391ef..e7a4604 100644
 +- 生成前に `tools/check_sync.py` が `aikatsu_calendar.html` の `ITEMS` と
 +  `data/items.json` のIDを突き合わせる。ズレていればCIが落ちる。
 +  つまり**片方だけ更新した状態でmainに入れると .ics のビルドが失敗する**。
-+- `UID` は `<id>@aikatsu-calendar.aikatsu-info.github.io` で生成している。
++- `UID` は `<id>@aikatsu-calendar.aikatsu-info.github.io`。
++  これは**配信先URLではなく識別子の名前空間**なので、フォークでも独自ドメインでも変えない。
 +  **既存項目の `id` を振り直したり、UIDの生成規則を変えたりしてはいけない。**
 +  購読者のカレンダー上で予定が重複または消失する。
 +- 日付の3パターンの扱い:
@@ -89,6 +99,9 @@ index da391ef..e7a4604 100644
 +  - `eventDate` も `recur` も無い（日付未定）→ .ics には含めない
 +- 誕生日・周年はどちらも繰り返しルールなので、データが変わらない限り再生成は不要
 +  （ワークフローに定期実行は入れていない）。
++- `--base-url` / `--site-url` に既定値はない。省略すると `SOURCE` を出力せず、
++  `feeds.json` のURLは相対パスになる（＝ドメインが一切入らない）。
++  ワークフローがリポジトリ情報から組み立てて渡すので、フォークでも正しい絶対URLになる。
 +- ローカルで確認する場合:
 +  `python3 tools/check_sync.py && python3 tools/build_ics.py --input data/items.json --outdir calendar`
 +
@@ -112,14 +125,19 @@ index da391ef..e7a4604 100644
 +## 購読UI
 +
 +`aikatsu_calendar.html` 内の `.subscribe-btn` / `#subModal` と、ファイル末尾の購読用スクリプト。
-+編集元は `web/subscribe-demo.html`（単体で開いて動作確認できるデモ）で、
++編集元は `web/subscribe-demo.html`（HTTPサーバ越しに開けば単体で動作確認できるデモ）で、
 +`tools/extract_snippet.py` で貼り付け用スニペットを、`tools/apply_subscribe_ui.py` で本体への適用を行える。
-+UI側の `FEEDS` と `tools/build_ics.py` の `FEEDS` は対応しているので、増減させるときは両方を直すこと。
++
++- UI側の `FEEDS` と `tools/build_ics.py` の `FEEDS` は対応しているので、増減させるときは両方を直すこと。
++- **購読URLにドメインは一切埋め込んでいない。** `#subModal` の `data-feed-base`（既定 `calendar/`）を
++  ページ自身のURL基準で解決している。`.ics` の置き場所を変えるときはこの属性だけを直す。
++  ここをドメイン決め打ちに戻すと、フォーク先などで存在しないURLを購読させることになり、
++  Googleカレンダーは「カレンダーを追加できません。URL を確認してください。」で弾く。
 diff --git a/README.md b/README.md
-index fccbf9e..51c854a 100644
+index fccbf9e..d63a1af 100644
 --- a/README.md
 +++ b/README.md
-@@ -1 +1,34 @@
+@@ -1 +1,37 @@
 -# aikatsu-calendar
 \ No newline at end of file
 +# aikatsu-calendar
@@ -133,17 +151,20 @@ index fccbf9e..51c854a 100644
 +サイト右上の「カレンダー購読」ボタンから、お使いのカレンダーアプリに追加できます。
 +URLを直接登録することもできます。
 +
-+| 内容 | 購読URL |
++| 内容 | 購読URL（`<サイトのURL>` は上記サイトのURL） |
 +|---|---|
-+| すべて | https://aikatsu-info.github.io/aikatsu-calendar/calendar/aikatsu-all.ics |
-+| 誕生日・周年を除く | https://aikatsu-info.github.io/aikatsu-calendar/calendar/aikatsu-nobirthday.ics |
-+| イベント | https://aikatsu-info.github.io/aikatsu-calendar/calendar/aikatsu-event.ics |
-+| グッズ | https://aikatsu-info.github.io/aikatsu-calendar/calendar/aikatsu-goods.ics |
-+| アニメ・映像 | https://aikatsu-info.github.io/aikatsu-calendar/calendar/aikatsu-anime.ics |
-+| アイカツ！アンコール | https://aikatsu-info.github.io/aikatsu-calendar/calendar/aikatsu-game.ics |
-+| 配信 | https://aikatsu-info.github.io/aikatsu-calendar/calendar/aikatsu-stream.ics |
-+| 誕生日 | https://aikatsu-info.github.io/aikatsu-calendar/calendar/aikatsu-birthday.ics |
-+| 周年 | https://aikatsu-info.github.io/aikatsu-calendar/calendar/aikatsu-anniversary.ics |
++| すべて | `<サイトのURL>/calendar/aikatsu-all.ics` |
++| 誕生日・周年を除く | `<サイトのURL>/calendar/aikatsu-nobirthday.ics` |
++| イベント | `<サイトのURL>/calendar/aikatsu-event.ics` |
++| グッズ | `<サイトのURL>/calendar/aikatsu-goods.ics` |
++| アニメ・映像 | `<サイトのURL>/calendar/aikatsu-anime.ics` |
++| アイカツ！アンコール | `<サイトのURL>/calendar/aikatsu-game.ics` |
++| 配信 | `<サイトのURL>/calendar/aikatsu-stream.ics` |
++| 誕生日 | `<サイトのURL>/calendar/aikatsu-birthday.ics` |
++| 周年 | `<サイトのURL>/calendar/aikatsu-anniversary.ics` |
++
++正確なURLはサイト上の「カレンダー購読」モーダルに表示されます（コピーボタンつき）。
++配信中のフィード一覧は `calendar/feeds.json` にもあります。
 +
 +- 更新の反映には数時間かかることがあります（カレンダーアプリ側の取得間隔によります）。
 +- 日付が未定の情報は .ics には含まれません。サイトの「日程未定のトピックス」でご確認ください。
@@ -157,7 +178,7 @@ index fccbf9e..51c854a 100644
 +- `calendar/*.ics` — 上記から生成した iCalendar 形式（`tools/build_ics.py` / GitHub Actions が生成）
 +- `calendar/feeds.json` — 配信中のフィード一覧
 diff --git a/aikatsu_calendar.html b/aikatsu_calendar.html
-index 95bb10d..a5e7361 100644
+index 95bb10d..f730cad 100644
 --- a/aikatsu_calendar.html
 +++ b/aikatsu_calendar.html
 @@ -507,6 +507,93 @@
@@ -268,11 +289,12 @@ index 95bb10d..a5e7361 100644
    </div>
  
    <section id="panel-search" hidden>
-@@ -682,6 +776,80 @@
+@@ -682,6 +776,81 @@
    <div class="site-copyright">© 2026 AIKATSU! CALENDAR</div>
  </div>
  
-+<div class="sub-modal" id="subModal" role="dialog" aria-modal="true" aria-labelledby="subModalTitle" hidden>
++<div class="sub-modal" id="subModal" role="dialog" aria-modal="true" aria-labelledby="subModalTitle"
++     data-feed-base="calendar/" hidden>
 +  <div class="sub-modal-panel" id="subModalPanel">
 +    <div class="sub-modal-head">
 +      <h2 class="sub-modal-title" id="subModalTitle">カレンダーを購読する</h2>
@@ -349,7 +371,7 @@ index 95bb10d..a5e7361 100644
  <script>
  (function(){
    "use strict";
-@@ -1848,3 +2016,123 @@
+@@ -1848,3 +2017,126 @@
    }
  })();
  </script>
@@ -358,8 +380,9 @@ index 95bb10d..a5e7361 100644
 +(function(){
 +  "use strict";
 +
-+  // .ics の配信先。GitHub Pages のパスに合わせる。
-+  var FEED_BASE = "https://aikatsu-info.github.io/aikatsu-calendar/calendar/";
++  // .ics の配信先。ドメインはどこにも書かない。
++  // モーダルの data-feed-base（既定 "calendar/"）をページ自身のURL基準で解決するので、
++  // 本家・フォーク・独自ドメイン・ローカルサーバのいずれでもそのまま正しい先を指す。
 +
 +  // build_ics.py の FEEDS と対応。増やす場合は両方に足すこと。
 +  var FEEDS = [
@@ -388,6 +411,8 @@ index 95bb10d..a5e7361 100644
 +  if(!btn || !modal) return;
 +
 +  var lastFocused = null;
++
++  var FEED_BASE = new URL(modal.getAttribute("data-feed-base") || "calendar/", location.href).href;
 +
 +  function httpsUrl(feed){ return FEED_BASE + feed.slug + ".ics"; }
 +  function webcalUrl(feed){ return httpsUrl(feed).replace(/^https?:/, "webcal:"); }
@@ -580,10 +605,10 @@ index 0000000..23e0dcc
 +    sys.exit(main())
 diff --git a/tools/build_ics.py b/tools/build_ics.py
 new file mode 100644
-index 0000000..6a5cbb0
+index 0000000..05a89f8
 --- /dev/null
 +++ b/tools/build_ics.py
-@@ -0,0 +1,371 @@
+@@ -0,0 +1,379 @@
 +#!/usr/bin/env python3
 +# -*- coding: utf-8 -*-
 +"""
@@ -617,8 +642,11 @@ index 0000000..6a5cbb0
 +# ---------------------------------------------------------------- 設定
 +
 +PRODID = "-//aikatsu-info//aikatsu-calendar//JA"
-+BASE_URL_DEFAULT = "https://aikatsu-info.github.io/aikatsu-calendar"
-+SITE_URL_DEFAULT = "https://aikatsu-info.github.io/aikatsu-calendar/"
++
++# UID の右側に使う識別子。**URLではなく名前空間**なので、
++# 配信先ドメインが変わっても（フォーク・独自ドメイン）絶対に変えない。
++# 変えると購読者のカレンダー上で予定が重複または消失する。
++UID_DOMAIN_DEFAULT = "aikatsu-calendar.aikatsu-info.github.io"
 +
 +# aikatsu_calendar.html の var CATS と揃えること
 +CATS = {
@@ -771,7 +799,10 @@ index 0000000..6a5cbb0
 +        lines.append("\n".join(meta))
 +    if item.get("url"):
 +        lines.append(item["url"])
-+    lines.append("― アイカツ！情報カレンダー（非公式ファンメイド）\n" + site_url)
++    footer = "― アイカツ！情報カレンダー（非公式ファンメイド）"
++    if site_url:
++        footer += "\n" + site_url
++    lines.append(footer)
 +    return "\n\n".join(lines)
 +
 +
@@ -907,19 +938,21 @@ index 0000000..6a5cbb0
 +    ap = argparse.ArgumentParser(description="data/items.json から .ics を生成する")
 +    ap.add_argument("--input", default="data/items.json")
 +    ap.add_argument("--outdir", default="calendar")
-+    ap.add_argument("--base-url", default=BASE_URL_DEFAULT,
-+                    help="配信先のベースURL（feeds.json のURL生成に使う）")
-+    ap.add_argument("--site-url", default=SITE_URL_DEFAULT,
-+                    help="DESCRIPTION 末尾に入れるサイトURL")
-+    ap.add_argument("--uid-domain", default="aikatsu-calendar.aikatsu-info.github.io",
-+                    help="UID の右側に使うドメイン。一度決めたら変更しないこと")
++    ap.add_argument("--base-url", default=None,
++                    help="出力先ディレクトリの公開URL（例 https://<owner>.github.io/<repo>/calendar）。"
++                         "省略すると feeds.json のURLは相対パスになり、SOURCE は出力しない")
++    ap.add_argument("--site-url", default=None,
++                    help="DESCRIPTION 末尾に入れるサイトURL。省略すると入れない")
++    ap.add_argument("--uid-domain", default=UID_DOMAIN_DEFAULT,
++                    help="UID の右側に使う名前空間。配信先が変わっても変更しないこと")
 +    ap.add_argument("--undated", choices=["skip", "published"], default="skip",
 +                    help="eventDate も recur も無い項目の扱い（既定: skip）")
 +    ap.add_argument("--today", default=None, help="基準日 YYYY-MM-DD（テスト用）")
 +    opts = ap.parse_args(argv)
 +
 +    opts.today = parse_iso_date(opts.today) or dt.date.today()
-+    opts.base_url = opts.base_url.rstrip("/")
++    if opts.base_url:
++        opts.base_url = opts.base_url.rstrip("/")
 +
 +    with open(opts.input, encoding="utf-8") as f:
 +        items = json.load(f)
@@ -933,7 +966,7 @@ index 0000000..6a5cbb0
 +    feeds_meta = []
 +    for slug, name, desc, filt in FEEDS:
 +        subset = [it for it in items if filt(it)]
-+        feed_url = "%s/%s/%s.ics" % (opts.base_url, os.path.basename(opts.outdir), slug)
++        feed_url = ("%s/%s.ics" % (opts.base_url, slug)) if opts.base_url else None
 +        text = build_calendar(subset, name, desc, opts, dtstamp, feed_url)
 +        path = os.path.join(opts.outdir, slug + ".ics")
 +        with open(path, "w", encoding="utf-8", newline="") as f:
@@ -942,7 +975,7 @@ index 0000000..6a5cbb0
 +        feeds_meta.append({
 +            "slug": slug, "name": name, "description": desc,
 +            "file": slug + ".ics",
-+            "url": feed_url,
++            "url": feed_url or (slug + ".ics"),   # base-url 未指定なら feeds.json からの相対
 +            "items": len(subset), "events": n_events,
 +        })
 +        print("%-28s items=%-4d events=%-4d %s" % (slug, len(subset), n_events, path))
@@ -1096,10 +1129,10 @@ index 0000000..461cce6
 +    sys.exit(main())
 diff --git a/web/subscribe-demo.html b/web/subscribe-demo.html
 new file mode 100644
-index 0000000..a9adfa0
+index 0000000..ba83739
 --- /dev/null
 +++ b/web/subscribe-demo.html
-@@ -0,0 +1,366 @@
+@@ -0,0 +1,378 @@
 +<!DOCTYPE html>
 +<html lang="ja">
 +<head>
@@ -1237,7 +1270,9 @@ index 0000000..a9adfa0
 +    右上の「カレンダー購読」ボタンから、購読モーダルの挙動を確認できます。<br>
 +    本番では <code>&lt;!-- SUBSCRIBE:CSS --&gt;</code> / <code>&lt;!-- SUBSCRIBE:HTML --&gt;</code> / <code>&lt;!-- SUBSCRIBE:JS --&gt;</code>
 +    の3ブロックを <code>aikatsu_calendar.html</code> に貼り付けます（詳細は <code>docs/HANDOFF.md</code>）。<br>
-+    リンク先の .ics はまだ存在しないため、押しても 404 になります。
++    購読URLはページ自身のURLから <code>calendar/</code> を解決して作ります（ドメインは埋め込みません）。
++    <code>file://</code> で直接開くと <code>file:///…</code> のURLになるため、
++    実際のリンクを試すときは <code>python3 -m http.server</code> 越しに開いてください。
 +  </div>
 +
 +  <header class="top">
@@ -1268,7 +1303,8 @@ index 0000000..a9adfa0
 +</div>
 +
 +<!-- SUBSCRIBE:MODAL:START -->
-+<div class="sub-modal" id="subModal" role="dialog" aria-modal="true" aria-labelledby="subModalTitle" hidden>
++<div class="sub-modal" id="subModal" role="dialog" aria-modal="true" aria-labelledby="subModalTitle"
++     data-feed-base="calendar/" hidden>
 +  <div class="sub-modal-panel" id="subModalPanel">
 +    <div class="sub-modal-head">
 +      <h2 class="sub-modal-title" id="subModalTitle">カレンダーを購読する</h2>
@@ -1343,13 +1379,20 @@ index 0000000..a9adfa0
 +</div>
 +<!-- SUBSCRIBE:MODAL:END -->
 +
++<!-- デモ専用: このファイルは web/ にあるため、1つ上の calendar/ を見るように上書きする。
++     マーカー外なので本体には転記されない。 -->
++<script>
++  document.getElementById("subModal").setAttribute("data-feed-base", "../calendar/");
++</script>
++
 +<!-- SUBSCRIBE:JS:START -->
 +<script>
 +(function(){
 +  "use strict";
 +
-+  // .ics の配信先。GitHub Pages のパスに合わせる。
-+  var FEED_BASE = "https://aikatsu-info.github.io/aikatsu-calendar/calendar/";
++  // .ics の配信先。ドメインはどこにも書かない。
++  // モーダルの data-feed-base（既定 "calendar/"）をページ自身のURL基準で解決するので、
++  // 本家・フォーク・独自ドメイン・ローカルサーバのいずれでもそのまま正しい先を指す。
 +
 +  // build_ics.py の FEEDS と対応。増やす場合は両方に足すこと。
 +  var FEEDS = [
@@ -1378,6 +1421,8 @@ index 0000000..a9adfa0
 +  if(!btn || !modal) return;
 +
 +  var lastFocused = null;
++
++  var FEED_BASE = new URL(modal.getAttribute("data-feed-base") || "calendar/", location.href).href;
 +
 +  function httpsUrl(feed){ return FEED_BASE + feed.slug + ".ics"; }
 +  function webcalUrl(feed){ return httpsUrl(feed).replace(/^https?:/, "webcal:"); }
@@ -1468,10 +1513,10 @@ index 0000000..a9adfa0
 +</html>
 diff --git a/web/subscribe-snippet.html b/web/subscribe-snippet.html
 new file mode 100644
-index 0000000..a956574
+index 0000000..4962a14
 --- /dev/null
 +++ b/web/subscribe-snippet.html
-@@ -0,0 +1,297 @@
+@@ -0,0 +1,301 @@
 +<!--
 +  aikatsu_calendar.html への貼り付け用スニペット
 +  （web/subscribe-demo.html から tools/extract_snippet.py で自動生成）
@@ -1575,7 +1620,8 @@ index 0000000..a956574
 +    </button>
 +
 +<!-- ===== [MODAL] <div class="page"> を閉じた直後（</body> の手前）に貼る ===== -->
-+<div class="sub-modal" id="subModal" role="dialog" aria-modal="true" aria-labelledby="subModalTitle" hidden>
++<div class="sub-modal" id="subModal" role="dialog" aria-modal="true" aria-labelledby="subModalTitle"
++     data-feed-base="calendar/" hidden>
 +  <div class="sub-modal-panel" id="subModalPanel">
 +    <div class="sub-modal-head">
 +      <h2 class="sub-modal-title" id="subModalTitle">カレンダーを購読する</h2>
@@ -1654,8 +1700,9 @@ index 0000000..a956574
 +(function(){
 +  "use strict";
 +
-+  // .ics の配信先。GitHub Pages のパスに合わせる。
-+  var FEED_BASE = "https://aikatsu-info.github.io/aikatsu-calendar/calendar/";
++  // .ics の配信先。ドメインはどこにも書かない。
++  // モーダルの data-feed-base（既定 "calendar/"）をページ自身のURL基準で解決するので、
++  // 本家・フォーク・独自ドメイン・ローカルサーバのいずれでもそのまま正しい先を指す。
 +
 +  // build_ics.py の FEEDS と対応。増やす場合は両方に足すこと。
 +  var FEEDS = [
@@ -1684,6 +1731,8 @@ index 0000000..a956574
 +  if(!btn || !modal) return;
 +
 +  var lastFocused = null;
++
++  var FEED_BASE = new URL(modal.getAttribute("data-feed-base") || "calendar/", location.href).href;
 +
 +  function httpsUrl(feed){ return FEED_BASE + feed.slug + ".ics"; }
 +  function webcalUrl(feed){ return httpsUrl(feed).replace(/^https?:/, "webcal:"); }

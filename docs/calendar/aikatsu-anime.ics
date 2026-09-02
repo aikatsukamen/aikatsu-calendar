@@ -8,7 +8,7 @@ X-WR-CALDESC:アニメ・映像関連の予定
 X-WR-TIMEZONE:Asia/Tokyo
 REFRESH-INTERVAL;VALUE=DURATION:PT6H
 X-PUBLISHED-TTL:PT6H
-SOURCE;VALUE=URI:https://aikatsu-info.github.io/aikatsu-calendar/calendar/a
+SOURCE;VALUE=URI:https://aikatsukamen.github.io/aikatsu-calendar/calendar/a
  ikatsu-anime.ics
 BEGIN:VEVENT
 UID:20260120-01@aikatsu-calendar.aikatsu-info.github.io
@@ -24,7 +24,7 @@ DESCRIPTION:『アイカツ！10th STORY ～未来へのSTARWAY～』のア
  限定上映\n情報公開日: 2026-01-20\n情報源: アイカツ！ポ
  ータル\n\nhttps://www.aikatsu.net/portal/topics/topics.php?id=23070\n\n
  ― アイカツ！情報カレンダー（非公式ファンメイド）\
- nhttps://aikatsu-info.github.io/aikatsu-calendar/
+ nhttps://aikatsukamen.github.io/aikatsu-calendar/
 URL:https://www.aikatsu.net/portal/topics/topics.php?id=23070
 CATEGORIES:アニメ・映像
 LAST-MODIFIED:20260729T000000Z
@@ -44,7 +44,7 @@ DESCRIPTION:『アイカツ！アンコール』の稼働にあわせ、テ
  日程表記: 2026年秋 放送開始予定\n情報公開日: 2026-05-01\n
  情報源: eeo Media\n\nhttps://eeo.today/media/2026/05/01/342087/\n\n― 
  アイカツ！情報カレンダー（非公式ファンメイド）\nhtt
- ps://aikatsu-info.github.io/aikatsu-calendar/
+ ps://aikatsukamen.github.io/aikatsu-calendar/
 URL:https://eeo.today/media/2026/05/01/342087/
 CATEGORIES:アニメ・映像
 LAST-MODIFIED:20260725T000000Z
@@ -64,7 +64,7 @@ DESCRIPTION:本来7月28日にプレミア公開予定だった『アイカ
  ニメ・映像\n日程表記: 8月4日(火)に延期\n情報公開日: 20
  26-07-28\n情報源: X @aikatsu_anime\n\nhttps://x.com/aikatsu_anime\n\n
  ― アイカツ！情報カレンダー（非公式ファンメイド）\
- nhttps://aikatsu-info.github.io/aikatsu-calendar/
+ nhttps://aikatsukamen.github.io/aikatsu-calendar/
 URL:https://x.com/aikatsu_anime
 CATEGORIES:アニメ・映像
 LAST-MODIFIED:20260731T000000Z
@@ -85,7 +85,7 @@ DESCRIPTION:『アイカツ！』シリーズと『プリパラ』の10周
  像\n日程表記: 2025年10月10日(金) 全国公開\n情報公開日: 2
  025-10-10\n情報源: アイカツ！×プリパラ THE MOVIE 公式サイ
  ト\n\nhttps://aikatsu-pripara-10movie.jp/\n\n― アイカツ！情報カ
- レンダー（非公式ファンメイド）\nhttps://aikatsu-info.github
+ レンダー（非公式ファンメイド）\nhttps://aikatsukamen.github
  .io/aikatsu-calendar/
 URL:https://aikatsu-pripara-10movie.jp/
 CATEGORIES:アニメ・映像
@@ -107,7 +107,7 @@ DESCRIPTION:TVアニメ『アイカツ！』のアンコール放送が2026
  程表記: 10月9日(金) 18:25〜 放送開始（テレビ東京系6局
  ネット）\n情報公開日: 2026-09-01\n情報源: gamebiz\n\nhttps://g
  amebiz.jp/news/432026\n\n― アイカツ！情報カレンダー（非公
- 式ファンメイド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+ 式ファンメイド）\nhttps://aikatsukamen.github.io/aikatsu-calendar/
 URL:https://gamebiz.jp/news/432026
 CATEGORIES:アニメ・映像
 LAST-MODIFIED:20260901T000000Z

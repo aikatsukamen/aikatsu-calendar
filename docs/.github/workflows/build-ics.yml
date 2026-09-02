@@ -42,8 +42,17 @@ jobs:
       - name: Check items.json / HTML sync
         run: python3 tools/check_sync.py --html aikatsu_calendar.html --json data/items.json
 
+      # 配信URL（feeds.json と SOURCE プロパティ）はリポジトリから組み立てるので、
+      # フォークでもそのまま正しい値になる。
+      # UID のドメインは意図的に固定（--uid-domain の既定値）。フォークで変えないこと。
       - name: Build .ics
-        run: python3 tools/build_ics.py --input data/items.json --outdir calendar
+        run: |
+          OWNER=$(echo "${{ github.repository_owner }}" | tr 'A-Z' 'a-z')
+          REPO="${{ github.event.repository.name }}"
+          BASE="https://$OWNER.github.io/$REPO"
+          python3 tools/build_ics.py \
+            --input data/items.json --outdir calendar \
+            --base-url "$BASE/calendar" --site-url "$BASE/"
 
       - name: Commit if changed
         run: |

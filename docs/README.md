@@ -9,17 +9,20 @@
 サイト右上の「カレンダー購読」ボタンから、お使いのカレンダーアプリに追加できます。
 URLを直接登録することもできます。
 
-| 内容 | 購読URL |
+| 内容 | 購読URL（`<サイトのURL>` は上記サイトのURL） |
 |---|---|
-| すべて | https://aikatsu-info.github.io/aikatsu-calendar/calendar/aikatsu-all.ics |
-| 誕生日・周年を除く | https://aikatsu-info.github.io/aikatsu-calendar/calendar/aikatsu-nobirthday.ics |
-| イベント | https://aikatsu-info.github.io/aikatsu-calendar/calendar/aikatsu-event.ics |
-| グッズ | https://aikatsu-info.github.io/aikatsu-calendar/calendar/aikatsu-goods.ics |
-| アニメ・映像 | https://aikatsu-info.github.io/aikatsu-calendar/calendar/aikatsu-anime.ics |
-| アイカツ！アンコール | https://aikatsu-info.github.io/aikatsu-calendar/calendar/aikatsu-game.ics |
-| 配信 | https://aikatsu-info.github.io/aikatsu-calendar/calendar/aikatsu-stream.ics |
-| 誕生日 | https://aikatsu-info.github.io/aikatsu-calendar/calendar/aikatsu-birthday.ics |
-| 周年 | https://aikatsu-info.github.io/aikatsu-calendar/calendar/aikatsu-anniversary.ics |
+| すべて | `<サイトのURL>/calendar/aikatsu-all.ics` |
+| 誕生日・周年を除く | `<サイトのURL>/calendar/aikatsu-nobirthday.ics` |
+| イベント | `<サイトのURL>/calendar/aikatsu-event.ics` |
+| グッズ | `<サイトのURL>/calendar/aikatsu-goods.ics` |
+| アニメ・映像 | `<サイトのURL>/calendar/aikatsu-anime.ics` |
+| アイカツ！アンコール | `<サイトのURL>/calendar/aikatsu-game.ics` |
+| 配信 | `<サイトのURL>/calendar/aikatsu-stream.ics` |
+| 誕生日 | `<サイトのURL>/calendar/aikatsu-birthday.ics` |
+| 周年 | `<サイトのURL>/calendar/aikatsu-anniversary.ics` |
+
+正確なURLはサイト上の「カレンダー購読」モーダルに表示されます（コピーボタンつき）。
+配信中のフィード一覧は `calendar/feeds.json` にもあります。
 
 - 更新の反映には数時間かかることがあります（カレンダーアプリ側の取得間隔によります）。
 - 日付が未定の情報は .ics には含まれません。サイトの「日程未定のトピックス」でご確認ください。

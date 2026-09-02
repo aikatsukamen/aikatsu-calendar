@@ -8,7 +8,7 @@ X-WR-CALDESC:ライブ・上映会・POP UP SHOP などのイベント
 X-WR-TIMEZONE:Asia/Tokyo
 REFRESH-INTERVAL;VALUE=DURATION:PT6H
 X-PUBLISHED-TTL:PT6H
-SOURCE;VALUE=URI:https://aikatsu-info.github.io/aikatsu-calendar/calendar/a
+SOURCE;VALUE=URI:https://aikatsukamen.github.io/aikatsu-calendar/calendar/a
  ikatsu-event.ics
 BEGIN:VEVENT
 UID:20260726-12@aikatsu-calendar.aikatsu-info.github.io
@@ -23,7 +23,7 @@ DESCRIPTION:アイカツ！オフィシャルストアにて、アトレ秋
  開日: 2026-01-23\n情報源: アイカツ！オフィシャルストア\
  n\nhttps://bandainamco-am.co.jp/official_shop/aikatsu/topics/20260123_1.ht
  ml\n\n― アイカツ！情報カレンダー（非公式ファンメイ
- ド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+ ド）\nhttps://aikatsukamen.github.io/aikatsu-calendar/
 URL:https://bandainamco-am.co.jp/official_shop/aikatsu/topics/20260123_1.ht
  ml
 CATEGORIES:イベント
@@ -45,7 +45,7 @@ DESCRIPTION:「アイカツ！シリーズ」オーケストラコンサー
  リフォニーホール\n情報公開日: 2026-03-13\n情報源: アイ
  カツ！ポータル\n\nhttps://www.aikatsu.net/portal/topics/topics.php?
  id=23263\n\n― アイカツ！情報カレンダー（非公式ファン
- メイド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+ メイド）\nhttps://aikatsukamen.github.io/aikatsu-calendar/
 URL:https://www.aikatsu.net/portal/topics/topics.php?id=23263
 CATEGORIES:イベント
 LAST-MODIFIED:20260729T000000Z
@@ -65,7 +65,7 @@ DESCRIPTION:「ALL AIKATSU！ BAND LIVE ～LEGGENDA VOCE～」が2026年6
  国立大ホール\n情報公開日: 2026-03-21\n情報源: アイカツ
  ！ポータル\n\nhttps://www.aikatsu.net/portal/topics/topics.php?id=233
  27\n\n― アイカツ！情報カレンダー（非公式ファンメイ
- ド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+ ド）\nhttps://aikatsukamen.github.io/aikatsu-calendar/
 URL:https://www.aikatsu.net/portal/topics/topics.php?id=23327
 CATEGORIES:イベント
 LAST-MODIFIED:20260729T000000Z
@@ -85,7 +85,7 @@ DESCRIPTION:『オケカツ！』2026 -Anniversary Baton-の特典付きS
  程表記: 2026年4月4日 チケット一般発売\n情報公開日: 2026
  -04-02\n情報源: アイカツ！ポータル\n\nhttps://www.aikatsu.net/
  portal/topics/topics.php?id=23439\n\n― アイカツ！情報カレンダ
- ー（非公式ファンメイド）\nhttps://aikatsu-info.github.io/aikat
+ ー（非公式ファンメイド）\nhttps://aikatsukamen.github.io/aikat
  su-calendar/
 URL:https://www.aikatsu.net/portal/topics/topics.php?id=23439
 CATEGORIES:イベント
@@ -106,7 +106,7 @@ DESCRIPTION:「ALL AIKATSU！ BAND LIVE ～LEGGENDA VOCE～」に「アイ
  ント\n日程表記: 2026年5月2日 チケット一般発売\n情報公
  開日: 2026-04-25\n情報源: アイカツ！ポータル\n\nhttps://www.
  aikatsu.net/portal/topics/topics.php?id=23525\n\n― アイカツ！情報
- カレンダー（非公式ファンメイド）\nhttps://aikatsu-info.git
+ カレンダー（非公式ファンメイド）\nhttps://aikatsukamen.git
  hub.io/aikatsu-calendar/
 URL:https://www.aikatsu.net/portal/topics/topics.php?id=23525
 CATEGORIES:イベント
@@ -126,7 +126,7 @@ DESCRIPTION:『オケカツ！』2026 -Anniversary Baton-の当日引換券
  年4月30日 当日引換券販売開始\n情報公開日: 2026-04-28\n情
  報源: アイカツ！ポータル\n\nhttps://www.aikatsu.net/portal/topi
  cs/topics.php?id=23535\n\n― アイカツ！情報カレンダー（非
- 公式ファンメイド）\nhttps://aikatsu-info.github.io/aikatsu-calend
+ 公式ファンメイド）\nhttps://aikatsukamen.github.io/aikatsu-calend
  ar/
 URL:https://www.aikatsu.net/portal/topics/topics.php?id=23535
 CATEGORIES:イベント
@@ -147,7 +147,7 @@ DESCRIPTION:「ALL AIKATSU！ BAND LIVE ～LEGGENDA VOCE～」のライブ
  販売開始\n情報公開日: 2026-05-03\n情報源: アイカツ！ポ
  ータル\n\nhttps://www.aikatsu.net/portal/topics/topics.php?id=23568\n\n
  ― アイカツ！情報カレンダー（非公式ファンメイド）\
- nhttps://aikatsu-info.github.io/aikatsu-calendar/
+ nhttps://aikatsukamen.github.io/aikatsu-calendar/
 URL:https://www.aikatsu.net/portal/topics/topics.php?id=23568
 CATEGORIES:イベント
 LAST-MODIFIED:20260729T000000Z
@@ -167,7 +167,7 @@ DESCRIPTION:「ALL AIKATSU！ BAND LIVE ～LEGGENDA VOCE～」6月7日公
  演に関する注意事項\n情報公開日: 2026-05-22\n情報源: ア
  イカツ！ポータル\n\nhttps://www.aikatsu.net/portal/topics/topics.p
  hp?id=23615\n\n― アイカツ！情報カレンダー（非公式ファ
- ンメイド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+ ンメイド）\nhttps://aikatsukamen.github.io/aikatsu-calendar/
 URL:https://www.aikatsu.net/portal/topics/topics.php?id=23615
 CATEGORIES:イベント
 LAST-MODIFIED:20260729T000000Z
@@ -186,7 +186,7 @@ DESCRIPTION:アイカツアカデミー！の2周年を記念した配信
  程表記: 7月18日(土) 開催\n情報公開日: 2026-07-06\n情報源: 
  アイカツ！ポータル\n\nhttps://www.aikatsu.net/portal/topics/topic
  s.php?id=23850\n\n― アイカツ！情報カレンダー（非公式フ
- ァンメイド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+ ァンメイド）\nhttps://aikatsukamen.github.io/aikatsu-calendar/
 URL:https://www.aikatsu.net/portal/topics/topics.php?id=23850
 CATEGORIES:イベント
 LAST-MODIFIED:20260725T000000Z
@@ -205,7 +205,7 @@ DESCRIPTION:『劇場版アイカツスターズ！』-Anniversary Stars-
  開催\n情報公開日: 2026-07-06\n情報源: アイカツ！ポータ
  ル\n\nhttps://www.aikatsu.net/portal/topics/topics.php?id=23844\n\n― 
  アイカツ！情報カレンダー（非公式ファンメイド）\nhtt
- ps://aikatsu-info.github.io/aikatsu-calendar/
+ ps://aikatsukamen.github.io/aikatsu-calendar/
 URL:https://www.aikatsu.net/portal/topics/topics.php?id=23844
 CATEGORIES:イベント
 LAST-MODIFIED:20260725T000000Z
@@ -228,7 +228,7 @@ DESCRIPTION:全国5会場を巡回するイベント「ちゃお ぎゅぎ
   7月19日(日) イオンモール今治新都市（愛媛県）\n情報
  公開日: 2026-07-12\n情報源: X @aikatsu_dcd\n\nhttps://x.com/aikatsu_
  dcd\n\n― アイカツ！情報カレンダー（非公式ファンメイ
- ド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+ ド）\nhttps://aikatsukamen.github.io/aikatsu-calendar/
 URL:https://x.com/aikatsu_dcd
 CATEGORIES:イベント
 LAST-MODIFIED:20260725T000000Z
@@ -249,7 +249,7 @@ DESCRIPTION:全国5会場を巡回するイベント「ちゃお ぎゅぎ
  表記: 7月26日(日) イオンモール大牟田（福岡県）\n情報
  公開日: 2026-07-12\n情報源: X @aikatsu_dcd\n\nhttps://x.com/aikatsu_
  dcd\n\n― アイカツ！情報カレンダー（非公式ファンメイ
- ド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+ ド）\nhttps://aikatsukamen.github.io/aikatsu-calendar/
 URL:https://x.com/aikatsu_dcd
 CATEGORIES:イベント
 LAST-MODIFIED:20260725T000000Z
@@ -272,7 +272,7 @@ DESCRIPTION:全国5会場を巡回するイベント「ちゃお ぎゅぎ
  表記: 8月9日(日) イオンモール堺鉄砲町（大阪府）\n情
  報公開日: 2026-07-12\n情報源: X @aikatsu_dcd\n\nhttps://x.com/aikat
  su_dcd\n\n― アイカツ！情報カレンダー（非公式ファンメ
- イド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+ イド）\nhttps://aikatsukamen.github.io/aikatsu-calendar/
 URL:https://x.com/aikatsu_dcd
 CATEGORIES:イベント
 LAST-MODIFIED:20260725T000000Z
@@ -295,7 +295,7 @@ DESCRIPTION:全国5会場を巡回するイベント「ちゃお ぎゅぎ
  表記: 8月16日(日) イオンモール常滑（愛知県）\n情報公
  開日: 2026-07-12\n情報源: X @aikatsu_dcd\n\nhttps://x.com/aikatsu_dcd
  \n\n― アイカツ！情報カレンダー（非公式ファンメイド
- ）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+ ）\nhttps://aikatsukamen.github.io/aikatsu-calendar/
 URL:https://x.com/aikatsu_dcd
 CATEGORIES:イベント
 LAST-MODIFIED:20260725T000000Z
@@ -318,7 +318,7 @@ DESCRIPTION:全国5会場を巡回するイベント「ちゃお ぎゅぎ
  ベント\n日程表記: 8月23日(日) イオンモール名取（宮城
  県）\n情報公開日: 2026-07-12\n情報源: X @aikatsu_dcd\n\nhttps://
  x.com/aikatsu_dcd\n\n― アイカツ！情報カレンダー（非公式
- ファンメイド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+ ファンメイド）\nhttps://aikatsukamen.github.io/aikatsu-calendar/
 URL:https://x.com/aikatsu_dcd
 CATEGORIES:イベント
 LAST-MODIFIED:20260725T000000Z
@@ -336,8 +336,8 @@ DESCRIPTION:T・ジョイPRINCE品川にて、7月21日・23日に舞台挨
  ベント\n日程表記: 7月21日・23日 T・ジョイPRINCE品川\n情
  報公開日: 2026-07-14\n情報源: アイカツ！ポータル\n\nhttps:
  //www.aikatsu.net/portal/topics/topics.php?id=23886\n\n― アイカツ！
- 情報カレンダー（非公式ファンメイド）\nhttps://aikatsu-in
- fo.github.io/aikatsu-calendar/
+ 情報カレンダー（非公式ファンメイド）\nhttps://aikatsukam
+ en.github.io/aikatsu-calendar/
 URL:https://www.aikatsu.net/portal/topics/topics.php?id=23886
 CATEGORIES:イベント
 LAST-MODIFIED:20260725T000000Z
@@ -358,7 +358,7 @@ DESCRIPTION:2周年記念ライブが開催され、当日のセットリ
  す。\n\n区分: イベント\n日程表記: 7月18日 開催\n情報公
  開日: 2026-07-18\n情報源: X @aikatsu_acad\n\nhttps://x.com/aikatsu_ac
  ad\n\n― アイカツ！情報カレンダー（非公式ファンメイ
- ド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+ ド）\nhttps://aikatsukamen.github.io/aikatsu-calendar/
 URL:https://x.com/aikatsu_acad
 CATEGORIES:イベント
 LAST-MODIFIED:20260725T000000Z
@@ -380,7 +380,7 @@ DESCRIPTION:各劇場で7/22・23に上映終了。T・ジョイPRINCE品
  月22日・23日 各劇場で上映終了\n情報公開日: 2026-07-23\n
  情報源: X @aikatsu_anime\n\nhttps://x.com/aikatsu_anime\n\n― アイ
  カツ！情報カレンダー（非公式ファンメイド）\nhttps://a
- ikatsu-info.github.io/aikatsu-calendar/
+ ikatsukamen.github.io/aikatsu-calendar/
 URL:https://x.com/aikatsu_anime
 CATEGORIES:イベント
 LAST-MODIFIED:20260725T000000Z
@@ -400,7 +400,7 @@ DESCRIPTION:台北・統一時代百貨で開催のイベント。物販エ
  ) 開催開始（〜8月9日、統一時代百貨台北店・台湾）\n
  情報公開日: 2026-07-24\n情報源: X @aikatsu_style\n\nhttps://x.com/
  aikatsu_style/status/2080484523654185038\n\n― アイカツ！情報カ
- レンダー（非公式ファンメイド）\nhttps://aikatsu-info.github
+ レンダー（非公式ファンメイド）\nhttps://aikatsukamen.github
  .io/aikatsu-calendar/
 URL:https://x.com/aikatsu_style/status/2080484523654185038
 CATEGORIES:イベント
@@ -422,7 +422,7 @@ DESCRIPTION:北海道・サッポロファクトリーでのPOP UP SHOP「#
  サッポロファクトリー（北海道）\n情報公開日: 2026-07-25
  \n情報源: X @aikatsu_style\n\nhttps://x.com/aikatsu_style/status/206307
  1329755234562\n\n― アイカツ！情報カレンダー（非公式フ
- ァンメイド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+ ァンメイド）\nhttps://aikatsukamen.github.io/aikatsu-calendar/
 URL:https://x.com/aikatsu_style/status/2063071329755234562
 CATEGORIES:イベント
 LAST-MODIFIED:20260725T000000Z
@@ -441,7 +441,7 @@ DESCRIPTION:北海道・サッポロファクトリーにて、アイカツ
  イベント\n日程表記: 8月1日〜9日 サッポロファクトリー
  （北海道）\n情報公開日: 2026-07-25\n情報源: X @aikatsu_style\
  n\nhttps://x.com/aikatsu_style\n\n― アイカツ！情報カレンダー
- （非公式ファンメイド）\nhttps://aikatsu-info.github.io/aikatsu-
+ （非公式ファンメイド）\nhttps://aikatsukamen.github.io/aikatsu-
  calendar/
 URL:https://x.com/aikatsu_style
 CATEGORIES:イベント
@@ -462,7 +462,7 @@ DESCRIPTION:映画公開を記念した『アイカツ！』×『プリパ
  月21日(土) 16:00開場/17:00開演\n情報公開日: 2025-09-17\n情報
  源: アイカツ！×プリパラ THE MOVIE 公式サイト\n\nhttps://ai
  katsu-pripara-10movie.jp/\n\n― アイカツ！情報カレンダー（
- 非公式ファンメイド）\nhttps://aikatsu-info.github.io/aikatsu-cal
+ 非公式ファンメイド）\nhttps://aikatsukamen.github.io/aikatsu-cal
  endar/
 URL:https://aikatsu-pripara-10movie.jp/
 CATEGORIES:イベント
@@ -483,7 +483,7 @@ DESCRIPTION:描き下ろしコラボビジュアルによるコラボカフ
  、スイーツパラダイス上野マルイ店）\n情報源: アイカ
  ツ！×プリパラ THE MOVIE 公式サイト\n\nhttps://aikatsu-pripara-
  10movie.jp/goods/\n\n― アイカツ！情報カレンダー（非公式
- ファンメイド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+ ファンメイド）\nhttps://aikatsukamen.github.io/aikatsu-calendar/
 URL:https://aikatsu-pripara-10movie.jp/goods/
 CATEGORIES:イベント
 LAST-MODIFIED:20260801T000000Z
@@ -502,7 +502,7 @@ DESCRIPTION:上野マルイ店に続き京都のテイクアウト店舗で
  開催開始（〜9月30日、CAFE STAND KYOTO SWEETS PARADISE）\n情報
  源: アイカツ！×プリパラ THE MOVIE 公式サイト\n\nhttps://ai
  katsu-pripara-10movie.jp/goods/\n\n― アイカツ！情報カレンダ
- ー（非公式ファンメイド）\nhttps://aikatsu-info.github.io/aikat
+ ー（非公式ファンメイド）\nhttps://aikatsukamen.github.io/aikat
  su-calendar/
 URL:https://aikatsu-pripara-10movie.jp/goods/
 CATEGORIES:イベント
@@ -522,7 +522,7 @@ DESCRIPTION:『ひみつのアイプリ リング４だん』で、あか
  程表記: 10月2日(木)〜順次スタート\n情報源: アイカツ！
  ×プリパラ THE MOVIE 公式サイト\n\nhttps://aikatsu-pripara-10movi
  e.jp/goods/\n\n― アイカツ！情報カレンダー（非公式ファ
- ンメイド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+ ンメイド）\nhttps://aikatsukamen.github.io/aikatsu-calendar/
 URL:https://aikatsu-pripara-10movie.jp/goods/
 CATEGORIES:イベント
 LAST-MODIFIED:20260801T000000Z
@@ -543,7 +543,7 @@ DESCRIPTION:新規描き起こしのオリジナルミニキャライラス
  販は9/24から先行開始）\n情報源: アイカツ！×プリパラ 
  THE MOVIE 公式サイト\n\nhttps://aikatsu-pripara-10movie.jp/goods/\n\n
  ― アイカツ！情報カレンダー（非公式ファンメイド）\
- nhttps://aikatsu-info.github.io/aikatsu-calendar/
+ nhttps://aikatsukamen.github.io/aikatsu-calendar/
 URL:https://aikatsu-pripara-10movie.jp/goods/
 CATEGORIES:イベント
 LAST-MODIFIED:20260801T000000Z
@@ -562,7 +562,7 @@ DESCRIPTION:10月29日(水)〜11月3日(月・祝)は抽選予約(web受付
  2025年10月29日(水) 開催開始（〜11月13日、DECOTTO by animate c
  afe）\n情報源: アイカツ！×プリパラ THE MOVIE 公式サイト
  \n\nhttps://aikatsu-pripara-10movie.jp/goods/\n\n― アイカツ！情報
- カレンダー（非公式ファンメイド）\nhttps://aikatsu-info.git
+ カレンダー（非公式ファンメイド）\nhttps://aikatsukamen.git
  hub.io/aikatsu-calendar/
 URL:https://aikatsu-pripara-10movie.jp/goods/
 CATEGORIES:イベント
@@ -583,7 +583,7 @@ DESCRIPTION:謎解きイベント、秋をテーマにした紅葉コーデ
  日(水) 開催開始（〜12月4日）\n情報源: アイカツ！×プ
  リパラ THE MOVIE 公式サイト\n\nhttps://aikatsu-pripara-10movie.jp/
  goods/\n\n― アイカツ！情報カレンダー（非公式ファンメ
- イド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+ イド）\nhttps://aikatsukamen.github.io/aikatsu-calendar/
 URL:https://aikatsu-pripara-10movie.jp/goods/
 CATEGORIES:イベント
 LAST-MODIFIED:20260801T000000Z
@@ -602,7 +602,7 @@ DESCRIPTION:韓国発のセルフ写真館ブランド「Photoism」との
  ベント\n日程表記: 3月30日(月) サービス開始（〜6月7日
  ）\n情報源: アイカツ！×プリパラ THE MOVIE 公式サイト\n\
  nhttps://aikatsu-pripara-10movie.jp/goods/\n\n― アイカツ！情報カ
- レンダー（非公式ファンメイド）\nhttps://aikatsu-info.github
+ レンダー（非公式ファンメイド）\nhttps://aikatsukamen.github
  .io/aikatsu-calendar/
 URL:https://aikatsu-pripara-10movie.jp/goods/
 CATEGORIES:イベント
@@ -623,7 +623,7 @@ DESCRIPTION:映画公開を記念した『アイカツ！』×『プリパ
  情報公開日: 2025-09-17\n情報源: アイカツ！×プリパラ THE 
  MOVIE 公式サイト\n\nhttps://aikatsu-pripara-10movie.jp/\n\n― アイ
  カツ！情報カレンダー（非公式ファンメイド）\nhttps://a
- ikatsu-info.github.io/aikatsu-calendar/
+ ikatsukamen.github.io/aikatsu-calendar/
 URL:https://aikatsu-pripara-10movie.jp/
 CATEGORIES:イベント
 LAST-MODIFIED:20260801T000000Z
@@ -644,7 +644,7 @@ DESCRIPTION:「歩み」をコンセプトにした新規描き下ろしイ
  日(金) 開催開始（〜5月24日、池袋・梅田・栄ロフト）\n
  情報源: AMNIBUS\n\nhttps://event.amnibus.com/aikatsu-loft/\n\n― ア
  イカツ！情報カレンダー（非公式ファンメイド）\nhttps:
- //aikatsu-info.github.io/aikatsu-calendar/
+ //aikatsukamen.github.io/aikatsu-calendar/
 URL:https://event.amnibus.com/aikatsu-loft/
 CATEGORIES:イベント
 LAST-MODIFIED:20260802T000000Z
@@ -667,7 +667,7 @@ DESCRIPTION:対象のキャンディー菓子を1度に3個購入すると
  ンにて開催\n情報公開日: 2026-02-18\n情報源: インサイド\n
  \nhttps://www.inside-games.jp/article/2026/02/18/177510.html\n\n― アイ
  カツ！情報カレンダー（非公式ファンメイド）\nhttps://a
- ikatsu-info.github.io/aikatsu-calendar/
+ ikatsukamen.github.io/aikatsu-calendar/
 URL:https://www.inside-games.jp/article/2026/02/18/177510.html
 CATEGORIES:イベント
 LAST-MODIFIED:20260805T000000Z
@@ -687,7 +687,7 @@ DESCRIPTION:台北・統一時代百貨で開催のイベント。物販エ
   開催終了（統一時代百貨台北店・台湾）\n情報公開日: 
  2026-07-24\n情報源: X @aikatsu_style\n\nhttps://x.com/aikatsu_style/sta
  tus/2080484523654185038\n\n― アイカツ！情報カレンダー（非
- 公式ファンメイド）\nhttps://aikatsu-info.github.io/aikatsu-calend
+ 公式ファンメイド）\nhttps://aikatsukamen.github.io/aikatsu-calend
  ar/
 URL:https://x.com/aikatsu_style/status/2080484523654185038
 CATEGORIES:イベント
@@ -708,7 +708,7 @@ DESCRIPTION:描き下ろしコラボビジュアルによるコラボカフ
  パラダイス上野マルイ店）\n情報源: アイカツ！×プリ
  パラ THE MOVIE 公式サイト\n\nhttps://aikatsu-pripara-10movie.jp/goo
  ds/\n\n― アイカツ！情報カレンダー（非公式ファンメイ
- ド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+ ド）\nhttps://aikatsukamen.github.io/aikatsu-calendar/
 URL:https://aikatsu-pripara-10movie.jp/goods/
 CATEGORIES:イベント
 LAST-MODIFIED:20260803T000000Z
@@ -727,7 +727,7 @@ DESCRIPTION:上野マルイ店に続き京都のテイクアウト店舗で
  開催終了（CAFE STAND KYOTO SWEETS PARADISE）\n情報源: アイカ
  ツ！×プリパラ THE MOVIE 公式サイト\n\nhttps://aikatsu-pripara-
  10movie.jp/goods/\n\n― アイカツ！情報カレンダー（非公式
- ファンメイド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+ ファンメイド）\nhttps://aikatsukamen.github.io/aikatsu-calendar/
 URL:https://aikatsu-pripara-10movie.jp/goods/
 CATEGORIES:イベント
 LAST-MODIFIED:20260803T000000Z
@@ -747,7 +747,7 @@ DESCRIPTION:新規描き起こしのオリジナルミニキャライラス
  日(火) 開催終了（店舗・通販とも）\n情報源: アイカツ
  ！×プリパラ THE MOVIE 公式サイト\n\nhttps://aikatsu-pripara-10m
  ovie.jp/goods/\n\n― アイカツ！情報カレンダー（非公式フ
- ァンメイド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+ ァンメイド）\nhttps://aikatsukamen.github.io/aikatsu-calendar/
 URL:https://aikatsu-pripara-10movie.jp/goods/
 CATEGORIES:イベント
 LAST-MODIFIED:20260803T000000Z
@@ -766,7 +766,7 @@ DESCRIPTION:10月29日(水)〜11月3日(月・祝)は抽選予約(web受付
  2025年11月13日(木) 開催終了（DECOTTO by animate cafe）\n情報
  源: アイカツ！×プリパラ THE MOVIE 公式サイト\n\nhttps://ai
  katsu-pripara-10movie.jp/goods/\n\n― アイカツ！情報カレンダ
- ー（非公式ファンメイド）\nhttps://aikatsu-info.github.io/aikat
+ ー（非公式ファンメイド）\nhttps://aikatsukamen.github.io/aikat
  su-calendar/
 URL:https://aikatsu-pripara-10movie.jp/goods/
 CATEGORIES:イベント
@@ -787,7 +787,7 @@ DESCRIPTION:謎解きイベント、秋をテーマにした紅葉コーデ
  日(木) 開催終了\n情報源: アイカツ！×プリパラ THE MOVIE 
  公式サイト\n\nhttps://aikatsu-pripara-10movie.jp/goods/\n\n― アイ
  カツ！情報カレンダー（非公式ファンメイド）\nhttps://a
- ikatsu-info.github.io/aikatsu-calendar/
+ ikatsukamen.github.io/aikatsu-calendar/
 URL:https://aikatsu-pripara-10movie.jp/goods/
 CATEGORIES:イベント
 LAST-MODIFIED:20260803T000000Z
@@ -806,7 +806,7 @@ DESCRIPTION:韓国発のセルフ写真館ブランド「Photoism」との
  ベント\n日程表記: 6月7日(日) サービス終了\n情報源: ア
  イカツ！×プリパラ THE MOVIE 公式サイト\n\nhttps://aikatsu-pr
  ipara-10movie.jp/goods/\n\n― アイカツ！情報カレンダー（非
- 公式ファンメイド）\nhttps://aikatsu-info.github.io/aikatsu-calend
+ 公式ファンメイド）\nhttps://aikatsukamen.github.io/aikatsu-calend
  ar/
 URL:https://aikatsu-pripara-10movie.jp/goods/
 CATEGORIES:イベント
@@ -827,7 +827,7 @@ DESCRIPTION:「歩み」をコンセプトにした新規描き下ろしイ
  ）などを展開。\n\n区分: イベント\n日程表記: 2026年5月24
  日(日) 開催終了（池袋・梅田・栄ロフト）\n情報源: AMNI
  BUS\n\nhttps://event.amnibus.com/aikatsu-loft/\n\n― アイカツ！情
- 報カレンダー（非公式ファンメイド）\nhttps://aikatsu-info.
+ 報カレンダー（非公式ファンメイド）\nhttps://aikatsukamen.
  github.io/aikatsu-calendar/
 URL:https://event.amnibus.com/aikatsu-loft/
 CATEGORIES:イベント
@@ -852,7 +852,7 @@ DESCRIPTION:北海道初開催となる「アイカツ！デザインマー
  〜8月9日、サッポロファクトリー）\n情報公開日: 2026-06-
  06\n情報源: X @aikatsu_style\n\nhttps://x.com/aikatsu_style/status/2063
  071088389791933\n\n― アイカツ！情報カレンダー（非公式フ
- ァンメイド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+ ァンメイド）\nhttps://aikatsukamen.github.io/aikatsu-calendar/
 URL:https://x.com/aikatsu_style/status/2063071088389791933
 CATEGORIES:イベント
 LAST-MODIFIED:20260806T000000Z
@@ -872,7 +872,7 @@ DESCRIPTION:北海道初開催「アイカツ！デザインマートBYア
   開催終了（サッポロファクトリー）\n情報公開日: 2026-0
  6-06\n情報源: X @aikatsu_style\n\nhttps://x.com/aikatsu_style/status/20
  63071088389791933\n\n― アイカツ！情報カレンダー（非公式
- ファンメイド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+ ファンメイド）\nhttps://aikatsukamen.github.io/aikatsu-calendar/
 URL:https://x.com/aikatsu_style/status/2063071088389791933
 CATEGORIES:イベント
 LAST-MODIFIED:20260806T000000Z
@@ -893,7 +893,7 @@ DESCRIPTION:大宮マルイにて『アイカツ！』POP UP SHOPを開催
  月23日、大宮マルイ）\n情報公開日: 2026-08-09\n情報源: 大
  宮マルイ 公式サイト\n\nhttps://www.0101.co.jp/053/event/detail.ht
  ml?article_seq=143681&article_type=sto\n\n― アイカツ！情報カレ
- ンダー（非公式ファンメイド）\nhttps://aikatsu-info.github.io
+ ンダー（非公式ファンメイド）\nhttps://aikatsukamen.github.io
  /aikatsu-calendar/
 URL:https://www.0101.co.jp/053/event/detail.html?article_seq=143681&article
  _type=sto
@@ -916,7 +916,7 @@ DESCRIPTION:大宮マルイにて『アイカツ！』POP UP SHOPを開催
  マルイ）\n情報公開日: 2026-08-09\n情報源: 大宮マルイ 公
  式サイト\n\nhttps://www.0101.co.jp/053/event/detail.html?article_seq=1
  43681&article_type=sto\n\n― アイカツ！情報カレンダー（非
- 公式ファンメイド）\nhttps://aikatsu-info.github.io/aikatsu-calend
+ 公式ファンメイド）\nhttps://aikatsukamen.github.io/aikatsu-calend
  ar/
 URL:https://www.0101.co.jp/053/event/detail.html?article_seq=143681&article
  _type=sto
@@ -943,7 +943,7 @@ DESCRIPTION:全国アニメイト（通販含む）にて『アイカツ！
  \n情報公開日: 2026-04-27\n情報源: アニメイト\n\nhttps://www.a
  nimate-onlineshop.jp/contents/fair_event/detail.php?id=115252\n\n― ア
  イカツ！情報カレンダー（非公式ファンメイド）\nhttps:
- //aikatsu-info.github.io/aikatsu-calendar/
+ //aikatsukamen.github.io/aikatsu-calendar/
 URL:https://www.animate-onlineshop.jp/contents/fair_event/detail.php?id=115
  252
 CATEGORIES:イベント
@@ -964,7 +964,7 @@ DESCRIPTION:全国アニメイト（通販含む）で開催の『アイカ
  ) 開催終了（全国アニメイト・通販含む）\n情報公開日:
   2026-04-27\n情報源: アニメイト\n\nhttps://www.animate-onlineshop.
  jp/contents/fair_event/detail.php?id=115252\n\n― アイカツ！情報
- カレンダー（非公式ファンメイド）\nhttps://aikatsu-info.git
+ カレンダー（非公式ファンメイド）\nhttps://aikatsukamen.git
  hub.io/aikatsu-calendar/
 URL:https://www.animate-onlineshop.jp/contents/fair_event/detail.php?id=115
  252
@@ -989,7 +989,7 @@ DESCRIPTION:東京駅一番街 地下1階 東京キャラクターストリ
  17日(金) 開催開始（〜7月30日、東京駅一番街）\n情報公
  開日: 2026-07-17\n情報源: アニメ！アニメ！\n\nhttps://animean
  ime.jp/article/2026/07/17/101156.html\n\n― アイカツ！情報カレ
- ンダー（非公式ファンメイド）\nhttps://aikatsu-info.github.io
+ ンダー（非公式ファンメイド）\nhttps://aikatsukamen.github.io
  /aikatsu-calendar/
 URL:https://animeanime.jp/article/2026/07/17/101156.html
 CATEGORIES:イベント
@@ -1009,7 +1009,7 @@ DESCRIPTION:東京駅一番街 地下1階 東京キャラクターストリ
  了（東京駅一番街）\n情報公開日: 2026-07-17\n情報源: ア
  ニメ！アニメ！\n\nhttps://animeanime.jp/article/2026/07/17/101156.h
  tml\n\n― アイカツ！情報カレンダー（非公式ファンメイ
- ド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+ ド）\nhttps://aikatsukamen.github.io/aikatsu-calendar/
 URL:https://animeanime.jp/article/2026/07/17/101156.html
 CATEGORIES:イベント
 LAST-MODIFIED:20260810T000000Z
@@ -1035,7 +1035,7 @@ DESCRIPTION:2026年10月稼働予定のデータカードダス『アイカ
  前抽選申込開始（〜8月18日18:00）\n情報公開日: 2026-08-14\
  n情報源: X @aikatsu_dcd\n\nhttps://x.com/aikatsu_dcd\n\n― アイカ
  ツ！情報カレンダー（非公式ファンメイド）\nhttps://aika
- tsu-info.github.io/aikatsu-calendar/
+ tsukamen.github.io/aikatsu-calendar/
 URL:https://x.com/aikatsu_dcd
 CATEGORIES:イベント
 LAST-MODIFIED:20260815T000000Z
@@ -1060,7 +1060,7 @@ DESCRIPTION:2026年10月稼働予定のデータカードダス『アイカ
  名）。\n\n区分: イベント\n日程表記: 8月18日(火)18:00 事
  前抽選申込締切\n情報公開日: 2026-08-14\n情報源: X @aikatsu_
  dcd\n\nhttps://x.com/aikatsu_dcd\n\n― アイカツ！情報カレンダ
- ー（非公式ファンメイド）\nhttps://aikatsu-info.github.io/aikat
+ ー（非公式ファンメイド）\nhttps://aikatsukamen.github.io/aikat
  su-calendar/
 URL:https://x.com/aikatsu_dcd
 CATEGORIES:イベント
@@ -1086,7 +1086,7 @@ DESCRIPTION:2026年10月稼働予定のデータカードダス『アイカ
  催開始（〜8月22日、namco池袋店）\n情報公開日: 2026-08-14\
  n情報源: X @aikatsu_dcd\n\nhttps://x.com/aikatsu_dcd\n\n― アイカ
  ツ！情報カレンダー（非公式ファンメイド）\nhttps://aika
- tsu-info.github.io/aikatsu-calendar/
+ tsukamen.github.io/aikatsu-calendar/
 URL:https://x.com/aikatsu_dcd
 CATEGORIES:イベント
 LAST-MODIFIED:20260815T000000Z
@@ -1110,7 +1110,7 @@ DESCRIPTION:2026年10月稼働予定のデータカードダス『アイカ
  専用2台）。\n\n区分: イベント\n日程表記: 8月22日(土) 開
  催終了（namco池袋店）\n情報公開日: 2026-08-14\n情報源: X @
  aikatsu_dcd\n\nhttps://x.com/aikatsu_dcd\n\n― アイカツ！情報カ
- レンダー（非公式ファンメイド）\nhttps://aikatsu-info.github
+ レンダー（非公式ファンメイド）\nhttps://aikatsukamen.github
  .io/aikatsu-calendar/
 URL:https://x.com/aikatsu_dcd
 CATEGORIES:イベント
@@ -1131,7 +1131,7 @@ DESCRIPTION:横浜BUNTAIで開催される『アイカツスターズ！』
  程表記: 8月17日 チケット最速先行受付開始（チケット
  ぴあ）\n情報公開日: 2026-08-17\n情報源: X @aikatsu_anime\n\nhtt
  ps://www.aikatsu.net/portal/stars10/\n\n― アイカツ！情報カレン
- ダー（非公式ファンメイド）\nhttps://aikatsu-info.github.io/ai
+ ダー（非公式ファンメイド）\nhttps://aikatsukamen.github.io/ai
  katsu-calendar/
 URL:https://www.aikatsu.net/portal/stars10/
 CATEGORIES:イベント
@@ -1156,7 +1156,7 @@ DESCRIPTION:横浜BUNTAIにて『アイカツスターズ！』10周年記
  : 11月28日(土) 開催〈きらめき☆サタディ〉（横浜BUNTAI
  ）\n情報公開日: 2026-08-17\n情報源: X @aikatsu_anime\n\nhttps://w
  ww.aikatsu.net/portal/stars10/\n\n― アイカツ！情報カレンダー
- （非公式ファンメイド）\nhttps://aikatsu-info.github.io/aikatsu-
+ （非公式ファンメイド）\nhttps://aikatsukamen.github.io/aikatsu-
  calendar/
 URL:https://www.aikatsu.net/portal/stars10/
 CATEGORIES:イベント
@@ -1181,7 +1181,7 @@ DESCRIPTION:横浜BUNTAIにて『アイカツスターズ！』10周年記
  記: 11月29日(日) 開催〈トキメキ☆サンディ〉（横浜BUNTA
  I）\n情報公開日: 2026-08-17\n情報源: X @aikatsu_anime\n\nhttps://
  www.aikatsu.net/portal/stars10/\n\n― アイカツ！情報カレンダ
- ー（非公式ファンメイド）\nhttps://aikatsu-info.github.io/aikat
+ ー（非公式ファンメイド）\nhttps://aikatsukamen.github.io/aikat
  su-calendar/
 URL:https://www.aikatsu.net/portal/stars10/
 CATEGORIES:イベント
@@ -1205,7 +1205,7 @@ DESCRIPTION:横浜BUNTAIで開催される『アイカツスターズ！』
  ド限定）\n情報公開日: 2026-08-17\n情報源: チケットぴあ
  ／アイカツ！ポータル\n\nhttps://www.aikatsu.net/portal/stars10/\
  n\n― アイカツ！情報カレンダー（非公式ファンメイド
- ）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+ ）\nhttps://aikatsukamen.github.io/aikatsu-calendar/
 URL:https://www.aikatsu.net/portal/stars10/
 CATEGORIES:イベント
 LAST-MODIFIED:20260817T000000Z
@@ -1229,7 +1229,7 @@ DESCRIPTION:星宮いちごら9名のアイドルがサファリルック
  1月11日、東武動物公園）\n情報公開日: 2026-08-19\n情報源:
   東武動物公園公式サイト\n\nhttps://www.tobuzoo.com/event/13645.
  html\n\n― アイカツ！情報カレンダー（非公式ファンメ
- イド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+ イド）\nhttps://aikatsukamen.github.io/aikatsu-calendar/
 URL:https://www.tobuzoo.com/event/13645.html
 CATEGORIES:イベント
 LAST-MODIFIED:20260819T000000Z
@@ -1253,7 +1253,7 @@ DESCRIPTION:星宮いちごら9名のアイドルがサファリルック
  （東武動物公園）\n情報公開日: 2026-08-19\n情報源: 東武
  動物公園公式サイト\n\nhttps://www.tobuzoo.com/event/13645.html\n\
  n― アイカツ！情報カレンダー（非公式ファンメイド）
- \nhttps://aikatsu-info.github.io/aikatsu-calendar/
+ \nhttps://aikatsukamen.github.io/aikatsu-calendar/
 URL:https://www.tobuzoo.com/event/13645.html
 CATEGORIES:イベント
 LAST-MODIFIED:20260819T000000Z
@@ -1277,7 +1277,7 @@ DESCRIPTION:エンタメショップ ツリービレッジ東京店（東
  日、ツリービレッジ東京店）\n情報公開日: 2026-08-20\n情
  報源: エンタメショップ ツリービレッジ\n\nhttps://tree-vil
  lage.jp/news/014478.html\n\n― アイカツ！情報カレンダー（非
- 公式ファンメイド）\nhttps://aikatsu-info.github.io/aikatsu-calend
+ 公式ファンメイド）\nhttps://aikatsukamen.github.io/aikatsu-calend
  ar/
 URL:https://tree-village.jp/news/014478.html
 CATEGORIES:イベント
@@ -1298,7 +1298,7 @@ DESCRIPTION:エンタメショップ ツリービレッジ東京店で開
  催終了（ツリービレッジ東京店）\n情報公開日: 2026-08-20
  \n情報源: エンタメショップ ツリービレッジ\n\nhttps://tre
  e-village.jp/news/014478.html\n\n― アイカツ！情報カレンダー
- （非公式ファンメイド）\nhttps://aikatsu-info.github.io/aikatsu-
+ （非公式ファンメイド）\nhttps://aikatsukamen.github.io/aikatsu-
  calendar/
 URL:https://tree-village.jp/news/014478.html
 CATEGORIES:イベント
@@ -1321,7 +1321,7 @@ DESCRIPTION:エンタメショップ ツリービレッジ大阪店・博
  、ツリービレッジ大阪・博多店）\n情報公開日: 2026-08-20
  \n情報源: エンタメショップ ツリービレッジ\n\nhttps://tre
  e-village.jp/news/014478.html\n\n― アイカツ！情報カレンダー
- （非公式ファンメイド）\nhttps://aikatsu-info.github.io/aikatsu-
+ （非公式ファンメイド）\nhttps://aikatsukamen.github.io/aikatsu-
  calendar/
 URL:https://tree-village.jp/news/014478.html
 CATEGORIES:イベント
@@ -1343,7 +1343,7 @@ DESCRIPTION:エンタメショップ ツリービレッジ大阪店・博
  リービレッジ大阪・博多店）\n情報公開日: 2026-08-20\n情
  報源: エンタメショップ ツリービレッジ\n\nhttps://tree-vil
  lage.jp/news/014478.html\n\n― アイカツ！情報カレンダー（非
- 公式ファンメイド）\nhttps://aikatsu-info.github.io/aikatsu-calend
+ 公式ファンメイド）\nhttps://aikatsukamen.github.io/aikatsu-calend
  ar/
 URL:https://tree-village.jp/news/014478.html
 CATEGORIES:イベント
@@ -1365,7 +1365,7 @@ DESCRIPTION:VRアイドル「えのぐ」のライブイベント「大絶
  演します。\n\n区分: イベント\n日程表記: 9月5日(土) 19:00
  開演\n情報公開日: 2026-07-20\n情報源: Z-aN公式サイト\n\nhtt
  ps://www.zan-live.com/ja/live/detail/10892\n\n― アイカツ！情報カ
- レンダー（非公式ファンメイド）\nhttps://aikatsu-info.github
+ レンダー（非公式ファンメイド）\nhttps://aikatsukamen.github
  .io/aikatsu-calendar/
 URL:https://www.zan-live.com/ja/live/detail/10892
 CATEGORIES:イベント
@@ -1389,7 +1389,7 @@ DESCRIPTION:セピア色をベースにした新規描き下ろし「セピ
  日、全国アニメイト・通販含む）\n情報源: アイカツ！
  ポータル\n\nhttps://www.aikatsu.net/portal/topics/topics.php?id=23499\
  n\n― アイカツ！情報カレンダー（非公式ファンメイド
- ）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+ ）\nhttps://aikatsukamen.github.io/aikatsu-calendar/
 URL:https://www.aikatsu.net/portal/topics/topics.php?id=23499
 CATEGORIES:イベント
 LAST-MODIFIED:20260823T000000Z
@@ -1410,8 +1410,8 @@ DESCRIPTION:セピア色をベースにした新規描き下ろし「セピ
   イベント\n日程表記: 9月13日(日) 開催終了（全国アニメ
  イト・通販含む）\n情報源: アイカツ！ポータル\n\nhttps:
  //www.aikatsu.net/portal/topics/topics.php?id=23499\n\n― アイカツ！
- 情報カレンダー（非公式ファンメイド）\nhttps://aikatsu-in
- fo.github.io/aikatsu-calendar/
+ 情報カレンダー（非公式ファンメイド）\nhttps://aikatsukam
+ en.github.io/aikatsu-calendar/
 URL:https://www.aikatsu.net/portal/topics/topics.php?id=23499
 CATEGORIES:イベント
 LAST-MODIFIED:20260823T000000Z
@@ -1433,7 +1433,7 @@ DESCRIPTION:バーチャルアイドルライブ「Life Like a Live!12～
  部出演（全体開催9月25日〜27日）\n情報公開日: 2026-08-22\
  n情報源: X @aikatsu_acad\n\nhttps://x.com/aikatsu_acad/status/209113770
  3442362419\n\n― アイカツ！情報カレンダー（非公式ファ
- ンメイド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+ ンメイド）\nhttps://aikatsukamen.github.io/aikatsu-calendar/
 URL:https://x.com/aikatsu_acad/status/2091137703442362419
 CATEGORIES:イベント
 LAST-MODIFIED:20260827T000000Z
@@ -1455,7 +1455,7 @@ DESCRIPTION:全国のイオンシネマ内「バンダイナムコ Cross Sp
  開日: 2026-04-22\n情報源: PR TIMES（バンダイナムコエクス
  ペリエンス）\n\nhttps://prtimes.jp/main/html/rd/p/000000364.00015911
  8.html\n\n― アイカツ！情報カレンダー（非公式ファンメ
- イド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+ イド）\nhttps://aikatsukamen.github.io/aikatsu-calendar/
 URL:https://prtimes.jp/main/html/rd/p/000000364.000159118.html
 CATEGORIES:イベント
 LAST-MODIFIED:20260831T000000Z
@@ -1476,7 +1476,7 @@ DESCRIPTION:全国のイオンシネマ内「バンダイナムコ Cross Sp
  -22\n情報源: PR TIMES（バンダイナムコエクスペリエンス
  ）\n\nhttps://prtimes.jp/main/html/rd/p/000000364.000159118.html\n\n― 
  アイカツ！情報カレンダー（非公式ファンメイド）\nhtt
- ps://aikatsu-info.github.io/aikatsu-calendar/
+ ps://aikatsukamen.github.io/aikatsu-calendar/
 URL:https://prtimes.jp/main/html/rd/p/000000364.000159118.html
 CATEGORIES:イベント
 LAST-MODIFIED:20260831T000000Z
@@ -1497,7 +1497,7 @@ DESCRIPTION:『アイカツ！ 10th STORY ～未来へのSTARWAY～』と
  日）\n情報公開日: 2026-03-09\n情報源: PR TIMES（ラウンドワ
  ンジャパン）\n\nhttps://prtimes.jp/main/html/rd/p/000000066.00002777
  2.html\n\n― アイカツ！情報カレンダー（非公式ファンメ
- イド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+ イド）\nhttps://aikatsukamen.github.io/aikatsu-calendar/
 URL:https://prtimes.jp/main/html/rd/p/000000066.000027772.html
 CATEGORIES:イベント
 LAST-MODIFIED:20260831T000000Z
@@ -1517,7 +1517,7 @@ DESCRIPTION:全国のボウリング＆カラオケ店舗で実施されて
   2026-03-09\n情報源: PR TIMES（ラウンドワンジャパン）\n\nht
  tps://prtimes.jp/main/html/rd/p/000000066.000027772.html\n\n― アイカ
  ツ！情報カレンダー（非公式ファンメイド）\nhttps://aika
- tsu-info.github.io/aikatsu-calendar/
+ tsukamen.github.io/aikatsu-calendar/
 URL:https://prtimes.jp/main/html/rd/p/000000066.000027772.html
 CATEGORIES:イベント
 LAST-MODIFIED:20260831T000000Z

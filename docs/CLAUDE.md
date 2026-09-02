@@ -72,7 +72,8 @@
 - 生成前に `tools/check_sync.py` が `aikatsu_calendar.html` の `ITEMS` と
   `data/items.json` のIDを突き合わせる。ズレていればCIが落ちる。
   つまり**片方だけ更新した状態でmainに入れると .ics のビルドが失敗する**。
-- `UID` は `<id>@aikatsu-calendar.aikatsu-info.github.io` で生成している。
+- `UID` は `<id>@aikatsu-calendar.aikatsu-info.github.io`。
+  これは**配信先URLではなく識別子の名前空間**なので、フォークでも独自ドメインでも変えない。
   **既存項目の `id` を振り直したり、UIDの生成規則を変えたりしてはいけない。**
   購読者のカレンダー上で予定が重複または消失する。
 - 日付の3パターンの扱い:
@@ -82,6 +83,9 @@
   - `eventDate` も `recur` も無い（日付未定）→ .ics には含めない
 - 誕生日・周年はどちらも繰り返しルールなので、データが変わらない限り再生成は不要
   （ワークフローに定期実行は入れていない）。
+- `--base-url` / `--site-url` に既定値はない。省略すると `SOURCE` を出力せず、
+  `feeds.json` のURLは相対パスになる（＝ドメインが一切入らない）。
+  ワークフローがリポジトリ情報から組み立てて渡すので、フォークでも正しい絶対URLになる。
 - ローカルで確認する場合:
   `python3 tools/check_sync.py && python3 tools/build_ics.py --input data/items.json --outdir calendar`
 
@@ -105,6 +109,11 @@ iCalendar の `SUMMARY` は静的なので、繰り返しルールのまま年�
 ## 購読UI
 
 `aikatsu_calendar.html` 内の `.subscribe-btn` / `#subModal` と、ファイル末尾の購読用スクリプト。
-編集元は `web/subscribe-demo.html`（単体で開いて動作確認できるデモ）で、
+編集元は `web/subscribe-demo.html`（HTTPサーバ越しに開けば単体で動作確認できるデモ）で、
 `tools/extract_snippet.py` で貼り付け用スニペットを、`tools/apply_subscribe_ui.py` で本体への適用を行える。
-UI側の `FEEDS` と `tools/build_ics.py` の `FEEDS` は対応しているので、増減させるときは両方を直すこと。
+
+- UI側の `FEEDS` と `tools/build_ics.py` の `FEEDS` は対応しているので、増減させるときは両方を直すこと。
+- **購読URLにドメインは一切埋め込んでいない。** `#subModal` の `data-feed-base`（既定 `calendar/`）を
+  ページ自身のURL基準で解決している。`.ics` の置き場所を変えるときはこの属性だけを直す。
+  ここをドメイン決め打ちに戻すと、フォーク先などで存在しないURLを購読させることになり、
+  Googleカレンダーは「カレンダーを追加できません。URL を確認してください。」で弾く。

@@ -31,8 +31,11 @@ import sys
 # ---------------------------------------------------------------- 設定
 
 PRODID = "-//aikatsu-info//aikatsu-calendar//JA"
-BASE_URL_DEFAULT = "https://aikatsu-info.github.io/aikatsu-calendar"
-SITE_URL_DEFAULT = "https://aikatsu-info.github.io/aikatsu-calendar/"
+
+# UID の右側に使う識別子。**URLではなく名前空間**なので、
+# 配信先ドメインが変わっても（フォーク・独自ドメイン）絶対に変えない。
+# 変えると購読者のカレンダー上で予定が重複または消失する。
+UID_DOMAIN_DEFAULT = "aikatsu-calendar.aikatsu-info.github.io"
 
 # aikatsu_calendar.html の var CATS と揃えること
 CATS = {
@@ -185,7 +188,10 @@ def description_for(item, site_url):
         lines.append("\n".join(meta))
     if item.get("url"):
         lines.append(item["url"])
-    lines.append("― アイカツ！情報カレンダー（非公式ファンメイド）\n" + site_url)
+    footer = "― アイカツ！情報カレンダー（非公式ファンメイド）"
+    if site_url:
+        footer += "\n" + site_url
+    lines.append(footer)
     return "\n\n".join(lines)
 
 
@@ -321,19 +327,21 @@ def main(argv=None):
     ap = argparse.ArgumentParser(description="data/items.json から .ics を生成する")
     ap.add_argument("--input", default="data/items.json")
     ap.add_argument("--outdir", default="calendar")
-    ap.add_argument("--base-url", default=BASE_URL_DEFAULT,
-                    help="配信先のベースURL（feeds.json のURL生成に使う）")
-    ap.add_argument("--site-url", default=SITE_URL_DEFAULT,
-                    help="DESCRIPTION 末尾に入れるサイトURL")
-    ap.add_argument("--uid-domain", default="aikatsu-calendar.aikatsu-info.github.io",
-                    help="UID の右側に使うドメイン。一度決めたら変更しないこと")
+    ap.add_argument("--base-url", default=None,
+                    help="出力先ディレクトリの公開URL（例 https://<owner>.github.io/<repo>/calendar）。"
+                         "省略すると feeds.json のURLは相対パスになり、SOURCE は出力しない")
+    ap.add_argument("--site-url", default=None,
+                    help="DESCRIPTION 末尾に入れるサイトURL。省略すると入れない")
+    ap.add_argument("--uid-domain", default=UID_DOMAIN_DEFAULT,
+                    help="UID の右側に使う名前空間。配信先が変わっても変更しないこと")
     ap.add_argument("--undated", choices=["skip", "published"], default="skip",
                     help="eventDate も recur も無い項目の扱い（既定: skip）")
     ap.add_argument("--today", default=None, help="基準日 YYYY-MM-DD（テスト用）")
     opts = ap.parse_args(argv)
 
     opts.today = parse_iso_date(opts.today) or dt.date.today()
-    opts.base_url = opts.base_url.rstrip("/")
+    if opts.base_url:
+        opts.base_url = opts.base_url.rstrip("/")
 
     with open(opts.input, encoding="utf-8") as f:
         items = json.load(f)
@@ -347,7 +355,7 @@ def main(argv=None):
     feeds_meta = []
     for slug, name, desc, filt in FEEDS:
         subset = [it for it in items if filt(it)]
-        feed_url = "%s/%s/%s.ics" % (opts.base_url, os.path.basename(opts.outdir), slug)
+        feed_url = ("%s/%s.ics" % (opts.base_url, slug)) if opts.base_url else None
         text = build_calendar(subset, name, desc, opts, dtstamp, feed_url)
         path = os.path.join(opts.outdir, slug + ".ics")
         with open(path, "w", encoding="utf-8", newline="") as f:
@@ -356,7 +364,7 @@ def main(argv=None):
         feeds_meta.append({
             "slug": slug, "name": name, "description": desc,
             "file": slug + ".ics",
-            "url": feed_url,
+            "url": feed_url or (slug + ".ics"),   # base-url 未指定なら feeds.json からの相対
             "items": len(subset), "events": n_events,
         })
         print("%-28s items=%-4d events=%-4d %s" % (slug, len(subset), n_events, path))

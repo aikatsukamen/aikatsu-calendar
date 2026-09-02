@@ -9,10 +9,10 @@
 HANDOFF.md                  ← 先方の Claude にそのまま渡す実装指示書
 data-format.md              ← data/items.json の形式調査結果
 aikatsu-calendar-ics.patch  ← 差分パッチ（生成物の calendar/*.ics は除外）
-integrated/                 ← 適用済みリポジトリ一式（そのまま差し替え可能）
+docs/                       ← 適用済みリポジトリ一式（そのまま差し替え可能）
 ```
 
-## integrated/ での変更点
+## docs/ での変更点
 
 | ファイル                          | 変更                                                                       |
 | --------------------------------- | -------------------------------------------------------------------------- |
@@ -40,7 +40,7 @@ integrated/                 ← 適用済みリポジトリ一式（そのまま
 
 ## 適用の仕方（先方の選択肢）
 
-1. `integrated/` をそのまま使う
+1. `docs/` をそのまま使う
 2. `aikatsu-calendar-ics.patch` を当てて `python3 tools/build_ics.py --input data/items.json --outdir calendar`
 3. `HANDOFF.md` を読んで自分で入れ直す（`tools/apply_subscribe_ui.py` が使える）
 

@@ -2,8 +2,8 @@
 
 このファイルは、`aikatsu-info/aikatsu-calendar` を開発している Claude に
 そのまま渡すことを想定した実装指示書です。
-添付の zip に、動作確認済みの変換スクリプト・購読UI・
-**すでに適用済みのリポジトリ一式（`integrated/`）と差分パッチ（`aikatsu-calendar-ics.patch`）** が入っています。
+動作確認済みの変換スクリプト・購読UI・
+**すでに適用済みのリポジトリ一式（`docs/`）と差分パッチ（`aikatsu-calendar-ics.patch`）** が入っています。
 そのまま取り込むこともできますし、下の説明を読んで自分で入れ直しても構いません。
 
 ---
@@ -40,7 +40,7 @@ GitHub Pages で配信してください。あわせてサイト上に**購読�
 
 ### 2-1. `tools/build_ics.py` を追加する
 
-zip 内の `tools/build_ics.py` をそのまま `tools/build_ics.py` として配置してください。
+`tools/build_ics.py` をそのまま `tools/build_ics.py` として配置してください。
 Python 3 標準ライブラリのみで動きます。動作確認済み（378件 → 352 VEVENT）。
 
 ```
@@ -49,16 +49,16 @@ python3 tools/build_ics.py --input data/items.json --outdir calendar
 
 このスクリプトの設計上の決定事項（変更する場合はここを意識してください）:
 
-| 項目 | 決定 | 理由 |
-|---|---|---|
-| イベント種別 | すべて終日（`DTSTART;VALUE=DATE`、`DTEND` は翌日） | データに時刻の情報がない |
-| `UID` | `<id>@aikatsu-calendar.aikatsu-info.github.io` | **一度公開したら絶対に変えない**。変えると購読者側で重複または消失が起きる |
-| `DTSTAMP` | データ中の最新 `addedAt`/`published` から生成（実行時刻を使わない） | 実行のたびに全行差分が出るのを防ぐ。生成結果が決定的になる |
-| 誕生日 | `RRULE:FREQ=YEARLY`（基準年 2013 固定） | ファイルが小さく、将来の年も自動で出る |
-| 周年 | `RRULE:FREQ=YEARLY`（`DTSTART` = `foundingYear` の当日）。タイトルは `<startWord>開始記念日` | 下の「周年の表現」を参照 |
-| 日付未定26件 | **既定でスキップ** | カレンダー上に置くべき日付が存在しない。`--undated=published` で公開日に置くことも可能 |
-| `TRANSP` | `TRANSPARENT` | 購読者の「予定あり」判定を汚さない |
-| 更新間隔 | `REFRESH-INTERVAL:PT6H` / `X-PUBLISHED-TTL:PT6H` | クライアントへの再取得ヒント（あくまでヒント） |
+| 項目         | 決定                                                                                         | 理由                                                                                   |
+| ------------ | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| イベント種別 | すべて終日（`DTSTART;VALUE=DATE`、`DTEND` は翌日）                                           | データに時刻の情報がない                                                               |
+| `UID`        | `<id>@aikatsu-calendar.aikatsu-info.github.io`                                               | **一度公開したら絶対に変えない**。変えると購読者側で重複または消失が起きる             |
+| `DTSTAMP`    | データ中の最新 `addedAt`/`published` から生成（実行時刻を使わない）                          | 実行のたびに全行差分が出るのを防ぐ。生成結果が決定的になる                             |
+| 誕生日       | `RRULE:FREQ=YEARLY`（基準年 2013 固定）                                                      | ファイルが小さく、将来の年も自動で出る                                                 |
+| 周年         | `RRULE:FREQ=YEARLY`（`DTSTART` = `foundingYear` の当日）。タイトルは `<startWord>開始記念日` | 下の「周年の表現」を参照                                                               |
+| 日付未定26件 | **既定でスキップ**                                                                           | カレンダー上に置くべき日付が存在しない。`--undated=published` で公開日に置くことも可能 |
+| `TRANSP`     | `TRANSPARENT`                                                                                | 購読者の「予定あり」判定を汚さない                                                     |
+| 更新間隔     | `REFRESH-INTERVAL:PT6H` / `X-PUBLISHED-TTL:PT6H`                                             | クライアントへの再取得ヒント（あくまでヒント）                                         |
 
 出力するフィードは9本（`FEEDS` 定数）:
 `aikatsu-all` / `aikatsu-nobirthday` / `aikatsu-goods` / `aikatsu-event` /
@@ -97,7 +97,7 @@ RRULE 化により `anniversary` は 7件 → 7 VEVENT（展開案なら42）に
 
 ### 2-3. `.github/workflows/build-ics.yml` を追加する
 
-zip 内の同名ファイルを配置してください。`data/items.json` などが push されたら
+同名ファイルを配置してください。`data/items.json` などが push されたら
 `check_sync.py` → `build_ics.py` を走らせ、`calendar/` に差分があればコミットします。
 `paths` に `calendar/**` を含めていないので自己ループしません。
 誕生日・周年はどちらも `RRULE:FREQ=YEARLY` なので、データが変わらない限り再生成は不要です
@@ -110,7 +110,7 @@ zip 内の同名ファイルを配置してください。`data/items.json` な�
 
 ### 2-4. 購読UIを `aikatsu_calendar.html` に組み込む
 
-**すでに適用済みの `aikatsu_calendar.html` が zip の `integrated/` に入っています。**
+**すでに適用済みの `aikatsu_calendar.html` が `docs/` に入っています。**
 そのまま差し替えるか、`aikatsu-calendar-ics.patch` を当ててください。
 手で入れ直す場合は `tools/apply_subscribe_ui.py` を使えます（冪等・既存コードの整形はしません）。
 
@@ -121,12 +121,12 @@ python3 tools/apply_subscribe_ui.py --html aikatsu_calendar.html --demo web/subs
 `aikatsu_calendar.html` は `<html>` / `<head>` / `<body>` を持たない素のフラグメントなので、
 挿入位置は次の4か所です（`web/subscribe-snippet.html` に切り出し済み）。
 
-| ブロック | 貼り付け位置 |
-|---|---|
-| `[CSS]` | 既存 `<style>` の `</style>` 直後（`<div class="today-bar">` の手前） |
-| `[HTML]`（購読ボタン） | `<div class="tabs-row">` の中、`<div class="tabs">…</div>` の直後 |
-| `[MODAL]` | `.page` の閉じ `</div>`（`site-copyright` の次の行）の直後 |
-| `[JS]` | ファイル末尾（既存の2つの `<script>` の後ろ） |
+| ブロック               | 貼り付け位置                                                          |
+| ---------------------- | --------------------------------------------------------------------- |
+| `[CSS]`                | 既存 `<style>` の `</style>` 直後（`<div class="today-bar">` の手前） |
+| `[HTML]`（購読ボタン） | `<div class="tabs-row">` の中、`<div class="tabs">…</div>` の直後     |
+| `[MODAL]`              | `.page` の閉じ `</div>`（`site-copyright` の次の行）の直後            |
+| `[JS]`                 | ファイル末尾（既存の2つの `<script>` の後ろ）                         |
 
 UIの仕様:
 
@@ -176,7 +176,7 @@ UIの仕様:
 - [ ] サイト上の購読ボタン → モーダル → 各ボタンとコピーが期待通り動くこと（ライト/ダーク両方）
 - [ ] 既存機能（カレンダー表示・トピックス・検索・シェア）に影響がないこと
 
-依頼側で確認済みの項目（`integrated/` の状態）:
+依頼側で確認済みの項目（`docs/` の状態）:
 Chromium(headless) でライト/ダーク・PC(1000px)/モバイル(390px) 表示、
 モーダル開閉・Esc・フィード切り替え・生成されるURL、
 JSエラーなし、要素IDの重複なし、HTMLのタグ対応、3つの `<script>` ブロックの構文、

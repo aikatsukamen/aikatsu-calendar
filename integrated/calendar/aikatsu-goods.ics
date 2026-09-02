@@ -1,0 +1,3770 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//aikatsu-info//aikatsu-calendar//JA
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:アイカツ！グッズ
+X-WR-CALDESC:グッズの発売日・予約開始／締切
+X-WR-TIMEZONE:Asia/Tokyo
+REFRESH-INTERVAL;VALUE=DURATION:PT6H
+X-PUBLISHED-TTL:PT6H
+SOURCE;VALUE=URI:https://aikatsu-info.github.io/aikatsu-calendar/calendar/a
+ ikatsu-goods.ics
+BEGIN:VEVENT
+UID:20260730-01@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260112
+DTEND;VALUE=DATE:20260113
+SUMMARY:ガシャポン「アイカツ！ だれでもアイドル活動ア
+ クリルチャーム3」発売
+DESCRIPTION:作中の人気プレミアムドレスをデザインした2
+ 層印刷のアクリルチャーム、全12種。1回300円。二次元
+ コードから『アイカツ！』プレイリストを聴くことが
+ できる。\n\n区分: グッズ／ガシャポン\n日程表記: 2026年
+ 1月第3週 発売\n情報公開日: 2025-09-30\n情報源: gashapon.jp\n\
+ nhttps://gashapon.jp/products/detail.php?jan_code=4570118238559000\n\n― 
+ アイカツ！情報カレンダー（非公式ファンメイド）\nhtt
+ ps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://gashapon.jp/products/detail.php?jan_code=4570118238559000
+CATEGORIES:グッズ,ガシャポン
+LAST-MODIFIED:20260730T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260730-02@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260209
+DTEND;VALUE=DATE:20260210
+SUMMARY:ガシャポン「アイカツ！ グッズコレクション3」
+ 発売
+DESCRIPTION:ドラム式オルゴール・ラバークリップ・カード
+ ミニチュアチャームなど全15種展開のユニットテーマグ
+ ッズコレクション第3弾。1回400円。ディスプレイやミニ
+ ブックの二次元コードから楽曲プレイリストも聴ける
+ 。\n\n区分: グッズ／ガシャポン\n日程表記: 2026年2月第2
+ 週 発売\n情報公開日: 2025-10-16\n情報源: gashapon.jp\n\nhttps:/
+ /gashapon.jp/products/detail.php?jan_code=4570118238450000\n\n― アイ
+ カツ！情報カレンダー（非公式ファンメイド）\nhttps://a
+ ikatsu-info.github.io/aikatsu-calendar/
+URL:https://gashapon.jp/products/detail.php?jan_code=4570118238450000
+CATEGORIES:グッズ,ガシャポン
+LAST-MODIFIED:20260730T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260108-01@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260108
+DTEND;VALUE=DATE:20260109
+SUMMARY:「ALL AIKATSU！ ROCK FES. MO-IKKAI!!」ライブグッズ事後
+ 通販開始
+DESCRIPTION:ライブイベント「ALL AIKATSU！ ROCK FES. MO-IKKAI!!」
+ の会場限定グッズの事後通販が案内されました。\n\n区
+ 分: グッズ\n日程表記: 2026年1月8日 事後通販開始\n情報
+ 公開日: 2026-01-08\n情報源: アイカツ！ポータル\n\nhttps://w
+ ww.aikatsu.net/portal/topics/topics.php?id=23029\n\n― アイカツ！情
+ 報カレンダー（非公式ファンメイド）\nhttps://aikatsu-info.
+ github.io/aikatsu-calendar/
+URL:https://www.aikatsu.net/portal/topics/topics.php?id=23029
+CATEGORIES:グッズ
+LAST-MODIFIED:20260729T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260110-02@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260110
+DTEND;VALUE=DATE:20260111
+SUMMARY:アイカツアカデミー！「Kawaii☆Wake Up!つながるア
+ クリルスタンド」登場
+DESCRIPTION:「アイカツアカデミー！」より、つなげて飾れ
+ るアクリルスタンド「Kawaii☆Wake Up!つながるアクリルス
+ タンド」が登場しました。\n\n区分: グッズ\n日程表記: 2
+ 026年1月10日 発売\n情報公開日: 2026-01-10\n情報源: アイカ
+ ツ！ポータル\n\nhttps://www.aikatsu.net/portal/topics/topics.php?id=
+ 23031\n\n― アイカツ！情報カレンダー（非公式ファンメ
+ イド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://www.aikatsu.net/portal/topics/topics.php?id=23031
+CATEGORIES:グッズ
+LAST-MODIFIED:20260729T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260117-01@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260117
+DTEND;VALUE=DATE:20260118
+SUMMARY:「アイカツ！」より雑貨新商品が登場
+DESCRIPTION:「アイカツ！」シリーズの新しい雑貨商品が発
+ 売されました。\n\n区分: グッズ\n日程表記: 2026年1月17日
+  発売\n情報公開日: 2026-01-17\n情報源: アイカツ！ポータ
+ ル\n\nhttps://www.aikatsu.net/portal/topics/topics.php?id=23058\n\n― 
+ アイカツ！情報カレンダー（非公式ファンメイド）\nhtt
+ ps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://www.aikatsu.net/portal/topics/topics.php?id=23058
+CATEGORIES:グッズ
+LAST-MODIFIED:20260729T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260726-11@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260206
+DTEND;VALUE=DATE:20260207
+SUMMARY:「アクリルスタンド おうちdeサマーパーティー！
+ 」リバイバル発売
+DESCRIPTION:アイカツ！オフィシャルストアにてリバイバル
+ 発売。\n\n区分: グッズ\n日程表記: 2月6日(金) 発売開始\n
+ 情報公開日: 2026-01-23\n情報源: アイカツ！オフィシャル
+ ストア\n\nhttps://bandainamco-am.co.jp/official_shop/aikatsu/topics/202
+ 60123_2.html\n\n― アイカツ！情報カレンダー（非公式ファ
+ ンメイド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://bandainamco-am.co.jp/official_shop/aikatsu/topics/20260123_2.ht
+ ml
+CATEGORIES:グッズ
+LAST-MODIFIED:20260726T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260726-10@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260307
+DTEND;VALUE=DATE:20260308
+SUMMARY:「アイカツプラネット！」リバイバルグッズ発売
+DESCRIPTION:アイカツ！オフィシャルストアにて「アイカツ
+ プラネット！」のリバイバルグッズが発売。\n\n区分: 
+ グッズ\n日程表記: 3月7日(土) 発売開始\n情報公開日: 2026
+ -02-27\n情報源: アイカツ！オフィシャルストア\n\nhttps://b
+ andainamco-am.co.jp/official_shop/aikatsu/topics/20260227.html\n\n― ア
+ イカツ！情報カレンダー（非公式ファンメイド）\nhttps:
+ //aikatsu-info.github.io/aikatsu-calendar/
+URL:https://bandainamco-am.co.jp/official_shop/aikatsu/topics/20260227.html
+CATEGORIES:グッズ
+LAST-MODIFIED:20260726T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260228-01@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260314
+DTEND;VALUE=DATE:20260315
+SUMMARY:アイカツアカデミー！プレミアムLIVEグッズ登場、
+ 3月14日先行物販
+DESCRIPTION:「アイカツアカデミー！」のプレミアムLIVEグ
+ ッズが登場。3月14日のLIVE会場にて先行物販が実施され
+ ます。\n\n区分: グッズ\n日程表記: 2026年3月14日 LIVE会場
+ 先行物販\n情報公開日: 2026-02-28\n情報源: アイカツ！ポ
+ ータル\n\nhttps://www.aikatsu.net/portal/topics/topics.php?id=23196\n\n
+ ― アイカツ！情報カレンダー（非公式ファンメイド）\
+ nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://www.aikatsu.net/portal/topics/topics.php?id=23196
+CATEGORIES:グッズ
+LAST-MODIFIED:20260729T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260305-01@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260305
+DTEND;VALUE=DATE:20260306
+SUMMARY:デザインマート「虹野ゆめ レインボーエトワール
+ コーデ」chibiぬいぐるみ登場
+DESCRIPTION:アイカツ！デザインマートより、虹野ゆめのレ
+ インボーエトワールコーデをモチーフにしたchibiぬいぐ
+ るみが登場しました。\n\n区分: グッズ\n日程表記: 2026年
+ 3月5日 発売\n情報公開日: 2026-03-05\n情報源: アイカツ！
+ ポータル\n\nhttps://www.aikatsu.net/portal/topics/topics.php?id=23236\
+ n\n― アイカツ！情報カレンダー（非公式ファンメイド
+ ）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://www.aikatsu.net/portal/topics/topics.php?id=23236
+CATEGORIES:グッズ
+LAST-MODIFIED:20260729T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260305-02@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260305
+DTEND;VALUE=DATE:20260306
+SUMMARY:デザインマート「星宮いちご リラフェアアリーコ
+ ーデ」chibiぬいぐるみ登場
+DESCRIPTION:アイカツ！デザインマートより、星宮いちごの
+ リラフェアアリーコーデをモチーフにしたchibiぬいぐる
+ みが登場しました。\n\n区分: グッズ\n日程表記: 2026年3
+ 月5日 発売\n情報公開日: 2026-03-05\n情報源: アイカツ！ポ
+ ータル\n\nhttps://www.aikatsu.net/portal/topics/topics.php?id=23235\n\n
+ ― アイカツ！情報カレンダー（非公式ファンメイド）\
+ nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://www.aikatsu.net/portal/topics/topics.php?id=23235
+CATEGORIES:グッズ
+LAST-MODIFIED:20260729T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260308-01@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260308
+DTEND;VALUE=DATE:20260309
+SUMMARY:アイカツアカデミー！パジャマコレクション登場
+DESCRIPTION:「アイカツアカデミー！」のパジャマコレクシ
+ ョンが登場しました。\n\n区分: グッズ\n日程表記: 2026年
+ 3月8日 発売\n情報公開日: 2026-03-08\n情報源: アイカツ！
+ ポータル\n\nhttps://www.aikatsu.net/portal/topics/topics.php?id=23237\
+ n\n― アイカツ！情報カレンダー（非公式ファンメイド
+ ）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://www.aikatsu.net/portal/topics/topics.php?id=23237
+CATEGORIES:グッズ
+LAST-MODIFIED:20260729T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260311-01@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260311
+DTEND;VALUE=DATE:20260312
+SUMMARY:「アイカツ！」ポケットティッシュが約10年ぶり
+ に復刻
+DESCRIPTION:「アイカツ！」のポケットティッシュが約10年
+ ぶりに復刻発売されました。\n\n区分: グッズ\n日程表記
+ : 2026年3月11日 復刻発売\n情報公開日: 2026-03-11\n情報源: 
+ アイカツ！ポータル\n\nhttps://www.aikatsu.net/portal/topics/topic
+ s.php?id=23238\n\n― アイカツ！情報カレンダー（非公式フ
+ ァンメイド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://www.aikatsu.net/portal/topics/topics.php?id=23238
+CATEGORIES:グッズ
+LAST-MODIFIED:20260729T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260730-03@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260530
+DTEND;VALUE=DATE:20260531
+SUMMARY:一番くじ「アイカツ！～私のアツいアイドル活動
+ ！～」発売
+DESCRIPTION:オーロラキスコーデ・ゴスマジックコーデ等を
+ あしらったトルソー型アクセサリートレイや、ブラン
+ ド「エンジェリーシュガー」のキャラクター「エンジ
+ ェリーベア」のねそべりぬいぐるみが景品に登場。1回7
+ 50円。店頭は5月30日、オンラインは6月1日発売。\n\n区分
+ : グッズ\n日程表記: 2026年5月30日(土) 順次発売\n情報公
+ 開日: 2026-03-16\n情報源: 一番くじ倶楽部\n\nhttps://1kuji.com/
+ products/aikatsu7\n\n― アイカツ！情報カレンダー（非公式
+ ファンメイド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://1kuji.com/products/aikatsu7
+CATEGORIES:グッズ
+LAST-MODIFIED:20260730T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260730-04@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260615
+DTEND;VALUE=DATE:20260616
+SUMMARY:ガシャポン「アイカツ！ カプセルジェムクリップ
+ 」発売
+DESCRIPTION:オーロラキスコーデや天の川コズミックコーデ
+ など人気コーデをラメ入りでクリップ化した全6種。ぷ
+ っくり立体的なデザインで、サイズは約4.5〜5cm。1回400
+ 円。\n\n区分: グッズ／ガシャポン\n日程表記: 2026年6月
+ 第3週 発売\n情報公開日: 2026-03-26\n情報源: gashapon.jp\n\nhtt
+ ps://gashapon.jp/products/detail.php?jan_code=4582770027815000\n\n― ア
+ イカツ！情報カレンダー（非公式ファンメイド）\nhttps:
+ //aikatsu-info.github.io/aikatsu-calendar/
+URL:https://gashapon.jp/products/detail.php?jan_code=4582770027815000
+CATEGORIES:グッズ,ガシャポン
+LAST-MODIFIED:20260730T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260408-01@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260408
+DTEND;VALUE=DATE:20260409
+SUMMARY:アイカツスターズ！10周年記念「四ツ星学園学生
+ 証」デザインPIICA登場
+DESCRIPTION:『アイカツスターズ！』10周年記念として、四
+ ツ星学園学生証デザインのPIICAが登場しました。\n\n区
+ 分: グッズ\n日程表記: 2026年4月8日 発売\n情報公開日: 202
+ 6-04-08\n情報源: アイカツ！ポータル\n\nhttps://www.aikatsu.net
+ /portal/topics/topics.php?id=23462\n\n― アイカツ！情報カレン
+ ダー（非公式ファンメイド）\nhttps://aikatsu-info.github.io/ai
+ katsu-calendar/
+URL:https://www.aikatsu.net/portal/topics/topics.php?id=23462
+CATEGORIES:グッズ
+LAST-MODIFIED:20260729T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260726-09@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260425
+DTEND;VALUE=DATE:20260426
+SUMMARY:「びっくらたまご アイカツ！ vol.2」オフィシャル
+ ストア限定ver.発売
+DESCRIPTION:アイカツ！オフィシャルストア限定バージョン
+ が登場。\n\n区分: グッズ\n日程表記: 4月25日(土) 発売開
+ 始\n情報公開日: 2026-04-14\n情報源: アイカツ！オフィシ
+ ャルストア\n\nhttps://bandainamco-am.co.jp/official_shop/aikatsu/topi
+ cs/20260415.html\n\n― アイカツ！情報カレンダー（非公式
+ ファンメイド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://bandainamco-am.co.jp/official_shop/aikatsu/topics/20260415.html
+CATEGORIES:グッズ
+LAST-MODIFIED:20260726T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260726-14@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260822
+DTEND;VALUE=DATE:20260823
+SUMMARY:『アイカツ！シリーズ セピア・ラ・モード』アニ
+ メイトフェア開始
+DESCRIPTION:全国アニメイト（通販含む）でセピア色をテー
+ マにした新規描き下ろしグッズが登場。対象商品を予
+ 約内金1\,100円（税込）ごとに特典ステッカー（全11種）
+ がもらえる。秋葉原2号館6Fではオンリーショップも同
+ 時開催。\n\n区分: グッズ\n日程表記: 2026年8月22日（土）
+  フェア開始（〜9月13日）\n情報公開日: 2026-04-27\n情報源
+ : アニメイト公式サイト\n\nhttps://www.animate-onlineshop.jp/cont
+ ents/fair_event/detail.php?id=115252\n\n― アイカツ！情報カレン
+ ダー（非公式ファンメイド）\nhttps://aikatsu-info.github.io/ai
+ katsu-calendar/
+URL:https://www.animate-onlineshop.jp/contents/fair_event/detail.php?id=115
+ 252
+CATEGORIES:グッズ
+LAST-MODIFIED:20260726T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260529-01@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260529
+DTEND;VALUE=DATE:20260530
+SUMMARY:「モバイルステッカーコレクション アイカツ！ Vo
+ l.2」発売
+DESCRIPTION:「モバイルステッカーコレクション アイカツ
+ ！ Vol.2」が発売されました。\n\n区分: グッズ\n日程表記
+ : 2026年5月29日 発売\n情報公開日: 2026-05-29\n情報源: アイ
+ カツ！ポータル\n\nhttps://www.aikatsu.net/portal/topics/topics.php?
+ id=23630\n\n― アイカツ！情報カレンダー（非公式ファン
+ メイド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://www.aikatsu.net/portal/topics/topics.php?id=23630
+CATEGORIES:グッズ
+LAST-MODIFIED:20260729T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260726-08@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260613
+DTEND;VALUE=DATE:20260614
+SUMMARY:「アイカツスターズ！」リバイバルグッズ発売
+DESCRIPTION:アイカツ！オフィシャルストアにて「アイカツ
+ スターズ！」のリバイバルグッズが発売。\n\n区分: グ
+ ッズ\n日程表記: 6月13日(土) 発売開始\n情報公開日: 2026-0
+ 6-03\n情報源: アイカツ！オフィシャルストア\n\nhttps://ban
+ dainamco-am.co.jp/official_shop/aikatsu/topics/20260613.html\n\n― アイ
+ カツ！情報カレンダー（非公式ファンメイド）\nhttps://a
+ ikatsu-info.github.io/aikatsu-calendar/
+URL:https://bandainamco-am.co.jp/official_shop/aikatsu/topics/20260613.html
+CATEGORIES:グッズ
+LAST-MODIFIED:20260726T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260726-07@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260620
+DTEND;VALUE=DATE:20260621
+SUMMARY:「オールアイカツ！ゲームモデル缶バッジ」発売
+DESCRIPTION:キュート＆フェアリー＆フラワー 全16種（ラン
+ ダム封入）。アイカツ！オフィシャルストアにて発売
+ 。\n\n区分: グッズ\n日程表記: 6月20日(土) 発売\n情報公
+ 開日: 2026-06-15\n情報源: X @aikatsu_ofs\n\nhttps://x.com/aikatsu_ofs
+ /status/2066395001698009336\n\n― アイカツ！情報カレンダー（
+ 非公式ファンメイド）\nhttps://aikatsu-info.github.io/aikatsu-cal
+ endar/
+URL:https://x.com/aikatsu_ofs/status/2066395001698009336
+CATEGORIES:グッズ
+LAST-MODIFIED:20260726T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260726-05@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260622
+DTEND;VALUE=DATE:20260623
+SUMMARY:「チケットライクコレクション アイカツ！ Vol.2」
+ 発売
+DESCRIPTION:ノーマル19種＋シークレット2種の全21種類。ア
+ トレ秋葉原・京都・名古屋にて発売（名古屋店は同施
+ 設内「ライフスタイルバンダイ オフィシャルショップ
+ 」と同日販売）。\n\n区分: グッズ\n日程表記: 6月22日(月
+ ) 発売\n情報公開日: 2026-06-21\n情報源: X @aikatsu_ofs\n\nhttps:
+ //x.com/aikatsu_ofs/status/2068635035909890055\n\n― アイカツ！情
+ 報カレンダー（非公式ファンメイド）\nhttps://aikatsu-info.
+ github.io/aikatsu-calendar/
+URL:https://x.com/aikatsu_ofs/status/2068635035909890055
+CATEGORIES:グッズ
+LAST-MODIFIED:20260726T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260726-06@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260622
+DTEND;VALUE=DATE:20260623
+SUMMARY:「ポンデクルール アイカツ！ マルチカラーパウ
+ ダー Vol.2」発売
+DESCRIPTION:新規デザイン6種＋1弾再録6種の全12種。アトレ
+ 秋葉原・京都・名古屋にて発売。\n\n区分: グッズ\n日程
+ 表記: 6月22日(月) 発売\n情報公開日: 2026-06-21\n情報源: X @
+ aikatsu_ofs\n\nhttps://x.com/aikatsu_ofs/status/2068628512211366329\n\n―
+  アイカツ！情報カレンダー（非公式ファンメイド）\nht
+ tps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://x.com/aikatsu_ofs/status/2068628512211366329
+CATEGORIES:グッズ
+LAST-MODIFIED:20260726T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260725-08@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260625
+DTEND;VALUE=DATE:20260626
+SUMMARY:Anniversary Stars上映記念グッズが「アイカツ！デザ
+ インマート」に登場
+DESCRIPTION:『劇場版アイカツスターズ！』公開10周年を記
+ 念したグッズが、プレミアムバンダイの「アイカツ！
+ デザインマート」で発売されました。\n\n区分: グッズ\n
+ 日程表記: 6月25日 発売\n情報公開日: 2026-06-25\n情報源: 
+ アイカツ！ポータル\n\nhttps://www.aikatsu.net/portal/topics/topic
+ s.php?id=23793\n\n― アイカツ！情報カレンダー（非公式フ
+ ァンメイド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://www.aikatsu.net/portal/topics/topics.php?id=23793
+CATEGORIES:グッズ
+LAST-MODIFIED:20260725T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260726-13@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260715
+DTEND;VALUE=DATE:20260716
+SUMMARY:アイカツアカデミー！ソロ曲アルバム「Hélianthe So
+ lo Collection」発売
+DESCRIPTION:配信部のソロ曲を中心としたCDアルバム「Hélian
+ the Solo Collection」がリリースされました。【ソロコレ盤
+ 】【ミッション・エリオント盤】の2形態展開で、初回
+ 生産分にはアイカツアカデミー！カードの特典が付属
+ しました。\n\n区分: グッズ\n日程表記: 7月15日 発売\n情
+ 報公開日: 2026-06-30\n情報源: アイカツアカデミー！公式
+ サイト\n\nhttps://aikatsu-academy.com/2026/06/30/solo-collection-purcha
+ sebonus/\n\n― アイカツ！情報カレンダー（非公式ファン
+ メイド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://aikatsu-academy.com/2026/06/30/solo-collection-purchasebonus/
+CATEGORIES:グッズ
+LAST-MODIFIED:20260726T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260725-10@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260704
+DTEND;VALUE=DATE:20260705
+SUMMARY:入場者プレゼント第2弾「アイカツ！カード Vol.2」
+ の配布が決定
+DESCRIPTION:『劇場版アイカツスターズ！』-Anniversary Stars- 
+ の入場者プレゼント第2弾。上映劇場にて配布されまし
+ た。\n\n区分: グッズ\n日程表記: 7月4日〜 上映劇場で配
+ 布\n情報公開日: 2026-07-04\n情報源: アイカツ！ポータル\n
+ \nhttps://www.aikatsu.net/portal/topics/topics.php?id=23845\n\n― アイ
+ カツ！情報カレンダー（非公式ファンメイド）\nhttps://a
+ ikatsu-info.github.io/aikatsu-calendar/
+URL:https://www.aikatsu.net/portal/topics/topics.php?id=23845
+CATEGORIES:グッズ
+LAST-MODIFIED:20260725T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260725-21@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260717
+DTEND;VALUE=DATE:20260718
+SUMMARY:第3弾入場者プレゼント「クリアブロマイド」の配
+ 布が決定
+DESCRIPTION:『劇場版アイカツスターズ！』-Anniversary Stars- 
+ 第3弾の入場者プレゼントとして、クリアブロマイドの
+ 配布が決定しました。\n\n区分: グッズ\n日程表記: 7月17
+ 日(金)〜23日(木) 上映劇場で配布\n情報公開日: 2026-07-14\n
+ 情報源: アイカツ！ポータル\n\nhttps://www.aikatsu.net/portal/t
+ opics/topics.php?id=23891\n\n― アイカツ！情報カレンダー（
+ 非公式ファンメイド）\nhttps://aikatsu-info.github.io/aikatsu-cal
+ endar/
+URL:https://www.aikatsu.net/portal/topics/topics.php?id=23891
+CATEGORIES:グッズ
+LAST-MODIFIED:20260725T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260725-03@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260717
+DTEND;VALUE=DATE:20260718
+SUMMARY:『アイカツ！』POP UP SHOP開催開始、東京駅で「ア
+ イカツ８」描き下ろしグッズ発売
+DESCRIPTION:東京キャラクターストリート（東京駅八重洲北
+ 口地下1階）にて『アイカツ！』POP UP SHOPを開催中。星
+ 宮いちごら人気キャラ8名の描き下ろしイラストを使用
+ した新作グッズが登場し、通販サイト「東京キャラク
+ ターストリートオンラインプラザ」でも販売されてい
+ ます。\n\n区分: グッズ\n日程表記: 7月17日(金) 開催開始
+ （〜7月30日、東京キャラクターストリート）\n情報公開
+ 日: 2026-07-17\n情報源: アニメ！アニメ！\n\nhttps://animeanime
+ .jp/article/2026/07/17/101156.html\n\n― アイカツ！情報カレン
+ ダー（非公式ファンメイド）\nhttps://aikatsu-info.github.io/ai
+ katsu-calendar/
+URL:https://animeanime.jp/article/2026/07/17/101156.html
+CATEGORIES:グッズ
+LAST-MODIFIED:20260725T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260729-01@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260717
+DTEND;VALUE=DATE:20260718
+SUMMARY:「アイカツ８」描き下ろしグッズ POP UP SHOP開催開
+ 始（東京キャラクターストリート）
+DESCRIPTION:星宮いちご・神崎美月・藤堂ユリカらが集合し
+ た『アイカツ！』音符とハートの衣装の描き下ろしイ
+ ラストを使用した新作グッズが登場。東京キャラクタ
+ ーストリート F階段下ワゴンショップと通販サイトで販
+ 売。\n\n区分: グッズ\n日程表記: 7月17日 開催開始（〜7
+ 月30日）\n情報公開日: 2026-07-17\n情報源: アニメ！アニメ
+ ！\n\nhttps://animeanime.jp/article/2026/07/17/101156.html\n\n― アイ
+ カツ！情報カレンダー（非公式ファンメイド）\nhttps://a
+ ikatsu-info.github.io/aikatsu-calendar/
+URL:https://animeanime.jp/article/2026/07/17/101156.html
+CATEGORIES:グッズ
+LAST-MODIFIED:20260729T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260726-03@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260722
+DTEND;VALUE=DATE:20260723
+SUMMARY:【予約】アイカツアカデミー！LIVEグッズ「ペンラ
+ イト」再販予約開始
+DESCRIPTION:エリオントレジェンドドレス以外のLIVEグッズ
+ 「ペンライト」の再販予約を、アイカツ！デザインマ
+ ートにて実施。\n\n区分: グッズ\n日程表記: 7月22日(水) 
+ 予約受付開始\n情報公開日: 2026-07-22\n情報源: X @aikatsu_sty
+ le\n\nhttps://x.com/aikatsu_style/status/2079738505224478816\n\n― アイ
+ カツ！情報カレンダー（非公式ファンメイド）\nhttps://a
+ ikatsu-info.github.io/aikatsu-calendar/
+URL:https://x.com/aikatsu_style/status/2079738505224478816
+CATEGORIES:グッズ,予約
+LAST-MODIFIED:20260726T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260726-01@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260725
+DTEND;VALUE=DATE:20260726
+SUMMARY:バースデー缶バッジ Season3＜7～8月＞ 発売
+DESCRIPTION:アイカツ！オフィシャルストアの新商品。全11
+ 種(ランダム)、価格473円(税込)。取扱店舗は秋葉原・京
+ 都・名古屋。\n\n区分: グッズ\n日程表記: 7月25日(土) 発
+ 売\n情報公開日: 2026-07-24\n情報源: X @aikatsu_ofs\n\nhttps://x.c
+ om/aikatsu_ofs/status/2080489135127908649\n\n― アイカツ！情報カ
+ レンダー（非公式ファンメイド）\nhttps://aikatsu-info.github
+ .io/aikatsu-calendar/
+URL:https://x.com/aikatsu_ofs/status/2080489135127908649
+CATEGORIES:グッズ
+LAST-MODIFIED:20260726T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260725-27@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260724
+DTEND;VALUE=DATE:20260725
+SUMMARY:劇場グッズの事後通販 受付開始
+DESCRIPTION:『劇場版アイカツスターズ！』-Anniversary Stars- 
+ の劇場販売グッズの事後通販がスタート。通販期間は20
+ 26年7月24日(金)正午〜8月23日(日)23:59まで。通販サイトは
+ A-on STORE。\n\n区分: グッズ\n日程表記: 7月24日(金)正午 通
+ 販受付開始（〜8月23日23:59）\n情報公開日: 2026-07-24\n情
+ 報源: X @aikatsu_anime\n\nhttps://x.com/aikatsu_anime\n\n― アイカ
+ ツ！情報カレンダー（非公式ファンメイド）\nhttps://aika
+ tsu-info.github.io/aikatsu-calendar/
+URL:https://x.com/aikatsu_anime
+CATEGORIES:グッズ
+LAST-MODIFIED:20260725T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260725-04@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20261001
+DTEND;VALUE=DATE:20261002
+SUMMARY:新作立体シール「Cherigem Sticker」発売決定、『アイ
+ カツ！』『フレンズ！/オンパレード！』の2種展開
+DESCRIPTION:カミオジャパンより、箔押し＆ホログラム加工
+ が施された立体シール「Cherigem Sticker」が発売されます
+ 。『アイカツ！』（星宮いちご・霧矢あおい・紫吹蘭
+ ほか）と『アイカツフレンズ！アイカツオンパレード
+ ！』の2種展開で、価格は各660円（税込）。発売日は店
+ 舗により異なる場合があります。\n\n区分: グッズ\n日程
+ 表記: 2026年10月中 発売予定\n情報公開日: 2026-07-25\n情報
+ 源: 楽天市場（アニメイト公式）\n\nhttps://item.rakuten.co.jp
+ /acosbyanimate/4550432341272/\n\n― アイカツ！情報カレンダー
+ （非公式ファンメイド）\nhttps://aikatsu-info.github.io/aikatsu-
+ calendar/
+URL:https://item.rakuten.co.jp/acosbyanimate/4550432341272/
+CATEGORIES:グッズ
+LAST-MODIFIED:20260725T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260726-02@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260726
+DTEND;VALUE=DATE:20260727
+SUMMARY:【予約】「あかりGenerationプレミアムレアドレス大
+ 投票」TOP5スペシャルセット 予約締切
+DESCRIPTION:ユーザー投票でTOP5に選ばれたドレスの魅力を
+ つめこんだスペシャルセット。アイカツ！デザインマ
+ ートで予約受付中、締切は7月26日(日)23:59。韓国でも予
+ 約販売を実施。\n\n区分: グッズ\n日程表記: 7月26日(日) 2
+ 3:59 予約締切\n情報公開日: 2026-07-25\n情報源: X @aikatsu_styl
+ e\n\nhttps://x.com/aikatsu_style/status/2080835529717981670\n\n― アイ
+ カツ！情報カレンダー（非公式ファンメイド）\nhttps://a
+ ikatsu-info.github.io/aikatsu-calendar/
+URL:https://x.com/aikatsu_style/status/2080835529717981670
+CATEGORIES:グッズ,予約
+LAST-MODIFIED:20260726T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260802-03@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260727
+DTEND;VALUE=DATE:20260728
+SUMMARY:ガシャポン「アイカツ！ ダイキャストドレスチャ
+ ーム」発売
+DESCRIPTION:ステージコーデとハートのWチャームを再現し
+ たダイキャストチャーム。全6種、1回400円。\n\n区分: グ
+ ッズ／ガシャポン\n日程表記: 2026年7月第5週 発売\n情報
+ 源: gashapon.jp\n\nhttps://gashapon.jp/products/detail.php?jan_code=45827
+ 70095326000\n\n― アイカツ！情報カレンダー（非公式ファ
+ ンメイド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://gashapon.jp/products/detail.php?jan_code=4582770095326000
+CATEGORIES:グッズ,ガシャポン
+LAST-MODIFIED:20260725T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260725-29@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260822
+DTEND;VALUE=DATE:20260823
+SUMMARY:アニメイトで『アイカツ！シリーズ』購入・予約
+ 特典フェア開始
+DESCRIPTION:アニメイトにて、『アイカツ！シリーズ』関連
+ グッズの購入・予約で特典ステッカー（全11種）がもら
+ えるフェアが開催されます。\n\n区分: グッズ\n日程表記
+ : 8月22日 フェア開始（〜9月13日）\n情報公開日: 2026-07-25
+ \n情報源: アニメイトタイムズ\n\nhttps://www.animatetimes.com/n
+ ews/details.php?id=1773128646\n\n― アイカツ！情報カレンダー
+ （非公式ファンメイド）\nhttps://aikatsu-info.github.io/aikatsu-
+ calendar/
+URL:https://www.animatetimes.com/news/details.php?id=1773128646
+CATEGORIES:グッズ
+LAST-MODIFIED:20260725T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260727-01@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260727
+DTEND;VALUE=DATE:20260728
+SUMMARY:「ブックマークコレクション アイカツ！」発売（
+ 通常・2枚入り）
+DESCRIPTION:プレミアムレアドレスからノーマルドレス・ア
+ クセサリーまで全29種展開のクリアブックマーク。プレ
+ ミアムレアドレスは箔押しデザイン。1枚入り(110円)と2
+ 枚入り(220円)の2種類。アニメイト・アイカツ！オフィ
+ シャルストア・均一ショップ等で順次発売。\n\n区分: 
+ グッズ\n日程表記: 7月27日(月) 発売\n情報公開日: 2026-07-2
+ 6\n情報源: ライフスタイルバンダイ\n\nhttps://bandai-lifestyl
+ e.jp/products/details.php?detail=4582769993343000\n\n― アイカツ！
+ 情報カレンダー（非公式ファンメイド）\nhttps://aikatsu-in
+ fo.github.io/aikatsu-calendar/
+URL:https://bandai-lifestyle.jp/products/details.php?detail=458276999334300
+ 0
+CATEGORIES:グッズ
+LAST-MODIFIED:20260726T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260730-05@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260701
+DTEND;VALUE=DATE:20260702
+SUMMARY:【予約】ガシャポン「アイカツ！ カラフルマルチ
+ チャーム」予約開始
+DESCRIPTION:星宮いちご・霧矢あおい・紫吹蘭・有栖川おと
+ め・藤堂ユリカをモチーフにした、クリアな星のパー
+ ツ付きマスコットチャーム全5種。ガシャポンオンライ
+ ンで7月1日16時より予約受付、発送は10月下旬予定。1回3
+ 00円（税込）。\n\n区分: グッズ／ガシャポン\n日程表記:
+  7月1日16時 予約受付開始（発送は2026年10月下旬予定）\n
+ 情報公開日: 2026-07-01\n情報源: ガシャポンオンライン（
+ ナムコパークス）\n\nhttps://parks2.bandainamco-am.co.jp/category/G
+ ASHAPON_TOP_TAG/PRE_4582770095319.html\n\n― アイカツ！情報カレ
+ ンダー（非公式ファンメイド）\nhttps://aikatsu-info.github.io
+ /aikatsu-calendar/
+URL:https://parks2.bandainamco-am.co.jp/category/GASHAPON_TOP_TAG/PRE_45827
+ 70095319.html
+CATEGORIES:グッズ,ガシャポン,予約
+LAST-MODIFIED:20260730T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260730-06@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260601
+DTEND;VALUE=DATE:20260602
+SUMMARY:【予約】ガシャポン「だれでもアイドル活動アク
+ リルチャーム ～アイカツスターズ！～」予約開始
+DESCRIPTION:『アイカツスターズ！』10周年を記念し、劇場
+ 版のコーデも含めカード裏面まで再現したアクリルチ
+ ャーム全15種が登場。ガシャポンオンラインで6月1日18
+ 時〜6月22日23時59分に予約受付、発送は9月予定。1回300
+ 円（税込）。\n\n区分: グッズ／ガシャポン\n日程表記: 6
+ 月1日18時 予約受付開始（発送は2026年9月予定）\n情報公
+ 開日: 2026-06-01\n情報源: ガシャポンオンライン（ナムコ
+ パークス）\n\nhttps://parks2.bandainamco-am.co.jp/category/GASHAPON_T
+ OP_TAG/PRE_4582770076554.html\n\n― アイカツ！情報カレンダー
+ （非公式ファンメイド）\nhttps://aikatsu-info.github.io/aikatsu-
+ calendar/
+URL:https://parks2.bandainamco-am.co.jp/category/GASHAPON_TOP_TAG/PRE_45827
+ 70076554.html
+CATEGORIES:グッズ,ガシャポン,予約
+LAST-MODIFIED:20260730T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260731-01@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260119
+DTEND;VALUE=DATE:20260120
+SUMMARY:ガシャポン「アイカツ！ クリアファイルコレクシ
+ ョン2」発売
+DESCRIPTION:ホログラム加工を施したクリアファイルのコレ
+ クション第2弾、全8種。1回300円。ディスプレイの二次
+ 元コードから『アイカツ！』プレイリストを聴くこと
+ ができる。\n\n区分: グッズ／ガシャポン\n日程表記: 2026
+ 年1月第4週 発売\n情報源: gashapon.jp\n\nhttps://gashapon.jp/produ
+ cts/detail.php?jan_code=4582769898747000\n\n― アイカツ！情報カ
+ レンダー（非公式ファンメイド）\nhttps://aikatsu-info.github
+ .io/aikatsu-calendar/
+URL:https://gashapon.jp/products/detail.php?jan_code=4582769898747000
+CATEGORIES:グッズ,ガシャポン
+LAST-MODIFIED:20260731T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260731-02@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260302
+DTEND;VALUE=DATE:20260303
+SUMMARY:ガシャポン「アイカツ！ プリパラ あそーと」発
+ 売
+DESCRIPTION:フィギュアやアクリルチャーム、缶バッジなど
+ を詰め合わせたアソートグッズ、全10種。1回400円。特
+ 別プレイリストも用意されている。\n\n区分: グッズ／
+ ガシャポン\n日程表記: 2026年3月第1週 発売\n情報源: gasha
+ pon.jp\n\nhttps://gashapon.jp/products/detail.php?jan_code=458276991117000
+ 0\n\n― アイカツ！情報カレンダー（非公式ファンメイ
+ ド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://gashapon.jp/products/detail.php?jan_code=4582769911170000
+CATEGORIES:グッズ,ガシャポン
+LAST-MODIFIED:20260731T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260731-03@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260413
+DTEND;VALUE=DATE:20260414
+SUMMARY:ガシャポン「アイカツ！ カスタムドレスアップチ
+ ャーム」発売
+DESCRIPTION:人気コーデをモチーフにしたドレスアップチャ
+ ーム、全12種。1回300円。\n\n区分: グッズ／ガシャポン\n
+ 日程表記: 2026年4月第3週 発売\n情報源: gashapon.jp\n\nhttps:/
+ /gashapon.jp/products/detail.php?jan_code=4570118247292000\n\n― アイ
+ カツ！情報カレンダー（非公式ファンメイド）\nhttps://a
+ ikatsu-info.github.io/aikatsu-calendar/
+URL:https://gashapon.jp/products/detail.php?jan_code=4570118247292000
+CATEGORIES:グッズ,ガシャポン
+LAST-MODIFIED:20260731T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260731-04@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260420
+DTEND;VALUE=DATE:20260421
+SUMMARY:ガシャポン「アイカツ！ アクセサリートレイ［フ
+ ラット］」発売
+DESCRIPTION:イーゼル型のディスプレイスタンドに立てて飾
+ れるアクセサリートレイ、全6種。1回500円。\n\n区分: グ
+ ッズ／ガシャポン\n日程表記: 2026年4月第4週 発売\n情報
+ 源: gashapon.jp\n\nhttps://gashapon.jp/products/detail.php?jan_code=45701
+ 18197054000\n\n― アイカツ！情報カレンダー（非公式ファ
+ ンメイド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://gashapon.jp/products/detail.php?jan_code=4570118197054000
+CATEGORIES:グッズ,ガシャポン
+LAST-MODIFIED:20260731T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260731-05@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260518
+DTEND;VALUE=DATE:20260519
+SUMMARY:ガシャポン「アイカツ！ コンパクトミラー」発売
+DESCRIPTION:アイカツ！デザインのコンパクトミラー、全6
+ 種。1回400円。二次元コードから『アイカツ！』プレイ
+ リストを聴くことができる。\n\n区分: グッズ／ガシャ
+ ポン\n日程表記: 2026年5月第3週 発売\n情報源: gashapon.jp\n\
+ nhttps://gashapon.jp/products/detail.php?jan_code=4570118252067000\n\n― 
+ アイカツ！情報カレンダー（非公式ファンメイド）\nhtt
+ ps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://gashapon.jp/products/detail.php?jan_code=4570118252067000
+CATEGORIES:グッズ,ガシャポン
+LAST-MODIFIED:20260731T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260731-06@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260525
+DTEND;VALUE=DATE:20260526
+SUMMARY:【再販】ガシャポン「アイカツ！ めじるしアクセ
+ サリー」
+DESCRIPTION:2025年12月発売分と同一内容の再販商品、全9種
+ 。1回300円。\n\n区分: グッズ／ガシャポン\n日程表記: 202
+ 6年5月第4週 発売（再販）\n情報源: gashapon.jp\n\nhttps://gash
+ apon.jp/products/detail.php?jan_code=4582769911187000\n\n― アイカツ
+ ！情報カレンダー（非公式ファンメイド）\nhttps://aikatsu
+ -info.github.io/aikatsu-calendar/
+URL:https://gashapon.jp/products/detail.php?jan_code=4582769911187000
+CATEGORIES:グッズ,ガシャポン
+LAST-MODIFIED:20260731T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260731-07@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260720
+DTEND;VALUE=DATE:20260721
+SUMMARY:【再販】ガシャポン「アイカツ！ グッズコレクシ
+ ョン2～大スター宮いちごまつり～」
+DESCRIPTION:2025年7月発売分と同一内容の再販商品。ドラム
+ 式オルゴールやラバーコースター、カードバインダー
+ ミニチュア、ミニチャームなど全15種。1回400円。二次
+ 元コードから『アイカツ！』プレイリストを聴くこと
+ ができる。\n\n区分: グッズ／ガシャポン\n日程表記: 2026
+ 年7月第4週 発売（再販）\n情報源: gashapon.jp\n\nhttps://gasha
+ pon.jp/products/detail.php?jan_code=4582769875786000\n\n― アイカツ
+ ！情報カレンダー（非公式ファンメイド）\nhttps://aikatsu
+ -info.github.io/aikatsu-calendar/
+URL:https://gashapon.jp/products/detail.php?jan_code=4582769875786000
+CATEGORIES:グッズ,ガシャポン
+LAST-MODIFIED:20260731T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260731-08@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20241001
+DTEND;VALUE=DATE:20241002
+SUMMARY:ガシャポン「アイカツ！ グッズコレクション」発
+ 売
+DESCRIPTION:ドラム式オルゴール（収録曲：ヒラリ/ヒトリ/
+ キラリ）やラバーコースター、ミニチャームなど全15種
+ のグッズコレクション第1弾。1回400円。\n\n区分: グッズ
+ ／ガシャポン\n日程表記: 2024年10月発売\n情報源: gashapon.
+ jp\n\nhttps://gashapon.jp/products/detail.php?jan_code=4582769709043000\n\
+ n― アイカツ！情報カレンダー（非公式ファンメイド）
+ \nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://gashapon.jp/products/detail.php?jan_code=4582769709043000
+CATEGORIES:グッズ,ガシャポン
+LAST-MODIFIED:20260731T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260731-09@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20250224
+DTEND;VALUE=DATE:20250225
+SUMMARY:【再販】ガシャポン「アイカツ！ グッズコレクシ
+ ョン」
+DESCRIPTION:2024年10月発売分と同一内容の再販商品。全15種
+ 、1回400円。\n\n区分: グッズ／ガシャポン\n日程表記: 202
+ 5年2月第4週 発売（再販）\n情報源: gashapon.jp\n\nhttps://gash
+ apon.jp/products/detail.php?jan_code=4582769709043000\n\n― アイカツ
+ ！情報カレンダー（非公式ファンメイド）\nhttps://aikatsu
+ -info.github.io/aikatsu-calendar/
+URL:https://gashapon.jp/products/detail.php?jan_code=4582769709043000
+CATEGORIES:グッズ,ガシャポン
+LAST-MODIFIED:20260731T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260731-10@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20250331
+DTEND;VALUE=DATE:20250401
+SUMMARY:ガシャポン「アイカツ！ だれでもアイドル活動ア
+ クリルチャーム」発売
+DESCRIPTION:アイカツ！カードを2層構造のミニアクリルチ
+ ャームで再現、カード裏面デザインも再現。全13種、1
+ 回300円。二次元コードから『アイカツ！』プレイリス
+ トを聴くことができる。\n\n区分: グッズ／ガシャポン\n
+ 日程表記: 2025年3月第5週 発売\n情報源: gashapon.jp\n\nhttps:/
+ /gashapon.jp/products/detail.php?jan_code=4582769836596000\n\n― アイ
+ カツ！情報カレンダー（非公式ファンメイド）\nhttps://a
+ ikatsu-info.github.io/aikatsu-calendar/
+URL:https://gashapon.jp/products/detail.php?jan_code=4582769836596000
+CATEGORIES:グッズ,ガシャポン
+LAST-MODIFIED:20260731T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260731-11@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20250401
+DTEND;VALUE=DATE:20250402
+SUMMARY:ガシャポン「アイカツ！ クリアファイル」発売
+DESCRIPTION:データカードダス アイカツ！のゲーム中デー
+ タやカードデザインをちりばめたホログラム仕様のA4ク
+ リアファイル。全8種、1回300円。\n\n区分: グッズ／ガシ
+ ャポン\n日程表記: 2025年4月発売\n情報源: gashapon.jp\n\nhttp
+ s://gashapon.jp/products/detail.php?jan_code=4582769866616000\n\n― ア
+ イカツ！情報カレンダー（非公式ファンメイド）\nhttps:
+ //aikatsu-info.github.io/aikatsu-calendar/
+URL:https://gashapon.jp/products/detail.php?jan_code=4582769866616000
+CATEGORIES:グッズ,ガシャポン
+LAST-MODIFIED:20260731T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260731-12@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20250825
+DTEND;VALUE=DATE:20250826
+SUMMARY:【再販】ガシャポン「アイカツ！ クリアファイル
+ 」
+DESCRIPTION:2025年4月発売分と同一内容の再販商品。全8種、
+ 1回300円。\n\n区分: グッズ／ガシャポン\n日程表記: 2025
+ 年8月第4週 発売（再販）\n情報源: gashapon.jp\n\nhttps://gasha
+ pon.jp/products/detail.php?jan_code=4582769866616000\n\n― アイカツ
+ ！情報カレンダー（非公式ファンメイド）\nhttps://aikatsu
+ -info.github.io/aikatsu-calendar/
+URL:https://gashapon.jp/products/detail.php?jan_code=4582769866616000
+CATEGORIES:グッズ,ガシャポン
+LAST-MODIFIED:20260731T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260731-13@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20250623
+DTEND;VALUE=DATE:20250624
+SUMMARY:ガシャポン「アイカツ！ だれでもアイドル活動ア
+ クリルチャーム２」発売
+DESCRIPTION:2層構造で立体感のあるミニアクリルチャーム
+ 第2弾。全14種、1回300円。二次元コードから『アイカツ
+ ！』プレイリストを聴くことができる。\n\n区分: グッ
+ ズ／ガシャポン\n日程表記: 2025年6月第4週 発売\n情報源:
+  gashapon.jp\n\nhttps://gashapon.jp/products/detail.php?jan_code=458276989
+ 1625000\n\n― アイカツ！情報カレンダー（非公式ファン
+ メイド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://gashapon.jp/products/detail.php?jan_code=4582769891625000
+CATEGORIES:グッズ,ガシャポン
+LAST-MODIFIED:20260731T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260731-14@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20250908
+DTEND;VALUE=DATE:20250909
+SUMMARY:ガシャポン「アイカツ！×プリパラ カプセルラバ
+ ーマスコット」発売
+DESCRIPTION:『アイカツ！』と『プリパラ』のコラボによる
+ カプセルラバーマスコット。全12種、1回300円。二次元
+ コードから特別プレイリストを聴くことができる。\n\n
+ 区分: グッズ／ガシャポン\n日程表記: 2025年9月第2週 発
+ 売\n情報源: gashapon.jp\n\nhttps://gashapon.jp/products/detail.php?jan
+ _code=4582769891670000\n\n― アイカツ！情報カレンダー（非
+ 公式ファンメイド）\nhttps://aikatsu-info.github.io/aikatsu-calend
+ ar/
+URL:https://gashapon.jp/products/detail.php?jan_code=4582769891670000
+CATEGORIES:グッズ,ガシャポン
+LAST-MODIFIED:20260731T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260731-15@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20250915
+DTEND;VALUE=DATE:20250916
+SUMMARY:ガシャポン「ポンデクルール アイカツ！ マルチ
+ カラーパウダー」発売
+DESCRIPTION:アイカラー・チーク・ハイライトの3way仕様の
+ コスメガシャポン。全6種、1回500円。\n\n区分: グッズ／
+ ガシャポン\n日程表記: 2025年9月第3週 発売\n情報源: gasha
+ pon.jp\n\nhttps://gashapon.jp/products/detail.php?jan_code=458276975866900
+ 0\n\n― アイカツ！情報カレンダー（非公式ファンメイ
+ ド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://gashapon.jp/products/detail.php?jan_code=4582769758669000
+CATEGORIES:グッズ,ガシャポン
+LAST-MODIFIED:20260731T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260731-16@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20251013
+DTEND;VALUE=DATE:20251014
+SUMMARY:ガシャポン「アイカツ！×プリパラ めじるしアク
+ セサリー」発売
+DESCRIPTION:『アイカツ！』と『プリパラ』のアイドルを一
+ 緒に身につけられるめじるしアクセサリー。全6種、1回
+ 300円。二次元コードから特別プレイリストを聴くこと
+ ができる。\n\n区分: グッズ／ガシャポン\n日程表記: 2025
+ 年10月第3週 発売\n情報源: gashapon.jp\n\nhttps://gashapon.jp/prod
+ ucts/detail.php?jan_code=4582769911156000\n\n― アイカツ！情報カ
+ レンダー（非公式ファンメイド）\nhttps://aikatsu-info.github
+ .io/aikatsu-calendar/
+URL:https://gashapon.jp/products/detail.php?jan_code=4582769911156000
+CATEGORIES:グッズ,ガシャポン
+LAST-MODIFIED:20260731T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260731-17@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20251027
+DTEND;VALUE=DATE:20251028
+SUMMARY:ガシャポン「アイカツ！×プリパラ だれでもアク
+ リルチャーム1」発売
+DESCRIPTION:アイカツ！カードとプリチケ「マイチケ」のデ
+ ザインを活かしたアクリルチャーム。全12種、1回300円
+ 。二次元コードから特別プレイリストを聴くことがで
+ きる。\n\n区分: グッズ／ガシャポン\n日程表記: 2025年10
+ 月第5週 発売\n情報源: gashapon.jp\n\nhttps://gashapon.jp/products/
+ detail.php?jan_code=4582769891656000\n\n― アイカツ！情報カレン
+ ダー（非公式ファンメイド）\nhttps://aikatsu-info.github.io/ai
+ katsu-calendar/
+URL:https://gashapon.jp/products/detail.php?jan_code=4582769891656000
+CATEGORIES:グッズ,ガシャポン
+LAST-MODIFIED:20260731T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260731-18@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20251124
+DTEND;VALUE=DATE:20251125
+SUMMARY:ガシャポン「アイカツ！×プリパラ だれでもアク
+ リルチャーム2」発売
+DESCRIPTION:だれでもアクリルチャーム第2弾。全12種、1回30
+ 0円。二次元コードから特別プレイリストを聴くことが
+ できる。\n\n区分: グッズ／ガシャポン\n日程表記: 2025年
+ 11月第4週 発売\n情報源: gashapon.jp\n\nhttps://gashapon.jp/product
+ s/detail.php?jan_code=4582769911163000\n\n― アイカツ！情報カレ
+ ンダー（非公式ファンメイド）\nhttps://aikatsu-info.github.io
+ /aikatsu-calendar/
+URL:https://gashapon.jp/products/detail.php?jan_code=4582769911163000
+CATEGORIES:グッズ,ガシャポン
+LAST-MODIFIED:20260731T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260731-19@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20251201
+DTEND;VALUE=DATE:20251202
+SUMMARY:ガシャポン「Capsuleトルソー アイカツ！」発売
+DESCRIPTION:アイカツ！のドレスを飾れるCapsuleトルソー。
+ アクセサリースタンドとしても使える仕様。全4種、1回
+ 500円。\n\n区分: グッズ／ガシャポン\n日程表記: 2025年11
+ 月第5週 発売\n情報源: gashapon.jp\n\nhttps://gashapon.jp/products/
+ detail.php?jan_code=4582769891632000\n\n― アイカツ！情報カレン
+ ダー（非公式ファンメイド）\nhttps://aikatsu-info.github.io/ai
+ katsu-calendar/
+URL:https://gashapon.jp/products/detail.php?jan_code=4582769891632000
+CATEGORIES:グッズ,ガシャポン
+LAST-MODIFIED:20260731T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260731-20@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20251208
+DTEND;VALUE=DATE:20251209
+SUMMARY:ガシャポン「アイカツ！×プリパラ クリアビジュ
+ アルポスター」発売
+DESCRIPTION:『アイカツ！』と『プリパラ』のクリアビジュ
+ アルポスター。全14種、1回200円。二次元コードから特
+ 別プレイリストを聴くことができる。\n\n区分: グッズ
+ ／ガシャポン\n日程表記: 2025年12月第2週 発売\n情報源: g
+ ashapon.jp\n\nhttps://gashapon.jp/products/detail.php?jan_code=45827698916
+ 63000\n\n― アイカツ！情報カレンダー（非公式ファンメ
+ イド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://gashapon.jp/products/detail.php?jan_code=4582769891663000
+CATEGORIES:グッズ,ガシャポン
+LAST-MODIFIED:20260731T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260731-21@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20251201
+DTEND;VALUE=DATE:20251202
+SUMMARY:ガシャポン「アイカツ！ めじるしアクセサリー」
+ 発売
+DESCRIPTION:全9種、1回300円。※2026年5月に同一内容で再販
+ されている。\n\n区分: グッズ／ガシャポン\n日程表記: 2
+ 025年12月発売\n情報源: gashapon.jp\n\nhttps://gashapon.jp/products/
+ detail.php?jan_code=4582769911187000\n\n― アイカツ！情報カレン
+ ダー（非公式ファンメイド）\nhttps://aikatsu-info.github.io/ai
+ katsu-calendar/
+URL:https://gashapon.jp/products/detail.php?jan_code=4582769911187000
+CATEGORIES:グッズ,ガシャポン
+LAST-MODIFIED:20260731T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260731-22@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20250701
+DTEND;VALUE=DATE:20250702
+SUMMARY:ガシャポン「アイカツ！ グッズコレクション2～
+ 大スター宮いちごまつり～」発売
+DESCRIPTION:大スター宮いちごまつりをテーマにしたグッズ
+ コレクション第2弾。ドラム式オルゴールやラバーコー
+ スター、カードバインダーミニチュア、ミニチャーム
+ など全15種。1回400円。二次元コードから『アイカツ！
+ 』プレイリストを聴くことができる。※2026年7月に同一
+ 内容で再販されている。\n\n区分: グッズ／ガシャポン\n
+ 日程表記: 2025年7月発売\n情報源: gashapon.jp\n\nhttps://gashapo
+ n.jp/products/detail.php?jan_code=4582769875786000\n\n― アイカツ！
+ 情報カレンダー（非公式ファンメイド）\nhttps://aikatsu-in
+ fo.github.io/aikatsu-calendar/
+URL:https://gashapon.jp/products/detail.php?jan_code=4582769875786000
+CATEGORIES:グッズ,ガシャポン
+LAST-MODIFIED:20260731T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260731-25@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260731
+DTEND;VALUE=DATE:20260801
+SUMMARY:「ALL AIKATSU！ BAND LIVE ～LEGGENDA VOCE～」グッズ事後
+ 通販 受付終了
+DESCRIPTION:6月17日から実施されていたライブグッズの事後
+ 通販受付が、7月31日(金)23:59をもって終了しました。\n\n
+ 区分: グッズ\n日程表記: 7月31日(金) 23:59 受付終了\n情報
+ 公開日: 2026-07-31\n情報源: X @aikatsu_anime\n\nhttps://x.com/aikats
+ u_anime\n\n― アイカツ！情報カレンダー（非公式ファン
+ メイド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://x.com/aikatsu_anime
+CATEGORIES:グッズ
+LAST-MODIFIED:20260731T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260801-01@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260619
+DTEND;VALUE=DATE:20260620
+SUMMARY:【予約】「あかりGenerationプレミアムレアドレス大
+ 投票」TOP5スペシャルセット 予約開始
+DESCRIPTION:『アイカツ！あかりGenerationプレミアムレアド
+ レス大投票』でユーザー投票の結果TOP5に選ばれたドレ
+ スをつめこんだスペシャルセットの予約受付が開始さ
+ れました。プレミアムバンダイ（国内）で予約可能、
+ 韓国でも予約実施予定。\n\n区分: グッズ\n日程表記: 6月
+ 19日 予約受付開始（国内PB、韓国でも予約予定）\n情報
+ 公開日: 2026-06-19\n情報源: X @aikatsu_style\n\nhttps://x.com/aikats
+ u_style\n\n― アイカツ！情報カレンダー（非公式ファン
+ メイド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://x.com/aikatsu_style
+CATEGORIES:グッズ,予約
+LAST-MODIFIED:20260801T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260801-02@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260622
+DTEND;VALUE=DATE:20260623
+SUMMARY:【予約】ガシャポン「だれでもアイドル活動アク
+ リルチャーム ～アイカツスターズ！～」予約締切
+DESCRIPTION:『アイカツスターズ！』10周年を記念し、劇場
+ 版のコーデも含めカード裏面まで再現したアクリルチ
+ ャーム全15種が登場。ガシャポンオンラインで6月1日18
+ 時〜6月22日23時59分に予約受付、発送は9月予定。1回300
+ 円（税込）。\n\n区分: グッズ／ガシャポン\n日程表記: 6
+ 月22日23時59分 予約締切（発送は2026年9月予定）\n情報公
+ 開日: 2026-06-01\n情報源: ガシャポンオンライン（ナムコ
+ パークス）\n\nhttps://parks2.bandainamco-am.co.jp/category/GASHAPON_T
+ OP_TAG/PRE_4582770076554.html\n\n― アイカツ！情報カレンダー
+ （非公式ファンメイド）\nhttps://aikatsu-info.github.io/aikatsu-
+ calendar/
+URL:https://parks2.bandainamco-am.co.jp/category/GASHAPON_TOP_TAG/PRE_45827
+ 70076554.html
+CATEGORIES:グッズ,ガシャポン,予約
+LAST-MODIFIED:20260801T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260801-03@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260802
+DTEND;VALUE=DATE:20260803
+SUMMARY:【予約】アイカツアカデミー！LIVEグッズ「ペンラ
+ イト」再販予約締切
+DESCRIPTION:エリオントレジェンドドレス以外のLIVEグッズ
+ 「ペンライト」の再販予約を、アイカツ！デザインマ
+ ートにて実施。\n\n区分: グッズ\n日程表記: 8月2日(日) 
+ 予約締切\n情報公開日: 2026-07-22\n情報源: X @aikatsu_style\n\n
+ https://x.com/aikatsu_style/status/2079738505224478816\n\n― アイカツ
+ ！情報カレンダー（非公式ファンメイド）\nhttps://aikatsu
+ -info.github.io/aikatsu-calendar/
+URL:https://x.com/aikatsu_style/status/2079738505224478816
+CATEGORIES:グッズ,予約
+LAST-MODIFIED:20260801T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260801-07@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260318
+DTEND;VALUE=DATE:20260319
+SUMMARY:『アイカツ！×プリパラ THE MOVIE -出会いのキセキ
+ ！-』Blu-ray発売
+DESCRIPTION:初回生産限定盤。本編映像に加え、オールステ
+ ージムービー特別版・完成披露上映会舞台挨拶映像な
+ どの特典映像を収録。封入特典として「トモチケ付き
+ アイカツ！カード」＆「プリチケ」セット等。\n\n区分:
+  グッズ\n日程表記: 2026年3月18日(水) 発売 初回生産限定
+ 盤 10\,500円(税抜)\n情報源: アイカツ！×プリパラ THE MOVIE
+  公式サイト\n\nhttps://aikatsu-pripara-10movie.jp/\n\n― アイカ
+ ツ！情報カレンダー（非公式ファンメイド）\nhttps://aika
+ tsu-info.github.io/aikatsu-calendar/
+URL:https://aikatsu-pripara-10movie.jp/
+CATEGORIES:グッズ
+LAST-MODIFIED:20260801T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260801-08@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260408
+DTEND;VALUE=DATE:20260409
+SUMMARY:「AIKATSU! × PRIPARA THE LIVE -Miraculous Stage!-」ライブグ
+ ッズ事後通販 受付開始
+DESCRIPTION:ライブグッズの一部について事後通販を実施。
+ 「ミニキャラアクリルスタンド」は受注生産で予約受
+ 付。\n\n区分: グッズ\n日程表記: 4月8日(水)18:00 事後通販
+ 受付開始（〜4月30日23:59）\n情報公開日: 2026-04-08\n情報
+ 源: X @a_p_10movie\n\nhttps://x.com/a_p_10movie\n\n― アイカツ！情
+ 報カレンダー（非公式ファンメイド）\nhttps://aikatsu-info.
+ github.io/aikatsu-calendar/
+URL:https://x.com/a_p_10movie
+CATEGORIES:グッズ
+LAST-MODIFIED:20260801T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260801-09@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20250701
+DTEND;VALUE=DATE:20250702
+SUMMARY:【予約】「アイカツ！デザインマートBYアイカツ
+ ！スタイル」コラボグッズ第一弾 予約開始
+DESCRIPTION:ティザービジュアルタペストリー・PIICA・オー
+ ロラ缶バッジが登場。\n\n区分: グッズ\n日程表記: 2025年
+ 7月1日より順次予約開始\n情報源: アイカツ！×プリパラ
+  THE MOVIE 公式サイト\n\nhttps://aikatsu-pripara-10movie.jp/goods/\n\
+ n― アイカツ！情報カレンダー（非公式ファンメイド）
+ \nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://aikatsu-pripara-10movie.jp/goods/
+CATEGORIES:グッズ,予約
+LAST-MODIFIED:20260801T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260801-10@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20250716
+DTEND;VALUE=DATE:20250717
+SUMMARY:【予約】「アイカツ！デザインマートBYアイカツ
+ ！スタイル」コラボグッズ第二弾 予約開始
+DESCRIPTION:デザインマートオリジナルのデフォルメイラス
+ トを使用した「つなぎゅっと」シリーズ（ハンカチ・
+ アクリルスタンド・ぷに缶）。\n\n区分: グッズ\n日程表
+ 記: 7月16日(水)18時 予約販売開始\n情報源: アイカツ！×
+ プリパラ THE MOVIE 公式サイト\n\nhttps://aikatsu-pripara-10movie.
+ jp/goods/\n\n― アイカツ！情報カレンダー（非公式ファン
+ メイド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://aikatsu-pripara-10movie.jp/goods/
+CATEGORIES:グッズ,予約
+LAST-MODIFIED:20260801T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260801-11@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20251101
+DTEND;VALUE=DATE:20251102
+SUMMARY:『アイカツ！×プリパラ THE MOVIE -出会いのキセキ
+ ！-』ウエハース発売
+DESCRIPTION:新規描き下ろしイラストを使用したカードを含
+ む全24種。スペシャルカードは豪華ホロ箔押し仕様。\n\
+ n区分: グッズ\n日程表記: 2025年11月発売\n情報公開日: 202
+ 5-11-01\n情報源: アイカツ！×プリパラ THE MOVIE 公式サイ
+ ト\n\nhttps://aikatsu-pripara-10movie.jp/goods/\n\n― アイカツ！情
+ 報カレンダー（非公式ファンメイド）\nhttps://aikatsu-info.
+ github.io/aikatsu-calendar/
+URL:https://aikatsu-pripara-10movie.jp/goods/
+CATEGORIES:グッズ
+LAST-MODIFIED:20260801T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260801-12@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260501
+DTEND;VALUE=DATE:20260502
+SUMMARY:５頭身フィギュアブランド「Adokenette」大空あかり
+ ＆真中らぁら
+DESCRIPTION:プレミアムバンダイ「魂ウェブ商店」にて予約
+ 受付中のデフォルメフィギュア。\n\n区分: グッズ\n日程
+ 表記: 2026年5月発送予定\n情報源: アイカツ！×プリパラ 
+ THE MOVIE 公式サイト\n\nhttps://aikatsu-pripara-10movie.jp/goods/\n\n
+ ― アイカツ！情報カレンダー（非公式ファンメイド）\
+ nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://aikatsu-pripara-10movie.jp/goods/
+CATEGORIES:グッズ
+LAST-MODIFIED:20260801T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260801-13@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20250801
+DTEND;VALUE=DATE:20250802
+SUMMARY:ガチャ「でふぉラバ！ アイカツ！×プリパラ THE MO
+ VIE」発売
+DESCRIPTION:劇場版の新衣装を着た「ルミナス」「SoLaMi♡SMI
+ LE」のデフォルメラバーキーホルダー。タカラトミーア
+ ーツより。\n\n区分: グッズ\n日程表記: 2025年8月 発売\n
+ 情報源: アイカツ！×プリパラ THE MOVIE 公式サイト\n\nhttp
+ s://aikatsu-pripara-10movie.jp/goods/\n\n― アイカツ！情報カレ
+ ンダー（非公式ファンメイド）\nhttps://aikatsu-info.github.io
+ /aikatsu-calendar/
+URL:https://aikatsu-pripara-10movie.jp/goods/
+CATEGORIES:グッズ
+LAST-MODIFIED:20260801T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260801-16@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20251001
+DTEND;VALUE=DATE:20251002
+SUMMARY:クレーンゲーム景品「アイカツ！×プリパラ ちび
+ ぐるみ vol.1」登場
+DESCRIPTION:新コスチュームのちびぐるみ、あかり・スミレ
+ ・ひなき・らぁら・みれぃ・そふぃの全6種。バンプレ
+ スト。\n\n区分: グッズ\n日程表記: 2025年10月より登場\n
+ 情報源: アイカツ！×プリパラ THE MOVIE 公式サイト\n\nhttp
+ s://aikatsu-pripara-10movie.jp/goods/\n\n― アイカツ！情報カレ
+ ンダー（非公式ファンメイド）\nhttps://aikatsu-info.github.io
+ /aikatsu-calendar/
+URL:https://aikatsu-pripara-10movie.jp/goods/
+CATEGORIES:グッズ
+LAST-MODIFIED:20260801T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260801-17@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20250724
+DTEND;VALUE=DATE:20250725
+SUMMARY:【予約】ガシャポン「アイカツ！×プリパラ めじ
+ るしアクセサリー」予約締切
+DESCRIPTION:ガシャポンオンライン限定の予約受付。全国の
+ カプセルトイ自販機では2025年秋頃発売予定。\n\n区分: 
+ グッズ\n日程表記: 【ガシャポンオンライン】7月24日(木
+ )23:59まで\n情報源: アイカツ！×プリパラ THE MOVIE 公式サ
+ イト\n\nhttps://aikatsu-pripara-10movie.jp/goods/\n\n― アイカツ！
+ 情報カレンダー（非公式ファンメイド）\nhttps://aikatsu-in
+ fo.github.io/aikatsu-calendar/
+URL:https://aikatsu-pripara-10movie.jp/goods/
+CATEGORIES:グッズ,予約
+LAST-MODIFIED:20260801T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260801-18@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20250801
+DTEND;VALUE=DATE:20250802
+SUMMARY:【予約】ガシャポン「アイカツ！×プリパラ だれ
+ でもアクリルチャーム2」予約開始
+DESCRIPTION:アイカツ！カードとプリチケのマイチケデザイ
+ ンのアクリルチャーム第2弾。\n\n区分: グッズ\n日程表
+ 記: 【ガシャポンオンライン】8月1日(金)12:00〜8月25日(
+ 月)23:59\n情報源: アイカツ！×プリパラ THE MOVIE 公式サイ
+ ト\n\nhttps://aikatsu-pripara-10movie.jp/goods/\n\n― アイカツ！情
+ 報カレンダー（非公式ファンメイド）\nhttps://aikatsu-info.
+ github.io/aikatsu-calendar/
+URL:https://aikatsu-pripara-10movie.jp/goods/
+CATEGORIES:グッズ,予約
+LAST-MODIFIED:20260801T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260801-19@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20250825
+DTEND;VALUE=DATE:20250826
+SUMMARY:【予約】ガシャポン「アイカツ！×プリパラ だれ
+ でもアクリルチャーム2」予約締切
+DESCRIPTION:アイカツ！カードとプリチケのマイチケデザイ
+ ンのアクリルチャーム第2弾。\n\n区分: グッズ\n日程表
+ 記: 【ガシャポンオンライン】8月25日(月)23:59 予約締切\
+ n情報源: アイカツ！×プリパラ THE MOVIE 公式サイト\n\nhtt
+ ps://aikatsu-pripara-10movie.jp/goods/\n\n― アイカツ！情報カレ
+ ンダー（非公式ファンメイド）\nhttps://aikatsu-info.github.io
+ /aikatsu-calendar/
+URL:https://aikatsu-pripara-10movie.jp/goods/
+CATEGORIES:グッズ,予約
+LAST-MODIFIED:20260801T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260801-20@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20251001
+DTEND;VALUE=DATE:20251002
+SUMMARY:「マルチリングプラス」＆「コレクタブルマウス
+ パッド」発売
+DESCRIPTION:劇場版の新衣装を着た「ルミナス」「そらみス
+ マイル」等のデザインを使用したモバイルグッズ。ご
+ 予約受付中。\n\n区分: グッズ\n日程表記: 2025年10月中旬
+ 発売予定\n情報源: アイカツ！×プリパラ THE MOVIE 公式サ
+ イト\n\nhttps://aikatsu-pripara-10movie.jp/goods/\n\n― アイカツ！
+ 情報カレンダー（非公式ファンメイド）\nhttps://aikatsu-in
+ fo.github.io/aikatsu-calendar/
+URL:https://aikatsu-pripara-10movie.jp/goods/
+CATEGORIES:グッズ
+LAST-MODIFIED:20260801T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260801-22@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20251103
+DTEND;VALUE=DATE:20251104
+SUMMARY:「アイカツ！×プリパラ THE MOVIE サイン色紙コレク
+ ション」発売
+DESCRIPTION:劇場版オリジナルコーデ着用イラストとキャラ
+ クターのサインをデザイン。タカラトミーアーツより
+ 、色紙とチューインガムのセット。\n\n区分: グッズ\n日
+ 程表記: 2025年11月3日(月) 発売\n情報源: アイカツ！×プ
+ リパラ THE MOVIE 公式サイト\n\nhttps://aikatsu-pripara-10movie.jp/
+ goods/\n\n― アイカツ！情報カレンダー（非公式ファンメ
+ イド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://aikatsu-pripara-10movie.jp/goods/
+CATEGORIES:グッズ
+LAST-MODIFIED:20260801T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260801-24@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20251130
+DTEND;VALUE=DATE:20251201
+SUMMARY:【予約】「アイカツ！デザインマートBYアイカツ
+ ！スタイル」コラボグッズ第三弾 予約締切
+DESCRIPTION:アクリルロゴディスプレイEX、アイカツ！カー
+ ドセット～STAR PARADISE Coord～、ドレスアクリルキーホル
+ ダーの3品。\n\n区分: グッズ\n日程表記: 〜11月30日(日)23:
+ 59 予約締切\n情報源: アイカツ！×プリパラ THE MOVIE 公式
+ サイト\n\nhttps://aikatsu-pripara-10movie.jp/goods/\n\n― アイカツ
+ ！情報カレンダー（非公式ファンメイド）\nhttps://aikatsu
+ -info.github.io/aikatsu-calendar/
+URL:https://aikatsu-pripara-10movie.jp/goods/
+CATEGORIES:グッズ,予約
+LAST-MODIFIED:20260801T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260801-25@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20251001
+DTEND;VALUE=DATE:20251002
+SUMMARY:『アイカツ！×プリパラ THE MOVIE』オリジナルデザ
+ インTシャツ発売
+DESCRIPTION:Amazon「Merch on Demand」のオンラインアパレルショ
+ ップ『ボカンデパートメント』にて販売。全3種デザイ
+ ン。\n\n区分: グッズ\n日程表記: 2025年10月1日(水)発売\n
+ 情報源: アイカツ！×プリパラ THE MOVIE 公式サイト\n\nhttp
+ s://aikatsu-pripara-10movie.jp/goods/\n\n― アイカツ！情報カレ
+ ンダー（非公式ファンメイド）\nhttps://aikatsu-info.github.io
+ /aikatsu-calendar/
+URL:https://aikatsu-pripara-10movie.jp/goods/
+CATEGORIES:グッズ
+LAST-MODIFIED:20260801T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260801-26@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20251010
+DTEND;VALUE=DATE:20251011
+SUMMARY:『アイカツ！×プリパラ THE MOVIE』オリジナルポッ
+ プコーンバッグ発売
+DESCRIPTION:全国のティ・ジョイ運営劇場他で販売。購入者
+ 特典としてハート型アクリルキーホルダー（全6種ラン
+ ダム）付き。\n\n区分: グッズ\n日程表記: 2025年10月10日(
+ 金) 各劇場オープン時間より販売\n情報源: アイカツ！×
+ プリパラ THE MOVIE 公式サイト\n\nhttps://aikatsu-pripara-10movie.
+ jp/goods/\n\n― アイカツ！情報カレンダー（非公式ファン
+ メイド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://aikatsu-pripara-10movie.jp/goods/
+CATEGORIES:グッズ
+LAST-MODIFIED:20260801T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260801-27@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20251010
+DTEND;VALUE=DATE:20251011
+SUMMARY:【予約】ガシャポン「アイカツ！×プリパラ クリ
+ アビジュアルポスター」予約開始
+DESCRIPTION:キービジュアルやサイリウムチェンジシーンを
+ デザイン。全国のカプセルトイ自販機では2025年12月頃
+ 発売予定。\n\n区分: グッズ\n日程表記: 【ガシャポンオ
+ ンライン】10/10(金)12:00〜予約開始\n情報源: アイカツ！
+ ×プリパラ THE MOVIE 公式サイト\n\nhttps://aikatsu-pripara-10movi
+ e.jp/goods/\n\n― アイカツ！情報カレンダー（非公式ファ
+ ンメイド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://aikatsu-pripara-10movie.jp/goods/
+CATEGORIES:グッズ,予約
+LAST-MODIFIED:20260801T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260801-28@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20251101
+DTEND;VALUE=DATE:20251102
+SUMMARY:クレーンゲーム景品「アイカツ！×プリパラ ちび
+ ぐるみ vol.2」登場
+DESCRIPTION:劇中衣装を着用したちびぐるみ第2弾。みれぃ
+ ・ひなき・まどか・シオン・凜の全5種。バンプレスト
+ 。\n\n区分: グッズ\n日程表記: 2025年11月より登場\n情報
+ 源: アイカツ！×プリパラ THE MOVIE 公式サイト\n\nhttps://ai
+ katsu-pripara-10movie.jp/goods/\n\n― アイカツ！情報カレンダ
+ ー（非公式ファンメイド）\nhttps://aikatsu-info.github.io/aikat
+ su-calendar/
+URL:https://aikatsu-pripara-10movie.jp/goods/
+CATEGORIES:グッズ
+LAST-MODIFIED:20260801T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260801-30@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20251015
+DTEND;VALUE=DATE:20251016
+SUMMARY:【予約】「Dream harmony！」シリーズ 予約開始
+DESCRIPTION:アクリルスタンド・トレーディング缶バッジ・
+ クリアファイル・タペストリー等、6人でおでかけの装
+ いの新規描き下ろしイラストシリーズ。ソル・インタ
+ ーナショナルより。\n\n区分: グッズ\n日程表記: 10月15日
+ (水)12時より順次予約受付開始\n情報源: アイカツ！×プ
+ リパラ THE MOVIE 公式サイト\n\nhttps://aikatsu-pripara-10movie.jp/
+ goods/\n\n― アイカツ！情報カレンダー（非公式ファンメ
+ イド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://aikatsu-pripara-10movie.jp/goods/
+CATEGORIES:グッズ,予約
+LAST-MODIFIED:20260801T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260801-31@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260201
+DTEND;VALUE=DATE:20260202
+SUMMARY:「Dream harmony！」シリーズ発売
+DESCRIPTION:アクリルスタンド・トレーディング缶バッジ・
+ クリアファイルセット・タペストリー・キャラナップ
+ コレクション・プレシャスショットコレクション・ト
+ レーディングミニ色紙の各種。\n\n区分: グッズ\n日程表
+ 記: 2026年2月発売予定\n情報源: アイカツ！×プリパラ THE
+  MOVIE 公式サイト\n\nhttps://aikatsu-pripara-10movie.jp/goods/\n\n―
+  アイカツ！情報カレンダー（非公式ファンメイド）\nht
+ tps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://aikatsu-pripara-10movie.jp/goods/
+CATEGORIES:グッズ
+LAST-MODIFIED:20260801T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260801-32@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20251014
+DTEND;VALUE=DATE:20251015
+SUMMARY:「アイカツ！×プリパラ THE MOVIE」ローソンプリン
+ トブロマイド販売開始
+DESCRIPTION:ビジュアル・キャラクター・場面写真の各ブロ
+ マイドをローソンプリントで販売。\n\n区分: グッズ\n日
+ 程表記: 2025年10月14日(火)0:00 販売開始（〜10月28日）\n情
+ 報源: アイカツ！×プリパラ THE MOVIE 公式サイト\n\nhttps:/
+ /aikatsu-pripara-10movie.jp/goods/\n\n― アイカツ！情報カレン
+ ダー（非公式ファンメイド）\nhttps://aikatsu-info.github.io/ai
+ katsu-calendar/
+URL:https://aikatsu-pripara-10movie.jp/goods/
+CATEGORIES:グッズ
+LAST-MODIFIED:20260801T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260801-34@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20251027
+DTEND;VALUE=DATE:20251028
+SUMMARY:【予約】ガシャポン「アイカツ！×プリパラ あそ
+ ーと」予約開始
+DESCRIPTION:フィギュア・アクリルチャーム・缶バッジをラ
+ インナップ。全国のカプセルトイ自販機では2026年3月頃
+ 発売予定。\n\n区分: グッズ\n日程表記: 【ガシャポンオ
+ ンライン】10/27(月)15:00〜予約開始\n情報源: アイカツ！
+ ×プリパラ THE MOVIE 公式サイト\n\nhttps://aikatsu-pripara-10movi
+ e.jp/goods/\n\n― アイカツ！情報カレンダー（非公式ファ
+ ンメイド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://aikatsu-pripara-10movie.jp/goods/
+CATEGORIES:グッズ,予約
+LAST-MODIFIED:20260801T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260801-35@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20251028
+DTEND;VALUE=DATE:20251029
+SUMMARY:「アイカツ！×プリパラ THE MOVIE」ローソンプリン
+ トブロマイドvol.2販売開始
+DESCRIPTION:場面写真ブロマイドvol.2、全12種。\n\n区分: グ
+ ッズ\n日程表記: 2025年10月28日 販売開始（〜11月24日）\n
+ 情報源: アイカツ！×プリパラ THE MOVIE 公式サイト\n\nhttp
+ s://aikatsu-pripara-10movie.jp/goods/\n\n― アイカツ！情報カレ
+ ンダー（非公式ファンメイド）\nhttps://aikatsu-info.github.io
+ /aikatsu-calendar/
+URL:https://aikatsu-pripara-10movie.jp/goods/
+CATEGORIES:グッズ
+LAST-MODIFIED:20260801T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260801-36@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260202
+DTEND;VALUE=DATE:20260203
+SUMMARY:【予約】「アイカツ！デザインマート」chibiぬい
+ ぐるみ 大空あかり＆真中らぁら 予約開始
+DESCRIPTION:劇中の「スターパラダイスコーデ」を着用した
+ chibiぬいぐるみ。セット販売・単品販売あり。\n\n区分: 
+ グッズ\n日程表記: 受注期間：2026年2月2日(日)〜3月29日(
+ 日)23:59\n情報源: アイカツ！×プリパラ THE MOVIE 公式サイ
+ ト\n\nhttps://aikatsu-pripara-10movie.jp/goods/\n\n― アイカツ！情
+ 報カレンダー（非公式ファンメイド）\nhttps://aikatsu-info.
+ github.io/aikatsu-calendar/
+URL:https://aikatsu-pripara-10movie.jp/goods/
+CATEGORIES:グッズ,予約
+LAST-MODIFIED:20260801T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260801-37@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260329
+DTEND;VALUE=DATE:20260330
+SUMMARY:【予約】「アイカツ！デザインマート」chibiぬい
+ ぐるみ 大空あかり＆真中らぁら 予約締切
+DESCRIPTION:劇中の「スターパラダイスコーデ」を着用した
+ chibiぬいぐるみ。セット販売・単品販売あり。\n\n区分: 
+ グッズ\n日程表記: 受注期間：〜2026年3月29日(日)23:59\n情
+ 報源: アイカツ！×プリパラ THE MOVIE 公式サイト\n\nhttps:/
+ /aikatsu-pripara-10movie.jp/goods/\n\n― アイカツ！情報カレン
+ ダー（非公式ファンメイド）\nhttps://aikatsu-info.github.io/ai
+ katsu-calendar/
+URL:https://aikatsu-pripara-10movie.jp/goods/
+CATEGORIES:グッズ,予約
+LAST-MODIFIED:20260801T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260801-38@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260430
+DTEND;VALUE=DATE:20260501
+SUMMARY:【予約】「アイカツ！デザインマートBYアイカツ
+ ！スタイル」コラボグッズ第四弾 予約締切
+DESCRIPTION:ステージモデルアクリルスタンド・ステージモ
+ デル缶バッジ・ゲームモデルアクリルスタンドの3品。
+ ステージモデルアクリルスタンドは3/21・22開催のライ
+ ブでも先行販売。\n\n区分: グッズ\n日程表記: 〜4月30日(
+ 木)23:59 予約締切\n情報源: アイカツ！×プリパラ THE MOVIE
+  公式サイト\n\nhttps://aikatsu-pripara-10movie.jp/goods/\n\n― ア
+ イカツ！情報カレンダー（非公式ファンメイド）\nhttps:
+ //aikatsu-info.github.io/aikatsu-calendar/
+URL:https://aikatsu-pripara-10movie.jp/goods/
+CATEGORIES:グッズ,予約
+LAST-MODIFIED:20260801T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260801-42@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260518
+DTEND;VALUE=DATE:20260519
+SUMMARY:【予約】ガシャポン「データカードダスアイカツ
+ ！ ミニチュアコレクション」予約開始
+DESCRIPTION:懐かしいDCDのプレイ音が鳴るボタンギミック付
+ きミニチュアコレクション全5種。ガシャポンオンライ
+ ンで5月18日18時〜5月24日23時59分に予約受付、発送は8月
+ 下旬予定。1回500円（税込）。\n\n区分: グッズ／ガシャ
+ ポン\n日程表記: 5月18日18時 予約受付開始（発送は2026年
+ 8月下旬予定）\n情報公開日: 2026-05-18\n情報源: ガシャポ
+ ンオンライン（ナムコパークス）\n\nhttps://parks2.bandainamc
+ o-am.co.jp/category/GASHAPON_TOP_TAG/PRE_4582769810541.html\n\n― アイ
+ カツ！情報カレンダー（非公式ファンメイド）\nhttps://a
+ ikatsu-info.github.io/aikatsu-calendar/
+URL:https://parks2.bandainamco-am.co.jp/category/GASHAPON_TOP_TAG/PRE_45827
+ 69810541.html
+CATEGORIES:グッズ,ガシャポン,予約
+LAST-MODIFIED:20260801T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260801-43@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260524
+DTEND;VALUE=DATE:20260525
+SUMMARY:【予約】ガシャポン「データカードダスアイカツ
+ ！ ミニチュアコレクション」予約締切
+DESCRIPTION:懐かしいDCDのプレイ音が鳴るボタンギミック付
+ きミニチュアコレクション全5種。ガシャポンオンライ
+ ンで5月18日18時〜5月24日23時59分に予約受付、発送は8月
+ 下旬予定。1回500円（税込）。\n\n区分: グッズ／ガシャ
+ ポン\n日程表記: 5月24日23時59分 予約締切（発送は2026年8
+ 月下旬予定）\n情報公開日: 2026-05-18\n情報源: ガシャポ
+ ンオンライン（ナムコパークス）\n\nhttps://parks2.bandainamc
+ o-am.co.jp/category/GASHAPON_TOP_TAG/PRE_4582769810541.html\n\n― アイ
+ カツ！情報カレンダー（非公式ファンメイド）\nhttps://a
+ ikatsu-info.github.io/aikatsu-calendar/
+URL:https://parks2.bandainamco-am.co.jp/category/GASHAPON_TOP_TAG/PRE_45827
+ 69810541.html
+CATEGORIES:グッズ,ガシャポン,予約
+LAST-MODIFIED:20260801T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260802-01@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260817
+DTEND;VALUE=DATE:20260818
+SUMMARY:ガシャポン「データカードダス アイカツ！ ミニ
+ チュアコレクション」発売
+DESCRIPTION:データカードダス アイカツ！がミニチュアに
+ なって登場。2種はDCDの音声が流れる特別仕様。全5種、
+ 1回500円。\n\n区分: グッズ／ガシャポン\n日程表記: 2026
+ 年8月第4週 発売\n情報源: gashapon.jp\n\nhttps://gashapon.jp/produ
+ cts/detail.php?jan_code=4582769810541000\n\n― アイカツ！情報カ
+ レンダー（非公式ファンメイド）\nhttps://aikatsu-info.github
+ .io/aikatsu-calendar/
+URL:https://gashapon.jp/products/detail.php?jan_code=4582769810541000
+CATEGORIES:グッズ,ガシャポン
+LAST-MODIFIED:20260802T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260802-02@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260622
+DTEND;VALUE=DATE:20260623
+SUMMARY:ガシャポン「ポンデクルール アイカツ！ マルチ
+ カラーパウダーVol.2」発売
+DESCRIPTION:本格コスメシリーズ『ポンデクルール』のアイ
+ カツ！第2弾。カード型の四角容器に入ったアイシャド
+ ウ・フェイスカラー用マルチカラーパウダーで、新規
+ デザイン6種＋第1弾の再録6種の全12種。1回500円。\n\n区
+ 分: グッズ／ガシャポン\n日程表記: 2026年6月第4週 発売\
+ n情報源: gashapon.jp\n\nhttps://gashapon.jp/products/detail.php?jan_cod
+ e=4582770066258000\n\n― アイカツ！情報カレンダー（非公式
+ ファンメイド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://gashapon.jp/products/detail.php?jan_code=4582770066258000
+CATEGORIES:グッズ,ガシャポン
+LAST-MODIFIED:20260802T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260802-04@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260421
+DTEND;VALUE=DATE:20260422
+SUMMARY:【予約】ガシャポン「Capsuleトルソー アイカツ！2 
+ PREMIUM」予約開始
+DESCRIPTION:アイカツ！Capsuleトルソー第2弾のオンライン限
+ 定PREMIUM仕様。豪華塗装とアクセサリー付きで、天の川
+ コズミックコーデ・ローズボンボンコーデ・マーブル
+ キャンディコーデの全3種。ガシャポンオンラインで4月
+ 21日16時より予約受付、発送は10月下旬予定。1回800円（
+ 税込）。\n\n区分: グッズ／ガシャポン\n日程表記: 4月21
+ 日16時 予約受付開始（発送は2026年10月下旬予定）\n情報
+ 公開日: 2026-04-21\n情報源: ガシャポンオンライン（ナム
+ コパークス）\n\nhttps://parks2.bandainamco-am.co.jp/category/GASHAPO
+ N_TOP_TAG/PRE_4582769995699.html\n\n― アイカツ！情報カレンダ
+ ー（非公式ファンメイド）\nhttps://aikatsu-info.github.io/aikat
+ su-calendar/
+URL:https://parks2.bandainamco-am.co.jp/category/GASHAPON_TOP_TAG/PRE_45827
+ 69995699.html
+CATEGORIES:グッズ,ガシャポン,予約
+LAST-MODIFIED:20260802T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260802-05@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260522
+DTEND;VALUE=DATE:20260523
+SUMMARY:【予約】ガシャポン「Capsuleトルソー アイカツ！2 
+ PREMIUM」予約締切
+DESCRIPTION:アイカツ！Capsuleトルソー第2弾のオンライン限
+ 定PREMIUM仕様。豪華塗装とアクセサリー付きで、天の川
+ コズミックコーデ・ローズボンボンコーデ・マーブル
+ キャンディコーデの全3種。ガシャポンオンラインで4月
+ 21日16時〜5月22日23時59分に予約受付、発送は10月下旬予
+ 定。1回800円（税込）。\n\n区分: グッズ／ガシャポン\n
+ 日程表記: 5月22日23時59分 予約締切（発送は2026年10月下
+ 旬予定）\n情報公開日: 2026-04-21\n情報源: ガシャポンオ
+ ンライン（ナムコパークス）\n\nhttps://parks2.bandainamco-am.c
+ o.jp/category/GASHAPON_TOP_TAG/PRE_4582769995699.html\n\n― アイカツ
+ ！情報カレンダー（非公式ファンメイド）\nhttps://aikatsu
+ -info.github.io/aikatsu-calendar/
+URL:https://parks2.bandainamco-am.co.jp/category/GASHAPON_TOP_TAG/PRE_45827
+ 69995699.html
+CATEGORIES:グッズ,ガシャポン,予約
+LAST-MODIFIED:20260802T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260802-06@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20250527
+DTEND;VALUE=DATE:20250528
+SUMMARY:【予約】ガシャポン「アイカツアカデミー！ マル
+ チクロスコレクション」予約開始
+DESCRIPTION:『アイカツアカデミー！』のマルチクロスが登
+ 場。等身大のビッグサイズクロスを含む全12種。ガシャ
+ ポンオンラインで5月27日11時〜6月24日23時59分に予約受
+ 付、発送は8月下旬予定。1回500円（税込）。\n\n区分: グ
+ ッズ／ガシャポン\n日程表記: 5月27日11時 予約受付開始
+ （発送は2025年8月下旬予定）\n情報公開日: 2025-05-27\n情
+ 報源: ガシャポンオンライン（ナムコパークス）\n\nhttps
+ ://parks2.bandainamco-am.co.jp/category/GASHAPON_TOP_TAG/PRE_4582769836602
+ .html\n\n― アイカツ！情報カレンダー（非公式ファンメ
+ イド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://parks2.bandainamco-am.co.jp/category/GASHAPON_TOP_TAG/PRE_45827
+ 69836602.html
+CATEGORIES:グッズ,ガシャポン,予約
+LAST-MODIFIED:20260802T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260802-07@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20250624
+DTEND;VALUE=DATE:20250625
+SUMMARY:【予約】ガシャポン「アイカツアカデミー！ マル
+ チクロスコレクション」予約締切
+DESCRIPTION:『アイカツアカデミー！』のマルチクロスが登
+ 場。等身大のビッグサイズクロスを含む全12種。ガシャ
+ ポンオンラインで5月27日11時〜6月24日23時59分に予約受
+ 付、発送は8月下旬予定。1回500円（税込）。\n\n区分: グ
+ ッズ／ガシャポン\n日程表記: 6月24日23時59分 予約締切
+ （発送は2025年8月下旬予定）\n情報公開日: 2025-05-27\n情
+ 報源: ガシャポンオンライン（ナムコパークス）\n\nhttps
+ ://parks2.bandainamco-am.co.jp/category/GASHAPON_TOP_TAG/PRE_4582769836602
+ .html\n\n― アイカツ！情報カレンダー（非公式ファンメ
+ イド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://parks2.bandainamco-am.co.jp/category/GASHAPON_TOP_TAG/PRE_45827
+ 69836602.html
+CATEGORIES:グッズ,ガシャポン,予約
+LAST-MODIFIED:20260802T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260802-08@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20240808
+DTEND;VALUE=DATE:20240809
+SUMMARY:【予約】ガシャポン「アイカツアカデミー！あそ
+ ーと」予約開始
+DESCRIPTION:新プロジェクト『アイカツアカデミー！』始動
+ を記念したガシャポンオンライン限定くじ。姫乃みえ
+ る・真未夢メエ・和央パリンをデザインした全長約30cm
+ のビッグアクリルスタンドや大判缶バッジなど全21種。
+ ガシャポンオンラインで8月8日11時〜9月2日23時59分に予
+ 約受付、発送は11月下旬予定。1回500円（税込）。10連ガ
+ シャの最後の1個はアクリルスタンド確定。\n\n区分: グ
+ ッズ／ガシャポン\n日程表記: 8月8日11時 予約受付開始
+ （発送は2024年11月下旬予定）\n情報公開日: 2024-08-08\n情
+ 報源: ガシャポンオンライン（ナムコパークス）\n\nhttps
+ ://parks2.bandainamco-am.co.jp/category/GASHAPON_TOP_TAG/PRE_4570118247186
+ .html\n\n― アイカツ！情報カレンダー（非公式ファンメ
+ イド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://parks2.bandainamco-am.co.jp/category/GASHAPON_TOP_TAG/PRE_45701
+ 18247186.html
+CATEGORIES:グッズ,ガシャポン,予約
+LAST-MODIFIED:20260802T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260802-09@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20240902
+DTEND;VALUE=DATE:20240903
+SUMMARY:【予約】ガシャポン「アイカツアカデミー！あそ
+ ーと」予約締切
+DESCRIPTION:新プロジェクト『アイカツアカデミー！』始動
+ を記念したガシャポンオンライン限定くじ。姫乃みえ
+ る・真未夢メエ・和央パリンをデザインした全長約30cm
+ のビッグアクリルスタンドや大判缶バッジなど全21種。
+ ガシャポンオンラインで8月8日11時〜9月2日23時59分に予
+ 約受付、発送は11月下旬予定。1回500円（税込）。10連ガ
+ シャの最後の1個はアクリルスタンド確定。\n\n区分: グ
+ ッズ／ガシャポン\n日程表記: 9月2日23時59分 予約締切（
+ 発送は2024年11月下旬予定）\n情報公開日: 2024-08-08\n情報
+ 源: ガシャポンオンライン（ナムコパークス）\n\nhttps://
+ parks2.bandainamco-am.co.jp/category/GASHAPON_TOP_TAG/PRE_4570118247186.ht
+ ml\n\n― アイカツ！情報カレンダー（非公式ファンメイ
+ ド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://parks2.bandainamco-am.co.jp/category/GASHAPON_TOP_TAG/PRE_45701
+ 18247186.html
+CATEGORIES:グッズ,ガシャポン,予約
+LAST-MODIFIED:20260802T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260802-10@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20250807
+DTEND;VALUE=DATE:20250808
+SUMMARY:【予約】ガシャポン「Capsuleトルソー アイカツ！ P
+ REMIUM」予約開始
+DESCRIPTION:アイカツ！初のCapsuleトルソーのオンライン限
+ 定PREMIUM仕様。豪華塗装と羽・アクセサリー付きで、オ
+ ーロラキスコーデ・ゴスマジックコーデ・ロイヤルム
+ ーンコーデの全3種。ガシャポンオンラインで8月7日9時
+ より予約受付、発送は11月27日予定。1回800円（税込）。
+ \n\n区分: グッズ／ガシャポン\n日程表記: 8月7日9時 予約
+ 受付開始（発送は2025年11月27日予定）\n情報公開日: 2025-
+ 08-07\n情報源: ガシャポンオンライン（ナムコパークス
+ ）\n\nhttps://parks2.bandainamco-am.co.jp/category/GASHAPON_TOP_TAG/PRE_4
+ 582769891649.html\n\n― アイカツ！情報カレンダー（非公式
+ ファンメイド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://parks2.bandainamco-am.co.jp/category/GASHAPON_TOP_TAG/PRE_45827
+ 69891649.html
+CATEGORIES:グッズ,ガシャポン,予約
+LAST-MODIFIED:20260802T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260802-11@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20250825
+DTEND;VALUE=DATE:20250826
+SUMMARY:【予約】ガシャポン「Capsuleトルソー アイカツ！ P
+ REMIUM」予約締切
+DESCRIPTION:アイカツ！初のCapsuleトルソーのオンライン限
+ 定PREMIUM仕様。豪華塗装と羽・アクセサリー付きで、オ
+ ーロラキスコーデ・ゴスマジックコーデ・ロイヤルム
+ ーンコーデの全3種。ガシャポンオンラインで8月7日9時
+ 〜8月25日23時59分に予約受付、発送は11月27日予定。1回80
+ 0円（税込）。\n\n区分: グッズ／ガシャポン\n日程表記: 
+ 8月25日23時59分 予約締切（発送は2025年11月27日予定）\n
+ 情報公開日: 2025-08-07\n情報源: ガシャポンオンライン（
+ ナムコパークス）\n\nhttps://parks2.bandainamco-am.co.jp/category/G
+ ASHAPON_TOP_TAG/PRE_4582769891649.html\n\n― アイカツ！情報カレ
+ ンダー（非公式ファンメイド）\nhttps://aikatsu-info.github.io
+ /aikatsu-calendar/
+URL:https://parks2.bandainamco-am.co.jp/category/GASHAPON_TOP_TAG/PRE_45827
+ 69891649.html
+CATEGORIES:グッズ,ガシャポン,予約
+LAST-MODIFIED:20260802T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260802-12@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20250829
+DTEND;VALUE=DATE:20250830
+SUMMARY:【予約】ガシャポン「Capsuleトルソー アイカツ！ P
+ REMIUM」2次予約開始
+DESCRIPTION:『Capsuleトルソー アイカツ！ PREMIUM』の第2次予
+ 約受付。ラインナップは1次と同一（オーロラキスコー
+ デ・ゴスマジックコーデ・ロイヤルムーンコーデ全3種
+ ）。ガシャポンオンラインで8月29日17時〜9月11日23時59
+ 分に予約受付、発送は12月25日予定。1回800円（税込）。
+ \n\n区分: グッズ／ガシャポン\n日程表記: 8月29日17時 予
+ 約受付開始（発送は2025年12月25日予定）\n情報公開日: 20
+ 25-08-29\n情報源: ガシャポンオンライン（ナムコパーク
+ ス）\n\nhttps://parks2.bandainamco-am.co.jp/category/GASHAPON_TOP_TAG/PR
+ E_A4582769891649.html\n\n― アイカツ！情報カレンダー（非公
+ 式ファンメイド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://parks2.bandainamco-am.co.jp/category/GASHAPON_TOP_TAG/PRE_A4582
+ 769891649.html
+CATEGORIES:グッズ,ガシャポン,予約
+LAST-MODIFIED:20260802T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260802-13@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20250911
+DTEND;VALUE=DATE:20250912
+SUMMARY:【予約】ガシャポン「Capsuleトルソー アイカツ！ P
+ REMIUM」2次予約締切
+DESCRIPTION:『Capsuleトルソー アイカツ！ PREMIUM』の第2次予
+ 約受付。ラインナップは1次と同一（オーロラキスコー
+ デ・ゴスマジックコーデ・ロイヤルムーンコーデ全3種
+ ）。ガシャポンオンラインで8月29日17時〜9月11日23時59
+ 分に予約受付、発送は12月25日予定。1回800円（税込）。
+ \n\n区分: グッズ／ガシャポン\n日程表記: 9月11日23時59分
+  予約締切（発送は2025年12月25日予定）\n情報公開日: 2025
+ -08-29\n情報源: ガシャポンオンライン（ナムコパークス
+ ）\n\nhttps://parks2.bandainamco-am.co.jp/category/GASHAPON_TOP_TAG/PRE_A
+ 4582769891649.html\n\n― アイカツ！情報カレンダー（非公式
+ ファンメイド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://parks2.bandainamco-am.co.jp/category/GASHAPON_TOP_TAG/PRE_A4582
+ 769891649.html
+CATEGORIES:グッズ,ガシャポン,予約
+LAST-MODIFIED:20260802T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260802-14@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20241211
+DTEND;VALUE=DATE:20241212
+SUMMARY:【予約】ガシャポン「アイカツ！ だれでもアイド
+ ル活動アクリルチャーム」2次予約開始
+DESCRIPTION:アイカツ！カードを2層アクリルで再現したミ
+ ニチュアチャームの第2次予約受付。全13種、1回300円（
+ 税込）。ガシャポンオンラインで12月11日11時〜12月24日2
+ 3時59分に予約受付、発送は3月下旬予定。\n\n区分: グッ
+ ズ／ガシャポン\n日程表記: 12月11日11時 予約受付開始（
+ 発送は2025年3月下旬予定）\n情報公開日: 2024-12-11\n情報
+ 源: ガシャポンオンライン（ナムコパークス）\n\nhttps://
+ parks2.bandainamco-am.co.jp/category/GASHAPON_TOP_TAG/PRE_A4582769836596.h
+ tml\n\n― アイカツ！情報カレンダー（非公式ファンメイ
+ ド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://parks2.bandainamco-am.co.jp/category/GASHAPON_TOP_TAG/PRE_A4582
+ 769836596.html
+CATEGORIES:グッズ,ガシャポン,予約
+LAST-MODIFIED:20260802T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260802-15@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20241224
+DTEND;VALUE=DATE:20241225
+SUMMARY:【予約】ガシャポン「アイカツ！ だれでもアイド
+ ル活動アクリルチャーム」2次予約締切
+DESCRIPTION:アイカツ！カードを2層アクリルで再現したミ
+ ニチュアチャームの第2次予約受付。全13種、1回300円（
+ 税込）。ガシャポンオンラインで12月11日11時〜12月24日2
+ 3時59分に予約受付、発送は3月下旬予定。\n\n区分: グッ
+ ズ／ガシャポン\n日程表記: 12月24日23時59分 予約締切（
+ 発送は2025年3月下旬予定）\n情報公開日: 2024-12-11\n情報
+ 源: ガシャポンオンライン（ナムコパークス）\n\nhttps://
+ parks2.bandainamco-am.co.jp/category/GASHAPON_TOP_TAG/PRE_A4582769836596.h
+ tml\n\n― アイカツ！情報カレンダー（非公式ファンメイ
+ ド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://parks2.bandainamco-am.co.jp/category/GASHAPON_TOP_TAG/PRE_A4582
+ 769836596.html
+CATEGORIES:グッズ,ガシャポン,予約
+LAST-MODIFIED:20260802T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260802-16@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20250331
+DTEND;VALUE=DATE:20250401
+SUMMARY:【予約】ガシャポン「アイカツ！ だれでもアイド
+ ル活動アクリルチャーム２」2次予約開始
+DESCRIPTION:2015年シリーズのロマンスストーリー編ドレス
+ をラインナップしたミニアクリルチャーム第2弾の2次予
+ 約受付。全14種、1回300円（税込）。ガシャポンオンラ
+ インで3月31日17時〜4月20日23時59分に予約受付、発送は7
+ 月下旬予定。\n\n区分: グッズ／ガシャポン\n日程表記: 3
+ 月31日17時 予約受付開始（発送は2025年7月下旬予定）\n
+ 情報公開日: 2025-03-31\n情報源: ガシャポンオンライン（
+ ナムコパークス）\n\nhttps://parks2.bandainamco-am.co.jp/category/G
+ ASHAPON_TOP_TAG/PRE_A4582769891625.html\n\n― アイカツ！情報カレ
+ ンダー（非公式ファンメイド）\nhttps://aikatsu-info.github.io
+ /aikatsu-calendar/
+URL:https://parks2.bandainamco-am.co.jp/category/GASHAPON_TOP_TAG/PRE_A4582
+ 769891625.html
+CATEGORIES:グッズ,ガシャポン,予約
+LAST-MODIFIED:20260802T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260802-17@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20250420
+DTEND;VALUE=DATE:20250421
+SUMMARY:【予約】ガシャポン「アイカツ！ だれでもアイド
+ ル活動アクリルチャーム２」2次予約締切
+DESCRIPTION:2015年シリーズのロマンスストーリー編ドレス
+ をラインナップしたミニアクリルチャーム第2弾の2次予
+ 約受付。全14種、1回300円（税込）。ガシャポンオンラ
+ インで3月31日17時〜4月20日23時59分に予約受付、発送は7
+ 月下旬予定。\n\n区分: グッズ／ガシャポン\n日程表記: 4
+ 月20日23時59分 予約締切（発送は2025年7月下旬予定）\n情
+ 報公開日: 2025-03-31\n情報源: ガシャポンオンライン（ナ
+ ムコパークス）\n\nhttps://parks2.bandainamco-am.co.jp/category/GASH
+ APON_TOP_TAG/PRE_A4582769891625.html\n\n― アイカツ！情報カレン
+ ダー（非公式ファンメイド）\nhttps://aikatsu-info.github.io/ai
+ katsu-calendar/
+URL:https://parks2.bandainamco-am.co.jp/category/GASHAPON_TOP_TAG/PRE_A4582
+ 769891625.html
+CATEGORIES:グッズ,ガシャポン,予約
+LAST-MODIFIED:20260802T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260802-18@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20250818
+DTEND;VALUE=DATE:20250819
+SUMMARY:【予約】ガシャポン「アイカツ！×プリパラ だれ
+ でもアクリルチャーム1」2次予約開始
+DESCRIPTION:だれでもアクリルチャームに『アイカツ！×プ
+ リパラ』が登場。全12種、1回300円（税込）。ガシャポ
+ ンオンラインで8月18日17時〜8月24日23時59分に予約受付
+ 、発送は12月25日予定。\n\n区分: グッズ／ガシャポン\n
+ 日程表記: 8月18日17時 予約受付開始（発送は2025年12月25
+ 日予定）\n情報公開日: 2025-08-18\n情報源: ガシャポンオ
+ ンライン（ナムコパークス）\n\nhttps://parks2.bandainamco-am.c
+ o.jp/category/GASHAPON_TOP_TAG/PRE_A4582769891656.html\n\n― アイカツ
+ ！情報カレンダー（非公式ファンメイド）\nhttps://aikatsu
+ -info.github.io/aikatsu-calendar/
+URL:https://parks2.bandainamco-am.co.jp/category/GASHAPON_TOP_TAG/PRE_A4582
+ 769891656.html
+CATEGORIES:グッズ,ガシャポン,予約
+LAST-MODIFIED:20260802T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260802-19@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20250824
+DTEND;VALUE=DATE:20250825
+SUMMARY:【予約】ガシャポン「アイカツ！×プリパラ だれ
+ でもアクリルチャーム1」2次予約締切
+DESCRIPTION:だれでもアクリルチャームに『アイカツ！×プ
+ リパラ』が登場。全12種、1回300円（税込）。ガシャポ
+ ンオンラインで8月18日17時〜8月24日23時59分に予約受付
+ 、発送は12月25日予定。\n\n区分: グッズ／ガシャポン\n
+ 日程表記: 8月24日23時59分 予約締切（発送は2025年12月25
+ 日予定）\n情報公開日: 2025-08-18\n情報源: ガシャポンオ
+ ンライン（ナムコパークス）\n\nhttps://parks2.bandainamco-am.c
+ o.jp/category/GASHAPON_TOP_TAG/PRE_A4582769891656.html\n\n― アイカツ
+ ！情報カレンダー（非公式ファンメイド）\nhttps://aikatsu
+ -info.github.io/aikatsu-calendar/
+URL:https://parks2.bandainamco-am.co.jp/category/GASHAPON_TOP_TAG/PRE_A4582
+ 769891656.html
+CATEGORIES:グッズ,ガシャポン,予約
+LAST-MODIFIED:20260802T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260802-20@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20250818
+DTEND;VALUE=DATE:20250819
+SUMMARY:【予約】ガシャポン「アイカツ！×プリパラ だれ
+ でもアクリルチャーム2」2次予約開始
+DESCRIPTION:だれでもアクリルチャーム『アイカツ！×プリ
+ パラ』の第2弾。全12種、1回300円（税込）。ガシャポン
+ オンラインで8月18日17時〜8月24日23時59分に予約受付、
+ 発送は12月25日予定。\n\n区分: グッズ／ガシャポン\n日
+ 程表記: 8月18日17時 予約受付開始（発送は2025年12月25日
+ 予定）\n情報公開日: 2025-08-18\n情報源: ガシャポンオン
+ ライン（ナムコパークス）\n\nhttps://parks2.bandainamco-am.co.j
+ p/category/GASHAPON_TOP_TAG/PRE_A4582769911163.html\n\n― アイカツ！
+ 情報カレンダー（非公式ファンメイド）\nhttps://aikatsu-in
+ fo.github.io/aikatsu-calendar/
+URL:https://parks2.bandainamco-am.co.jp/category/GASHAPON_TOP_TAG/PRE_A4582
+ 769911163.html
+CATEGORIES:グッズ,ガシャポン,予約
+LAST-MODIFIED:20260802T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260802-21@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20250824
+DTEND;VALUE=DATE:20250825
+SUMMARY:【予約】ガシャポン「アイカツ！×プリパラ だれ
+ でもアクリルチャーム2」2次予約締切
+DESCRIPTION:だれでもアクリルチャーム『アイカツ！×プリ
+ パラ』の第2弾。全12種、1回300円（税込）。ガシャポン
+ オンラインで8月18日17時〜8月24日23時59分に予約受付、
+ 発送は12月25日予定。\n\n区分: グッズ／ガシャポン\n日
+ 程表記: 8月24日23時59分 予約締切（発送は2025年12月25日
+ 予定）\n情報公開日: 2025-08-18\n情報源: ガシャポンオン
+ ライン（ナムコパークス）\n\nhttps://parks2.bandainamco-am.co.j
+ p/category/GASHAPON_TOP_TAG/PRE_A4582769911163.html\n\n― アイカツ！
+ 情報カレンダー（非公式ファンメイド）\nhttps://aikatsu-in
+ fo.github.io/aikatsu-calendar/
+URL:https://parks2.bandainamco-am.co.jp/category/GASHAPON_TOP_TAG/PRE_A4582
+ 769911163.html
+CATEGORIES:グッズ,ガシャポン,予約
+LAST-MODIFIED:20260802T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260802-22@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20210607
+DTEND;VALUE=DATE:20210608
+SUMMARY:ガシャポン「アイカツプラネット！ ミニメモコレ
+ クション」発売
+DESCRIPTION:アイカツプラネット！のミニメモコレクション
+ 。全5種にミニスイングつき。1回200円。\n\n区分: グッズ
+ ／ガシャポン\n日程表記: 2021年6月第2週 発売\n情報源: ga
+ shapon.jp\n\nhttps://gashapon.jp/products/detail.php?jan_code=454966066029
+ 3000\n\n― アイカツ！情報カレンダー（非公式ファンメ
+ イド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://gashapon.jp/products/detail.php?jan_code=4549660660293000
+CATEGORIES:グッズ,ガシャポン
+LAST-MODIFIED:20260802T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260802-23@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20210208
+DTEND;VALUE=DATE:20210209
+SUMMARY:ガシャポン「アイカツプラネット！ マスキングテ
+ ープコレクション」発売
+DESCRIPTION:アイカツプラネット！のマスキングテープコレ
+ クション。全6種にミニスイングつき。1回200円。\n\n区
+ 分: グッズ／ガシャポン\n日程表記: 2021年2月第2週 発売\
+ n情報源: gashapon.jp\n\nhttps://gashapon.jp/products/detail.php?jan_cod
+ e=4549660533399000\n\n― アイカツ！情報カレンダー（非公式
+ ファンメイド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://gashapon.jp/products/detail.php?jan_code=4549660533399000
+CATEGORIES:グッズ,ガシャポン
+LAST-MODIFIED:20260802T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260802-24@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20201026
+DTEND;VALUE=DATE:20201027
+SUMMARY:ガシャポン「アイカツ！シリーズあそーと5」発売
+DESCRIPTION:アイカツ！シリーズあそーと第5弾。A賞は桜庭
+ ローラ・氷上スミレのビッグサイズフィギュア、B賞は
+ デフォルメアクリルチャーム、C賞はプレミアムレアド
+ レス姿の缶バッジ。全13種、1回300円。\n\n区分: グッズ
+ ／ガシャポン\n日程表記: 2020年10月第5週 発売\n情報源: g
+ ashapon.jp\n\nhttps://gashapon.jp/products/detail.php?jan_code=45496605090
+ 59000\n\n― アイカツ！情報カレンダー（非公式ファンメ
+ イド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://gashapon.jp/products/detail.php?jan_code=4549660509059000
+CATEGORIES:グッズ,ガシャポン
+LAST-MODIFIED:20260802T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260802-25@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20200518
+DTEND;VALUE=DATE:20200519
+SUMMARY:ガシャポン「アイカツ！シリーズあそーと4」発売
+DESCRIPTION:アイカツ！シリーズあそーと第4弾。A賞は姫石
+ らき・紫吹蘭のビッグサイズフィギュア、B賞はSDイラ
+ ストのアクリルチャーム、C賞はドリームアカデミー5人
+ の缶バッジ。全12種、1回300円。\n\n区分: グッズ／ガシ
+ ャポン\n日程表記: 2020年5月第4週 発売\n情報源: gashapon.jp
+ \n\nhttps://gashapon.jp/products/detail.php?jan_code=4549660478850000\n\n
+ ― アイカツ！情報カレンダー（非公式ファンメイド）\
+ nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://gashapon.jp/products/detail.php?jan_code=4549660478850000
+CATEGORIES:グッズ,ガシャポン
+LAST-MODIFIED:20260802T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260802-26@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20191209
+DTEND;VALUE=DATE:20191210
+SUMMARY:ガシャポン「アイカツ！シリーズあそーと3」発売
+DESCRIPTION:アイカツ！シリーズあそーと第3弾。A賞は虹野
+ ゆめ・大空あかりのビッグサイズフィギュア、B賞は姫
+ 石らきらのアクリルチャーム、C賞は歴代アイドルの缶
+ バッジ。全12種、1回300円。\n\n区分: グッズ／ガシャポ
+ ン\n日程表記: 2019年12月第2週 発売\n情報源: gashapon.jp\n\nh
+ ttps://gashapon.jp/products/detail.php?jan_code=4549660418955000\n\n― 
+ アイカツ！情報カレンダー（非公式ファンメイド）\nhtt
+ ps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://gashapon.jp/products/detail.php?jan_code=4549660418955000
+CATEGORIES:グッズ,ガシャポン
+LAST-MODIFIED:20260802T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260802-27@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20191021
+DTEND;VALUE=DATE:20191022
+SUMMARY:ガシャポン「アイカツ！シリーズ カプセルラバー
+ マスコット02」発売
+DESCRIPTION:『アイカツオンパレード！』に登場するキャラ
+ クターのラバーマスコット第2弾。1回300円。\n\n区分: グ
+ ッズ／ガシャポン\n日程表記: 2019年10月第4週 発売\n情報
+ 源: gashapon.jp\n\nhttps://gashapon.jp/products/detail.php?jan_code=45496
+ 60445395000\n\n― アイカツ！情報カレンダー（非公式ファ
+ ンメイド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://gashapon.jp/products/detail.php?jan_code=4549660445395000
+CATEGORIES:グッズ,ガシャポン
+LAST-MODIFIED:20260802T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260802-28@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20190819
+DTEND;VALUE=DATE:20190820
+SUMMARY:ガシャポン「アイカツ！シリーズあそーと2」発売
+DESCRIPTION:アイカツ！シリーズあそーと第2弾。A賞は霧矢
+ あおい・湊みおのビッグサイズフィギュア。1回300円。\
+ n\n区分: グッズ／ガシャポン\n日程表記: 2019年8月第4週 
+ 発売\n情報源: gashapon.jp\n\nhttps://gashapon.jp/products/detail.php?
+ jan_code=4549660404774000\n\n― アイカツ！情報カレンダー（
+ 非公式ファンメイド）\nhttps://aikatsu-info.github.io/aikatsu-cal
+ endar/
+URL:https://gashapon.jp/products/detail.php?jan_code=4549660404774000
+CATEGORIES:グッズ,ガシャポン
+LAST-MODIFIED:20260802T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260802-29@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20190422
+DTEND;VALUE=DATE:20190423
+SUMMARY:ガシャポン「アイカツ！シリーズ カプセルラバー
+ マスコット」発売
+DESCRIPTION:アイカツ！シリーズの人気アイドルをSDキャラ
+ クター化した約6cmのラバーマスコット。1回300円。\n\n区
+ 分: グッズ／ガシャポン\n日程表記: 2019年4月第4週 発売\
+ n情報源: gashapon.jp\n\nhttps://gashapon.jp/products/detail.php?jan_cod
+ e=4549660346234000\n\n― アイカツ！情報カレンダー（非公式
+ ファンメイド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://gashapon.jp/products/detail.php?jan_code=4549660346234000
+CATEGORIES:グッズ,ガシャポン
+LAST-MODIFIED:20260802T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260802-30@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20190121
+DTEND;VALUE=DATE:20190122
+SUMMARY:ガシャポン「アイカツ！シリーズあそーと」発売
+DESCRIPTION:アイカツ！シリーズの人気キャラクターが集ま
+ ったくじ形式のあそーとシリーズ第1弾。A賞は星宮いち
+ ご・友希あいねのビッグサイズフィギュア。1回300円。\
+ n\n区分: グッズ／ガシャポン\n日程表記: 2019年1月第4週 
+ 発売\n情報源: gashapon.jp\n\nhttps://gashapon.jp/products/detail.php?
+ jan_code=4549660333739000\n\n― アイカツ！情報カレンダー（
+ 非公式ファンメイド）\nhttps://aikatsu-info.github.io/aikatsu-cal
+ endar/
+URL:https://gashapon.jp/products/detail.php?jan_code=4549660333739000
+CATEGORIES:グッズ,ガシャポン
+LAST-MODIFIED:20260802T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260802-31@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20180423
+DTEND;VALUE=DATE:20180424
+SUMMARY:ガシャポン「アイカツフレンズ！アイドルチャー
+ ムコレクション」発売
+DESCRIPTION:『アイカツフレンズ！』開始を記念したアイド
+ ルチャームコレクション。スクールバッグ風ポーチに
+ アイカツパスやモバイルチャームを付けられる。1回200
+ 円。\n\n区分: グッズ／ガシャポン\n日程表記: 2018年4月
+ 第4週 発売\n情報源: gashapon.jp\n\nhttps://gashapon.jp/products/det
+ ail.php?jan_code=4549660268413000\n\n― アイカツ！情報カレンダ
+ ー（非公式ファンメイド）\nhttps://aikatsu-info.github.io/aikat
+ su-calendar/
+URL:https://gashapon.jp/products/detail.php?jan_code=4549660268413000
+CATEGORIES:グッズ,ガシャポン
+LAST-MODIFIED:20260802T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260802-32@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20170807
+DTEND;VALUE=DATE:20170808
+SUMMARY:ガシャポン「アイカツスターズ！アクセコレクシ
+ ョン2nd」発売
+DESCRIPTION:エルザのヘアアクセをヘアゴム化。エルザ・き
+ ららを含む人気キャラクター5人分のアクセコレクショ
+ ン。全種データカードダスのミニカード付き。1回200円
+ 。\n\n区分: グッズ／ガシャポン\n日程表記: 2017年8月第2
+ 週 発売\n情報源: gashapon.jp\n\nhttps://gashapon.jp/products/detail.
+ php?jan_code=4549660180036000\n\n― アイカツ！情報カレンダー
+ （非公式ファンメイド）\nhttps://aikatsu-info.github.io/aikatsu-
+ calendar/
+URL:https://gashapon.jp/products/detail.php?jan_code=4549660180036000
+CATEGORIES:グッズ,ガシャポン
+LAST-MODIFIED:20260802T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260802-33@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20161201
+DTEND;VALUE=DATE:20161202
+SUMMARY:ガシャポン「アイカツスターズ！マスコットコレ
+ クション　～ドレスver.～」発売
+DESCRIPTION:白銀リリィ・香澄真昼を含む、スクールドレス
+ 姿のマスコットコレクション。1回300円。\n\n区分: グッ
+ ズ／ガシャポン\n日程表記: 2016年12月上旬 発売\n情報源:
+  gashapon.jp\n\nhttps://gashapon.jp/products/detail.php?jan_code=454966010
+ 9747000\n\n― アイカツ！情報カレンダー（非公式ファン
+ メイド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://gashapon.jp/products/detail.php?jan_code=4549660109747000
+CATEGORIES:グッズ,ガシャポン
+LAST-MODIFIED:20260802T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260802-34@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20160901
+DTEND;VALUE=DATE:20160902
+SUMMARY:ガシャポン「アイカツスターズ！　マスコットコ
+ レクション」発売
+DESCRIPTION:『アイカツスターズ！』初のスイングコレクシ
+ ョン。ゆめちゃんら人気キャラクター全5種。1回300円。
+ \n\n区分: グッズ／ガシャポン\n日程表記: 2016年09月上旬 
+ 発売\n情報源: gashapon.jp\n\nhttps://gashapon.jp/products/detail.php?
+ jan_code=4549660066408000\n\n― アイカツ！情報カレンダー（
+ 非公式ファンメイド）\nhttps://aikatsu-info.github.io/aikatsu-cal
+ endar/
+URL:https://gashapon.jp/products/detail.php?jan_code=4549660066408000
+CATEGORIES:グッズ,ガシャポン
+LAST-MODIFIED:20260802T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260802-35@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20160621
+DTEND;VALUE=DATE:20160622
+SUMMARY:ガシャポン「アイカツスターズ！アクセコレクシ
+ ョン」発売
+DESCRIPTION:『アイカツスターズ！』のアクセサリーコレク
+ ション。2種にラインストーン付きマスコット、オリジ
+ ナルミニアイカツ！カード付き。1回200円。\n\n区分: グ
+ ッズ／ガシャポン\n日程表記: 2016年06月下旬 発売\n情報
+ 源: gashapon.jp\n\nhttps://gashapon.jp/products/detail.php?jan_code=45496
+ 60066385000\n\n― アイカツ！情報カレンダー（非公式ファ
+ ンメイド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://gashapon.jp/products/detail.php?jan_code=4549660066385000
+CATEGORIES:グッズ,ガシャポン
+LAST-MODIFIED:20260802T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260802-36@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20151221
+DTEND;VALUE=DATE:20151222
+SUMMARY:ガシャポン「アイカツ！コンパクトミラーコレク
+ ション」発売
+DESCRIPTION:ドリーミークラウンやドーリーデビルなど作中
+ ブランドをモチーフにしたコンパクトミラー。1回200円
+ 。\n\n区分: グッズ／ガシャポン\n日程表記: 2015年12月下
+ 旬 発売\n情報源: gashapon.jp\n\nhttps://gashapon.jp/products/detail.
+ php?jan_code=4549660028932000\n\n― アイカツ！情報カレンダー
+ （非公式ファンメイド）\nhttps://aikatsu-info.github.io/aikatsu-
+ calendar/
+URL:https://gashapon.jp/products/detail.php?jan_code=4549660028932000
+CATEGORIES:グッズ,ガシャポン
+LAST-MODIFIED:20260802T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260802-37@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20150601
+DTEND;VALUE=DATE:20150602
+SUMMARY:ガシャポン「アイカツ！スイーツマスコットコレ
+ クション」発売
+DESCRIPTION:スイーツモチーフのマスコットコレクション。
+ スターライト学園のドーナッツ＆ボックスマスコット
+ にはオリジナルミニアイカツ！カード付き。1回200円。\
+ n\n区分: グッズ／ガシャポン\n日程表記: 2015年06月上旬 
+ 発売\n情報源: gashapon.jp\n\nhttps://gashapon.jp/products/detail.php?
+ jan_code=4543112941848000\n\n― アイカツ！情報カレンダー（
+ 非公式ファンメイド）\nhttps://aikatsu-info.github.io/aikatsu-cal
+ endar/
+URL:https://gashapon.jp/products/detail.php?jan_code=4543112941848000
+CATEGORIES:グッズ,ガシャポン
+LAST-MODIFIED:20260802T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260802-38@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20150301
+DTEND;VALUE=DATE:20150302
+SUMMARY:ガシャポン「アイカツ！カードグッズコレクショ
+ ン」発売
+DESCRIPTION:カードが入るポーチやバンドなど小物入れの全
+ 5種グッズコレクション。1回200円。\n\n区分: グッズ／ガ
+ シャポン\n日程表記: 2015年03月上旬 発売\n情報源: gashapon
+ .jp\n\nhttps://gashapon.jp/products/detail.php?jan_code=4543112941534000\n
+ \n― アイカツ！情報カレンダー（非公式ファンメイド
+ ）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://gashapon.jp/products/detail.php?jan_code=4543112941534000
+CATEGORIES:グッズ,ガシャポン
+LAST-MODIFIED:20260802T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260802-39@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20150101
+DTEND;VALUE=DATE:20150102
+SUMMARY:ガシャポン「劇場版アイカツ！オールスターズ缶
+ バッヂ」発売
+DESCRIPTION:劇場版『アイカツ！』の人気キャラクターが集
+ 合した缶バッジ。1回200円。\n\n区分: グッズ／ガシャポ
+ ン\n日程表記: 2015年01月上旬 発売\n情報源: gashapon.jp\n\nht
+ tps://gashapon.jp/products/detail.php?jan_code=4543112940643000\n\n― ア
+ イカツ！情報カレンダー（非公式ファンメイド）\nhttps:
+ //aikatsu-info.github.io/aikatsu-calendar/
+URL:https://gashapon.jp/products/detail.php?jan_code=4543112940643000
+CATEGORIES:グッズ,ガシャポン
+LAST-MODIFIED:20260802T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260802-40@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20141201
+DTEND;VALUE=DATE:20141202
+SUMMARY:ガシャポン「アイカツ！コレクションスイングvol.
+ 1」発売
+DESCRIPTION:大空あかりを中心とした人気メンバーのディフ
+ ォルメマスコット第1弾。1回200円。\n\n区分: グッズ／ガ
+ シャポン\n日程表記: 2014年12月上旬 発売\n情報源: gashapon
+ .jp\n\nhttps://gashapon.jp/products/detail.php?jan_code=4543112921208000\n
+ \n― アイカツ！情報カレンダー（非公式ファンメイド
+ ）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://gashapon.jp/products/detail.php?jan_code=4543112921208000
+CATEGORIES:グッズ,ガシャポン
+LAST-MODIFIED:20260802T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260802-41@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20141111
+DTEND;VALUE=DATE:20141112
+SUMMARY:ガシャポン「アイカツ！Tiny Can ケース」発売
+DESCRIPTION:キャラクターデザインの缶ケース。シール2枚
+ とミニアイカツ！カード付き。1回200円。\n\n区分: グッ
+ ズ／ガシャポン\n日程表記: 2014年11月中旬 発売\n情報源:
+  gashapon.jp\n\nhttps://gashapon.jp/products/detail.php?jan_code=454311292
+ 1185000\n\n― アイカツ！情報カレンダー（非公式ファン
+ メイド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://gashapon.jp/products/detail.php?jan_code=4543112921185000
+CATEGORIES:グッズ,ガシャポン
+LAST-MODIFIED:20260802T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260802-42@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20141001
+DTEND;VALUE=DATE:20141002
+SUMMARY:ガシャポン「アイカツ！キラキラチャームセレク
+ ション」発売
+DESCRIPTION:大空あかりを中心とした新キャラクターのチャ
+ ームコレクション。ミニアイカツ！カード付き。1回200
+ 円。\n\n区分: グッズ／ガシャポン\n日程表記: 2014年10月
+ 上旬 発売\n情報源: gashapon.jp\n\nhttps://gashapon.jp/products/deta
+ il.php?jan_code=4543112908650000\n\n― アイカツ！情報カレンダ
+ ー（非公式ファンメイド）\nhttps://aikatsu-info.github.io/aikat
+ su-calendar/
+URL:https://gashapon.jp/products/detail.php?jan_code=4543112908650000
+CATEGORIES:グッズ,ガシャポン
+LAST-MODIFIED:20260802T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260802-43@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20140801
+DTEND;VALUE=DATE:20140802
+SUMMARY:ガシャポン「アイカツ！アクセコレクションvol.5
+ 」発売
+DESCRIPTION:アイカツ！ブランドアクセサリーコレクション
+ 第5弾。イヤーカフ仕様入り、ミニアイカツ！カード2種
+ 付き。1回200円。\n\n区分: グッズ／ガシャポン\n日程表
+ 記: 2014年08月上旬 発売\n情報源: gashapon.jp\n\nhttps://gashapon
+ .jp/products/detail.php?jan_code=4543112907097000\n\n― アイカツ！
+ 情報カレンダー（非公式ファンメイド）\nhttps://aikatsu-in
+ fo.github.io/aikatsu-calendar/
+URL:https://gashapon.jp/products/detail.php?jan_code=4543112907097000
+CATEGORIES:グッズ,ガシャポン
+LAST-MODIFIED:20260802T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260802-44@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20140601
+DTEND;VALUE=DATE:20140602
+SUMMARY:ガシャポン「アイカツ！マスコットコレクションv
+ ol.3」発売
+DESCRIPTION:美月・みくるをスイングマスコット化した第3
+ 弾。各衣装のミニアイカツ！カード付き。1回200円。\n\n
+ 区分: グッズ／ガシャポン\n日程表記: 2014年06月上旬 発
+ 売\n情報源: gashapon.jp\n\nhttps://gashapon.jp/products/detail.php?jan
+ _code=4543112851048000\n\n― アイカツ！情報カレンダー（非
+ 公式ファンメイド）\nhttps://aikatsu-info.github.io/aikatsu-calend
+ ar/
+URL:https://gashapon.jp/products/detail.php?jan_code=4543112851048000
+CATEGORIES:グッズ,ガシャポン
+LAST-MODIFIED:20260802T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260802-45@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20140421
+DTEND;VALUE=DATE:20140422
+SUMMARY:ガシャポン「アイカツ！コフレグッズ」発売
+DESCRIPTION:コンパクトやコーム、香水瓶風チャームなどの
+ コフレグッズ。エンジェリーシュガー・ラブムーンラ
+ イズの2タイプ全6種、ミニアイカツ！カード付き。1回20
+ 0円。\n\n区分: グッズ／ガシャポン\n日程表記: 2014年04月
+ 下旬 発売\n情報源: gashapon.jp\n\nhttps://gashapon.jp/products/deta
+ il.php?jan_code=4543112872647000\n\n― アイカツ！情報カレンダ
+ ー（非公式ファンメイド）\nhttps://aikatsu-info.github.io/aikat
+ su-calendar/
+URL:https://gashapon.jp/products/detail.php?jan_code=4543112872647000
+CATEGORIES:グッズ,ガシャポン
+LAST-MODIFIED:20260802T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260802-46@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20140311
+DTEND;VALUE=DATE:20140312
+SUMMARY:ガシャポン「アイカツ！ブランドブレス」発売
+DESCRIPTION:アイカツ！全6ブランドのブレスレット。ビー
+ ズを組み替えてカスタムアレンジ可能。1回200円。\n\n区
+ 分: グッズ／ガシャポン\n日程表記: 2014年03月中旬 発売\
+ n情報源: gashapon.jp\n\nhttps://gashapon.jp/products/detail.php?jan_cod
+ e=4543112851000000\n\n― アイカツ！情報カレンダー（非公式
+ ファンメイド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://gashapon.jp/products/detail.php?jan_code=4543112851000000
+CATEGORIES:グッズ,ガシャポン
+LAST-MODIFIED:20260802T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260802-47@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260703
+DTEND;VALUE=DATE:20260704
+SUMMARY:映画『アイカツスターズ！ ～星々のProgress～』ム
+ ビチケ前売り券 発売開始
+DESCRIPTION:虹野ゆめが新たなドレスに身を包んだティザー
+ ビジュアルが解禁され、同ビジュアルが描かれたA5クリ
+ アファイルが特典としてもらえるムビチケ前売り券の
+ 販売がスタートしました。\n\n区分: グッズ\n日程表記: 7
+ 月3日(金) 発売開始\n情報公開日: 2026-07-03\n情報源: eeo Med
+ ia\n\nhttps://eeo.today/media/2026/07/03/366102/\n\n― アイカツ！情
+ 報カレンダー（非公式ファンメイド）\nhttps://aikatsu-info.
+ github.io/aikatsu-calendar/
+URL:https://eeo.today/media/2026/07/03/366102/
+CATEGORIES:グッズ
+LAST-MODIFIED:20260802T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260803-02@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260805
+DTEND;VALUE=DATE:20260806
+SUMMARY:【予約】『アイカツ！10th STORY』描き下ろし「レト
+ ロストライプver.」新作グッズ 予約締切
+DESCRIPTION:アクリルスタンドやマルチデスクマットなど全
+ 58種類の新作グッズがAMNIBUSにて受注予約中。予約受付
+ は8月5日まで、発送は2026年10月頃を予定。\n\n区分: グッ
+ ズ\n日程表記: 〜2026年8月5日 予約受付（AMNIBUS、全58種、
+ 発送は2026年10月頃予定）\n情報源: キャラホビ\n\nhttps://p
+ remium.gamepedia.jp/hobby/archives/198716\n\n― アイカツ！情報カ
+ レンダー（非公式ファンメイド）\nhttps://aikatsu-info.github
+ .io/aikatsu-calendar/
+URL:https://premium.gamepedia.jp/hobby/archives/198716
+CATEGORIES:グッズ,予約
+LAST-MODIFIED:20260803T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260803-03@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260803
+DTEND;VALUE=DATE:20260804
+SUMMARY:『アイカツ！デザインマートBYアイカツ！スタイ
+ ル』北海道POP UP SHOPアイテムが通販受付開始
+DESCRIPTION:北海道・サッポロファクトリーで開催中のPOP UP
+  SHOP「アイカツ！デザインマート in北海道」の会場限定
+ アイテムが通販でも受付開始。やぐちひろこ描き下ろ
+ しの大空あかり・大地のの・白樺リサをあしらったBIG
+ ホロ缶バッジ、アクリルスタンドなどがラインナップ
+ 。\n\n区分: グッズ\n日程表記: 8月3日 通販受付中\n情報
+ 公開日: 2026-08-03\n情報源: X @p_bandai\n\nhttps://x.com/p_bandai/st
+ atus/2084134710582898753\n\n― アイカツ！情報カレンダー（非
+ 公式ファンメイド）\nhttps://aikatsu-info.github.io/aikatsu-calend
+ ar/
+URL:https://x.com/p_bandai/status/2084134710582898753
+CATEGORIES:グッズ
+LAST-MODIFIED:20260803T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260803-04@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260803
+DTEND;VALUE=DATE:20260804
+SUMMARY:【予約】「アイカツ！シリーズ ブランドイメージ
+  ルームフレグランス」予約開始
+DESCRIPTION:『アイカツ！』エンジェリーシュガー・ドリー
+ ミークラウン、『アイカツスターズ！』レインボーベ
+ リーパルフェ・マイリトルハートの4ブランドをイメー
+ ジしたルームフレグランス。各ブランドロゴのメタル
+ チャーム付き。全4種、各2\,970円（税込）。プレミアム
+ バンダイにて8月3日12時より予約受付、発売は12月予定
+ 。\n\n区分: グッズ\n日程表記: 8月3日12時 予約受付開始
+ （発売は2026年12月予定）\n情報公開日: 2026-08-03\n情報源:
+  アイカツ！ポータル\n\nhttps://www.aikatsu.net/portal/topics/topi
+ cs.php?id=24008\n\n― アイカツ！情報カレンダー（非公式フ
+ ァンメイド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://www.aikatsu.net/portal/topics/topics.php?id=24008
+CATEGORIES:グッズ,予約
+LAST-MODIFIED:20260803T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260803-05@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260803
+DTEND;VALUE=DATE:20260804
+SUMMARY:【予約】「Lil'Carry アイカツ！ パフュームハンド
+ 」予約開始
+DESCRIPTION:オーロラキスコーデ・ゴスマジックコーデをイ
+ メージした羽チャーム付きハンドクリーム。データカ
+ ードダス『アイカツ！アンコール』対応の「アイカツ
+ ！カード」1枚封入。全2種、各1\,430円（税込）。プレミ
+ アムバンダイにて8月3日12時より予約受付、一般販売は2
+ 027年1月予定。\n\n区分: グッズ\n日程表記: 8月3日12時 予
+ 約受付開始（一般販売は2027年1月予定）\n情報公開日: 20
+ 26-08-03\n情報源: アイカツ！ポータル\n\nhttps://www.aikatsu.ne
+ t/portal/topics/topics.php?id=23992\n\n― アイカツ！情報カレン
+ ダー（非公式ファンメイド）\nhttps://aikatsu-info.github.io/ai
+ katsu-calendar/
+URL:https://www.aikatsu.net/portal/topics/topics.php?id=23992
+CATEGORIES:グッズ,予約
+LAST-MODIFIED:20260803T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260804-01@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260811
+DTEND;VALUE=DATE:20260812
+SUMMARY:「オールアイカツ！ゲームモデル缶バッジ」クー
+ ル・ジュエル・ミュージックver. 発売
+DESCRIPTION:『オールアイカツ！ゲームモデル缶バッジ』の
+ 新色展開、クール・ジュエル・ミュージックverがアイ
+ カツ！オフィシャルストアに登場しました。既存のキ
+ ュート・フェアリー・フラワーverに続く商品です。\n\n
+ 区分: グッズ\n日程表記: 8月11日(火・祝) 発売\n情報公開
+ 日: 2026-08-11\n情報源: アイカツ！オフィシャルストア\n\n
+ https://bandainamco-am.co.jp/official_shop/aikatsu/\n\n― アイカツ！
+ 情報カレンダー（非公式ファンメイド）\nhttps://aikatsu-in
+ fo.github.io/aikatsu-calendar/
+URL:https://bandainamco-am.co.jp/official_shop/aikatsu/
+CATEGORIES:グッズ
+LAST-MODIFIED:20260804T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260805-02@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20240719
+DTEND;VALUE=DATE:20240720
+SUMMARY:【予約】ガシャポン「アイカツ！ グッズコレクシ
+ ョン」2次予約開始
+DESCRIPTION:アイカツフォン型のドラム式オルゴール、ブラ
+ ンドロゴ・ED場面写ラバーコースター、アイカツ！カー
+ ドデザインのミニチャームなど全15種。1回400円（税込
+ ）。1次受注と同内容の2次受注で、ガシャポンオンライ
+ ンにて7月19日17時より予約受付、発送は1次と同じく11月
+ 予定。\n\n区分: グッズ／ガシャポン\n日程表記: 7月19日1
+ 7時 2次予約受付開始（発送は2024年11月予定）\n情報公開
+ 日: 2024-07-19\n情報源: ガシャポンオンライン（ナムコパ
+ ークス）\n\nhttps://parks2.bandainamco-am.co.jp/category/GASHAPON_TOP_
+ TAG/PRE_A4582769709043.html\n\n― アイカツ！情報カレンダー（
+ 非公式ファンメイド）\nhttps://aikatsu-info.github.io/aikatsu-cal
+ endar/
+URL:https://parks2.bandainamco-am.co.jp/category/GASHAPON_TOP_TAG/PRE_A4582
+ 769709043.html
+CATEGORIES:グッズ,ガシャポン,予約
+LAST-MODIFIED:20260805T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260803-06@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260913
+DTEND;VALUE=DATE:20260914
+SUMMARY:『アイカツ！シリーズ セピア・ラ・モード』アニ
+ メイトフェア終了
+DESCRIPTION:全国アニメイト（通販含む）でセピア色をテー
+ マにした新規描き下ろしグッズが登場。対象商品を予
+ 約内金1\,100円（税込）ごとに特典ステッカー（全11種）
+ がもらえる。秋葉原2号館6Fではオンリーショップも同
+ 時開催。\n\n区分: グッズ\n日程表記: 2026年9月13日（日）
+  フェア終了\n情報公開日: 2026-04-27\n情報源: アニメイト
+ 公式サイト\n\nhttps://www.animate-onlineshop.jp/contents/fair_event/d
+ etail.php?id=115252\n\n― アイカツ！情報カレンダー（非公
+ 式ファンメイド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://www.animate-onlineshop.jp/contents/fair_event/detail.php?id=115
+ 252
+CATEGORIES:グッズ
+LAST-MODIFIED:20260803T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260803-07@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260730
+DTEND;VALUE=DATE:20260731
+SUMMARY:『アイカツ！』POP UP SHOP開催終了（東京駅・アイ
+ カツ８描き下ろしグッズ）
+DESCRIPTION:東京キャラクターストリート（東京駅八重洲北
+ 口地下1階）にて『アイカツ！』POP UP SHOPを開催中。星
+ 宮いちごら人気キャラ8名の描き下ろしイラストを使用
+ した新作グッズが登場し、通販サイト「東京キャラク
+ ターストリートオンラインプラザ」でも販売されてい
+ ます。\n\n区分: グッズ\n日程表記: 7月30日(木) 開催終了
+ （東京キャラクターストリート）\n情報公開日: 2026-07-17
+ \n情報源: アニメ！アニメ！\n\nhttps://animeanime.jp/article/202
+ 6/07/17/101156.html\n\n― アイカツ！情報カレンダー（非公
+ 式ファンメイド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://animeanime.jp/article/2026/07/17/101156.html
+CATEGORIES:グッズ
+LAST-MODIFIED:20260803T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260803-08@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260730
+DTEND;VALUE=DATE:20260731
+SUMMARY:「アイカツ８」描き下ろしグッズ POP UP SHOP開催終
+ 了（東京キャラクターストリート）
+DESCRIPTION:星宮いちご・神崎美月・藤堂ユリカらが集合し
+ た『アイカツ！』音符とハートの衣装の描き下ろしイ
+ ラストを使用した新作グッズが登場。東京キャラクタ
+ ーストリート F階段下ワゴンショップと通販サイトで販
+ 売。\n\n区分: グッズ\n日程表記: 7月30日 開催終了\n情報
+ 公開日: 2026-07-17\n情報源: アニメ！アニメ！\n\nhttps://anim
+ eanime.jp/article/2026/07/17/101156.html\n\n― アイカツ！情報カ
+ レンダー（非公式ファンメイド）\nhttps://aikatsu-info.github
+ .io/aikatsu-calendar/
+URL:https://animeanime.jp/article/2026/07/17/101156.html
+CATEGORIES:グッズ
+LAST-MODIFIED:20260803T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260803-10@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260823
+DTEND;VALUE=DATE:20260824
+SUMMARY:劇場グッズの事後通販 受付終了
+DESCRIPTION:『劇場版アイカツスターズ！』-Anniversary Stars- 
+ の劇場販売グッズの事後通販がスタート。通販期間は20
+ 26年7月24日(金)正午〜8月23日(日)23:59まで。通販サイトは
+ A-on STORE。\n\n区分: グッズ\n日程表記: 8月23日(日)23:59 通
+ 販受付終了\n情報公開日: 2026-07-24\n情報源: X @aikatsu_anime\
+ n\nhttps://x.com/aikatsu_anime\n\n― アイカツ！情報カレンダー
+ （非公式ファンメイド）\nhttps://aikatsu-info.github.io/aikatsu-
+ calendar/
+URL:https://x.com/aikatsu_anime
+CATEGORIES:グッズ
+LAST-MODIFIED:20260803T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260803-11@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260913
+DTEND;VALUE=DATE:20260914
+SUMMARY:アニメイトで『アイカツ！シリーズ』購入・予約
+ 特典フェア終了
+DESCRIPTION:アニメイトにて、『アイカツ！シリーズ』関連
+ グッズの購入・予約で特典ステッカー（全11種）がもら
+ えるフェアが開催されます。\n\n区分: グッズ\n日程表記
+ : 9月13日 フェア終了\n情報公開日: 2026-07-25\n情報源: ア
+ ニメイトタイムズ\n\nhttps://www.animatetimes.com/news/details.php?
+ id=1773128646\n\n― アイカツ！情報カレンダー（非公式フ
+ ァンメイド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://www.animatetimes.com/news/details.php?id=1773128646
+CATEGORIES:グッズ
+LAST-MODIFIED:20260803T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260803-12@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260430
+DTEND;VALUE=DATE:20260501
+SUMMARY:「AIKATSU! × PRIPARA THE LIVE -Miraculous Stage!-」ライブグ
+ ッズ事後通販 受付終了
+DESCRIPTION:ライブグッズの一部について事後通販を実施。
+ 「ミニキャラアクリルスタンド」は受注生産で予約受
+ 付。\n\n区分: グッズ\n日程表記: 4月30日(木)23:59 事後通
+ 販受付終了\n情報公開日: 2026-04-08\n情報源: X @a_p_10movie\n\
+ nhttps://x.com/a_p_10movie\n\n― アイカツ！情報カレンダー（
+ 非公式ファンメイド）\nhttps://aikatsu-info.github.io/aikatsu-cal
+ endar/
+URL:https://x.com/a_p_10movie
+CATEGORIES:グッズ
+LAST-MODIFIED:20260803T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260803-17@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20251028
+DTEND;VALUE=DATE:20251029
+SUMMARY:「アイカツ！×プリパラ THE MOVIE」ローソンプリン
+ トブロマイド販売終了
+DESCRIPTION:ビジュアル・キャラクター・場面写真の各ブロ
+ マイドをローソンプリントで販売。\n\n区分: グッズ\n日
+ 程表記: 2025年10月28日(火) 販売終了\n情報源: アイカツ！
+ ×プリパラ THE MOVIE 公式サイト\n\nhttps://aikatsu-pripara-10movi
+ e.jp/goods/\n\n― アイカツ！情報カレンダー（非公式ファ
+ ンメイド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://aikatsu-pripara-10movie.jp/goods/
+CATEGORIES:グッズ
+LAST-MODIFIED:20260803T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260803-19@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20251124
+DTEND;VALUE=DATE:20251125
+SUMMARY:「アイカツ！×プリパラ THE MOVIE」ローソンプリン
+ トブロマイドvol.2販売終了
+DESCRIPTION:場面写真ブロマイドvol.2、全12種。\n\n区分: グ
+ ッズ\n日程表記: 2025年11月24日 販売終了\n情報源: アイカ
+ ツ！×プリパラ THE MOVIE 公式サイト\n\nhttps://aikatsu-pripara-
+ 10movie.jp/goods/\n\n― アイカツ！情報カレンダー（非公式
+ ファンメイド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://aikatsu-pripara-10movie.jp/goods/
+CATEGORIES:グッズ
+LAST-MODIFIED:20260803T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260806-03@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260831
+DTEND;VALUE=DATE:20260901
+SUMMARY:一番くじ「アイカツ！～私のアツいアイドル活動
+ ！～」ラストワン賞ダブルチャンスキャンペーン締切
+DESCRIPTION:5月30日発売の一番くじ「アイカツ！～私のアツ
+ いアイドル活動！～」のラストワン賞（ゴスマジック
+ コーデ アクセサリートレイ）が引けなかった人向けの
+ ダブルチャンスキャンペーン応募期間は発売日〜2026年8
+ 月末日まで。\n\n区分: グッズ\n日程表記: 2026年8月末日 
+ 応募締切\n情報公開日: 2026-04-30\n情報源: 電撃ホビーウ
+ ェブ\n\nhttps://hobby.dengeki.com/news/2994579/\n\n― アイカツ！
+ 情報カレンダー（非公式ファンメイド）\nhttps://aikatsu-in
+ fo.github.io/aikatsu-calendar/
+URL:https://hobby.dengeki.com/news/2994579/
+CATEGORIES:グッズ
+LAST-MODIFIED:20260806T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260807-03@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260808
+DTEND;VALUE=DATE:20260809
+SUMMARY:『アイカツ！デザインマート』夏の再販売フェア
+ 開催開始
+DESCRIPTION:プレミアムバンダイにて、過去商品のキャンセ
+ ル分などを販売する「夏の再販売フェア」を開催。数
+ 量限定・種類欠け/サイズ欠けありで、準備数に達し次
+ 第終了。\n\n区分: グッズ\n日程表記: 8月8日(土) AM10:00〜 
+ 開催開始\n情報公開日: 2026-08-07\n情報源: X @aikatsu_style\n\n
+ https://p-bandai.jp/aikatsu-designmart/\n\n― アイカツ！情報カレ
+ ンダー（非公式ファンメイド）\nhttps://aikatsu-info.github.io
+ /aikatsu-calendar/
+URL:https://p-bandai.jp/aikatsu-designmart/
+CATEGORIES:グッズ
+LAST-MODIFIED:20260807T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260808-01@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260803
+DTEND;VALUE=DATE:20260804
+SUMMARY:【予約】Lil'Carry アイカツ！ パフュームハンド 予
+ 約開始
+DESCRIPTION:プレミアムバンダイにて、コーデをイメージし
+ たチャーム付きハンドクリーム「Lil'Carry アイカツ！ パ
+ フュームハンド」の予約受付を開始。オーロラキスコ
+ ーデ・ゴスマジックコーデの全2種、各1\,430円（税込）
+ 。使い切った後はチャームをキーホルダーとして使用
+ できる。\n\n区分: グッズ\n日程表記: 8月3日(月) 12:00〜 
+ 予約開始（一般販売は2027年1月予定）\n情報公開日: 2026-
+ 08-03\n情報源: プレミアムバンダイ\n\nhttps://p-bandai.jp/item/
+ item-1000255100/\n\n― アイカツ！情報カレンダー（非公式
+ ファンメイド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://p-bandai.jp/item/item-1000255100/
+CATEGORIES:グッズ,予約
+LAST-MODIFIED:20260808T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260810-01@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260803
+DTEND;VALUE=DATE:20260804
+SUMMARY:【予約】アイカツ！シリーズ ブランドイメージ 
+ ルームフレグランス 予約開始
+DESCRIPTION:プレミアムバンダイにて、『アイカツ！』『ア
+ イカツスターズ！』の作中ブランドをイメージした香
+ りの「アイカツ！シリーズ ブランドイメージ ルームフ
+ レグランス」の予約受付を開始。エンジェリーシュガ
+ ー・ドリーミークラウン・レインボなど全4種、各2\,970
+ 円（税込）。\n\n区分: グッズ\n日程表記: 8月3日(月) 12:00
+ 〜 予約開始（発売予定は2026年12月）\n情報公開日: 2026-0
+ 8-03\n情報源: プレミアムバンダイ\n\nhttps://p-bandai.jp/item/i
+ tem-1000255098/\n\n― アイカツ！情報カレンダー（非公式フ
+ ァンメイド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://p-bandai.jp/item/item-1000255098/
+CATEGORIES:グッズ,予約
+LAST-MODIFIED:20260810T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260811-01@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20261128
+DTEND;VALUE=DATE:20261129
+SUMMARY:アイカツ！ Wariふぉと！ 発売
+DESCRIPTION:バンダイ発売のトレーディングカードグッズ「
+ アイカツ！ Wariふぉと！」（1パック220円）。通販ではBO
+ X（20パック入り）単位での販売。アニメイト通販にて
+ 予約受付中。\n\n区分: グッズ\n日程表記: 2026年11月28日 
+ 発売（予約受付中）\n情報公開日: 2026-08-11\n情報源: ア
+ ニメイト通販\n\nhttps://www.animate-onlineshop.jp/sphone/products/de
+ tail.php?product_id=3562907\n\n― アイカツ！情報カレンダー（
+ 非公式ファンメイド）\nhttps://aikatsu-info.github.io/aikatsu-cal
+ endar/
+URL:https://www.animate-onlineshop.jp/sphone/products/detail.php?product_id
+ =3562907
+CATEGORIES:グッズ
+LAST-MODIFIED:20260811T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260814-01@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260813
+DTEND;VALUE=DATE:20260814
+SUMMARY:【予約】あかりGeneration10周年記念 おすわりボール
+ チェーンマスコット スクドレver.セット 発売開始
+DESCRIPTION:『アイカツ！』あかりGeneration10周年記念として
+ 、大空あかり・氷上スミレ・新条ひなきの3体セットに
+ よる「おすわりボールチェーンマスコット スクドレver.
+ セット」がプレミアムバンダイに登場。価格6\,600円（
+ 税込）、数量限定の先着順販売。\n\n区分: グッズ\n日程
+ 表記: 8月13日(水)12:00〜 プレミアムバンダイにて販売開
+ 始（数量限定・先着順）\n情報公開日: 2026-08-13\n情報源:
+  アイカツ！ポータル トピックス\n\nhttps://www.aikatsu.net/po
+ rtal/topics/topics.php?id=22567\n\n― アイカツ！情報カレンダ
+ ー（非公式ファンメイド）\nhttps://aikatsu-info.github.io/aikat
+ su-calendar/
+URL:https://www.aikatsu.net/portal/topics/topics.php?id=22567
+CATEGORIES:グッズ,予約
+LAST-MODIFIED:20260814T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260816-02@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260803
+DTEND;VALUE=DATE:20260804
+SUMMARY:【予約】アイカツ！シリーズ ルームフレグランス
+  予約開始
+DESCRIPTION:『アイカツ！』のエンジェリーシュガー・ドリ
+ ーミークラウン、『アイカツスターズ！』のレインボ
+ ーベリーパルフェ・マイリトルハートをイメージした
+ ルームフレグランス。全4種、各2\,970円（税込）。プレ
+ ミアムバンダイにて予約受付開始、一般販売は2027年1月
+ 予定。\n\n区分: グッズ\n日程表記: 8月3日(月) 12:00〜 予
+ 約開始（一般販売は2027年1月予定）\n情報公開日: 2026-08-
+ 03\n情報源: アイカツ！ポータル\n\nhttps://www.aikatsu.net/port
+ al/topics/topics.php?id=23992\n\n― アイカツ！情報カレンダー
+ （非公式ファンメイド）\nhttps://aikatsu-info.github.io/aikatsu-
+ calendar/
+URL:https://www.aikatsu.net/portal/topics/topics.php?id=23992
+CATEGORIES:グッズ,予約
+LAST-MODIFIED:20260817T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260823-01@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260817
+DTEND;VALUE=DATE:20260818
+SUMMARY:ガシャポン「データカードダス アイカツ！ ミニ
+ チュアコレクション」発売
+DESCRIPTION:歴代の「データカードダス アイカツ！」筐体
+ をミニチュア化。全5種いずれもボタンを押せるギミッ
+ ク付きで、うち2種はボタンを押すとゲーム内音声が流
+ れる特別仕様。価格は1回500円（税込）。\n\n区分: グッ
+ ズ／ガシャポン\n日程表記: 2026年8月第4週 発売\n情報公
+ 開日: 2026-08-07\n情報源: インサイド\n\nhttps://gashapon.jp/prod
+ ucts/detail.php?jan_code=4582769810541000\n\n― アイカツ！情報カ
+ レンダー（非公式ファンメイド）\nhttps://aikatsu-info.github
+ .io/aikatsu-calendar/
+URL:https://gashapon.jp/products/detail.php?jan_code=4582769810541000
+CATEGORIES:グッズ,ガシャポン
+LAST-MODIFIED:20260823T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260824-01@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20261107
+DTEND;VALUE=DATE:20261108
+SUMMARY:『アイカツ！アンコール』ぺたしきしーるコレク
+ ション アニメイト先行販売
+DESCRIPTION:色紙風デザインのステッカー「ぺたしきしーる
+ コレクション アイカツ！アンコール」（3枚入り330円・
+ 1枚入り110円、全25種、サイズ約60.5×68mm）を、アニメイ
+ トガールズフェスティバル（AGF）にて先行販売。\n\n区
+ 分: グッズ\n日程表記: 11月7日(土)〜8日(日) アニメイト
+ 先行販売\n情報公開日: 2026-08-24\n情報源: X @oshi_tsushin\n\nh
+ ttps://bandai-lifestyle.jp/products/detail.php\n\n― アイカツ！情
+ 報カレンダー（非公式ファンメイド）\nhttps://aikatsu-info.
+ github.io/aikatsu-calendar/
+URL:https://bandai-lifestyle.jp/products/detail.php
+CATEGORIES:グッズ
+LAST-MODIFIED:20260824T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260824-03@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20261123
+DTEND;VALUE=DATE:20261124
+SUMMARY:『アイカツ！アンコール』ぺたしきしーるコレク
+ ション 発売
+DESCRIPTION:色紙風デザインのステッカーがキラキラフレー
+ ムで登場。3枚入り330円・1枚入り110円の2種展開、全25種
+ 類（いずれかがランダムで封入）。サイズ約60.5×68mm、
+ モバイル機器に挟んだりコレクションリフィルへの収
+ 納も可能。アイドルのサインが入ったデザインや全身
+ ・アップが楽しめるデザインなどラインナップも豊富
+ 。アニメイト通販など各通販サイトで予約受付中。\n\n
+ 区分: グッズ\n日程表記: 11月23日 発売\n情報公開日: 2026-
+ 08-24\n情報源: X @oshi_tsushin\n\nhttps://www.animate-onlineshop.jp/pn/
+ pd/3571127/\n\n― アイカツ！情報カレンダー（非公式ファ
+ ンメイド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://www.animate-onlineshop.jp/pn/pd/3571127/
+CATEGORIES:グッズ
+LAST-MODIFIED:20260824T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260824-04@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20261107
+DTEND;VALUE=DATE:20261108
+SUMMARY:『アイカツスターズ！』ブックマークコレクショ
+ ン アニメイト先行販売
+DESCRIPTION:クリア素材で背景の一部が透過するフルカラー
+ ブックマーク（約135×45mm）「ブックマークコレクショ
+ ン アイカツスターズ！」（1枚入り110円・2枚入り220円
+ 、ノーマル26種＋シークレット1種の全27種）を、アニメ
+ イトガールズフェスティバル（AGF）にて先行販売。ス
+ タープレミアムレアドレス・プレミアムレアドレスは
+ 箔押しデザイン。\n\n区分: グッズ\n日程表記: 11月7日(土
+ )〜8日(日) アニメイト先行販売\n情報公開日: 2026-08-24\n
+ 情報源: X @oshi_tsushin\n\nhttps://bandai-lifestyle.jp/products/detail.
+ php\n\n― アイカツ！情報カレンダー（非公式ファンメイ
+ ド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://bandai-lifestyle.jp/products/detail.php
+CATEGORIES:グッズ
+LAST-MODIFIED:20260824T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260824-06@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20261116
+DTEND;VALUE=DATE:20261117
+SUMMARY:『アイカツスターズ！』ブックマークコレクショ
+ ン 発売
+DESCRIPTION:クリア素材で背景の一部が透過するフルカラー
+ ブックマーク（約135×45mm）。1枚入り110円・2枚入り220円
+ の2種展開、ノーマル26種＋シークレット1種の全27種類
+ （いずれかがランダムで封入）。本や手帳に挟んだり
+ 、風景をバックに写真を撮って楽しめる。スタープレ
+ ミアムレアドレス・プレミアムレアドレスは箔押しデ
+ ザイン。アニメイト通販など各通販サイトで予約受付
+ 中。\n\n区分: グッズ\n日程表記: 11月16日 発売\n情報公開
+ 日: 2026-08-24\n情報源: X @oshi_tsushin\n\nhttps://www.animate-onlines
+ hop.jp/pn/pd/3571126/\n\n― アイカツ！情報カレンダー（非公
+ 式ファンメイド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://www.animate-onlineshop.jp/pn/pd/3571126/
+CATEGORIES:グッズ
+LAST-MODIFIED:20260824T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260824-07@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260824
+DTEND;VALUE=DATE:20260825
+SUMMARY:【予約】『アイカツ！』描き下ろし＜星空ドレス
+ ＞グッズ 事後通販予約開始
+DESCRIPTION:『アイカツ！』POP UP SHOP in マルイ（大宮マルイ
+ 、8/14〜8/23）で先行発売された描き下ろしイラスト＜星
+ 空ドレス＞グッズの事後通販予約を、クラックスオン
+ ラインストアにて受付開始。トレーディングリボン付
+ きアクリルキーホルダー（全6種、単品990円・BOX6個入り
+ 5\,940円）、アクリルスタンド（全6種、各1\,980円）、ト
+ レーディングブロマイド（全12種、1パック550円）、ア
+ クリルバッグチャーム（全6種、各2\,200円）、ステッカ
+ ーセット（全6種、各825円）など。発売は2026年11月予定
+ 。\n\n区分: グッズ\n日程表記: 8月24日 事後通販予約受付
+ 開始（発売は2026年11月予定）\n情報公開日: 2026-08-24\n情
+ 報源: X @crux_anime\n\nhttps://www.crux-onlinestore.com/shopbrand/ct291/
+ \n\n― アイカツ！情報カレンダー（非公式ファンメイド
+ ）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://www.crux-onlinestore.com/shopbrand/ct291/
+CATEGORIES:グッズ,予約
+LAST-MODIFIED:20260824T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260827-02@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20261008
+DTEND;VALUE=DATE:20261009
+SUMMARY:アイカツ！オフィシャルストア購入特典アイカツ
+ ！カード配布決定
+DESCRIPTION:2026年10月8日(木)より、アイカツ！オフィシャル
+ ストアの購入特典として、小花柄ワンピ／ラベンダー
+ ブーツ／ブラックジュエリーワンピをデザインしたス
+ トアオリジナルの「アイカツ！カード」を配布予定。
+ 配布条件など詳細は今後発表。\n\n区分: グッズ\n日程表
+ 記: 10月8日(木)〜 購入特典配布開始予定\n情報公開日: 20
+ 26-08-27\n情報源: X @aikatsu_ofs\n\nhttps://x.com/aikatsu_ofs/status/20
+ 92779126239224199\n\n― アイカツ！情報カレンダー（非公式
+ ファンメイド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://x.com/aikatsu_ofs/status/2092779126239224199
+CATEGORIES:グッズ
+LAST-MODIFIED:20260827T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260827-05@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20261001
+DTEND;VALUE=DATE:20261002
+SUMMARY:「おすわりボールチェーンマスコット」ステージ
+ コーデ スクールドレスVer. 発売決定
+DESCRIPTION:『アイカツ！』アンコール放送記念として、お
+ すわりボールチェーンマスコットにステージコーデの
+ スクールドレスVer.が登場。10月1日(木)よりプレミアム
+ バンダイ、上海/広州で開催予定のイベント「IAGF」他で
+ 順次販売開始予定。TOKYOおもちゃショー2026アイカツ！
+ コーナーに展示中。\n\n区分: グッズ\n日程表記: 10月1日(
+ 木)〜 プレバン他で順次販売開始予定\n情報公開日: 2026-
+ 08-27\n情報源: X @aikatsu_style\n\nhttps://x.com/aikatsu_style/status/2
+ 092786683590898092\n\n― アイカツ！情報カレンダー（非公式
+ ファンメイド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://x.com/aikatsu_style/status/2092786683590898092
+CATEGORIES:グッズ
+LAST-MODIFIED:20260827T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260827-06@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20261001
+DTEND;VALUE=DATE:20261002
+SUMMARY:「アイカツ！マスコットフードポンチョ」発売決
+ 定
+DESCRIPTION:「おすわりボールチェーンマスコット」「どこ
+ でもアイカツ！ぬい」シリーズに対応した「アイカツ
+ ！マスコットフードポンチョ」が10月1日発売予定。\n\n
+ 区分: グッズ\n日程表記: 10月1日 発売予定\n情報公開日: 
+ 2026-08-27\n情報源: X @aikatsu_style\n\nhttps://x.com/aikatsu_style/sta
+ tus/2092918855345844650\n\n― アイカツ！情報カレンダー（非
+ 公式ファンメイド）\nhttps://aikatsu-info.github.io/aikatsu-calend
+ ar/
+URL:https://x.com/aikatsu_style/status/2092918855345844650
+CATEGORIES:グッズ
+LAST-MODIFIED:20260827T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260827-07@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260830
+DTEND;VALUE=DATE:20260831
+SUMMARY:アイカツアカデミー！ほぼ等身大アクリルパネル 
+ プレミアムレアドレスVer. 追加予約締切
+DESCRIPTION:アイカツ！デザインマートにて販売中の「アイ
+ カツアカデミー！ほぼ等身大アクリルパネル プレミア
+ ムレアドレスVer.」、予約上限を調整のうえ少量を追加
+ 。アイドル直筆のニックネーム＆コメント入りメッセ
+ ージカード同梱、1アカウントにつき各種1点まで。追加
+ 予約は8月30日(日)まで。\n\n区分: グッズ\n日程表記: 8月3
+ 0日(日) 追加予約締切\n情報公開日: 2026-08-24\n情報源: X @a
+ ikatsu_style\n\nhttps://x.com/aikatsu_style/status/2091813210127307100\n\n
+ ― アイカツ！情報カレンダー（非公式ファンメイド）\
+ nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://x.com/aikatsu_style/status/2091813210127307100
+CATEGORIES:グッズ,予約
+LAST-MODIFIED:20260827T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260827-13@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20261128
+DTEND;VALUE=DATE:20261129
+SUMMARY:「アイカツフォン アンコール」発売決定
+DESCRIPTION:2012年発売の「アイカツフォン」が『アイカツ
+ フォン アンコール』として新登場。外観・プログラム
+ をアニメ設定により忠実に再現してフルリニューアル
+ 。データカードダス「アイカツ！アンコール」で使え
+ るアイカツ！カードやWariふぉと！と連動し、カメラでQ
+ Rコードをスキャンしてドレスを入手できる。多数のミ
+ ニゲーム・オーディションに加え、ファンを集めて挑
+ 戦する豪華ステージ機能「アンコールチャレンジ」を
+ 搭載。星宮いちごのボイスや作中楽曲も多数収録。ア
+ イカツ！カード3枚付属。13\,200円（税込）。\n\n区分: グ
+ ッズ\n日程表記: 2026年11月28日 発売\n情報公開日: 2026-08-2
+ 7\n情報源: BANDAI TOYS\n\nhttps://toy.bandai.co.jp/ja/item/01_21043/\n\
+ n― アイカツ！情報カレンダー（非公式ファンメイド）
+ \nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://toy.bandai.co.jp/ja/item/01_21043/
+CATEGORIES:グッズ
+LAST-MODIFIED:20260827T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260827-14@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20261128
+DTEND;VALUE=DATE:20261129
+SUMMARY:「アイカツフォンキャリー」発売決定
+DESCRIPTION:「アイカツフォン アンコール」を収納して持
+ ち運べるキャリーが登場。スターライト学園の制服を
+ イメージしたデザインで、カードをセットできるポケ
+ ット付き。データカードダス「アイカツ！アンコール
+ 」で使えるアイカツ！カードが1枚付属。2\,970円（税込
+ ）。\n\n区分: グッズ\n日程表記: 2026年11月28日 発売\n情
+ 報公開日: 2026-08-27\n情報源: BANDAI TOYS\n\nhttps://toy.bandai.co.
+ jp/ja/item/01_21042/\n\n― アイカツ！情報カレンダー（非公
+ 式ファンメイド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://toy.bandai.co.jp/ja/item/01_21042/
+CATEGORIES:グッズ
+LAST-MODIFIED:20260827T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260827-15@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20261128
+DTEND;VALUE=DATE:20261129
+SUMMARY:「アイカツフォン アンコール＆アイカツフォンキ
+ ャリー アイドルデビューセット」発売決定
+DESCRIPTION:「アイカツフォン アンコール」と「アイカツ
+ フォンキャリー」のセット品。データカードダス「ア
+ イカツ！アンコール」で使えるアイカツ！カードが計4
+ 枚付属する豪華アイテム。16\,170円（税込）。\n\n区分: 
+ グッズ\n日程表記: 2026年11月28日 発売\n情報公開日: 2026-0
+ 8-27\n情報源: BANDAI TOYS\n\nhttps://toy.bandai.co.jp/ja/item/01_21041/
+ \n\n― アイカツ！情報カレンダー（非公式ファンメイド
+ ）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://toy.bandai.co.jp/ja/item/01_21041/
+CATEGORIES:グッズ
+LAST-MODIFIED:20260827T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260827-16@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20261128
+DTEND;VALUE=DATE:20261129
+SUMMARY:「アイカツ！おうえんスターライト」キュート／
+ クール／セクシー／ポップ 全4タイプ発売決定
+DESCRIPTION:ボタンを押すとライトが光るペンライト「アイ
+ カツ！おうえんスターライト」が、キュート・クール
+ ・セクシー・ポップの全4タイプで登場。データカード
+ ダス「アイカツ！アンコール」で使えるアイカツ！カ
+ ードが各2枚付属。各1\,925円（税込）。\n\n区分: グッズ\
+ n日程表記: 2026年11月28日 発売\n情報公開日: 2026-08-27\n情
+ 報源: BANDAI TOYS\n\nhttps://toy.bandai.co.jp/ja/item/01_21040/\n\n― 
+ アイカツ！情報カレンダー（非公式ファンメイド）\nhtt
+ ps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://toy.bandai.co.jp/ja/item/01_21040/
+CATEGORIES:グッズ
+LAST-MODIFIED:20260827T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260827-17@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20261128
+DTEND;VALUE=DATE:20261129
+SUMMARY:「アイカツ！ チェンジングカードチャーム」発売
+ 決定
+DESCRIPTION:アイカツ！カードがミニチュアサイズのチャー
+ ムになって登場。見る角度によってトップス・ボトム
+ ス・シューズ・アクセサリーなどの柄が切り替わるレ
+ ンチキュラー仕様。別売りのミニチュアホルダーにセ
+ ット可能。クローズドパッケージで全9種展開。440円（
+ 税込）。\n\n区分: グッズ\n日程表記: 2026年11月28日 発売\
+ n情報公開日: 2026-08-27\n情報源: BANDAI TOYS\n\nhttps://toy.bandai
+ .co.jp/ja/item/01_21036/\n\n― アイカツ！情報カレンダー（非
+ 公式ファンメイド）\nhttps://aikatsu-info.github.io/aikatsu-calend
+ ar/
+URL:https://toy.bandai.co.jp/ja/item/01_21036/
+CATEGORIES:グッズ
+LAST-MODIFIED:20260827T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260827-18@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20261128
+DTEND;VALUE=DATE:20261129
+SUMMARY:「アイカツ！ミニチュアホルダー スターライト学
+ 園セット」発売決定
+DESCRIPTION:アイカツ！のミニチュアをじゃら付けできるミ
+ ニチュアホルダー。別売りのチェンジングカードチャ
+ ームをセットしてキーホルダーにできる。扉が開くミ
+ ニチュアのアイカツフォンが付属。2\,200円（税込）。\n
+ \n区分: グッズ\n日程表記: 2026年11月28日 発売\n情報公開
+ 日: 2026-08-27\n情報源: BANDAI TOYS\n\nhttps://toy.bandai.co.jp/ja/ite
+ m/01_21035/\n\n― アイカツ！情報カレンダー（非公式ファ
+ ンメイド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://toy.bandai.co.jp/ja/item/01_21035/
+CATEGORIES:グッズ
+LAST-MODIFIED:20260827T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260827-19@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20261128
+DTEND;VALUE=DATE:20261129
+SUMMARY:「アイカツ！ミニチュアホルダー 星宮いちごセッ
+ ト」発売決定
+DESCRIPTION:アイカツ！のミニチュアをじゃら付けできるミ
+ ニチュアホルダー。別売りのチェンジングカードチャ
+ ームをセットしてキーホルダーにできる。ミニチュア
+ のエンジェリーベアが付属。2\,200円（税込）。\n\n区分:
+  グッズ\n日程表記: 2026年11月28日 発売\n情報公開日: 2026-
+ 08-27\n情報源: BANDAI TOYS\n\nhttps://toy.bandai.co.jp/ja/item/01_21034
+ /\n\n― アイカツ！情報カレンダー（非公式ファンメイ
+ ド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://toy.bandai.co.jp/ja/item/01_21034/
+CATEGORIES:グッズ
+LAST-MODIFIED:20260827T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260827-20@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20261121
+DTEND;VALUE=DATE:20261122
+SUMMARY:「アイカツ！ Wariふぉと！（自販機）」発売決定
+DESCRIPTION:カプセル自販機向け「Wariふぉと！」シリーズ
+ に『アイカツ！』が登場。割るとカードデザイン＆ミ
+ ニキャラクターブロマイドになる新フォーマットで、1
+ セット2枚入り、カードは全40種（レアは金箔仕様）。
+ 裏面のQRコードで「アイカツフォン アンコール」と連
+ 動可能（データカードダス「アイカツ！アンコール」
+ では読み込み不可）。1回200円（税込）。通販パック版
+ （220円・20パック入りBOX）とは別ライン。\n\n区分: グッ
+ ズ\n日程表記: 2026年11月下旬 発売\n情報公開日: 2026-08-27\
+ n情報源: BANDAI TOYS\n\nhttps://toy.bandai.co.jp/ja/item/01_21130/\n\n
+ ― アイカツ！情報カレンダー（非公式ファンメイド）\
+ nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://toy.bandai.co.jp/ja/item/01_21130/
+CATEGORIES:グッズ
+LAST-MODIFIED:20260827T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+END:VCALENDAR

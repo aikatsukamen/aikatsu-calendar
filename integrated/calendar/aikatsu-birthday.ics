@@ -1,0 +1,1288 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//aikatsu-info//aikatsu-calendar//JA
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:アイカツ！誕生日
+X-WR-CALDESC:キャラクターの誕生日（毎年繰り返し）
+X-WR-TIMEZONE:Asia/Tokyo
+REFRESH-INTERVAL;VALUE=DURATION:PT6H
+X-PUBLISHED-TTL:PT6H
+SOURCE;VALUE=URI:https://aikatsu-info.github.io/aikatsu-calendar/calendar/a
+ ikatsu-birthday.ics
+BEGIN:VEVENT
+UID:bd01@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20130303
+DTEND;VALUE=DATE:20130304
+RRULE:FREQ=YEARLY
+SUMMARY:🎂 虹野ゆめ の誕生日
+DESCRIPTION:『アイカツスターズ！』虹野ゆめの誕生日です
+ 。\n\n区分: 誕生日\n日程表記: 3月3日（毎年）\n情報公開
+ 日: 2026-07-25\n情報源: アイカツ！ポータル アイドル名鑑
+ \n\nhttps://www.aikatsu.net/portal/idol/aikatsustars-01.html\n\n― アイ
+ カツ！情報カレンダー（非公式ファンメイド）\nhttps://a
+ ikatsu-info.github.io/aikatsu-calendar/
+URL:https://www.aikatsu.net/portal/idol/aikatsustars-01.html
+CATEGORIES:誕生日
+LAST-MODIFIED:20260725T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:bd02@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20131104
+DTEND;VALUE=DATE:20131105
+RRULE:FREQ=YEARLY
+SUMMARY:🎂 桜庭ローラ の誕生日
+DESCRIPTION:『アイカツスターズ！』桜庭ローラの誕生日で
+ す。\n\n区分: 誕生日\n日程表記: 11月4日（毎年）\n情報
+ 公開日: 2026-07-25\n情報源: アイカツ！ポータル アイドル
+ 名鑑\n\nhttps://www.aikatsu.net/portal/idol/aikatsustars-01.html\n\n― 
+ アイカツ！情報カレンダー（非公式ファンメイド）\nhtt
+ ps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://www.aikatsu.net/portal/idol/aikatsustars-01.html
+CATEGORIES:誕生日
+LAST-MODIFIED:20260725T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:bd03@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20131028
+DTEND;VALUE=DATE:20131029
+RRULE:FREQ=YEARLY
+SUMMARY:🎂 香澄真昼 の誕生日
+DESCRIPTION:『アイカツスターズ！』香澄真昼の誕生日です
+ 。\n\n区分: 誕生日\n日程表記: 10月28日（毎年）\n情報公
+ 開日: 2026-07-25\n情報源: アイカツ！ポータル アイドル名
+ 鑑\n\nhttps://www.aikatsu.net/portal/idol/aikatsustars-01.html\n\n― ア
+ イカツ！情報カレンダー（非公式ファンメイド）\nhttps:
+ //aikatsu-info.github.io/aikatsu-calendar/
+URL:https://www.aikatsu.net/portal/idol/aikatsustars-01.html
+CATEGORIES:誕生日
+LAST-MODIFIED:20260725T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:bd04@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20130925
+DTEND;VALUE=DATE:20130926
+RRULE:FREQ=YEARLY
+SUMMARY:🎂 早乙女あこ の誕生日
+DESCRIPTION:『アイカツスターズ！』早乙女あこの誕生日で
+ す。\n\n区分: 誕生日\n日程表記: 9月25日（毎年）\n情報
+ 公開日: 2026-07-25\n情報源: アイカツ！ポータル アイドル
+ 名鑑\n\nhttps://www.aikatsu.net/portal/idol/aikatsustars-01.html\n\n― 
+ アイカツ！情報カレンダー（非公式ファンメイド）\nhtt
+ ps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://www.aikatsu.net/portal/idol/aikatsustars-01.html
+CATEGORIES:誕生日
+LAST-MODIFIED:20260725T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:bd05@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20130415
+DTEND;VALUE=DATE:20130416
+RRULE:FREQ=YEARLY
+SUMMARY:🎂 七倉小春 の誕生日
+DESCRIPTION:『アイカツスターズ！』七倉小春の誕生日です
+ 。\n\n区分: 誕生日\n日程表記: 4月15日（毎年）\n情報公
+ 開日: 2026-07-25\n情報源: アイカツ！ポータル アイドル名
+ 鑑\n\nhttps://www.aikatsu.net/portal/idol/aikatsustars-01.html\n\n― ア
+ イカツ！情報カレンダー（非公式ファンメイド）\nhttps:
+ //aikatsu-info.github.io/aikatsu-calendar/
+URL:https://www.aikatsu.net/portal/idol/aikatsustars-01.html
+CATEGORIES:誕生日
+LAST-MODIFIED:20260725T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:bd06@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20130122
+DTEND;VALUE=DATE:20130123
+RRULE:FREQ=YEARLY
+SUMMARY:🎂 白銀リリィ の誕生日
+DESCRIPTION:『アイカツスターズ！』白銀リリィの誕生日で
+ す。\n\n区分: 誕生日\n日程表記: 1月22日（毎年）\n情報
+ 公開日: 2026-07-25\n情報源: アイカツ！ポータル アイドル
+ 名鑑\n\nhttps://www.aikatsu.net/portal/idol/aikatsustars-01.html\n\n― 
+ アイカツ！情報カレンダー（非公式ファンメイド）\nhtt
+ ps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://www.aikatsu.net/portal/idol/aikatsustars-01.html
+CATEGORIES:誕生日
+LAST-MODIFIED:20260725T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:bd07@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20130226
+DTEND;VALUE=DATE:20130227
+RRULE:FREQ=YEARLY
+SUMMARY:🎂 白鳥ひめ の誕生日
+DESCRIPTION:『アイカツスターズ！』白鳥ひめの誕生日です
+ 。\n\n区分: 誕生日\n日程表記: 2月26日（毎年）\n情報公
+ 開日: 2026-07-25\n情報源: アイカツ！ポータル アイドル名
+ 鑑\n\nhttps://www.aikatsu.net/portal/idol/aikatsustars-02.html\n\n― ア
+ イカツ！情報カレンダー（非公式ファンメイド）\nhttps:
+ //aikatsu-info.github.io/aikatsu-calendar/
+URL:https://www.aikatsu.net/portal/idol/aikatsustars-02.html
+CATEGORIES:誕生日
+LAST-MODIFIED:20260725T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:bd08@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20130725
+DTEND;VALUE=DATE:20130726
+RRULE:FREQ=YEARLY
+SUMMARY:🎂 如月ツバサ の誕生日
+DESCRIPTION:『アイカツスターズ！』如月ツバサの誕生日で
+ す。\n\n区分: 誕生日\n日程表記: 7月25日（毎年）\n情報
+ 公開日: 2026-07-25\n情報源: アイカツ！ポータル アイドル
+ 名鑑\n\nhttps://www.aikatsu.net/portal/idol/aikatsustars-02.html\n\n― 
+ アイカツ！情報カレンダー（非公式ファンメイド）\nhtt
+ ps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://www.aikatsu.net/portal/idol/aikatsustars-02.html
+CATEGORIES:誕生日
+LAST-MODIFIED:20260725T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:bd09@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20130623
+DTEND;VALUE=DATE:20130624
+RRULE:FREQ=YEARLY
+SUMMARY:🎂 二階堂ゆず の誕生日
+DESCRIPTION:『アイカツスターズ！』二階堂ゆずの誕生日で
+ す。\n\n区分: 誕生日\n日程表記: 6月23日（毎年）\n情報
+ 公開日: 2026-07-25\n情報源: アイカツ！ポータル アイドル
+ 名鑑\n\nhttps://www.aikatsu.net/portal/idol/aikatsustars-02.html\n\n― 
+ アイカツ！情報カレンダー（非公式ファンメイド）\nhtt
+ ps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://www.aikatsu.net/portal/idol/aikatsustars-02.html
+CATEGORIES:誕生日
+LAST-MODIFIED:20260725T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:bd10@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20130513
+DTEND;VALUE=DATE:20130514
+RRULE:FREQ=YEARLY
+SUMMARY:🎂 香澄夜空 の誕生日
+DESCRIPTION:『アイカツスターズ！』香澄夜空の誕生日です
+ 。\n\n区分: 誕生日\n日程表記: 5月13日（毎年）\n情報公
+ 開日: 2026-07-25\n情報源: アイカツ！ポータル アイドル名
+ 鑑\n\nhttps://www.aikatsu.net/portal/idol/aikatsustars-02.html\n\n― ア
+ イカツ！情報カレンダー（非公式ファンメイド）\nhttps:
+ //aikatsu-info.github.io/aikatsu-calendar/
+URL:https://www.aikatsu.net/portal/idol/aikatsustars-02.html
+CATEGORIES:誕生日
+LAST-MODIFIED:20260725T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:bd11@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20130801
+DTEND;VALUE=DATE:20130802
+RRULE:FREQ=YEARLY
+SUMMARY:🎂 エルザ・フォルテ の誕生日
+DESCRIPTION:『アイカツスターズ！』エルザ・フォルテの誕
+ 生日です。\n\n区分: 誕生日\n日程表記: 8月1日（毎年）\n
+ 情報公開日: 2026-07-25\n情報源: アイカツ！ポータル アイ
+ ドル名鑑\n\nhttps://www.aikatsu.net/portal/idol/aikatsustars-02.html\n
+ \n― アイカツ！情報カレンダー（非公式ファンメイド
+ ）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://www.aikatsu.net/portal/idol/aikatsustars-02.html
+CATEGORIES:誕生日
+LAST-MODIFIED:20260725T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:bd12@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20130330
+DTEND;VALUE=DATE:20130331
+RRULE:FREQ=YEARLY
+SUMMARY:🎂 花園きらら の誕生日
+DESCRIPTION:『アイカツスターズ！』花園きららの誕生日で
+ す。\n\n区分: 誕生日\n日程表記: 3月30日（毎年）\n情報
+ 公開日: 2026-07-25\n情報源: アイカツ！ポータル アイドル
+ 名鑑\n\nhttps://www.aikatsu.net/portal/idol/aikatsustars-02.html\n\n― 
+ アイカツ！情報カレンダー（非公式ファンメイド）\nhtt
+ ps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://www.aikatsu.net/portal/idol/aikatsustars-02.html
+CATEGORIES:誕生日
+LAST-MODIFIED:20260725T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:bd13@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20130501
+DTEND;VALUE=DATE:20130502
+RRULE:FREQ=YEARLY
+SUMMARY:🎂 騎咲レイ の誕生日
+DESCRIPTION:『アイカツスターズ！』騎咲レイの誕生日です
+ 。\n\n区分: 誕生日\n日程表記: 5月1日（毎年）\n情報公開
+ 日: 2026-07-25\n情報源: アイカツ！ポータル アイドル名鑑
+ \n\nhttps://www.aikatsu.net/portal/idol/aikatsustars-02.html\n\n― アイ
+ カツ！情報カレンダー（非公式ファンメイド）\nhttps://a
+ ikatsu-info.github.io/aikatsu-calendar/
+URL:https://www.aikatsu.net/portal/idol/aikatsustars-02.html
+CATEGORIES:誕生日
+LAST-MODIFIED:20260725T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:bd14@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20131224
+DTEND;VALUE=DATE:20131225
+RRULE:FREQ=YEARLY
+SUMMARY:🎂 双葉アリア の誕生日
+DESCRIPTION:『アイカツスターズ！』双葉アリアの誕生日で
+ す。\n\n区分: 誕生日\n日程表記: 12月24日（毎年）\n情報
+ 公開日: 2026-07-25\n情報源: アイカツ！ポータル アイドル
+ 名鑑\n\nhttps://www.aikatsu.net/portal/idol/aikatsustars-02.html\n\n― 
+ アイカツ！情報カレンダー（非公式ファンメイド）\nhtt
+ ps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://www.aikatsu.net/portal/idol/aikatsustars-02.html
+CATEGORIES:誕生日
+LAST-MODIFIED:20260725T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:bd15@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20130720
+DTEND;VALUE=DATE:20130721
+RRULE:FREQ=YEARLY
+SUMMARY:🎂 友希あいね の誕生日
+DESCRIPTION:『アイカツフレンズ！』友希あいねの誕生日で
+ す。\n\n区分: 誕生日\n日程表記: 7月20日（毎年）\n情報
+ 公開日: 2026-07-25\n情報源: アイカツ！ポータル アイドル
+ 名鑑\n\nhttps://www.aikatsu.net/portal/idol/aikatsufriends-01.html\n\n
+ ― アイカツ！情報カレンダー（非公式ファンメイド）\
+ nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://www.aikatsu.net/portal/idol/aikatsufriends-01.html
+CATEGORIES:誕生日
+LAST-MODIFIED:20260725T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:bd16@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20130106
+DTEND;VALUE=DATE:20130107
+RRULE:FREQ=YEARLY
+SUMMARY:🎂 湊みお の誕生日
+DESCRIPTION:『アイカツフレンズ！』湊みおの誕生日です。
+ \n\n区分: 誕生日\n日程表記: 1月6日（毎年）\n情報公開日
+ : 2026-07-25\n情報源: アイカツ！ポータル アイドル名鑑\n\
+ nhttps://www.aikatsu.net/portal/idol/aikatsufriends-01.html\n\n― アイ
+ カツ！情報カレンダー（非公式ファンメイド）\nhttps://a
+ ikatsu-info.github.io/aikatsu-calendar/
+URL:https://www.aikatsu.net/portal/idol/aikatsufriends-01.html
+CATEGORIES:誕生日
+LAST-MODIFIED:20260725T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:bd17@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20130808
+DTEND;VALUE=DATE:20130809
+RRULE:FREQ=YEARLY
+SUMMARY:🎂 蝶乃舞花 の誕生日
+DESCRIPTION:『アイカツフレンズ！』蝶乃舞花の誕生日です
+ 。\n\n区分: 誕生日\n日程表記: 8月8日（毎年）\n情報公開
+ 日: 2026-07-25\n情報源: アイカツ！ポータル アイドル名鑑
+ \n\nhttps://www.aikatsu.net/portal/idol/aikatsufriends-01.html\n\n― ア
+ イカツ！情報カレンダー（非公式ファンメイド）\nhttps:
+ //aikatsu-info.github.io/aikatsu-calendar/
+URL:https://www.aikatsu.net/portal/idol/aikatsufriends-01.html
+CATEGORIES:誕生日
+LAST-MODIFIED:20260725T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:bd18@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20130321
+DTEND;VALUE=DATE:20130322
+RRULE:FREQ=YEARLY
+SUMMARY:🎂 日向エマ の誕生日
+DESCRIPTION:『アイカツフレンズ！』日向エマの誕生日です
+ 。\n\n区分: 誕生日\n日程表記: 3月21日（毎年）\n情報公
+ 開日: 2026-07-25\n情報源: アイカツ！ポータル アイドル名
+ 鑑\n\nhttps://www.aikatsu.net/portal/idol/aikatsufriends-01.html\n\n― 
+ アイカツ！情報カレンダー（非公式ファンメイド）\nhtt
+ ps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://www.aikatsu.net/portal/idol/aikatsufriends-01.html
+CATEGORIES:誕生日
+LAST-MODIFIED:20260725T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:bd19@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20130609
+DTEND;VALUE=DATE:20130610
+RRULE:FREQ=YEARLY
+SUMMARY:🎂 白百合さくや の誕生日
+DESCRIPTION:『アイカツフレンズ！』白百合さくやの誕生日
+ です。双子の妹・かぐやと同じ誕生日です。\n\n区分: 
+ 誕生日\n日程表記: 6月9日（毎年）\n情報公開日: 2026-07-25
+ \n情報源: アイカツ！ポータル アイドル名鑑\n\nhttps://www
+ .aikatsu.net/portal/idol/aikatsufriends-01.html\n\n― アイカツ！情
+ 報カレンダー（非公式ファンメイド）\nhttps://aikatsu-info.
+ github.io/aikatsu-calendar/
+URL:https://www.aikatsu.net/portal/idol/aikatsufriends-01.html
+CATEGORIES:誕生日
+LAST-MODIFIED:20260725T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:bd20@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20130609
+DTEND;VALUE=DATE:20130610
+RRULE:FREQ=YEARLY
+SUMMARY:🎂 白百合かぐや の誕生日
+DESCRIPTION:『アイカツフレンズ！』白百合かぐやの誕生日
+ です。双子の姉・さくやと同じ誕生日です。\n\n区分: 
+ 誕生日\n日程表記: 6月9日（毎年）\n情報公開日: 2026-07-25
+ \n情報源: アイカツ！ポータル アイドル名鑑\n\nhttps://www
+ .aikatsu.net/portal/idol/aikatsufriends-01.html\n\n― アイカツ！情
+ 報カレンダー（非公式ファンメイド）\nhttps://aikatsu-info.
+ github.io/aikatsu-calendar/
+URL:https://www.aikatsu.net/portal/idol/aikatsufriends-01.html
+CATEGORIES:誕生日
+LAST-MODIFIED:20260725T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:bd21@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20131004
+DTEND;VALUE=DATE:20131005
+RRULE:FREQ=YEARLY
+SUMMARY:🎂 神城カレン の誕生日
+DESCRIPTION:『アイカツフレンズ！』神城カレンの誕生日で
+ す。\n\n区分: 誕生日\n日程表記: 10月4日（毎年）\n情報
+ 公開日: 2026-07-25\n情報源: アイカツ！ポータル アイドル
+ 名鑑\n\nhttps://www.aikatsu.net/portal/idol/aikatsufriends-02.html\n\n
+ ― アイカツ！情報カレンダー（非公式ファンメイド）\
+ nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://www.aikatsu.net/portal/idol/aikatsufriends-02.html
+CATEGORIES:誕生日
+LAST-MODIFIED:20260725T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:bd22@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20130509
+DTEND;VALUE=DATE:20130510
+RRULE:FREQ=YEARLY
+SUMMARY:🎂 明日香ミライ の誕生日
+DESCRIPTION:『アイカツフレンズ！』明日香ミライの誕生日
+ です。\n\n区分: 誕生日\n日程表記: 5月9日（毎年）\n情報
+ 公開日: 2026-07-25\n情報源: アイカツ！ポータル アイドル
+ 名鑑\n\nhttps://www.aikatsu.net/portal/idol/aikatsufriends-02.html\n\n
+ ― アイカツ！情報カレンダー（非公式ファンメイド）\
+ nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://www.aikatsu.net/portal/idol/aikatsufriends-02.html
+CATEGORIES:誕生日
+LAST-MODIFIED:20260725T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:bd23@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20130525
+DTEND;VALUE=DATE:20130526
+RRULE:FREQ=YEARLY
+SUMMARY:🎂 天翔ひびき の誕生日
+DESCRIPTION:『アイカツフレンズ！』天翔ひびきの誕生日で
+ す。\n\n区分: 誕生日\n日程表記: 5月25日（毎年）\n情報
+ 公開日: 2026-07-25\n情報源: アイカツ！ポータル アイドル
+ 名鑑\n\nhttps://www.aikatsu.net/portal/idol/aikatsufriends-02.html\n\n
+ ― アイカツ！情報カレンダー（非公式ファンメイド）\
+ nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://www.aikatsu.net/portal/idol/aikatsufriends-02.html
+CATEGORIES:誕生日
+LAST-MODIFIED:20260725T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:bd24@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20130223
+DTEND;VALUE=DATE:20130224
+RRULE:FREQ=YEARLY
+SUMMARY:🎂 アリシア・シャーロット の誕生日
+DESCRIPTION:『アイカツフレンズ！』アリシア・シャーロッ
+ トの誕生日です。\n\n区分: 誕生日\n日程表記: 2月23日（
+ 毎年）\n情報公開日: 2026-07-25\n情報源: アイカツ！ポー
+ タル アイドル名鑑\n\nhttps://www.aikatsu.net/portal/idol/aikatsufr
+ iends-02.html\n\n― アイカツ！情報カレンダー（非公式フ
+ ァンメイド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://www.aikatsu.net/portal/idol/aikatsufriends-02.html
+CATEGORIES:誕生日
+LAST-MODIFIED:20260725T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:bd25@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20130903
+DTEND;VALUE=DATE:20130904
+RRULE:FREQ=YEARLY
+SUMMARY:🎂 春風わかば の誕生日
+DESCRIPTION:『アイカツフレンズ！』春風わかばの誕生日で
+ す。\n\n区分: 誕生日\n日程表記: 9月3日（毎年）\n情報公
+ 開日: 2026-07-25\n情報源: アイカツ！ポータル アイドル名
+ 鑑\n\nhttps://www.aikatsu.net/portal/idol/aikatsufriends-02.html\n\n― 
+ アイカツ！情報カレンダー（非公式ファンメイド）\nhtt
+ ps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://www.aikatsu.net/portal/idol/aikatsufriends-02.html
+CATEGORIES:誕生日
+LAST-MODIFIED:20260725T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:bd26@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20131207
+DTEND;VALUE=DATE:20131208
+RRULE:FREQ=YEARLY
+SUMMARY:🎂 姫石らき の誕生日
+DESCRIPTION:『アイカツオンパレード！』姫石らきの誕生日
+ です。\n\n区分: 誕生日\n日程表記: 12月7日（毎年）\n情
+ 報公開日: 2026-07-25\n情報源: アイカツ！ポータル アイド
+ ル名鑑\n\nhttps://www.aikatsu.net/portal/idol/aikatsuonparade.html\n\n
+ ― アイカツ！情報カレンダー（非公式ファンメイド）\
+ nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://www.aikatsu.net/portal/idol/aikatsuonparade.html
+CATEGORIES:誕生日
+LAST-MODIFIED:20260725T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:bd27@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20130403
+DTEND;VALUE=DATE:20130404
+RRULE:FREQ=YEARLY
+SUMMARY:🎂 音羽舞桜／ハナ の誕生日
+DESCRIPTION:『アイカツプラネット！』音羽舞桜（ハナ）の
+ 誕生日です。\n\n区分: 誕生日\n日程表記: 4月3日（毎年
+ ）\n情報公開日: 2026-07-25\n情報源: アイカツ！ポータル 
+ アイドル名鑑\n\nhttps://www.aikatsu.net/portal/idol/aikatsuplanet.ht
+ ml\n\n― アイカツ！情報カレンダー（非公式ファンメイ
+ ド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://www.aikatsu.net/portal/idol/aikatsuplanet.html
+CATEGORIES:誕生日
+LAST-MODIFIED:20260725T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:bd28@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20130520
+DTEND;VALUE=DATE:20130521
+RRULE:FREQ=YEARLY
+SUMMARY:🎂 珠樹るり／ルリ の誕生日
+DESCRIPTION:『アイカツプラネット！』珠樹るり（ルリ）の
+ 誕生日です。\n\n区分: 誕生日\n日程表記: 5月20日（毎年
+ ）\n情報公開日: 2026-07-25\n情報源: アイカツ！ポータル 
+ アイドル名鑑\n\nhttps://www.aikatsu.net/portal/idol/aikatsuplanet.ht
+ ml\n\n― アイカツ！情報カレンダー（非公式ファンメイ
+ ド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://www.aikatsu.net/portal/idol/aikatsuplanet.html
+CATEGORIES:誕生日
+LAST-MODIFIED:20260725T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:bd29@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20130107
+DTEND;VALUE=DATE:20130108
+RRULE:FREQ=YEARLY
+SUMMARY:🎂 梅小路響子／ビート の誕生日
+DESCRIPTION:『アイカツプラネット！』梅小路響子（ビート
+ ）の誕生日です。\n\n区分: 誕生日\n日程表記: 1月7日（
+ 毎年）\n情報公開日: 2026-07-25\n情報源: アイカツ！ポー
+ タル アイドル名鑑\n\nhttps://www.aikatsu.net/portal/idol/aikatsupl
+ anet.html\n\n― アイカツ！情報カレンダー（非公式ファン
+ メイド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://www.aikatsu.net/portal/idol/aikatsuplanet.html
+CATEGORIES:誕生日
+LAST-MODIFIED:20260725T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:bd30@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20130326
+DTEND;VALUE=DATE:20130327
+RRULE:FREQ=YEARLY
+SUMMARY:🎂 本谷栞／シオリ の誕生日
+DESCRIPTION:『アイカツプラネット！』本谷栞（シオリ）の
+ 誕生日です。\n\n区分: 誕生日\n日程表記: 3月26日（毎年
+ ）\n情報公開日: 2026-07-25\n情報源: アイカツ！ポータル 
+ アイドル名鑑\n\nhttps://www.aikatsu.net/portal/idol/aikatsuplanet.ht
+ ml\n\n― アイカツ！情報カレンダー（非公式ファンメイ
+ ド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://www.aikatsu.net/portal/idol/aikatsuplanet.html
+CATEGORIES:誕生日
+LAST-MODIFIED:20260725T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:bd31@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20131206
+DTEND;VALUE=DATE:20131207
+RRULE:FREQ=YEARLY
+SUMMARY:🎂 月城愛弓／キューピット の誕生日
+DESCRIPTION:『アイカツプラネット！』月城愛弓（キューピ
+ ット）の誕生日です。\n\n区分: 誕生日\n日程表記: 12月6
+ 日（毎年）\n情報公開日: 2026-07-25\n情報源: アイカツ！
+ ポータル アイドル名鑑\n\nhttps://www.aikatsu.net/portal/idol/aik
+ atsuplanet.html\n\n― アイカツ！情報カレンダー（非公式フ
+ ァンメイド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://www.aikatsu.net/portal/idol/aikatsuplanet.html
+CATEGORIES:誕生日
+LAST-MODIFIED:20260725T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:bd32@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20130215
+DTEND;VALUE=DATE:20130216
+RRULE:FREQ=YEARLY
+SUMMARY:🎂 栗六杏／アン の誕生日
+DESCRIPTION:『アイカツプラネット！』栗六杏（アン）の誕
+ 生日です。\n\n区分: 誕生日\n日程表記: 2月15日（毎年）\
+ n情報公開日: 2026-07-25\n情報源: アイカツ！ポータル ア
+ イドル名鑑\n\nhttps://www.aikatsu.net/portal/idol/aikatsuplanet.html\
+ n\n― アイカツ！情報カレンダー（非公式ファンメイド
+ ）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://www.aikatsu.net/portal/idol/aikatsuplanet.html
+CATEGORIES:誕生日
+LAST-MODIFIED:20260725T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:bd33@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20130710
+DTEND;VALUE=DATE:20130711
+RRULE:FREQ=YEARLY
+SUMMARY:🎂 陽明咲／ローズ の誕生日
+DESCRIPTION:『アイカツプラネット！』陽明咲（ローズ）の
+ 誕生日です。\n\n区分: 誕生日\n日程表記: 7月10日（毎年
+ ）\n情報公開日: 2026-07-25\n情報源: アイカツ！ポータル 
+ アイドル名鑑\n\nhttps://www.aikatsu.net/portal/idol/aikatsuplanet.ht
+ ml\n\n― アイカツ！情報カレンダー（非公式ファンメイ
+ ド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://www.aikatsu.net/portal/idol/aikatsuplanet.html
+CATEGORIES:誕生日
+LAST-MODIFIED:20260725T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:bd34@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20130617
+DTEND;VALUE=DATE:20130618
+RRULE:FREQ=YEARLY
+SUMMARY:🎂 糸井紗良／サラ の誕生日
+DESCRIPTION:『アイカツプラネット！』糸井紗良（サラ）の
+ 誕生日です。\n\n区分: 誕生日\n日程表記: 6月17日（毎年
+ ）\n情報公開日: 2026-07-25\n情報源: アイカツ！ポータル 
+ アイドル名鑑\n\nhttps://www.aikatsu.net/portal/idol/aikatsuplanet.ht
+ ml\n\n― アイカツ！情報カレンダー（非公式ファンメイ
+ ド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://www.aikatsu.net/portal/idol/aikatsuplanet.html
+CATEGORIES:誕生日
+LAST-MODIFIED:20260725T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:bd35@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20130910
+DTEND;VALUE=DATE:20130911
+RRULE:FREQ=YEARLY
+SUMMARY:🎂 姫乃みえる の誕生日
+DESCRIPTION:『アイカツアカデミー！』姫乃みえるの誕生日
+ です。\n\n区分: 誕生日\n日程表記: 9月10日（毎年）\n情
+ 報公開日: 2026-07-25\n情報源: アイカツ！ポータル アイド
+ ル名鑑\n\nhttps://www.aikatsu.net/portal/idol/aikatsuacademy.html\n\n
+ ― アイカツ！情報カレンダー（非公式ファンメイド）\
+ nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://www.aikatsu.net/portal/idol/aikatsuacademy.html
+CATEGORIES:誕生日
+LAST-MODIFIED:20260725T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:bd36@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20131202
+DTEND;VALUE=DATE:20131203
+RRULE:FREQ=YEARLY
+SUMMARY:🎂 真未夢メエ の誕生日
+DESCRIPTION:『アイカツアカデミー！』真未夢メエの誕生日
+ です。\n\n区分: 誕生日\n日程表記: 12月2日（毎年）\n情
+ 報公開日: 2026-07-25\n情報源: アイカツ！ポータル アイド
+ ル名鑑\n\nhttps://www.aikatsu.net/portal/idol/aikatsuacademy.html\n\n
+ ― アイカツ！情報カレンダー（非公式ファンメイド）\
+ nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://www.aikatsu.net/portal/idol/aikatsuacademy.html
+CATEGORIES:誕生日
+LAST-MODIFIED:20260725T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:bd37@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20131105
+DTEND;VALUE=DATE:20131106
+RRULE:FREQ=YEARLY
+SUMMARY:🎂 和央パリン の誕生日
+DESCRIPTION:『アイカツアカデミー！』和央パリンの誕生日
+ です。\n\n区分: 誕生日\n日程表記: 11月5日（毎年）\n情
+ 報公開日: 2026-07-25\n情報源: アイカツ！ポータル アイド
+ ル名鑑\n\nhttps://www.aikatsu.net/portal/idol/aikatsuacademy.html\n\n
+ ― アイカツ！情報カレンダー（非公式ファンメイド）\
+ nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://www.aikatsu.net/portal/idol/aikatsuacademy.html
+CATEGORIES:誕生日
+LAST-MODIFIED:20260725T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:bd38@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20130209
+DTEND;VALUE=DATE:20130210
+RRULE:FREQ=YEARLY
+SUMMARY:🎂 凛堂たいむ の誕生日
+DESCRIPTION:『アイカツアカデミー！』凛堂たいむの誕生日
+ です。\n\n区分: 誕生日\n日程表記: 2月9日（毎年）\n情報
+ 公開日: 2026-07-25\n情報源: アイカツ！ポータル アイドル
+ 名鑑\n\nhttps://www.aikatsu.net/portal/idol/aikatsuacademy.html\n\n― 
+ アイカツ！情報カレンダー（非公式ファンメイド）\nhtt
+ ps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://www.aikatsu.net/portal/idol/aikatsuacademy.html
+CATEGORIES:誕生日
+LAST-MODIFIED:20260725T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:bd39@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20130315
+DTEND;VALUE=DATE:20130316
+RRULE:FREQ=YEARLY
+SUMMARY:🎂 星宮いちご の誕生日
+DESCRIPTION:『アイカツ！』星宮いちごの誕生日です。\n\n
+ 区分: 誕生日\n日程表記: 3月15日（毎年）\n情報公開日: 2
+ 026-07-25\n情報源: アイカツ！ポータル アイドル名鑑\n\nht
+ tps://www.aikatsu.net/portal/idol/#ichigo\n\n― アイカツ！情報カ
+ レンダー（非公式ファンメイド）\nhttps://aikatsu-info.github
+ .io/aikatsu-calendar/
+URL:https://www.aikatsu.net/portal/idol/#ichigo
+CATEGORIES:誕生日
+LAST-MODIFIED:20260725T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:bd40@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20130131
+DTEND;VALUE=DATE:20130201
+RRULE:FREQ=YEARLY
+SUMMARY:🎂 霧矢あおい の誕生日
+DESCRIPTION:『アイカツ！』霧矢あおいの誕生日です。\n\n
+ 区分: 誕生日\n日程表記: 1月31日（毎年）\n情報公開日: 2
+ 026-07-25\n情報源: アイカツ！ポータル アイドル名鑑\n\nht
+ tps://www.aikatsu.net/portal/idol/#aoi\n\n― アイカツ！情報カレ
+ ンダー（非公式ファンメイド）\nhttps://aikatsu-info.github.io
+ /aikatsu-calendar/
+URL:https://www.aikatsu.net/portal/idol/#aoi
+CATEGORIES:誕生日
+LAST-MODIFIED:20260725T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:bd41@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20130803
+DTEND;VALUE=DATE:20130804
+RRULE:FREQ=YEARLY
+SUMMARY:🎂 紫吹蘭 の誕生日
+DESCRIPTION:『アイカツ！』紫吹蘭の誕生日です。\n\n区分: 
+ 誕生日\n日程表記: 8月3日（毎年）\n情報公開日: 2026-07-25
+ \n情報源: アイカツ！ポータル アイドル名鑑\n\nhttps://www
+ .aikatsu.net/portal/idol/#ran\n\n― アイカツ！情報カレンダー
+ （非公式ファンメイド）\nhttps://aikatsu-info.github.io/aikatsu-
+ calendar/
+URL:https://www.aikatsu.net/portal/idol/#ran
+CATEGORIES:誕生日
+LAST-MODIFIED:20260725T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:bd42@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20130505
+DTEND;VALUE=DATE:20130506
+RRULE:FREQ=YEARLY
+SUMMARY:🎂 有栖川おとめ の誕生日
+DESCRIPTION:『アイカツ！』有栖川おとめの誕生日です。\n\
+ n区分: 誕生日\n日程表記: 5月5日（毎年）\n情報公開日: 2
+ 026-07-25\n情報源: アイカツ！ポータル アイドル名鑑\n\nht
+ tps://www.aikatsu.net/portal/idol/#otome\n\n― アイカツ！情報カ
+ レンダー（非公式ファンメイド）\nhttps://aikatsu-info.github
+ .io/aikatsu-calendar/
+URL:https://www.aikatsu.net/portal/idol/#otome
+CATEGORIES:誕生日
+LAST-MODIFIED:20260725T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:bd43@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20131226
+DTEND;VALUE=DATE:20131227
+RRULE:FREQ=YEARLY
+SUMMARY:🎂 藤堂ユリカ の誕生日
+DESCRIPTION:『アイカツ！』藤堂ユリカの誕生日です。\n\n
+ 区分: 誕生日\n日程表記: 12月26日（毎年）\n情報公開日: 
+ 2026-07-25\n情報源: アイカツ！ポータル アイドル名鑑\n\nh
+ ttps://www.aikatsu.net/portal/idol/#yurika\n\n― アイカツ！情報カ
+ レンダー（非公式ファンメイド）\nhttps://aikatsu-info.github
+ .io/aikatsu-calendar/
+URL:https://www.aikatsu.net/portal/idol/#yurika
+CATEGORIES:誕生日
+LAST-MODIFIED:20260725T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:bd44@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20130406
+DTEND;VALUE=DATE:20130407
+RRULE:FREQ=YEARLY
+SUMMARY:🎂 北大路さくら の誕生日
+DESCRIPTION:『アイカツ！』北大路さくらの誕生日です。\n\
+ n区分: 誕生日\n日程表記: 4月6日（毎年）\n情報公開日: 2
+ 026-07-25\n情報源: アイカツ！ポータル アイドル名鑑\n\nht
+ tps://www.aikatsu.net/portal/idol/#sakura\n\n― アイカツ！情報カ
+ レンダー（非公式ファンメイド）\nhttps://aikatsu-info.github
+ .io/aikatsu-calendar/
+URL:https://www.aikatsu.net/portal/idol/#sakura
+CATEGORIES:誕生日
+LAST-MODIFIED:20260725T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:bd45@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20131123
+DTEND;VALUE=DATE:20131124
+RRULE:FREQ=YEARLY
+SUMMARY:🎂 一ノ瀬かえで の誕生日
+DESCRIPTION:『アイカツ！』一ノ瀬かえでの誕生日です。\n\
+ n区分: 誕生日\n日程表記: 11月23日（毎年）\n情報公開日:
+  2026-07-25\n情報源: アイカツ！ポータル アイドル名鑑\n\n
+ https://www.aikatsu.net/portal/idol/#kaede\n\n― アイカツ！情報カ
+ レンダー（非公式ファンメイド）\nhttps://aikatsu-info.github
+ .io/aikatsu-calendar/
+URL:https://www.aikatsu.net/portal/idol/#kaede
+CATEGORIES:誕生日
+LAST-MODIFIED:20260725T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:bd46@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20130111
+DTEND;VALUE=DATE:20130112
+RRULE:FREQ=YEARLY
+SUMMARY:🎂 神谷しおん の誕生日
+DESCRIPTION:『アイカツ！』神谷しおんの誕生日です。\n\n
+ 区分: 誕生日\n日程表記: 1月11日（毎年）\n情報公開日: 2
+ 026-07-25\n情報源: アイカツ！ポータル アイドル名鑑\n\nht
+ tps://www.aikatsu.net/portal/idol/#shion\n\n― アイカツ！情報カ
+ レンダー（非公式ファンメイド）\nhttps://aikatsu-info.github
+ .io/aikatsu-calendar/
+URL:https://www.aikatsu.net/portal/idol/#shion
+CATEGORIES:誕生日
+LAST-MODIFIED:20260725T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:bd47@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20130328
+DTEND;VALUE=DATE:20130329
+RRULE:FREQ=YEARLY
+SUMMARY:🎂 三ノ輪ヒカリ の誕生日
+DESCRIPTION:『アイカツ！』三ノ輪ヒカリの誕生日です。\n\
+ n区分: 誕生日\n日程表記: 3月28日（毎年）\n情報公開日: 
+ 2026-07-25\n情報源: アイカツ！ポータル アイドル名鑑\n\nh
+ ttps://www.aikatsu.net/portal/idol/#hikari\n\n― アイカツ！情報カ
+ レンダー（非公式ファンメイド）\nhttps://aikatsu-info.github
+ .io/aikatsu-calendar/
+URL:https://www.aikatsu.net/portal/idol/#hikari
+CATEGORIES:誕生日
+LAST-MODIFIED:20260725T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:bd48@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20131111
+DTEND;VALUE=DATE:20131112
+RRULE:FREQ=YEARLY
+SUMMARY:🎂 音城セイラ の誕生日
+DESCRIPTION:『アイカツ！』音城セイラの誕生日です。\n\n
+ 区分: 誕生日\n日程表記: 11月11日（毎年）\n情報公開日: 
+ 2026-07-25\n情報源: アイカツ！ポータル アイドル名鑑\n\nh
+ ttps://www.aikatsu.net/portal/idol/aikatsu-02.html\n\n― アイカツ！
+ 情報カレンダー（非公式ファンメイド）\nhttps://aikatsu-in
+ fo.github.io/aikatsu-calendar/
+URL:https://www.aikatsu.net/portal/idol/aikatsu-02.html
+CATEGORIES:誕生日
+LAST-MODIFIED:20260725T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:bd49@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20131203
+DTEND;VALUE=DATE:20131204
+RRULE:FREQ=YEARLY
+SUMMARY:🎂 冴草きい の誕生日
+DESCRIPTION:『アイカツ！』冴草きいの誕生日です。\n\n区
+ 分: 誕生日\n日程表記: 12月3日（毎年）\n情報公開日: 2026
+ -07-25\n情報源: アイカツ！ポータル アイドル名鑑\n\nhttps
+ ://www.aikatsu.net/portal/idol/aikatsu-02.html\n\n― アイカツ！情
+ 報カレンダー（非公式ファンメイド）\nhttps://aikatsu-info.
+ github.io/aikatsu-calendar/
+URL:https://www.aikatsu.net/portal/idol/aikatsu-02.html
+CATEGORIES:誕生日
+LAST-MODIFIED:20260725T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:bd50@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20131002
+DTEND;VALUE=DATE:20131003
+RRULE:FREQ=YEARLY
+SUMMARY:🎂 風沢そら の誕生日
+DESCRIPTION:『アイカツ！』風沢そらの誕生日です。\n\n区
+ 分: 誕生日\n日程表記: 10月2日（毎年）\n情報公開日: 2026
+ -07-25\n情報源: アイカツ！ポータル アイドル名鑑\n\nhttps
+ ://www.aikatsu.net/portal/idol/aikatsu-02.html\n\n― アイカツ！情
+ 報カレンダー（非公式ファンメイド）\nhttps://aikatsu-info.
+ github.io/aikatsu-calendar/
+URL:https://www.aikatsu.net/portal/idol/aikatsu-02.html
+CATEGORIES:誕生日
+LAST-MODIFIED:20260725T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:bd51@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20130418
+DTEND;VALUE=DATE:20130419
+RRULE:FREQ=YEARLY
+SUMMARY:🎂 姫里マリア の誕生日
+DESCRIPTION:『アイカツ！』姫里マリアの誕生日です。\n\n
+ 区分: 誕生日\n日程表記: 4月18日（毎年）\n情報公開日: 2
+ 026-07-25\n情報源: アイカツ！ポータル アイドル名鑑\n\nht
+ tps://www.aikatsu.net/portal/idol/aikatsu-02.html\n\n― アイカツ！
+ 情報カレンダー（非公式ファンメイド）\nhttps://aikatsu-in
+ fo.github.io/aikatsu-calendar/
+URL:https://www.aikatsu.net/portal/idol/aikatsu-02.html
+CATEGORIES:誕生日
+LAST-MODIFIED:20260725T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:bd52@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20131225
+DTEND;VALUE=DATE:20131226
+RRULE:FREQ=YEARLY
+SUMMARY:🎂 音城ノエル の誕生日
+DESCRIPTION:『アイカツ！』音城ノエルの誕生日です。\n\n
+ 区分: 誕生日\n日程表記: 12月25日（毎年）\n情報公開日: 
+ 2026-07-25\n情報源: アイカツ！ポータル アイドル名鑑\n\nh
+ ttps://www.aikatsu.net/portal/idol/aikatsu-02.html\n\n― アイカツ！
+ 情報カレンダー（非公式ファンメイド）\nhttps://aikatsu-in
+ fo.github.io/aikatsu-calendar/
+URL:https://www.aikatsu.net/portal/idol/aikatsu-02.html
+CATEGORIES:誕生日
+LAST-MODIFIED:20260725T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:bd53@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20130918
+DTEND;VALUE=DATE:20130919
+RRULE:FREQ=YEARLY
+SUMMARY:🎂 神崎美月 の誕生日
+DESCRIPTION:『アイカツ！』神崎美月の誕生日です。\n\n区
+ 分: 誕生日\n日程表記: 9月18日（毎年）\n情報公開日: 2026
+ -07-25\n情報源: アイカツ！ポータル アイドル名鑑\n\nhttps
+ ://www.aikatsu.net/portal/idol/aikatsu-02.html\n\n― アイカツ！情
+ 報カレンダー（非公式ファンメイド）\nhttps://aikatsu-info.
+ github.io/aikatsu-calendar/
+URL:https://www.aikatsu.net/portal/idol/aikatsu-02.html
+CATEGORIES:誕生日
+LAST-MODIFIED:20260725T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:bd54@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20130707
+DTEND;VALUE=DATE:20130708
+RRULE:FREQ=YEARLY
+SUMMARY:🎂 夏樹みくる の誕生日
+DESCRIPTION:『アイカツ！』夏樹みくるの誕生日です。\n\n
+ 区分: 誕生日\n日程表記: 7月7日（毎年）\n情報公開日: 20
+ 26-07-25\n情報源: アイカツ！ポータル アイドル名鑑\n\nhtt
+ ps://www.aikatsu.net/portal/idol/aikatsu-02.html\n\n― アイカツ！情
+ 報カレンダー（非公式ファンメイド）\nhttps://aikatsu-info.
+ github.io/aikatsu-calendar/
+URL:https://www.aikatsu.net/portal/idol/aikatsu-02.html
+CATEGORIES:誕生日
+LAST-MODIFIED:20260725T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:bd55@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20130401
+DTEND;VALUE=DATE:20130402
+RRULE:FREQ=YEARLY
+SUMMARY:🎂 大空あかり の誕生日
+DESCRIPTION:『アイカツ！』大空あかりの誕生日です。\n\n
+ 区分: 誕生日\n日程表記: 4月1日（毎年）\n情報公開日: 20
+ 26-07-25\n情報源: アイカツ！ポータル アイドル名鑑\n\nhtt
+ ps://www.aikatsu.net/portal/idol/aikatsu-02.html\n\n― アイカツ！情
+ 報カレンダー（非公式ファンメイド）\nhttps://aikatsu-info.
+ github.io/aikatsu-calendar/
+URL:https://www.aikatsu.net/portal/idol/aikatsu-02.html
+CATEGORIES:誕生日
+LAST-MODIFIED:20260725T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:bd56@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20131020
+DTEND;VALUE=DATE:20131021
+RRULE:FREQ=YEARLY
+SUMMARY:🎂 氷上スミレ の誕生日
+DESCRIPTION:『アイカツ！』氷上スミレの誕生日です。\n\n
+ 区分: 誕生日\n日程表記: 10月20日（毎年）\n情報公開日: 
+ 2026-07-25\n情報源: アイカツ！ポータル アイドル名鑑\n\nh
+ ttps://www.aikatsu.net/portal/idol/aikatsu-02.html\n\n― アイカツ！
+ 情報カレンダー（非公式ファンメイド）\nhttps://aikatsu-in
+ fo.github.io/aikatsu-calendar/
+URL:https://www.aikatsu.net/portal/idol/aikatsu-02.html
+CATEGORIES:誕生日
+LAST-MODIFIED:20260725T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:bd57@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20130611
+DTEND;VALUE=DATE:20130612
+RRULE:FREQ=YEARLY
+SUMMARY:🎂 新条ひなき の誕生日
+DESCRIPTION:『アイカツ！』新条ひなきの誕生日です。\n\n
+ 区分: 誕生日\n日程表記: 6月11日（毎年）\n情報公開日: 2
+ 026-07-25\n情報源: アイカツ！ポータル アイドル名鑑\n\nht
+ tps://www.aikatsu.net/portal/idol/aikatsu-03.html\n\n― アイカツ！
+ 情報カレンダー（非公式ファンメイド）\nhttps://aikatsu-in
+ fo.github.io/aikatsu-calendar/
+URL:https://www.aikatsu.net/portal/idol/aikatsu-03.html
+CATEGORIES:誕生日
+LAST-MODIFIED:20260725T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:bd58@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20130731
+DTEND;VALUE=DATE:20130801
+RRULE:FREQ=YEARLY
+SUMMARY:🎂 紅林珠璃 の誕生日
+DESCRIPTION:『アイカツ！』紅林珠璃の誕生日です。\n\n区
+ 分: 誕生日\n日程表記: 7月31日（毎年）\n情報公開日: 2026
+ -07-25\n情報源: アイカツ！ポータル アイドル名鑑\n\nhttps
+ ://www.aikatsu.net/portal/idol/aikatsu-03.html\n\n― アイカツ！情
+ 報カレンダー（非公式ファンメイド）\nhttps://aikatsu-info.
+ github.io/aikatsu-calendar/
+URL:https://www.aikatsu.net/portal/idol/aikatsu-03.html
+CATEGORIES:誕生日
+LAST-MODIFIED:20260725T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:bd59@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20130101
+DTEND;VALUE=DATE:20130102
+RRULE:FREQ=YEARLY
+SUMMARY:🎂 黒沢凛 の誕生日
+DESCRIPTION:『アイカツ！』黒沢凛の誕生日です。\n\n区分: 
+ 誕生日\n日程表記: 1月1日（毎年）\n情報公開日: 2026-07-25
+ \n情報源: アイカツ！ポータル アイドル名鑑\n\nhttps://www
+ .aikatsu.net/portal/idol/aikatsu-03.html\n\n― アイカツ！情報カ
+ レンダー（非公式ファンメイド）\nhttps://aikatsu-info.github
+ .io/aikatsu-calendar/
+URL:https://www.aikatsu.net/portal/idol/aikatsu-03.html
+CATEGORIES:誕生日
+LAST-MODIFIED:20260725T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:bd60@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20130214
+DTEND;VALUE=DATE:20130215
+RRULE:FREQ=YEARLY
+SUMMARY:🎂 天羽まどか の誕生日
+DESCRIPTION:『アイカツ！』天羽まどかの誕生日です。\n\n
+ 区分: 誕生日\n日程表記: 2月14日（毎年）\n情報公開日: 2
+ 026-07-25\n情報源: アイカツ！ポータル アイドル名鑑\n\nht
+ tps://www.aikatsu.net/portal/idol/aikatsu-03.html\n\n― アイカツ！
+ 情報カレンダー（非公式ファンメイド）\nhttps://aikatsu-in
+ fo.github.io/aikatsu-calendar/
+URL:https://www.aikatsu.net/portal/idol/aikatsu-03.html
+CATEGORIES:誕生日
+LAST-MODIFIED:20260725T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:bd61@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20130110
+DTEND;VALUE=DATE:20130111
+RRULE:FREQ=YEARLY
+SUMMARY:🎂 大地のの の誕生日
+DESCRIPTION:『アイカツ！』大地ののの誕生日です。\n\n区
+ 分: 誕生日\n日程表記: 1月10日（毎年）\n情報公開日: 2026
+ -07-25\n情報源: アイカツ！ポータル アイドル名鑑\n\nhttps
+ ://www.aikatsu.net/portal/idol/aikatsu-03.html\n\n― アイカツ！情
+ 報カレンダー（非公式ファンメイド）\nhttps://aikatsu-info.
+ github.io/aikatsu-calendar/
+URL:https://www.aikatsu.net/portal/idol/aikatsu-03.html
+CATEGORIES:誕生日
+LAST-MODIFIED:20260725T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:bd62@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20131214
+DTEND;VALUE=DATE:20131215
+RRULE:FREQ=YEARLY
+SUMMARY:🎂 白樺リサ の誕生日
+DESCRIPTION:『アイカツ！』白樺リサの誕生日です。\n\n区
+ 分: 誕生日\n日程表記: 12月14日（毎年）\n情報公開日: 202
+ 6-07-25\n情報源: アイカツ！ポータル アイドル名鑑\n\nhttp
+ s://www.aikatsu.net/portal/idol/aikatsu-03.html\n\n― アイカツ！情
+ 報カレンダー（非公式ファンメイド）\nhttps://aikatsu-info.
+ github.io/aikatsu-calendar/
+URL:https://www.aikatsu.net/portal/idol/aikatsu-03.html
+CATEGORIES:誕生日
+LAST-MODIFIED:20260725T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:bd63@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20130914
+DTEND;VALUE=DATE:20130915
+RRULE:FREQ=YEARLY
+SUMMARY:🎂 藤原みやび の誕生日
+DESCRIPTION:『アイカツ！』藤原みやびの誕生日です。\n\n
+ 区分: 誕生日\n日程表記: 9月14日（毎年）\n情報公開日: 2
+ 026-07-25\n情報源: アイカツ！ポータル アイドル名鑑\n\nht
+ tps://www.aikatsu.net/portal/idol/aikatsu-03.html\n\n― アイカツ！
+ 情報カレンダー（非公式ファンメイド）\nhttps://aikatsu-in
+ fo.github.io/aikatsu-calendar/
+URL:https://www.aikatsu.net/portal/idol/aikatsu-03.html
+CATEGORIES:誕生日
+LAST-MODIFIED:20260725T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:bd64@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20130821
+DTEND;VALUE=DATE:20130822
+RRULE:FREQ=YEARLY
+SUMMARY:🎂 栗栖ここね の誕生日
+DESCRIPTION:『アイカツ！』栗栖ここねの誕生日です。\n\n
+ 区分: 誕生日\n日程表記: 8月21日（毎年）\n情報公開日: 2
+ 026-07-25\n情報源: アイカツ！ポータル アイドル名鑑\n\nht
+ tps://www.aikatsu.net/portal/idol/aikatsu-03.html\n\n― アイカツ！
+ 情報カレンダー（非公式ファンメイド）\nhttps://aikatsu-in
+ fo.github.io/aikatsu-calendar/
+URL:https://www.aikatsu.net/portal/idol/aikatsu-03.html
+CATEGORIES:誕生日
+LAST-MODIFIED:20260725T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:bd65@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20130207
+DTEND;VALUE=DATE:20130208
+RRULE:FREQ=YEARLY
+SUMMARY:🎂 堂島ニーナ の誕生日
+DESCRIPTION:『アイカツ！』堂島ニーナの誕生日です。\n\n
+ 区分: 誕生日\n日程表記: 2月7日（毎年）\n情報公開日: 20
+ 26-07-25\n情報源: アイカツ！ポータル アイドル名鑑\n\nhtt
+ ps://www.aikatsu.net/portal/idol/aikatsu-03.html\n\n― アイカツ！情
+ 報カレンダー（非公式ファンメイド）\nhttps://aikatsu-info.
+ github.io/aikatsu-calendar/
+URL:https://www.aikatsu.net/portal/idol/aikatsu-03.html
+CATEGORIES:誕生日
+LAST-MODIFIED:20260725T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:bd66@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20130717
+DTEND;VALUE=DATE:20130718
+RRULE:FREQ=YEARLY
+SUMMARY:🎂 服部ユウ の誕生日
+DESCRIPTION:『アイカツ！』服部ユウの誕生日です。\n\n区
+ 分: 誕生日\n日程表記: 7月17日（毎年）\n情報公開日: 2026
+ -07-25\n情報源: アイカツ！ポータル アイドル名鑑\n\nhttps
+ ://www.aikatsu.net/portal/idol/aikatsu-04.html\n\n― アイカツ！情
+ 報カレンダー（非公式ファンメイド）\nhttps://aikatsu-info.
+ github.io/aikatsu-calendar/
+URL:https://www.aikatsu.net/portal/idol/aikatsu-04.html
+CATEGORIES:誕生日
+LAST-MODIFIED:20260725T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:bd67@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20130808
+DTEND;VALUE=DATE:20130809
+RRULE:FREQ=YEARLY
+SUMMARY:🎂 ハルカ☆ルカ の誕生日
+DESCRIPTION:『アイカツスターズ！』ハルカ☆ルカの誕生日
+ です。\n\n区分: 誕生日\n日程表記: 8月8日（毎年）\n情報
+ 公開日: 2026-08-08\n情報源: アイカツ！ポータル アイドル
+ 名鑑\n\nhttps://www.aikatsu.net/portal/idol/\n\n― アイカツ！情
+ 報カレンダー（非公式ファンメイド）\nhttps://aikatsu-info.
+ github.io/aikatsu-calendar/
+URL:https://www.aikatsu.net/portal/idol/
+CATEGORIES:誕生日
+LAST-MODIFIED:20260808T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+END:VCALENDAR

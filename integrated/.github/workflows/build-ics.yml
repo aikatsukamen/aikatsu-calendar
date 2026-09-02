@@ -1,0 +1,58 @@
+# data/items.json から .ics を生成して calendar/ にコミットするワークフロー（提案）
+#
+# - paths に calendar/** を含めていないので、このジョブ自身のコミットでは再実行されない。
+# - Pages はリポジトリ直下から配信されているため、calendar/*.ics をコミットするだけで
+#   https://aikatsu-info.github.io/aikatsu-calendar/calendar/aikatsu-all.ics として公開される。
+# - Claude のデータ更新PRは auto-merge-claude-pr.yml で main にマージされるので、
+#   そのマージ push でこのワークフローが走る。
+# - 誕生日・周年は RRULE:FREQ=YEARLY で出力しているため、
+#   データが変わらない限り再生成の必要はない（定期実行は不要）。
+name: Build iCalendar feeds
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "data/items.json"
+      - "aikatsu_calendar.html"
+      - "tools/build_ics.py"
+      - "tools/check_sync.py"
+      - ".github/workflows/build-ics.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-ics
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # aikatsu_calendar.html の ITEMS と data/items.json がズレていると、
+      # .ics 側にだけ情報が欠ける。先に落とす。
+      - name: Check items.json / HTML sync
+        run: python3 tools/check_sync.py --html aikatsu_calendar.html --json data/items.json
+
+      - name: Build .ics
+        run: python3 tools/build_ics.py --input data/items.json --outdir calendar
+
+      - name: Commit if changed
+        run: |
+          if [ -z "$(git status --porcelain calendar)" ]; then
+            echo "No change in calendar/"
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add calendar
+          git commit -m "chore: rebuild iCalendar feeds"
+          git push

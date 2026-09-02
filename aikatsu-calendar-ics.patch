@@ -1,0 +1,1771 @@
+diff --git a/.github/workflows/build-ics.yml b/.github/workflows/build-ics.yml
+new file mode 100644
+index 0000000..1516126
+--- /dev/null
++++ b/.github/workflows/build-ics.yml
+@@ -0,0 +1,58 @@
++# data/items.json から .ics を生成して calendar/ にコミットするワークフロー（提案）
++#
++# - paths に calendar/** を含めていないので、このジョブ自身のコミットでは再実行されない。
++# - Pages はリポジトリ直下から配信されているため、calendar/*.ics をコミットするだけで
++#   https://aikatsu-info.github.io/aikatsu-calendar/calendar/aikatsu-all.ics として公開される。
++# - Claude のデータ更新PRは auto-merge-claude-pr.yml で main にマージされるので、
++#   そのマージ push でこのワークフローが走る。
++# - 誕生日・周年は RRULE:FREQ=YEARLY で出力しているため、
++#   データが変わらない限り再生成の必要はない（定期実行は不要）。
++name: Build iCalendar feeds
++
++on:
++  push:
++    branches: [main]
++    paths:
++      - "data/items.json"
++      - "aikatsu_calendar.html"
++      - "tools/build_ics.py"
++      - "tools/check_sync.py"
++      - ".github/workflows/build-ics.yml"
++  workflow_dispatch:
++
++permissions:
++  contents: write
++
++concurrency:
++  group: build-ics
++  cancel-in-progress: false
++
++jobs:
++  build:
++    runs-on: ubuntu-latest
++    steps:
++      - uses: actions/checkout@v4
++
++      - uses: actions/setup-python@v5
++        with:
++          python-version: "3.12"
++
++      # aikatsu_calendar.html の ITEMS と data/items.json がズレていると、
++      # .ics 側にだけ情報が欠ける。先に落とす。
++      - name: Check items.json / HTML sync
++        run: python3 tools/check_sync.py --html aikatsu_calendar.html --json data/items.json
++
++      - name: Build .ics
++        run: python3 tools/build_ics.py --input data/items.json --outdir calendar
++
++      - name: Commit if changed
++        run: |
++          if [ -z "$(git status --porcelain calendar)" ]; then
++            echo "No change in calendar/"
++            exit 0
++          fi
++          git config user.name  "github-actions[bot]"
++          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
++          git add calendar
++          git commit -m "chore: rebuild iCalendar feeds"
++          git push
+diff --git a/CLAUDE.md b/CLAUDE.md
+index da391ef..e7a4604 100644
+--- a/CLAUDE.md
++++ b/CLAUDE.md
+@@ -63,3 +63,48 @@
+ ### 収録範囲についての方針
+ 
+ 2013〜2021年頃の旧世代ガシャポン（初代アイカツ！〜アイカツフレンズ！時代）も、ユーザーの意向により**全て収録済み**（2026-08-02に25件追加）。gashapon.jpの検索結果に出てくる商品は年代を問わず全件カレンダー化する方針。今後も同様に、検索結果でヒットする商品は年代の新旧を問わず追加してよい。
++
++## iCalendar (.ics) の配信
++
++`calendar/*.ics` は `data/items.json` から `tools/build_ics.py` が生成し、
++`.github/workflows/build-ics.yml` が自動でコミットする。**手で編集しないこと。**
++
++- 生成前に `tools/check_sync.py` が `aikatsu_calendar.html` の `ITEMS` と
++  `data/items.json` のIDを突き合わせる。ズレていればCIが落ちる。
++  つまり**片方だけ更新した状態でmainに入れると .ics のビルドが失敗する**。
++- `UID` は `<id>@aikatsu-calendar.aikatsu-info.github.io` で生成している。
++  **既存項目の `id` を振り直したり、UIDの生成規則を変えたりしてはいけない。**
++  購読者のカレンダー上で予定が重複または消失する。
++- 日付の3パターンの扱い:
++  - `eventDate` あり → 終日イベント1件
++  - `recur` あり（誕生日）→ `RRULE:FREQ=YEARLY`（基準年は固定値 2013）
++  - `recur` あり（周年）→ `RRULE:FREQ=YEARLY`（`DTSTART` は `foundingYear` の当日。下記参照）
++  - `eventDate` も `recur` も無い（日付未定）→ .ics には含めない
++- 誕生日・周年はどちらも繰り返しルールなので、データが変わらない限り再生成は不要
++  （ワークフローに定期実行は入れていない）。
++- ローカルで確認する場合:
++  `python3 tools/check_sync.py && python3 tools/build_ics.py --input data/items.json --outdir calendar`
++
++### 周年（anniversary）の .ics での表現
++
++iCalendar の `SUMMARY` は静的なので、繰り返しルールのまま年ごとに「14周年」と
++出し分けることは**仕様上できない**。そこで `.ics` では次のようにしている
++（`build_ics.py` の `resolve_anniversary()`）。
++
++- `SUMMARY`: `{N}周年` → `<startWord>開始記念日`（例「アイカツ！ 放送開始記念日」）
++- `DTSTART`: `foundingYear` の当日（例 2012-10-08）＝放送/配信開始日そのものが初回インスタンス
++- `RRULE:FREQ=YEARLY`
++- `DESCRIPTION`: `detail` から「今年で{N}周年になります。」だけを落とす。
++  「2012年10月8日に放送が始まった…」という絶対年が残るので、何周年かは読み手が数えられる
++- `eventLabel`: `（{N}周年）` → `（毎年）`
++
++年ごとに個別VEVENTへ展開する方法もあるが、展開範囲の維持のために定期再生成が必要になり、
++範囲外の年には予定が無く、UIDも年ごとに増えるため採っていない。
++**サイト本体（`resolveForDate()`）の表示は従来どおり `{N}` を解決すること。ここは .ics 側だけの話。**
++
++## 購読UI
++
++`aikatsu_calendar.html` 内の `.subscribe-btn` / `#subModal` と、ファイル末尾の購読用スクリプト。
++編集元は `web/subscribe-demo.html`（単体で開いて動作確認できるデモ）で、
++`tools/extract_snippet.py` で貼り付け用スニペットを、`tools/apply_subscribe_ui.py` で本体への適用を行える。
++UI側の `FEEDS` と `tools/build_ics.py` の `FEEDS` は対応しているので、増減させるときは両方を直すこと。
+diff --git a/README.md b/README.md
+index fccbf9e..51c854a 100644
+--- a/README.md
++++ b/README.md
+@@ -1 +1,34 @@
+-# aikatsu-calendar
+\ No newline at end of file
++# aikatsu-calendar
++
++「アイカツ！」シリーズのイベント日程・グッズ発売日・キャラクター誕生日をまとめた非公式ファンメイドカレンダーです。
++
++サイト: https://aikatsu-info.github.io/aikatsu-calendar/
++
++## カレンダーを購読する
++
++サイト右上の「カレンダー購読」ボタンから、お使いのカレンダーアプリに追加できます。
++URLを直接登録することもできます。
++
++| 内容 | 購読URL |
++|---|---|
++| すべて | https://aikatsu-info.github.io/aikatsu-calendar/calendar/aikatsu-all.ics |
++| 誕生日・周年を除く | https://aikatsu-info.github.io/aikatsu-calendar/calendar/aikatsu-nobirthday.ics |
++| イベント | https://aikatsu-info.github.io/aikatsu-calendar/calendar/aikatsu-event.ics |
++| グッズ | https://aikatsu-info.github.io/aikatsu-calendar/calendar/aikatsu-goods.ics |
++| アニメ・映像 | https://aikatsu-info.github.io/aikatsu-calendar/calendar/aikatsu-anime.ics |
++| アイカツ！アンコール | https://aikatsu-info.github.io/aikatsu-calendar/calendar/aikatsu-game.ics |
++| 配信 | https://aikatsu-info.github.io/aikatsu-calendar/calendar/aikatsu-stream.ics |
++| 誕生日 | https://aikatsu-info.github.io/aikatsu-calendar/calendar/aikatsu-birthday.ics |
++| 周年 | https://aikatsu-info.github.io/aikatsu-calendar/calendar/aikatsu-anniversary.ics |
++
++- 更新の反映には数時間かかることがあります（カレンダーアプリ側の取得間隔によります）。
++- 日付が未定の情報は .ics には含まれません。サイトの「日程未定のトピックス」でご確認ください。
++- 周年は毎年繰り返しの予定として登録されるため、カレンダー上では「◯周年」ではなく
++  「放送開始記念日」のように表示されます。何周年かは予定の説明文の日付からご確認ください。
++- 非公式のファンメイドです。予定は変更・中止される場合があるため、最終的な情報は各公式サイトでご確認ください。
++
++## データ
++
++- `data/items.json` — カレンダーデータ（JSON）
++- `calendar/*.ics` — 上記から生成した iCalendar 形式（`tools/build_ics.py` / GitHub Actions が生成）
++- `calendar/feeds.json` — 配信中のフィード一覧
+diff --git a/aikatsu_calendar.html b/aikatsu_calendar.html
+index 95bb10d..a5e7361 100644
+--- a/aikatsu_calendar.html
++++ b/aikatsu_calendar.html
+@@ -507,6 +507,93 @@
+   }
+ </style>
+ 
++<style>
++  /* ===== カレンダー購読ボタン / モーダル ===== */
++  /* サイズ感は .tab-btn（12px / パディング 7px 15px）に合わせてある */
++  .subscribe-btn{
++    appearance:none; display:inline-flex; align-items:center; gap:6px;
++    background:var(--accent); color:var(--accent-contrast);
++    border:1px solid var(--accent); border-radius:999px; padding:7px 14px;
++    font:inherit; font-family:var(--font-gothic); font-size:12px; font-weight:700; line-height:1;
++    cursor:pointer; white-space:nowrap;
++    transition:filter .15s ease;
++  }
++  .subscribe-btn:hover{ filter:brightness(1.06); }
++  .subscribe-btn:focus-visible{ outline:2px solid var(--accent); outline-offset:2px; }
++  .subscribe-btn svg{ width:14px; height:14px; }
++  @media (max-width:520px){
++    .subscribe-btn{ padding:6px 11px; font-size:10.5px; }
++    .subscribe-btn svg{ width:13px; height:13px; }
++    .subscribe-btn .subscribe-btn-label{ display:none; }
++  }
++
++  .sub-modal[hidden]{ display:none; }
++  .sub-modal{
++    position:fixed; inset:0; z-index:1000;
++    display:flex; align-items:center; justify-content:center;
++    padding:16px; background:rgba(0,0,0,.5);
++    overscroll-behavior:contain;
++  }
++  .sub-modal-panel{
++    background:var(--surface); color:var(--ink);
++    border:1px solid var(--line); border-radius:18px;
++    box-shadow:var(--shadow);
++    width:min(520px, 100%); max-height:calc(100dvh - 32px); overflow:auto;
++    padding:20px 20px 22px;
++  }
++  .sub-modal-head{ display:flex; align-items:flex-start; justify-content:space-between; gap:12px; margin-bottom:4px; }
++  .sub-modal-title{ font-family:var(--font-round); font-size:17px; font-weight:700; margin:0; }
++  .sub-modal-close{
++    background:none; border:0; color:var(--ink-faint); font-size:22px; line-height:1;
++    padding:4px 8px; cursor:pointer; border-radius:8px;
++  }
++  .sub-modal-close:hover{ background:var(--surface-muted); color:var(--ink); }
++  .sub-lead{ font-size:12.5px; color:var(--ink-soft); line-height:1.7; margin:0 0 14px; }
++
++  .sub-section-label{ font-size:12px; font-weight:700; color:var(--ink-soft); margin:16px 0 8px; }
++  .sub-feeds{ display:flex; flex-wrap:wrap; gap:6px; }
++  .sub-feed-btn{
++    background:var(--surface-muted); color:var(--ink-soft);
++    border:1px solid var(--line); border-radius:999px;
++    padding:6px 12px; font:inherit; font-size:12.5px; cursor:pointer;
++  }
++  .sub-feed-btn[aria-pressed="true"]{
++    background:var(--accent-soft); color:var(--accent); border-color:var(--accent); font-weight:700;
++  }
++  .sub-feed-desc{ font-size:12px; color:var(--ink-faint); margin:8px 0 0; line-height:1.6; min-height:1.6em; }
++
++  .sub-actions{ display:grid; gap:8px; margin-top:6px; }
++  .sub-action{
++    display:flex; align-items:center; gap:10px;
++    background:var(--surface-muted); color:var(--ink);
++    border:1px solid var(--line); border-radius:12px;
++    padding:11px 13px; font:inherit; font-size:13.5px; font-weight:600;
++    text-decoration:none; cursor:pointer;
++  }
++  .sub-action:hover{ border-color:var(--accent); }
++  .sub-action .sub-action-sub{ display:block; font-size:11.5px; font-weight:400; color:var(--ink-faint); margin-top:2px; }
++  .sub-action-ico{ flex:0 0 22px; width:22px; height:22px; display:grid; place-items:center; }
++  .sub-action-ico svg{ width:20px; height:20px; }
++  .sub-action-body{ flex:1 1 auto; min-width:0; }
++
++  .sub-url-row{ display:flex; gap:6px; align-items:stretch; }
++  .sub-url-input{
++    flex:1 1 auto; min-width:0;
++    background:var(--surface-muted); color:var(--ink-soft);
++    border:1px solid var(--line); border-radius:10px;
++    padding:9px 11px; font-size:12px; font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
++  }
++  .sub-url-input:focus{ outline:2px solid var(--accent); outline-offset:1px; color:var(--ink); }
++  .sub-copy-btn{
++    flex:0 0 auto; background:var(--accent); color:var(--accent-contrast);
++    border:0; border-radius:10px; padding:0 14px; font:inherit; font-size:12.5px; font-weight:700; cursor:pointer;
++  }
++  .sub-copy-btn:hover{ filter:brightness(1.06); }
++  .sub-copy-btn.copied{ background:var(--surface-muted); color:var(--accent); border:1px solid var(--accent); }
++  .sub-hint{ font-size:11.5px; color:var(--ink-faint); line-height:1.7; margin:10px 0 0; }
++  .sub-hint a{ color:var(--accent); }
++</style>
++
+ <div class="today-bar">
+   <div class="today-bar-inner">
+     <div class="today-bar-badges" id="todayBadges" hidden>
+@@ -539,6 +626,13 @@
+       <button class="tab-btn" id="tab-cal-btn" role="tab" aria-selected="true" aria-controls="panel-cal">カレンダー</button>
+       <button class="tab-btn" id="tab-topics-btn" role="tab" aria-selected="false" aria-controls="panel-topics">トピックス</button>
+     </div>
++
++    <button class="subscribe-btn" id="subscribeBtn" type="button" aria-haspopup="dialog" aria-label="カレンダー購読" title="カレンダーアプリで購読">
++      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
++        <rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 14v4M10 16h4"/>
++      </svg>
++      <span class="subscribe-btn-label">カレンダー購読</span>
++    </button>
+   </div>
+ 
+   <section id="panel-search" hidden>
+@@ -682,6 +776,80 @@
+   <div class="site-copyright">© 2026 AIKATSU! CALENDAR</div>
+ </div>
+ 
++<div class="sub-modal" id="subModal" role="dialog" aria-modal="true" aria-labelledby="subModalTitle" hidden>
++  <div class="sub-modal-panel" id="subModalPanel">
++    <div class="sub-modal-head">
++      <h2 class="sub-modal-title" id="subModalTitle">カレンダーを購読する</h2>
++      <button class="sub-modal-close" id="subModalClose" type="button" aria-label="閉じる">×</button>
++    </div>
++    <p class="sub-lead">
++      お使いのカレンダーアプリに登録すると、イベントやグッズの予定が自動で追加され、更新も反映されます。
++    </p>
++
++    <div class="sub-section-label">1. 購読する内容を選ぶ</div>
++    <div class="sub-feeds" id="subFeeds" role="group" aria-label="購読する内容"></div>
++    <p class="sub-feed-desc" id="subFeedDesc"></p>
++
++    <div class="sub-section-label">2. 追加する</div>
++    <div class="sub-actions">
++      <a class="sub-action" id="subGoogle" href="#" target="_blank" rel="noopener">
++        <span class="sub-action-ico">
++          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
++            <rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18"/>
++          </svg>
++        </span>
++        <span class="sub-action-body">Google カレンダーに追加
++          <span class="sub-action-sub">Googleカレンダーの追加画面が開きます</span>
++        </span>
++      </a>
++      <a class="sub-action" id="subApple" href="#">
++        <span class="sub-action-ico">
++          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
++            <path d="M16.7 12.9c0-2.2 1.8-3.3 1.9-3.4-1-1.5-2.6-1.7-3.2-1.7-1.4-.1-2.7.8-3.3.8-.7 0-1.7-.8-2.8-.8-1.5 0-2.8.8-3.6 2.1-1.5 2.6-.4 6.5 1.1 8.6.7 1 1.6 2.2 2.7 2.1 1.1 0 1.5-.7 2.8-.7s1.7.7 2.8.7c1.2 0 1.9-1 2.6-2.1.8-1.2 1.2-2.3 1.2-2.4-.1 0-2.2-.9-2.2-3.2zM14.6 5.9c.6-.7 1-1.7.9-2.7-.9 0-2 .6-2.6 1.3-.5.6-1 1.6-.9 2.6 1 .1 2-.5 2.6-1.2z"/>
++          </svg>
++        </span>
++        <span class="sub-action-body">iPhone・iPad・Mac に追加
++          <span class="sub-action-sub">標準の「カレンダー」アプリが開きます</span>
++        </span>
++      </a>
++      <a class="sub-action" id="subOutlook" href="#" target="_blank" rel="noopener">
++        <span class="sub-action-ico">
++          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
++            <rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/>
++          </svg>
++        </span>
++        <span class="sub-action-body">Outlook.com に追加
++          <span class="sub-action-sub">Web版Outlookの購読画面が開きます</span>
++        </span>
++      </a>
++      <a class="sub-action" id="subDownload" href="#" download>
++        <span class="sub-action-ico">
++          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
++            <path d="M12 3v12M7 11l5 5 5-5M4 20h16"/>
++          </svg>
++        </span>
++        <span class="sub-action-body">.ics ファイルをダウンロード
++          <span class="sub-action-sub">1回きりの取り込み用（自動更新はされません）</span>
++        </span>
++      </a>
++    </div>
++
++    <div class="sub-section-label">手動で登録する（URLをコピー）</div>
++    <div class="sub-url-row">
++      <input class="sub-url-input" id="subUrlInput" type="text" readonly spellcheck="false" aria-label="購読用URL">
++      <button class="sub-copy-btn" id="subCopyBtn" type="button">コピー</button>
++    </div>
++    <p class="sub-hint">
++      Googleアカウントを複数お使いの場合は、上のボタンだと意図しないアカウントに追加されることがあります。
++      その場合はこのURLをコピーして、追加したいアカウントの Googleカレンダー →
++      「他のカレンダー」＋ → 「URLで追加」に貼り付けてください。
++    </p>
++    <p class="sub-hint">
++      ※ 非公式のファンメイドカレンダーです。予定は変更・中止される場合があるため、最終的な情報は各公式サイトでご確認ください。
++    </p>
++  </div>
++</div>
++
+ <script>
+ (function(){
+   "use strict";
+@@ -1848,3 +2016,123 @@
+   }
+ })();
+ </script>
++
++<script>
++(function(){
++  "use strict";
++
++  // .ics の配信先。GitHub Pages のパスに合わせる。
++  var FEED_BASE = "https://aikatsu-info.github.io/aikatsu-calendar/calendar/";
++
++  // build_ics.py の FEEDS と対応。増やす場合は両方に足すこと。
++  var FEEDS = [
++    { slug:"aikatsu-all",         label:"すべて",       desc:"イベント・グッズ・配信・誕生日・周年をすべて含みます。" },
++    { slug:"aikatsu-nobirthday",  label:"誕生日以外",   desc:"誕生日と周年を除いた、イベント／グッズ／配信などの予定だけを購読します。" },
++    { slug:"aikatsu-event",       label:"イベント",     desc:"ライブ・上映会・POP UP SHOP などのイベントのみ。" },
++    { slug:"aikatsu-goods",       label:"グッズ",       desc:"グッズの発売日・予約開始／締切のみ。" },
++    { slug:"aikatsu-game",        label:"アンコール",   desc:"『アイカツ！アンコール』関連の予定のみ。" },
++    { slug:"aikatsu-birthday",    label:"誕生日",       desc:"キャラクターの誕生日のみ（毎年繰り返し）。" }
++  ];
++
++  var current = FEEDS[0];
++
++  var btn        = document.getElementById("subscribeBtn");
++  var modal      = document.getElementById("subModal");
++  var panel      = document.getElementById("subModalPanel");
++  var closeBtn   = document.getElementById("subModalClose");
++  var feedsWrap  = document.getElementById("subFeeds");
++  var feedDesc   = document.getElementById("subFeedDesc");
++  var urlInput   = document.getElementById("subUrlInput");
++  var copyBtn    = document.getElementById("subCopyBtn");
++  var aGoogle    = document.getElementById("subGoogle");
++  var aApple     = document.getElementById("subApple");
++  var aOutlook   = document.getElementById("subOutlook");
++  var aDownload  = document.getElementById("subDownload");
++  if(!btn || !modal) return;
++
++  var lastFocused = null;
++
++  function httpsUrl(feed){ return FEED_BASE + feed.slug + ".ics"; }
++  function webcalUrl(feed){ return httpsUrl(feed).replace(/^https?:/, "webcal:"); }
++
++  function applyFeed(feed){
++    current = feed;
++    var https = httpsUrl(feed);
++    var webcal = webcalUrl(feed);
++    urlInput.value = https;
++    // Google: cid にURLエンコードした https URL を渡す。
++    // /u/0/ は付けない（ログイン中のアカウント選択をユーザーに委ねるため）。
++    aGoogle.href = "https://calendar.google.com/calendar/render?cid=" + encodeURIComponent(https);
++    aApple.href = webcal;
++    aOutlook.href = "https://outlook.live.com/calendar/0/addfromweb?url=" +
++      encodeURIComponent(https) + "&name=" + encodeURIComponent("アイカツ！情報カレンダー");
++    aDownload.href = https;
++    aDownload.setAttribute("download", feed.slug + ".ics");
++    feedDesc.textContent = feed.desc;
++    Array.prototype.forEach.call(feedsWrap.children, function(b){
++      b.setAttribute("aria-pressed", String(b.dataset.slug === feed.slug));
++    });
++    copyBtn.classList.remove("copied");
++    copyBtn.textContent = "コピー";
++  }
++
++  FEEDS.forEach(function(feed){
++    var b = document.createElement("button");
++    b.type = "button";
++    b.className = "sub-feed-btn";
++    b.dataset.slug = feed.slug;
++    b.textContent = feed.label;
++    b.setAttribute("aria-pressed", "false");
++    b.addEventListener("click", function(){ applyFeed(feed); });
++    feedsWrap.appendChild(b);
++  });
++  applyFeed(FEEDS[0]);
++
++  function openModal(){
++    lastFocused = document.activeElement;
++    modal.hidden = false;
++    document.body.style.overflow = "hidden";
++    closeBtn.focus();
++    document.addEventListener("keydown", onKeydown, true);
++  }
++  function closeModal(){
++    modal.hidden = true;
++    document.body.style.overflow = "";
++    document.removeEventListener("keydown", onKeydown, true);
++    if(lastFocused && lastFocused.focus) lastFocused.focus();
++  }
++  function onKeydown(e){
++    if(e.key === "Escape"){ e.preventDefault(); closeModal(); return; }
++    if(e.key !== "Tab") return;
++    var f = panel.querySelectorAll('a[href], button:not([disabled]), input, [tabindex]:not([tabindex="-1"])');
++    if(!f.length) return;
++    var first = f[0], last = f[f.length - 1];
++    if(e.shiftKey && document.activeElement === first){ e.preventDefault(); last.focus(); }
++    else if(!e.shiftKey && document.activeElement === last){ e.preventDefault(); first.focus(); }
++  }
++
++  btn.addEventListener("click", openModal);
++  closeBtn.addEventListener("click", closeModal);
++  modal.addEventListener("click", function(e){ if(e.target === modal) closeModal(); });
++
++  copyBtn.addEventListener("click", function(){
++    var text = urlInput.value;
++    function done(){
++      copyBtn.textContent = "コピーしました";
++      copyBtn.classList.add("copied");
++      setTimeout(function(){ copyBtn.textContent = "コピー"; copyBtn.classList.remove("copied"); }, 1800);
++    }
++    if(navigator.clipboard && navigator.clipboard.writeText){
++      navigator.clipboard.writeText(text).then(done, fallback);
++    } else { fallback(); }
++    function fallback(){
++      urlInput.focus();
++      urlInput.setSelectionRange(0, urlInput.value.length);
++      try{ document.execCommand("copy"); done(); }catch(e){ /* 手動選択に任せる */ }
++    }
++  });
++
++  // URLに #subscribe が付いていたら自動で開く（SNS等から誘導する用）
++  if(location.hash === "#subscribe") openModal();
++})();
++</script>
+diff --git a/robots.txt b/robots.txt
+index 3ef143e..8a6de3a 100644
+--- a/robots.txt
++++ b/robots.txt
+@@ -1,4 +1,5 @@
+ User-agent: *
+ Allow: /
++Disallow: /web/
+ 
+ Sitemap: https://aikatsu-info.github.io/aikatsu-calendar/sitemap.xml
+diff --git a/tools/apply_subscribe_ui.py b/tools/apply_subscribe_ui.py
+new file mode 100644
+index 0000000..23e0dcc
+--- /dev/null
++++ b/tools/apply_subscribe_ui.py
+@@ -0,0 +1,89 @@
++#!/usr/bin/env python3
++# -*- coding: utf-8 -*-
++"""
++aikatsu_calendar.html に購読UI（CSS / ボタン / モーダル / JS）を差し込む。
++
++    python3 tools/apply_subscribe_ui.py --html aikatsu_calendar.html
++
++- web/subscribe-demo.html のマーカー間を切り出して使うので、デモとズレない。
++- 既に適用済み（id="subscribeBtn" がある）なら何もしない（冪等）。
++- 既存コードの整形・並べ替えは一切しない。追加のみ。
++
++aikatsu_calendar.html は <html>/<head>/<body> を持たない素のフラグメント形式なので、
++挿入位置は「</style> の直後」「.tabs-row の閉じタグ直前」「.page の閉じタグ直後」「ファイル末尾」。
++"""
++
++import argparse
++import os
++import re
++import sys
++
++HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
++DEMO = os.path.join(HERE, "web", "subscribe-demo.html")
++
++# 挿入位置のアンカー（本体HTML内で一意であること）
++ANCHOR_CSS = '</style>\n\n<div class="today-bar">'
++ANCHOR_TABS = '''      <button class="tab-btn" id="tab-topics-btn" role="tab" aria-selected="false" aria-controls="panel-topics">トピックス</button>
++    </div>
++  </div>
++'''
++ANCHOR_PAGE_END = '''  <div class="site-copyright">© 2026 AIKATSU! CALENDAR</div>
++</div>
++'''
++
++
++def block(src, name):
++    m = re.search(
++        r"<!--\s*SUBSCRIBE:%s:START\s*-->\n(.*?)\n\s*<!--\s*SUBSCRIBE:%s:END\s*-->" % (name, name),
++        src, re.S)
++    if not m:
++        raise SystemExit("マーカーが見つかりません: SUBSCRIBE:%s" % name)
++    return m.group(1)
++
++
++def main(argv=None):
++    ap = argparse.ArgumentParser()
++    ap.add_argument("--html", default="aikatsu_calendar.html")
++    ap.add_argument("--demo", default=DEMO)
++    opts = ap.parse_args(argv)
++
++    demo = open(opts.demo, encoding="utf-8").read()
++    html = open(opts.html, encoding="utf-8").read()
++
++    if 'id="subscribeBtn"' in html:
++        print("既に適用済みのため何もしません: " + opts.html)
++        return 0
++
++    css = block(demo, "CSS")
++    btn = block(demo, "HTML")
++    modal = block(demo, "MODAL")
++    js = block(demo, "JS")
++
++    for name, anchor in (("CSS", ANCHOR_CSS), ("TABS", ANCHOR_TABS), ("PAGE", ANCHOR_PAGE_END)):
++        if html.count(anchor) != 1:
++            raise SystemExit("アンカーが一意ではありません(%s): %d件" % (name, html.count(anchor)))
++
++    # 1) CSS: 既存 <style> の直後
++    html = html.replace(ANCHOR_CSS, '</style>\n\n' + css + '\n\n<div class="today-bar">')
++
++    # 2) 購読ボタン: .tabs-row の中、.tabs の直後
++    # デモ側の [HTML] ブロックは既に4スペース字下げ済みなのでそのまま入れる
++    tabs_new = ANCHOR_TABS.replace("    </div>\n  </div>\n",
++                                   "    </div>\n\n" + btn + "\n  </div>\n")
++    html = html.replace(ANCHOR_TABS, tabs_new)
++
++    # 3) モーダル: .page を閉じた直後
++    html = html.replace(ANCHOR_PAGE_END, ANCHOR_PAGE_END + "\n" + modal + "\n")
++
++    # 4) JS: ファイル末尾
++    if not html.endswith("\n"):
++        html += "\n"
++    html += "\n" + js + "\n"
++
++    open(opts.html, "w", encoding="utf-8", newline="").write(html)
++    print("適用しました: " + opts.html)
++    return 0
++
++
++if __name__ == "__main__":
++    sys.exit(main())
+diff --git a/tools/build_ics.py b/tools/build_ics.py
+new file mode 100644
+index 0000000..6a5cbb0
+--- /dev/null
++++ b/tools/build_ics.py
+@@ -0,0 +1,371 @@
++#!/usr/bin/env python3
++# -*- coding: utf-8 -*-
++"""
++data/items.json -> iCalendar (.ics) 変換スクリプト
++
++使い方:
++    python3 tools/build_ics.py --input data/items.json --outdir calendar
++
++出力（既定）:
++    calendar/aikatsu-all.ics          全カテゴリ
++    calendar/aikatsu-nobirthday.ics   誕生日・周年を除く全カテゴリ
++    calendar/aikatsu-goods.ics        グッズ
++    calendar/aikatsu-event.ics        イベント
++    calendar/aikatsu-anime.ics        アニメ・映像
++    calendar/aikatsu-game.ics         アイカツ！アンコール
++    calendar/aikatsu-stream.ics       配信
++    calendar/aikatsu-birthday.ics     誕生日
++    calendar/aikatsu-anniversary.ics  周年
++    calendar/feeds.json               購読UI用のフィード一覧（任意）
++
++標準ライブラリのみで動作する（外部依存なし）。
++"""
++
++import argparse
++import datetime as dt
++import json
++import os
++import re
++import sys
++
++# ---------------------------------------------------------------- 設定
++
++PRODID = "-//aikatsu-info//aikatsu-calendar//JA"
++BASE_URL_DEFAULT = "https://aikatsu-info.github.io/aikatsu-calendar"
++SITE_URL_DEFAULT = "https://aikatsu-info.github.io/aikatsu-calendar/"
++
++# aikatsu_calendar.html の var CATS と揃えること
++CATS = {
++    "event":       {"label": "イベント",             "emoji": ""},
++    "goods":       {"label": "グッズ",               "emoji": ""},
++    "anime":       {"label": "アニメ・映像",         "emoji": ""},
++    "game":        {"label": "アイカツ！アンコール", "emoji": ""},
++    "stream":      {"label": "配信",                 "emoji": ""},
++    "birthday":    {"label": "誕生日",               "emoji": "🎂"},
++    "anniversary": {"label": "周年",                 "emoji": "🎉"},
++}
++SUBCAT_LABELS = {"gashapon": "ガシャポン"}
++
++# 出力するフィードの定義: (ファイル名, 表示名, 説明, フィルタ関数)
++FEEDS = [
++    ("aikatsu-all",         "アイカツ！情報カレンダー",
++     "アイカツ！シリーズのイベント・グッズ・配信・誕生日・周年をまとめた非公式カレンダー",
++     lambda it: True),
++    ("aikatsu-nobirthday",  "アイカツ！情報カレンダー（誕生日・周年なし）",
++     "誕生日・周年を除いた、イベント／グッズ／配信などの予定のみ",
++     lambda it: it.get("cat") not in ("birthday", "anniversary")),
++    ("aikatsu-goods",       "アイカツ！グッズ",        "グッズの発売日・予約開始／締切",
++     lambda it: it.get("cat") == "goods"),
++    ("aikatsu-event",       "アイカツ！イベント",      "ライブ・上映会・POP UP SHOP などのイベント",
++     lambda it: it.get("cat") == "event"),
++    ("aikatsu-anime",       "アイカツ！アニメ・映像",  "アニメ・映像関連の予定",
++     lambda it: it.get("cat") == "anime"),
++    ("aikatsu-game",        "アイカツ！アンコール",    "『アイカツ！アンコール』関連の予定",
++     lambda it: it.get("cat") == "game"),
++    ("aikatsu-stream",      "アイカツ！配信",          "配信番組・一挙配信などの予定",
++     lambda it: it.get("cat") == "stream"),
++    ("aikatsu-birthday",    "アイカツ！誕生日",        "キャラクターの誕生日（毎年繰り返し）",
++     lambda it: it.get("cat") == "birthday"),
++    ("aikatsu-anniversary", "アイカツ！周年",          "シリーズの周年記念日",
++     lambda it: it.get("cat") == "anniversary"),
++]
++
++# 誕生日の RRULE 用の基準年。
++# 毎回の生成で値が変わらないよう固定値にしている（差分ノイズを避けるため）。
++BIRTHDAY_BASE_YEAR = 2013
++
++# 周年は foundingYear を初回インスタンスの年に使う。
++# 万一 foundingYear が無いデータが来たときのフォールバック。
++ANNIVERSARY_FALLBACK_YEAR = 2013
++
++# ---------------------------------------------------------------- ICS プリミティブ
++
++ESCAPE_RE = re.compile(r"([\\;,])")
++
++
++def esc(text):
++    """TEXT 値のエスケープ（RFC 5545 3.3.11）"""
++    if text is None:
++        return ""
++    s = str(text)
++    s = s.replace("\\", "\\\\").replace(";", "\\;").replace(",", "\\,")
++    s = s.replace("\r\n", "\\n").replace("\n", "\\n").replace("\r", "\\n")
++    return s
++
++
++def fold(line):
++    """
++    75オクテットで行折り返し（RFC 5545 3.1）。
++    UTF-8 のマルチバイト文字の途中で切らないようバイト単位で処理する。
++    """
++    raw = line.encode("utf-8")
++    if len(raw) <= 75:
++        return line
++    out = []
++    start = 0
++    limit = 75
++    while start < len(raw):
++        end = min(start + limit, len(raw))
++        # UTF-8 の継続バイト (10xxxxxx) の途中で切らない
++        while end > start and end < len(raw) and (raw[end] & 0xC0) == 0x80:
++            end -= 1
++        out.append(raw[start:end].decode("utf-8"))
++        start = end
++        limit = 74  # 2行目以降は先頭の空白1文字ぶん減らす
++    return "\r\n ".join(out[:1] + out[1:])
++
++
++def prop(name, value, params=None):
++    p = ""
++    if params:
++        p = "".join(";%s=%s" % (k, v) for k, v in params)
++    return fold("%s%s:%s" % (name, p, value))
++
++
++def date_compact(d):
++    return d.strftime("%Y%m%d")
++
++
++def parse_iso_date(s):
++    if not s:
++        return None
++    try:
++        return dt.date(int(s[0:4]), int(s[5:7]), int(s[8:10]))
++    except (ValueError, TypeError, IndexError):
++        return None
++
++
++# ---------------------------------------------------------------- データ整形
++
++def resolve_anniversary(item):
++    """
++    周年を「毎年繰り返す1件のイベント」として表現するために {N} を落とす。
++
++    iCalendar の SUMMARY は静的なので、RRULE のまま「14周年」と年ごとに
++    出し分けることは仕様上できない。そこでタイトルからは「N周年」を外し、
++    「<startWord>開始記念日」にする。何周年かは detail に残る絶対年
++    （「2012年10月8日に放送が始まった…」）から読み手が数えられる。
++    サイト本体では従来どおり resolveForDate() が {N} を解決して表示する。
++    """
++    start_word = item.get("startWord") or "放送"
++    out = dict(item)
++    out["title"] = re.sub(r"\{N\}周年", start_word + "開始記念日", item.get("title", "") or "")
++    out["eventLabel"] = re.sub(r"（\{N\}周年）", "（毎年）", item.get("eventLabel", "") or "")
++    out["detail"] = re.sub(r"今年で\{N\}周年になります。", "", item.get("detail", "") or "").strip()
++    # 取りこぼした {N} が残らないようにする
++    for k in ("title", "detail", "eventLabel"):
++        if out.get(k):
++            out[k] = out[k].replace("{N}", "")
++    return out
++
++
++def summary_for(item):
++    cat = CATS.get(item.get("cat"), {})
++    emoji = cat.get("emoji") or ""
++    title = item.get("title") or "(無題)"
++    return (emoji + " " + title).strip() if emoji else title
++
++
++def description_for(item, site_url):
++    lines = []
++    if item.get("detail"):
++        lines.append(item["detail"])
++    meta = []
++    cat = CATS.get(item.get("cat"), {}).get("label")
++    sub = SUBCAT_LABELS.get(item.get("subcat"))
++    if cat:
++        meta.append("区分: " + cat + (("／" + sub) if sub else ""))
++    if item.get("eventLabel"):
++        meta.append("日程表記: " + item["eventLabel"])
++    if item.get("published"):
++        meta.append("情報公開日: " + item["published"])
++    if item.get("src"):
++        meta.append("情報源: " + item["src"])
++    if meta:
++        lines.append("\n".join(meta))
++    if item.get("url"):
++        lines.append(item["url"])
++    lines.append("― アイカツ！情報カレンダー（非公式ファンメイド）\n" + site_url)
++    return "\n\n".join(lines)
++
++
++def categories_for(item):
++    vals = []
++    label = CATS.get(item.get("cat"), {}).get("label")
++    if label:
++        vals.append(label)
++    sub = SUBCAT_LABELS.get(item.get("subcat"))
++    if sub:
++        vals.append(sub)
++    if item.get("reservation"):
++        vals.append("予約")
++    return vals
++
++
++def vevent(uid, start_date, item, dtstamp, site_url, rrule=None):
++    end_date = start_date + dt.timedelta(days=1)
++    out = ["BEGIN:VEVENT"]
++    out.append(prop("UID", esc(uid)))
++    out.append(prop("DTSTAMP", dtstamp))
++    out.append(prop("DTSTART", date_compact(start_date), [("VALUE", "DATE")]))
++    out.append(prop("DTEND", date_compact(end_date), [("VALUE", "DATE")]))
++    if rrule:
++        out.append(prop("RRULE", rrule))
++    out.append(prop("SUMMARY", esc(summary_for(item))))
++    out.append(prop("DESCRIPTION", esc(description_for(item, site_url))))
++    if item.get("url"):
++        out.append(prop("URL", item["url"]))
++    cats = categories_for(item)
++    if cats:
++        out.append(prop("CATEGORIES", ",".join(esc(c) for c in cats)))
++    added = parse_iso_date(item.get("addedAt"))
++    if added:
++        out.append(prop("LAST-MODIFIED", date_compact(added) + "T000000Z"))
++    out.append(prop("TRANSP", "TRANSPARENT"))   # 予定を「空き時間」扱いにする
++    out.append(prop("SEQUENCE", "0"))
++    out.append("END:VEVENT")
++    return out
++
++
++def build_events(items, opts, dtstamp):
++    """items -> VEVENT 行のリスト"""
++    lines = []
++    for item in items:
++        cat = item.get("cat")
++        recur = item.get("recur")
++        event_date = parse_iso_date(item.get("eventDate"))
++
++        if event_date:
++            # 通常の単発予定
++            lines += vevent("%s@%s" % (item["id"], opts.uid_domain),
++                            event_date, item, dtstamp, opts.site_url)
++
++        elif recur and cat == "anniversary":
++            # 周年: 放送/配信開始日を初回インスタンスとする毎年繰り返し。
++            # タイトルから「N周年」を外している（resolve_anniversary() を参照）。
++            mm, dd = int(recur[0:2]), int(recur[3:5])
++            base_year = int(item.get("foundingYear") or ANNIVERSARY_FALLBACK_YEAR)
++            try:
++                d = dt.date(base_year, mm, dd)
++            except ValueError:
++                continue
++            lines += vevent("%s@%s" % (item["id"], opts.uid_domain),
++                            d, resolve_anniversary(item), dtstamp, opts.site_url,
++                            rrule="FREQ=YEARLY")
++
++        elif recur:
++            # 誕生日など: 毎年繰り返し
++            mm, dd = int(recur[0:2]), int(recur[3:5])
++            base_year = BIRTHDAY_BASE_YEAR
++            if (mm, dd) == (2, 29):
++                while base_year % 4 != 0:
++                    base_year += 1
++            try:
++                d = dt.date(base_year, mm, dd)
++            except ValueError:
++                continue
++            lines += vevent("%s@%s" % (item["id"], opts.uid_domain),
++                            d, item, dtstamp, opts.site_url,
++                            rrule="FREQ=YEARLY")
++
++        else:
++            # eventDate も recur も無い（日付未定の告知）
++            if opts.undated == "published":
++                d = parse_iso_date(item.get("published")) or parse_iso_date(item.get("addedAt"))
++                if d:
++                    lines += vevent("%s@%s" % (item["id"], opts.uid_domain),
++                                    d, item, dtstamp, opts.site_url)
++            # opts.undated == "skip" の場合は何も出さない
++    return lines
++
++
++def build_calendar(items, name, desc, opts, dtstamp, feed_url=None):
++    lines = [
++        "BEGIN:VCALENDAR",
++        prop("VERSION", "2.0"),
++        prop("PRODID", PRODID),
++        prop("CALSCALE", "GREGORIAN"),
++        prop("METHOD", "PUBLISH"),
++        prop("X-WR-CALNAME", esc(name)),
++        prop("X-WR-CALDESC", esc(desc)),
++        prop("X-WR-TIMEZONE", "Asia/Tokyo"),
++        prop("REFRESH-INTERVAL", "PT6H", [("VALUE", "DURATION")]),
++        prop("X-PUBLISHED-TTL", "PT6H"),
++        prop("SOURCE", feed_url, [("VALUE", "URI")]) if feed_url else None,
++    ]
++    lines = [l for l in lines if l]
++    lines += build_events(items, opts, dtstamp)
++    lines.append("END:VCALENDAR")
++    return "\r\n".join(lines) + "\r\n"
++
++
++# ---------------------------------------------------------------- main
++
++def default_dtstamp(items):
++    """
++    DTSTAMP はデータ内の最新日付から決める。
++    実行時刻を使うと毎回全イベントの差分が出てコミットがノイズになるため。
++    """
++    latest = None
++    for it in items:
++        for key in ("addedAt", "published"):   # eventDate は未来日なので使わない
++            d = parse_iso_date(it.get(key))
++            if d and (latest is None or d > latest):
++                latest = d
++    if latest is None:
++        latest = dt.date.today()
++    return latest.strftime("%Y%m%dT000000Z")
++
++
++def main(argv=None):
++    ap = argparse.ArgumentParser(description="data/items.json から .ics を生成する")
++    ap.add_argument("--input", default="data/items.json")
++    ap.add_argument("--outdir", default="calendar")
++    ap.add_argument("--base-url", default=BASE_URL_DEFAULT,
++                    help="配信先のベースURL（feeds.json のURL生成に使う）")
++    ap.add_argument("--site-url", default=SITE_URL_DEFAULT,
++                    help="DESCRIPTION 末尾に入れるサイトURL")
++    ap.add_argument("--uid-domain", default="aikatsu-calendar.aikatsu-info.github.io",
++                    help="UID の右側に使うドメイン。一度決めたら変更しないこと")
++    ap.add_argument("--undated", choices=["skip", "published"], default="skip",
++                    help="eventDate も recur も無い項目の扱い（既定: skip）")
++    ap.add_argument("--today", default=None, help="基準日 YYYY-MM-DD（テスト用）")
++    opts = ap.parse_args(argv)
++
++    opts.today = parse_iso_date(opts.today) or dt.date.today()
++    opts.base_url = opts.base_url.rstrip("/")
++
++    with open(opts.input, encoding="utf-8") as f:
++        items = json.load(f)
++    if not isinstance(items, list):
++        print("items.json は配列であるべきです", file=sys.stderr)
++        return 1
++
++    dtstamp = default_dtstamp(items)
++    os.makedirs(opts.outdir, exist_ok=True)
++
++    feeds_meta = []
++    for slug, name, desc, filt in FEEDS:
++        subset = [it for it in items if filt(it)]
++        feed_url = "%s/%s/%s.ics" % (opts.base_url, os.path.basename(opts.outdir), slug)
++        text = build_calendar(subset, name, desc, opts, dtstamp, feed_url)
++        path = os.path.join(opts.outdir, slug + ".ics")
++        with open(path, "w", encoding="utf-8", newline="") as f:
++            f.write(text)
++        n_events = text.count("BEGIN:VEVENT")
++        feeds_meta.append({
++            "slug": slug, "name": name, "description": desc,
++            "file": slug + ".ics",
++            "url": feed_url,
++            "items": len(subset), "events": n_events,
++        })
++        print("%-28s items=%-4d events=%-4d %s" % (slug, len(subset), n_events, path))
++
++    with open(os.path.join(opts.outdir, "feeds.json"), "w", encoding="utf-8") as f:
++        json.dump({"generated": dtstamp, "feeds": feeds_meta}, f, ensure_ascii=False, indent=2)
++        f.write("\n")
++    return 0
++
++
++if __name__ == "__main__":
++    sys.exit(main())
+diff --git a/tools/check_sync.py b/tools/check_sync.py
+new file mode 100644
+index 0000000..4c58f64
+--- /dev/null
++++ b/tools/check_sync.py
+@@ -0,0 +1,75 @@
++#!/usr/bin/env python3
++# -*- coding: utf-8 -*-
++"""
++aikatsu_calendar.html に埋め込まれた ITEMS と data/items.json の整合チェック。
++
++CLAUDE.md にある通り、この2つは自動同期されない複製なので、
++.ics を items.json から生成する場合、items.json 側の更新漏れが
++そのままカレンダー購読者への情報漏れになる。CI で先に落とすためのスクリプト。
++
++    python3 tools/check_sync.py --html aikatsu_calendar.html --json data/items.json
++
++差分があれば終了コード 1。
++"""
++
++import argparse
++import json
++import re
++import sys
++
++ID_RE = re.compile(r'(?:^|[{,\s])id\s*:\s*"([^"]+)"')
++
++
++def ids_from_html(path):
++    src = open(path, encoding="utf-8").read()
++    i = src.find("// ITEMS:START")
++    j = src.find("// ITEMS:END")
++    if i < 0 or j < 0:
++        raise SystemExit("ITEMS:START / ITEMS:END が見つかりません: " + path)
++    return ID_RE.findall(src[i:j])
++
++
++def ids_from_json(path):
++    return [it["id"] for it in json.load(open(path, encoding="utf-8"))]
++
++
++def main(argv=None):
++    ap = argparse.ArgumentParser()
++    ap.add_argument("--html", default="aikatsu_calendar.html")
++    ap.add_argument("--json", default="data/items.json")
++    opts = ap.parse_args(argv)
++
++    html_ids = ids_from_html(opts.html)
++    json_ids = ids_from_json(opts.json)
++
++    ok = True
++    if len(html_ids) != len(json_ids):
++        print("件数不一致: html=%d json=%d" % (len(html_ids), len(json_ids)))
++        ok = False
++
++    only_html = [i for i in html_ids if i not in set(json_ids)]
++    only_json = [i for i in json_ids if i not in set(html_ids)]
++    if only_html:
++        print("html にのみ存在するID: " + ", ".join(only_html))
++        ok = False
++    if only_json:
++        print("json にのみ存在するID: " + ", ".join(only_json))
++        ok = False
++
++    dup_html = [i for i in set(html_ids) if html_ids.count(i) > 1]
++    dup_json = [i for i in set(json_ids) if json_ids.count(i) > 1]
++    if dup_html:
++        print("html 内で重複しているID: " + ", ".join(sorted(dup_html)))
++        ok = False
++    if dup_json:
++        print("json 内で重複しているID: " + ", ".join(sorted(dup_json)))
++        ok = False
++
++    if ok:
++        print("OK: %d件が一致" % len(json_ids))
++        return 0
++    return 1
++
++
++if __name__ == "__main__":
++    sys.exit(main())
+diff --git a/tools/extract_snippet.py b/tools/extract_snippet.py
+new file mode 100644
+index 0000000..461cce6
+--- /dev/null
++++ b/tools/extract_snippet.py
+@@ -0,0 +1,52 @@
++#!/usr/bin/env python3
++# -*- coding: utf-8 -*-
++"""
++web/subscribe-demo.html のマーカー間を抜き出して、
++aikatsu_calendar.html に貼り付ける用の web/subscribe-snippet.html を作る。
++
++    python3 tools/extract_snippet.py
++"""
++
++import os
++import re
++import sys
++
++HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
++SRC = os.path.join(HERE, "web", "subscribe-demo.html")
++DST = os.path.join(HERE, "web", "subscribe-snippet.html")
++
++BLOCKS = [
++    ("CSS",   "<head> の末尾（既存の <style> の後ろ）に貼る"),
++    ("HTML",  "<div class=\"tabs-row\"> の中、<div class=\"tabs\">…</div> の直後に貼る"),
++    ("MODAL", "<div class=\"page\"> を閉じた直後（</body> の手前）に貼る"),
++    ("JS",    "本体のメイン <script> の後ろ、</body> の直前に貼る"),
++]
++
++
++def extract(src, name):
++    m = re.search(
++        r"<!--\s*SUBSCRIBE:%s:START\s*-->\n(.*?)\n\s*<!--\s*SUBSCRIBE:%s:END\s*-->" % (name, name),
++        src, re.S)
++    if not m:
++        raise SystemExit("マーカーが見つかりません: SUBSCRIBE:%s" % name)
++    return m.group(1)
++
++
++def main():
++    src = open(SRC, encoding="utf-8").read()
++    out = ["<!--",
++           "  aikatsu_calendar.html への貼り付け用スニペット",
++           "  （web/subscribe-demo.html から tools/extract_snippet.py で自動生成）",
++           "  FEED_BASE の値と、build_ics.py の FEEDS の内容が一致していることを確認すること。",
++           "-->", ""]
++    for name, where in BLOCKS:
++        out.append("<!-- ===== [%s] %s ===== -->" % (name, where))
++        out.append(extract(src, name))
++        out.append("")
++    open(DST, "w", encoding="utf-8").write("\n".join(out))
++    print("wrote " + DST)
++    return 0
++
++
++if __name__ == "__main__":
++    sys.exit(main())
+diff --git a/web/subscribe-demo.html b/web/subscribe-demo.html
+new file mode 100644
+index 0000000..a9adfa0
+--- /dev/null
++++ b/web/subscribe-demo.html
+@@ -0,0 +1,366 @@
++<!DOCTYPE html>
++<html lang="ja">
++<head>
++<meta charset="utf-8">
++<meta name="viewport" content="width=device-width, initial-scale=1">
++<title>カレンダー購読UI デモ — アイカツ！情報カレンダー</title>
++<style>
++  /* ここは本体 aikatsu_calendar.html から持ってきた最小限のトークン。
++     本番に組み込むときはこのブロックは不要（本体の :root をそのまま使う）。 */
++  :root{
++    --bg:#fff6f9; --surface:#ffffff; --surface-muted:#fff0f6;
++    --ink:#2a1b28; --ink-soft:#7c6072; --ink-faint:#a98fa0; --line:#f4d9e6;
++    --accent:#e0176c; --accent-soft:#ffe1ee; --accent-contrast:#ffffff;
++    --shadow: 0 18px 40px -22px rgba(224,23,108,.35);
++    --font-gothic:"Hiragino Sans","Yu Gothic UI","YuGothic","Noto Sans JP",system-ui,-apple-system,sans-serif;
++    --font-round:"M PLUS Rounded 1c","Zen Maru Gothic","Hiragino Maru Gothic ProN","Hiragino Sans",sans-serif;
++  }
++  @media (prefers-color-scheme: dark){
++    :root{
++      --bg:#150e1c; --surface:#20152c; --surface-muted:#2a1c3a;
++      --ink:#f7edf4; --ink-soft:#c3aac0; --ink-faint:#8a7290; --line:#3c2a4c;
++      --accent:#ff6fac; --accent-soft:#3a1f34; --accent-contrast:#1b0f18;
++      --shadow: 0 18px 40px -20px rgba(0,0,0,.6);
++    }
++  }
++  body{ margin:0; background:var(--bg); color:var(--ink); font-family:var(--font-gothic); }
++  .page{ max-width:960px; margin:0 auto; padding:24px 16px 80px; }
++  .demo-note{ background:var(--surface-muted); border:1px dashed var(--line); border-radius:12px;
++    padding:12px 14px; font-size:13px; color:var(--ink-soft); line-height:1.7; margin-bottom:20px; }
++  .demo-note code{ font-size:12px; }
++  header.top{ display:flex; gap:12px; align-items:center; margin-bottom:16px; }
++  header.top h1{ font-family:var(--font-round); font-size:20px; margin:0; }
++  .tabs-row{ display:flex; align-items:center; justify-content:space-between; gap:8px;
++    border-bottom:1px solid var(--line); padding-bottom:8px; margin-bottom:24px; }
++  .tabs{ display:flex; gap:6px; }
++  .tab-btn{ background:none; border:0; padding:8px 14px; border-radius:999px 999px 0 0;
++    font:inherit; font-size:14px; color:var(--ink-soft); cursor:pointer; }
++  .tab-btn[aria-selected="true"]{ color:var(--accent); font-weight:700; }
++</style>
++
++<!-- SUBSCRIBE:CSS:START -->
++<style>
++  /* ===== カレンダー購読ボタン / モーダル ===== */
++  /* サイズ感は .tab-btn（12px / パディング 7px 15px）に合わせてある */
++  .subscribe-btn{
++    appearance:none; display:inline-flex; align-items:center; gap:6px;
++    background:var(--accent); color:var(--accent-contrast);
++    border:1px solid var(--accent); border-radius:999px; padding:7px 14px;
++    font:inherit; font-family:var(--font-gothic); font-size:12px; font-weight:700; line-height:1;
++    cursor:pointer; white-space:nowrap;
++    transition:filter .15s ease;
++  }
++  .subscribe-btn:hover{ filter:brightness(1.06); }
++  .subscribe-btn:focus-visible{ outline:2px solid var(--accent); outline-offset:2px; }
++  .subscribe-btn svg{ width:14px; height:14px; }
++  @media (max-width:520px){
++    .subscribe-btn{ padding:6px 11px; font-size:10.5px; }
++    .subscribe-btn svg{ width:13px; height:13px; }
++    .subscribe-btn .subscribe-btn-label{ display:none; }
++  }
++
++  .sub-modal[hidden]{ display:none; }
++  .sub-modal{
++    position:fixed; inset:0; z-index:1000;
++    display:flex; align-items:center; justify-content:center;
++    padding:16px; background:rgba(0,0,0,.5);
++    overscroll-behavior:contain;
++  }
++  .sub-modal-panel{
++    background:var(--surface); color:var(--ink);
++    border:1px solid var(--line); border-radius:18px;
++    box-shadow:var(--shadow);
++    width:min(520px, 100%); max-height:calc(100dvh - 32px); overflow:auto;
++    padding:20px 20px 22px;
++  }
++  .sub-modal-head{ display:flex; align-items:flex-start; justify-content:space-between; gap:12px; margin-bottom:4px; }
++  .sub-modal-title{ font-family:var(--font-round); font-size:17px; font-weight:700; margin:0; }
++  .sub-modal-close{
++    background:none; border:0; color:var(--ink-faint); font-size:22px; line-height:1;
++    padding:4px 8px; cursor:pointer; border-radius:8px;
++  }
++  .sub-modal-close:hover{ background:var(--surface-muted); color:var(--ink); }
++  .sub-lead{ font-size:12.5px; color:var(--ink-soft); line-height:1.7; margin:0 0 14px; }
++
++  .sub-section-label{ font-size:12px; font-weight:700; color:var(--ink-soft); margin:16px 0 8px; }
++  .sub-feeds{ display:flex; flex-wrap:wrap; gap:6px; }
++  .sub-feed-btn{
++    background:var(--surface-muted); color:var(--ink-soft);
++    border:1px solid var(--line); border-radius:999px;
++    padding:6px 12px; font:inherit; font-size:12.5px; cursor:pointer;
++  }
++  .sub-feed-btn[aria-pressed="true"]{
++    background:var(--accent-soft); color:var(--accent); border-color:var(--accent); font-weight:700;
++  }
++  .sub-feed-desc{ font-size:12px; color:var(--ink-faint); margin:8px 0 0; line-height:1.6; min-height:1.6em; }
++
++  .sub-actions{ display:grid; gap:8px; margin-top:6px; }
++  .sub-action{
++    display:flex; align-items:center; gap:10px;
++    background:var(--surface-muted); color:var(--ink);
++    border:1px solid var(--line); border-radius:12px;
++    padding:11px 13px; font:inherit; font-size:13.5px; font-weight:600;
++    text-decoration:none; cursor:pointer;
++  }
++  .sub-action:hover{ border-color:var(--accent); }
++  .sub-action .sub-action-sub{ display:block; font-size:11.5px; font-weight:400; color:var(--ink-faint); margin-top:2px; }
++  .sub-action-ico{ flex:0 0 22px; width:22px; height:22px; display:grid; place-items:center; }
++  .sub-action-ico svg{ width:20px; height:20px; }
++  .sub-action-body{ flex:1 1 auto; min-width:0; }
++
++  .sub-url-row{ display:flex; gap:6px; align-items:stretch; }
++  .sub-url-input{
++    flex:1 1 auto; min-width:0;
++    background:var(--surface-muted); color:var(--ink-soft);
++    border:1px solid var(--line); border-radius:10px;
++    padding:9px 11px; font-size:12px; font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
++  }
++  .sub-url-input:focus{ outline:2px solid var(--accent); outline-offset:1px; color:var(--ink); }
++  .sub-copy-btn{
++    flex:0 0 auto; background:var(--accent); color:var(--accent-contrast);
++    border:0; border-radius:10px; padding:0 14px; font:inherit; font-size:12.5px; font-weight:700; cursor:pointer;
++  }
++  .sub-copy-btn:hover{ filter:brightness(1.06); }
++  .sub-copy-btn.copied{ background:var(--surface-muted); color:var(--accent); border:1px solid var(--accent); }
++  .sub-hint{ font-size:11.5px; color:var(--ink-faint); line-height:1.7; margin:10px 0 0; }
++  .sub-hint a{ color:var(--accent); }
++</style>
++<!-- SUBSCRIBE:CSS:END -->
++</head>
++<body>
++<div class="page">
++
++  <div class="demo-note">
++    <strong>これは実証用のデモページです。</strong><br>
++    右上の「カレンダー購読」ボタンから、購読モーダルの挙動を確認できます。<br>
++    本番では <code>&lt;!-- SUBSCRIBE:CSS --&gt;</code> / <code>&lt;!-- SUBSCRIBE:HTML --&gt;</code> / <code>&lt;!-- SUBSCRIBE:JS --&gt;</code>
++    の3ブロックを <code>aikatsu_calendar.html</code> に貼り付けます（詳細は <code>docs/HANDOFF.md</code>）。<br>
++    リンク先の .ics はまだ存在しないため、押しても 404 になります。
++  </div>
++
++  <header class="top">
++    <svg width="40" height="40" viewBox="0 0 48 48" aria-hidden="true">
++      <circle cx="24" cy="24" r="23" fill="var(--accent-soft)"/>
++      <path d="M24 9 L27.2 20.2 L38.8 21.5 L28.8 28.3 L31.6 39.5 L24 32.4 L16.4 39.5 L19.2 28.3 L9.2 21.5 L20.8 20.2 Z" fill="var(--accent)"/>
++    </svg>
++    <h1>アイカツ！情報カレンダー</h1>
++  </header>
++
++  <div class="tabs-row">
++    <div class="tabs" role="tablist" aria-label="表示切り替え">
++      <button class="tab-btn" role="tab" aria-selected="true">カレンダー</button>
++      <button class="tab-btn" role="tab" aria-selected="false">トピックス</button>
++    </div>
++
++    <!-- SUBSCRIBE:HTML:START -->
++    <button class="subscribe-btn" id="subscribeBtn" type="button" aria-haspopup="dialog" aria-label="カレンダー購読" title="カレンダーアプリで購読">
++      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
++        <rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 14v4M10 16h4"/>
++      </svg>
++      <span class="subscribe-btn-label">カレンダー購読</span>
++    </button>
++    <!-- SUBSCRIBE:HTML:END -->
++  </div>
++
++  <p style="color:var(--ink-faint);font-size:13px;">（ここに本体のカレンダーが入ります）</p>
++</div>
++
++<!-- SUBSCRIBE:MODAL:START -->
++<div class="sub-modal" id="subModal" role="dialog" aria-modal="true" aria-labelledby="subModalTitle" hidden>
++  <div class="sub-modal-panel" id="subModalPanel">
++    <div class="sub-modal-head">
++      <h2 class="sub-modal-title" id="subModalTitle">カレンダーを購読する</h2>
++      <button class="sub-modal-close" id="subModalClose" type="button" aria-label="閉じる">×</button>
++    </div>
++    <p class="sub-lead">
++      お使いのカレンダーアプリに登録すると、イベントやグッズの予定が自動で追加され、更新も反映されます。
++    </p>
++
++    <div class="sub-section-label">1. 購読する内容を選ぶ</div>
++    <div class="sub-feeds" id="subFeeds" role="group" aria-label="購読する内容"></div>
++    <p class="sub-feed-desc" id="subFeedDesc"></p>
++
++    <div class="sub-section-label">2. 追加する</div>
++    <div class="sub-actions">
++      <a class="sub-action" id="subGoogle" href="#" target="_blank" rel="noopener">
++        <span class="sub-action-ico">
++          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
++            <rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18"/>
++          </svg>
++        </span>
++        <span class="sub-action-body">Google カレンダーに追加
++          <span class="sub-action-sub">Googleカレンダーの追加画面が開きます</span>
++        </span>
++      </a>
++      <a class="sub-action" id="subApple" href="#">
++        <span class="sub-action-ico">
++          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
++            <path d="M16.7 12.9c0-2.2 1.8-3.3 1.9-3.4-1-1.5-2.6-1.7-3.2-1.7-1.4-.1-2.7.8-3.3.8-.7 0-1.7-.8-2.8-.8-1.5 0-2.8.8-3.6 2.1-1.5 2.6-.4 6.5 1.1 8.6.7 1 1.6 2.2 2.7 2.1 1.1 0 1.5-.7 2.8-.7s1.7.7 2.8.7c1.2 0 1.9-1 2.6-2.1.8-1.2 1.2-2.3 1.2-2.4-.1 0-2.2-.9-2.2-3.2zM14.6 5.9c.6-.7 1-1.7.9-2.7-.9 0-2 .6-2.6 1.3-.5.6-1 1.6-.9 2.6 1 .1 2-.5 2.6-1.2z"/>
++          </svg>
++        </span>
++        <span class="sub-action-body">iPhone・iPad・Mac に追加
++          <span class="sub-action-sub">標準の「カレンダー」アプリが開きます</span>
++        </span>
++      </a>
++      <a class="sub-action" id="subOutlook" href="#" target="_blank" rel="noopener">
++        <span class="sub-action-ico">
++          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
++            <rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/>
++          </svg>
++        </span>
++        <span class="sub-action-body">Outlook.com に追加
++          <span class="sub-action-sub">Web版Outlookの購読画面が開きます</span>
++        </span>
++      </a>
++      <a class="sub-action" id="subDownload" href="#" download>
++        <span class="sub-action-ico">
++          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
++            <path d="M12 3v12M7 11l5 5 5-5M4 20h16"/>
++          </svg>
++        </span>
++        <span class="sub-action-body">.ics ファイルをダウンロード
++          <span class="sub-action-sub">1回きりの取り込み用（自動更新はされません）</span>
++        </span>
++      </a>
++    </div>
++
++    <div class="sub-section-label">手動で登録する（URLをコピー）</div>
++    <div class="sub-url-row">
++      <input class="sub-url-input" id="subUrlInput" type="text" readonly spellcheck="false" aria-label="購読用URL">
++      <button class="sub-copy-btn" id="subCopyBtn" type="button">コピー</button>
++    </div>
++    <p class="sub-hint">
++      Googleアカウントを複数お使いの場合は、上のボタンだと意図しないアカウントに追加されることがあります。
++      その場合はこのURLをコピーして、追加したいアカウントの Googleカレンダー →
++      「他のカレンダー」＋ → 「URLで追加」に貼り付けてください。
++    </p>
++    <p class="sub-hint">
++      ※ 非公式のファンメイドカレンダーです。予定は変更・中止される場合があるため、最終的な情報は各公式サイトでご確認ください。
++    </p>
++  </div>
++</div>
++<!-- SUBSCRIBE:MODAL:END -->
++
++<!-- SUBSCRIBE:JS:START -->
++<script>
++(function(){
++  "use strict";
++
++  // .ics の配信先。GitHub Pages のパスに合わせる。
++  var FEED_BASE = "https://aikatsu-info.github.io/aikatsu-calendar/calendar/";
++
++  // build_ics.py の FEEDS と対応。増やす場合は両方に足すこと。
++  var FEEDS = [
++    { slug:"aikatsu-all",         label:"すべて",       desc:"イベント・グッズ・配信・誕生日・周年をすべて含みます。" },
++    { slug:"aikatsu-nobirthday",  label:"誕生日以外",   desc:"誕生日と周年を除いた、イベント／グッズ／配信などの予定だけを購読します。" },
++    { slug:"aikatsu-event",       label:"イベント",     desc:"ライブ・上映会・POP UP SHOP などのイベントのみ。" },
++    { slug:"aikatsu-goods",       label:"グッズ",       desc:"グッズの発売日・予約開始／締切のみ。" },
++    { slug:"aikatsu-game",        label:"アンコール",   desc:"『アイカツ！アンコール』関連の予定のみ。" },
++    { slug:"aikatsu-birthday",    label:"誕生日",       desc:"キャラクターの誕生日のみ（毎年繰り返し）。" }
++  ];
++
++  var current = FEEDS[0];
++
++  var btn        = document.getElementById("subscribeBtn");
++  var modal      = document.getElementById("subModal");
++  var panel      = document.getElementById("subModalPanel");
++  var closeBtn   = document.getElementById("subModalClose");
++  var feedsWrap  = document.getElementById("subFeeds");
++  var feedDesc   = document.getElementById("subFeedDesc");
++  var urlInput   = document.getElementById("subUrlInput");
++  var copyBtn    = document.getElementById("subCopyBtn");
++  var aGoogle    = document.getElementById("subGoogle");
++  var aApple     = document.getElementById("subApple");
++  var aOutlook   = document.getElementById("subOutlook");
++  var aDownload  = document.getElementById("subDownload");
++  if(!btn || !modal) return;
++
++  var lastFocused = null;
++
++  function httpsUrl(feed){ return FEED_BASE + feed.slug + ".ics"; }
++  function webcalUrl(feed){ return httpsUrl(feed).replace(/^https?:/, "webcal:"); }
++
++  function applyFeed(feed){
++    current = feed;
++    var https = httpsUrl(feed);
++    var webcal = webcalUrl(feed);
++    urlInput.value = https;
++    // Google: cid にURLエンコードした https URL を渡す。
++    // /u/0/ は付けない（ログイン中のアカウント選択をユーザーに委ねるため）。
++    aGoogle.href = "https://calendar.google.com/calendar/render?cid=" + encodeURIComponent(https);
++    aApple.href = webcal;
++    aOutlook.href = "https://outlook.live.com/calendar/0/addfromweb?url=" +
++      encodeURIComponent(https) + "&name=" + encodeURIComponent("アイカツ！情報カレンダー");
++    aDownload.href = https;
++    aDownload.setAttribute("download", feed.slug + ".ics");
++    feedDesc.textContent = feed.desc;
++    Array.prototype.forEach.call(feedsWrap.children, function(b){
++      b.setAttribute("aria-pressed", String(b.dataset.slug === feed.slug));
++    });
++    copyBtn.classList.remove("copied");
++    copyBtn.textContent = "コピー";
++  }
++
++  FEEDS.forEach(function(feed){
++    var b = document.createElement("button");
++    b.type = "button";
++    b.className = "sub-feed-btn";
++    b.dataset.slug = feed.slug;
++    b.textContent = feed.label;
++    b.setAttribute("aria-pressed", "false");
++    b.addEventListener("click", function(){ applyFeed(feed); });
++    feedsWrap.appendChild(b);
++  });
++  applyFeed(FEEDS[0]);
++
++  function openModal(){
++    lastFocused = document.activeElement;
++    modal.hidden = false;
++    document.body.style.overflow = "hidden";
++    closeBtn.focus();
++    document.addEventListener("keydown", onKeydown, true);
++  }
++  function closeModal(){
++    modal.hidden = true;
++    document.body.style.overflow = "";
++    document.removeEventListener("keydown", onKeydown, true);
++    if(lastFocused && lastFocused.focus) lastFocused.focus();
++  }
++  function onKeydown(e){
++    if(e.key === "Escape"){ e.preventDefault(); closeModal(); return; }
++    if(e.key !== "Tab") return;
++    var f = panel.querySelectorAll('a[href], button:not([disabled]), input, [tabindex]:not([tabindex="-1"])');
++    if(!f.length) return;
++    var first = f[0], last = f[f.length - 1];
++    if(e.shiftKey && document.activeElement === first){ e.preventDefault(); last.focus(); }
++    else if(!e.shiftKey && document.activeElement === last){ e.preventDefault(); first.focus(); }
++  }
++
++  btn.addEventListener("click", openModal);
++  closeBtn.addEventListener("click", closeModal);
++  modal.addEventListener("click", function(e){ if(e.target === modal) closeModal(); });
++
++  copyBtn.addEventListener("click", function(){
++    var text = urlInput.value;
++    function done(){
++      copyBtn.textContent = "コピーしました";
++      copyBtn.classList.add("copied");
++      setTimeout(function(){ copyBtn.textContent = "コピー"; copyBtn.classList.remove("copied"); }, 1800);
++    }
++    if(navigator.clipboard && navigator.clipboard.writeText){
++      navigator.clipboard.writeText(text).then(done, fallback);
++    } else { fallback(); }
++    function fallback(){
++      urlInput.focus();
++      urlInput.setSelectionRange(0, urlInput.value.length);
++      try{ document.execCommand("copy"); done(); }catch(e){ /* 手動選択に任せる */ }
++    }
++  });
++
++  // URLに #subscribe が付いていたら自動で開く（SNS等から誘導する用）
++  if(location.hash === "#subscribe") openModal();
++})();
++</script>
++<!-- SUBSCRIBE:JS:END -->
++</body>
++</html>
+diff --git a/web/subscribe-snippet.html b/web/subscribe-snippet.html
+new file mode 100644
+index 0000000..a956574
+--- /dev/null
++++ b/web/subscribe-snippet.html
+@@ -0,0 +1,297 @@
++<!--
++  aikatsu_calendar.html への貼り付け用スニペット
++  （web/subscribe-demo.html から tools/extract_snippet.py で自動生成）
++  FEED_BASE の値と、build_ics.py の FEEDS の内容が一致していることを確認すること。
++-->
++
++<!-- ===== [CSS] <head> の末尾（既存の <style> の後ろ）に貼る ===== -->
++<style>
++  /* ===== カレンダー購読ボタン / モーダル ===== */
++  /* サイズ感は .tab-btn（12px / パディング 7px 15px）に合わせてある */
++  .subscribe-btn{
++    appearance:none; display:inline-flex; align-items:center; gap:6px;
++    background:var(--accent); color:var(--accent-contrast);
++    border:1px solid var(--accent); border-radius:999px; padding:7px 14px;
++    font:inherit; font-family:var(--font-gothic); font-size:12px; font-weight:700; line-height:1;
++    cursor:pointer; white-space:nowrap;
++    transition:filter .15s ease;
++  }
++  .subscribe-btn:hover{ filter:brightness(1.06); }
++  .subscribe-btn:focus-visible{ outline:2px solid var(--accent); outline-offset:2px; }
++  .subscribe-btn svg{ width:14px; height:14px; }
++  @media (max-width:520px){
++    .subscribe-btn{ padding:6px 11px; font-size:10.5px; }
++    .subscribe-btn svg{ width:13px; height:13px; }
++    .subscribe-btn .subscribe-btn-label{ display:none; }
++  }
++
++  .sub-modal[hidden]{ display:none; }
++  .sub-modal{
++    position:fixed; inset:0; z-index:1000;
++    display:flex; align-items:center; justify-content:center;
++    padding:16px; background:rgba(0,0,0,.5);
++    overscroll-behavior:contain;
++  }
++  .sub-modal-panel{
++    background:var(--surface); color:var(--ink);
++    border:1px solid var(--line); border-radius:18px;
++    box-shadow:var(--shadow);
++    width:min(520px, 100%); max-height:calc(100dvh - 32px); overflow:auto;
++    padding:20px 20px 22px;
++  }
++  .sub-modal-head{ display:flex; align-items:flex-start; justify-content:space-between; gap:12px; margin-bottom:4px; }
++  .sub-modal-title{ font-family:var(--font-round); font-size:17px; font-weight:700; margin:0; }
++  .sub-modal-close{
++    background:none; border:0; color:var(--ink-faint); font-size:22px; line-height:1;
++    padding:4px 8px; cursor:pointer; border-radius:8px;
++  }
++  .sub-modal-close:hover{ background:var(--surface-muted); color:var(--ink); }
++  .sub-lead{ font-size:12.5px; color:var(--ink-soft); line-height:1.7; margin:0 0 14px; }
++
++  .sub-section-label{ font-size:12px; font-weight:700; color:var(--ink-soft); margin:16px 0 8px; }
++  .sub-feeds{ display:flex; flex-wrap:wrap; gap:6px; }
++  .sub-feed-btn{
++    background:var(--surface-muted); color:var(--ink-soft);
++    border:1px solid var(--line); border-radius:999px;
++    padding:6px 12px; font:inherit; font-size:12.5px; cursor:pointer;
++  }
++  .sub-feed-btn[aria-pressed="true"]{
++    background:var(--accent-soft); color:var(--accent); border-color:var(--accent); font-weight:700;
++  }
++  .sub-feed-desc{ font-size:12px; color:var(--ink-faint); margin:8px 0 0; line-height:1.6; min-height:1.6em; }
++
++  .sub-actions{ display:grid; gap:8px; margin-top:6px; }
++  .sub-action{
++    display:flex; align-items:center; gap:10px;
++    background:var(--surface-muted); color:var(--ink);
++    border:1px solid var(--line); border-radius:12px;
++    padding:11px 13px; font:inherit; font-size:13.5px; font-weight:600;
++    text-decoration:none; cursor:pointer;
++  }
++  .sub-action:hover{ border-color:var(--accent); }
++  .sub-action .sub-action-sub{ display:block; font-size:11.5px; font-weight:400; color:var(--ink-faint); margin-top:2px; }
++  .sub-action-ico{ flex:0 0 22px; width:22px; height:22px; display:grid; place-items:center; }
++  .sub-action-ico svg{ width:20px; height:20px; }
++  .sub-action-body{ flex:1 1 auto; min-width:0; }
++
++  .sub-url-row{ display:flex; gap:6px; align-items:stretch; }
++  .sub-url-input{
++    flex:1 1 auto; min-width:0;
++    background:var(--surface-muted); color:var(--ink-soft);
++    border:1px solid var(--line); border-radius:10px;
++    padding:9px 11px; font-size:12px; font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
++  }
++  .sub-url-input:focus{ outline:2px solid var(--accent); outline-offset:1px; color:var(--ink); }
++  .sub-copy-btn{
++    flex:0 0 auto; background:var(--accent); color:var(--accent-contrast);
++    border:0; border-radius:10px; padding:0 14px; font:inherit; font-size:12.5px; font-weight:700; cursor:pointer;
++  }
++  .sub-copy-btn:hover{ filter:brightness(1.06); }
++  .sub-copy-btn.copied{ background:var(--surface-muted); color:var(--accent); border:1px solid var(--accent); }
++  .sub-hint{ font-size:11.5px; color:var(--ink-faint); line-height:1.7; margin:10px 0 0; }
++  .sub-hint a{ color:var(--accent); }
++</style>
++
++<!-- ===== [HTML] <div class="tabs-row"> の中、<div class="tabs">…</div> の直後に貼る ===== -->
++    <button class="subscribe-btn" id="subscribeBtn" type="button" aria-haspopup="dialog" aria-label="カレンダー購読" title="カレンダーアプリで購読">
++      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
++        <rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 14v4M10 16h4"/>
++      </svg>
++      <span class="subscribe-btn-label">カレンダー購読</span>
++    </button>
++
++<!-- ===== [MODAL] <div class="page"> を閉じた直後（</body> の手前）に貼る ===== -->
++<div class="sub-modal" id="subModal" role="dialog" aria-modal="true" aria-labelledby="subModalTitle" hidden>
++  <div class="sub-modal-panel" id="subModalPanel">
++    <div class="sub-modal-head">
++      <h2 class="sub-modal-title" id="subModalTitle">カレンダーを購読する</h2>
++      <button class="sub-modal-close" id="subModalClose" type="button" aria-label="閉じる">×</button>
++    </div>
++    <p class="sub-lead">
++      お使いのカレンダーアプリに登録すると、イベントやグッズの予定が自動で追加され、更新も反映されます。
++    </p>
++
++    <div class="sub-section-label">1. 購読する内容を選ぶ</div>
++    <div class="sub-feeds" id="subFeeds" role="group" aria-label="購読する内容"></div>
++    <p class="sub-feed-desc" id="subFeedDesc"></p>
++
++    <div class="sub-section-label">2. 追加する</div>
++    <div class="sub-actions">
++      <a class="sub-action" id="subGoogle" href="#" target="_blank" rel="noopener">
++        <span class="sub-action-ico">
++          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
++            <rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18"/>
++          </svg>
++        </span>
++        <span class="sub-action-body">Google カレンダーに追加
++          <span class="sub-action-sub">Googleカレンダーの追加画面が開きます</span>
++        </span>
++      </a>
++      <a class="sub-action" id="subApple" href="#">
++        <span class="sub-action-ico">
++          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
++            <path d="M16.7 12.9c0-2.2 1.8-3.3 1.9-3.4-1-1.5-2.6-1.7-3.2-1.7-1.4-.1-2.7.8-3.3.8-.7 0-1.7-.8-2.8-.8-1.5 0-2.8.8-3.6 2.1-1.5 2.6-.4 6.5 1.1 8.6.7 1 1.6 2.2 2.7 2.1 1.1 0 1.5-.7 2.8-.7s1.7.7 2.8.7c1.2 0 1.9-1 2.6-2.1.8-1.2 1.2-2.3 1.2-2.4-.1 0-2.2-.9-2.2-3.2zM14.6 5.9c.6-.7 1-1.7.9-2.7-.9 0-2 .6-2.6 1.3-.5.6-1 1.6-.9 2.6 1 .1 2-.5 2.6-1.2z"/>
++          </svg>
++        </span>
++        <span class="sub-action-body">iPhone・iPad・Mac に追加
++          <span class="sub-action-sub">標準の「カレンダー」アプリが開きます</span>
++        </span>
++      </a>
++      <a class="sub-action" id="subOutlook" href="#" target="_blank" rel="noopener">
++        <span class="sub-action-ico">
++          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
++            <rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/>
++          </svg>
++        </span>
++        <span class="sub-action-body">Outlook.com に追加
++          <span class="sub-action-sub">Web版Outlookの購読画面が開きます</span>
++        </span>
++      </a>
++      <a class="sub-action" id="subDownload" href="#" download>
++        <span class="sub-action-ico">
++          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
++            <path d="M12 3v12M7 11l5 5 5-5M4 20h16"/>
++          </svg>
++        </span>
++        <span class="sub-action-body">.ics ファイルをダウンロード
++          <span class="sub-action-sub">1回きりの取り込み用（自動更新はされません）</span>
++        </span>
++      </a>
++    </div>
++
++    <div class="sub-section-label">手動で登録する（URLをコピー）</div>
++    <div class="sub-url-row">
++      <input class="sub-url-input" id="subUrlInput" type="text" readonly spellcheck="false" aria-label="購読用URL">
++      <button class="sub-copy-btn" id="subCopyBtn" type="button">コピー</button>
++    </div>
++    <p class="sub-hint">
++      Googleアカウントを複数お使いの場合は、上のボタンだと意図しないアカウントに追加されることがあります。
++      その場合はこのURLをコピーして、追加したいアカウントの Googleカレンダー →
++      「他のカレンダー」＋ → 「URLで追加」に貼り付けてください。
++    </p>
++    <p class="sub-hint">
++      ※ 非公式のファンメイドカレンダーです。予定は変更・中止される場合があるため、最終的な情報は各公式サイトでご確認ください。
++    </p>
++  </div>
++</div>
++
++<!-- ===== [JS] 本体のメイン <script> の後ろ、</body> の直前に貼る ===== -->
++<script>
++(function(){
++  "use strict";
++
++  // .ics の配信先。GitHub Pages のパスに合わせる。
++  var FEED_BASE = "https://aikatsu-info.github.io/aikatsu-calendar/calendar/";
++
++  // build_ics.py の FEEDS と対応。増やす場合は両方に足すこと。
++  var FEEDS = [
++    { slug:"aikatsu-all",         label:"すべて",       desc:"イベント・グッズ・配信・誕生日・周年をすべて含みます。" },
++    { slug:"aikatsu-nobirthday",  label:"誕生日以外",   desc:"誕生日と周年を除いた、イベント／グッズ／配信などの予定だけを購読します。" },
++    { slug:"aikatsu-event",       label:"イベント",     desc:"ライブ・上映会・POP UP SHOP などのイベントのみ。" },
++    { slug:"aikatsu-goods",       label:"グッズ",       desc:"グッズの発売日・予約開始／締切のみ。" },
++    { slug:"aikatsu-game",        label:"アンコール",   desc:"『アイカツ！アンコール』関連の予定のみ。" },
++    { slug:"aikatsu-birthday",    label:"誕生日",       desc:"キャラクターの誕生日のみ（毎年繰り返し）。" }
++  ];
++
++  var current = FEEDS[0];
++
++  var btn        = document.getElementById("subscribeBtn");
++  var modal      = document.getElementById("subModal");
++  var panel      = document.getElementById("subModalPanel");
++  var closeBtn   = document.getElementById("subModalClose");
++  var feedsWrap  = document.getElementById("subFeeds");
++  var feedDesc   = document.getElementById("subFeedDesc");
++  var urlInput   = document.getElementById("subUrlInput");
++  var copyBtn    = document.getElementById("subCopyBtn");
++  var aGoogle    = document.getElementById("subGoogle");
++  var aApple     = document.getElementById("subApple");
++  var aOutlook   = document.getElementById("subOutlook");
++  var aDownload  = document.getElementById("subDownload");
++  if(!btn || !modal) return;
++
++  var lastFocused = null;
++
++  function httpsUrl(feed){ return FEED_BASE + feed.slug + ".ics"; }
++  function webcalUrl(feed){ return httpsUrl(feed).replace(/^https?:/, "webcal:"); }
++
++  function applyFeed(feed){
++    current = feed;
++    var https = httpsUrl(feed);
++    var webcal = webcalUrl(feed);
++    urlInput.value = https;
++    // Google: cid にURLエンコードした https URL を渡す。
++    // /u/0/ は付けない（ログイン中のアカウント選択をユーザーに委ねるため）。
++    aGoogle.href = "https://calendar.google.com/calendar/render?cid=" + encodeURIComponent(https);
++    aApple.href = webcal;
++    aOutlook.href = "https://outlook.live.com/calendar/0/addfromweb?url=" +
++      encodeURIComponent(https) + "&name=" + encodeURIComponent("アイカツ！情報カレンダー");
++    aDownload.href = https;
++    aDownload.setAttribute("download", feed.slug + ".ics");
++    feedDesc.textContent = feed.desc;
++    Array.prototype.forEach.call(feedsWrap.children, function(b){
++      b.setAttribute("aria-pressed", String(b.dataset.slug === feed.slug));
++    });
++    copyBtn.classList.remove("copied");
++    copyBtn.textContent = "コピー";
++  }
++
++  FEEDS.forEach(function(feed){
++    var b = document.createElement("button");
++    b.type = "button";
++    b.className = "sub-feed-btn";
++    b.dataset.slug = feed.slug;
++    b.textContent = feed.label;
++    b.setAttribute("aria-pressed", "false");
++    b.addEventListener("click", function(){ applyFeed(feed); });
++    feedsWrap.appendChild(b);
++  });
++  applyFeed(FEEDS[0]);
++
++  function openModal(){
++    lastFocused = document.activeElement;
++    modal.hidden = false;
++    document.body.style.overflow = "hidden";
++    closeBtn.focus();
++    document.addEventListener("keydown", onKeydown, true);
++  }
++  function closeModal(){
++    modal.hidden = true;
++    document.body.style.overflow = "";
++    document.removeEventListener("keydown", onKeydown, true);
++    if(lastFocused && lastFocused.focus) lastFocused.focus();
++  }
++  function onKeydown(e){
++    if(e.key === "Escape"){ e.preventDefault(); closeModal(); return; }
++    if(e.key !== "Tab") return;
++    var f = panel.querySelectorAll('a[href], button:not([disabled]), input, [tabindex]:not([tabindex="-1"])');
++    if(!f.length) return;
++    var first = f[0], last = f[f.length - 1];
++    if(e.shiftKey && document.activeElement === first){ e.preventDefault(); last.focus(); }
++    else if(!e.shiftKey && document.activeElement === last){ e.preventDefault(); first.focus(); }
++  }
++
++  btn.addEventListener("click", openModal);
++  closeBtn.addEventListener("click", closeModal);
++  modal.addEventListener("click", function(e){ if(e.target === modal) closeModal(); });
++
++  copyBtn.addEventListener("click", function(){
++    var text = urlInput.value;
++    function done(){
++      copyBtn.textContent = "コピーしました";
++      copyBtn.classList.add("copied");
++      setTimeout(function(){ copyBtn.textContent = "コピー"; copyBtn.classList.remove("copied"); }, 1800);
++    }
++    if(navigator.clipboard && navigator.clipboard.writeText){
++      navigator.clipboard.writeText(text).then(done, fallback);
++    } else { fallback(); }
++    function fallback(){
++      urlInput.focus();
++      urlInput.setSelectionRange(0, urlInput.value.length);
++      try{ document.execCommand("copy"); done(); }catch(e){ /* 手動選択に任せる */ }
++    }
++  });
++
++  // URLに #subscribe が付いていたら自動で開く（SNS等から誘導する用）
++  if(location.hash === "#subscribe") openModal();
++})();
++</script>

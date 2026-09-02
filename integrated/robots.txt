@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /web/
+
+Sitemap: https://aikatsu-info.github.io/aikatsu-calendar/sitemap.xml

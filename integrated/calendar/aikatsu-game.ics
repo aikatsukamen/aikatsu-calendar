@@ -1,0 +1,354 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//aikatsu-info//aikatsu-calendar//JA
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:アイカツ！アンコール
+X-WR-CALDESC:『アイカツ！アンコール』関連の予定
+X-WR-TIMEZONE:Asia/Tokyo
+REFRESH-INTERVAL;VALUE=DURATION:PT6H
+X-PUBLISHED-TTL:PT6H
+SOURCE;VALUE=URI:https://aikatsu-info.github.io/aikatsu-calendar/calendar/a
+ ikatsu-game.ics
+BEGIN:VEVENT
+UID:20260725-05@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20261001
+DTEND;VALUE=DATE:20261002
+SUMMARY:『アイカツ！アンコール』2026年10月より全国で順
+ 次稼働開始
+DESCRIPTION:バンダイのデータカードダス新筐体『アイカツ
+ ！アンコール』が、全国の玩具店・百貨店/量販店・ア
+ ミューズメント施設で順次稼働を開始します。新筐体
+ デザイン＆新カードデザインでの展開です。\n\n区分: 
+ アイカツ！アンコール\n日程表記: 2026年10月より順次稼
+ 働\n情報公開日: 2026-05-01\n情報源: ファミ通.com\n\nhttps://w
+ ww.famitsu.com/article/202605/73710\n\n― アイカツ！情報カレン
+ ダー（非公式ファンメイド）\nhttps://aikatsu-info.github.io/ai
+ katsu-calendar/
+URL:https://www.famitsu.com/article/202605/73710
+CATEGORIES:アイカツ！アンコール
+LAST-MODIFIED:20260725T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260725-07@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260615
+DTEND;VALUE=DATE:20260616
+SUMMARY:『アイカツ！アンコール』キービジュアル公開、
+ レジェンドコラボに橋本環奈さんが就任
+DESCRIPTION:DCD新作『アイカツ！アンコール』のキービジュ
+ アルが公開されました。レジェンドコラボパートナー
+ として女優の橋本環奈さんの就任が発表されています
+ （コラボの詳細は後日解禁予定）。\n\n区分: アイカツ
+ ！アンコール\n日程表記: 6月15日\n情報公開日: 2026-06-15\n
+ 情報源: X @aikatsu_dcd\n\nhttps://x.com/aikatsu_dcd/status/206632481274
+ 2488536\n\n― アイカツ！情報カレンダー（非公式ファン
+ メイド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://x.com/aikatsu_dcd/status/2066324812742488536
+CATEGORIES:アイカツ！アンコール
+LAST-MODIFIED:20260725T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260725-14@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260710
+DTEND;VALUE=DATE:20260711
+SUMMARY:『アイカツ！アンコール』キービジュアルを公開
+DESCRIPTION:DCD『アイカツ！アンコール』のキービジュアル
+ が新たに公開されました。\n\n区分: アイカツ！アンコ
+ ール\n日程表記: 7月10日 公開\n情報公開日: 2026-07-10\n情
+ 報源: X @aikatsu_dcd\n\nhttps://x.com/aikatsu_dcd/status/207538451131631
+ 6346\n\n― アイカツ！情報カレンダー（非公式ファンメ
+ イド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://x.com/aikatsu_dcd/status/2075384511316316346
+CATEGORIES:アイカツ！アンコール
+LAST-MODIFIED:20260725T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260725-20@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260713
+DTEND;VALUE=DATE:20260714
+SUMMARY:『アイカツ！アンコール』新カードデザインを順
+ 次公開中
+DESCRIPTION:2026年10月の稼働開始に向けて、新作カードのデ
+ ザインが順次公開されています。7月13日には『アイカ
+ ツ！』大空あかりの「オデットスワン」（1枚でフルコ
+ ーデが揃う『アンコールレア』カード）が公開されま
+ した。\n\n区分: アイカツ！アンコール\n日程表記: 6/22・
+ 7/6・7/13 順次公開\n情報公開日: 2026-07-13\n情報源: X @aikats
+ u_dcd\n\nhttps://x.com/aikatsu_dcd/status/2076471849291264025\n\n― ア
+ イカツ！情報カレンダー（非公式ファンメイド）\nhttps:
+ //aikatsu-info.github.io/aikatsu-calendar/
+URL:https://x.com/aikatsu_dcd/status/2076471849291264025
+CATEGORIES:アイカツ！アンコール
+LAST-MODIFIED:20260725T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260725-23@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260717
+DTEND;VALUE=DATE:20260718
+SUMMARY:『アイカツ！アンコール』機能紹介：マイキャラ
+ 作成機能を公開
+DESCRIPTION:アイカツパスを使って「かみがた」「めのいろ
+ 」などのパーツを選び、自分だけのマイキャラを作成
+ できる機能が紹介されました。\n\n区分: アイカツ！ア
+ ンコール\n日程表記: 7月17日 公開\n情報公開日: 2026-07-17\
+ n情報源: X @aikatsu_dcd\n\nhttps://x.com/aikatsu_dcd/status/20779212260
+ 18980056\n\n― アイカツ！情報カレンダー（非公式ファン
+ メイド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://x.com/aikatsu_dcd/status/2077921226018980056
+CATEGORIES:アイカツ！アンコール
+LAST-MODIFIED:20260725T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260731-26@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260731
+DTEND;VALUE=DATE:20260801
+SUMMARY:「アイカツアカデミー！カード」関連サービスの
+ 利用期限
+DESCRIPTION:カードショップでのデジタルカード販売、アイ
+ カツストアでのリアルカード交換販売、トレカツ機能
+ 、シリアルコード入力機能のご利用は、7月31日(金)23時5
+ 9分までとなりました。\n\n区分: アイカツ！アンコール\
+ n日程表記: 7月31日(金) 23:59 利用終了\n情報公開日: 2026-07
+ -31\n情報源: X @aikatsu_acad\n\nhttps://x.com/aikatsu_acad\n\n― ア
+ イカツ！情報カレンダー（非公式ファンメイド）\nhttps:
+ //aikatsu-info.github.io/aikatsu-calendar/
+URL:https://x.com/aikatsu_acad
+CATEGORIES:アイカツ！アンコール
+LAST-MODIFIED:20260731T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260803-01@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260803
+DTEND;VALUE=DATE:20260804
+SUMMARY:「アイカツアカデミー！カード」ダウンロード機
+ 能 提供開始
+DESCRIPTION:所持デジタルカードを画像（png）と音声データ
+ として一括ダウンロードできる機能が8月3日から提供開
+ 始。利用期間は9月30日23:59までで、10月1日以降は利用不
+ 可となる。\n\n区分: アイカツ！アンコール\n日程表記: 8
+ 月3日(月) 提供開始（利用期限は9月30日23:59まで）\n情報
+ 公開日: 2026-03-28\n情報源: アイカツアカデミー！公式サ
+ イト\n\nhttps://aikatsu-academy.com/2026/08/03/demica-dl-release/\n\n―
+  アイカツ！情報カレンダー（非公式ファンメイド）\nht
+ tps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://aikatsu-academy.com/2026/08/03/demica-dl-release/
+CATEGORIES:アイカツ！アンコール
+LAST-MODIFIED:20260803T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260803-22@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260930
+DTEND;VALUE=DATE:20261001
+SUMMARY:「アイカツアカデミー！カード」ダウンロード機
+ 能 利用期限（終了）
+DESCRIPTION:所持デジタルカードを画像（png）と音声データ
+ として一括ダウンロードできる機能が8月3日から提供開
+ 始。利用期間は9月30日23:59までで、10月1日以降は利用不
+ 可となる。\n\n区分: アイカツ！アンコール\n日程表記: 9
+ 月30日(水)23:59 利用期限（デミカダウンロード・アルバ
+ ム閲覧終了）\n情報公開日: 2026-03-28\n情報源: アイカツ
+ アカデミー！公式サイト\n\nhttps://aikatsu-academy.com/2026/08/0
+ 3/demica-dl-release/\n\n― アイカツ！情報カレンダー（非公
+ 式ファンメイド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://aikatsu-academy.com/2026/08/03/demica-dl-release/
+CATEGORIES:アイカツ！アンコール
+LAST-MODIFIED:20260803T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260807-01@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260829
+DTEND;VALUE=DATE:20260830
+SUMMARY:『アイカツ！アンコール』TOKYOおもちゃショー2026 
+ 先行試遊コーナー開催開始
+DESCRIPTION:DCD『アイカツ！アンコール』がTOKYOおもちゃシ
+ ョー2026に出展。ブースでは1弾の先行試遊コーナー（カ
+ ード排出なし）のほか、アイカツ！はじめようセット
+ （アイカツパス・プロモーションカード・ガイドBOOK）
+ や特製うちわ、特製シール付冊子の来場者プレゼント
+ を実施。1弾カードの展示や初解禁情報の公開も準備中
+ とのこと。\n\n区分: アイカツ！アンコール\n日程表記: 8
+ 月29日(土) 9:00〜17:00 開催開始（〜8月30日）\n情報公開日
+ : 2026-08-07\n情報源: X @aikatsu_dcd\n\nhttps://x.com/aikatsu_dcd\n\n
+ ― アイカツ！情報カレンダー（非公式ファンメイド）\
+ nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://x.com/aikatsu_dcd
+CATEGORIES:アイカツ！アンコール
+LAST-MODIFIED:20260807T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260807-02@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260830
+DTEND;VALUE=DATE:20260831
+SUMMARY:『アイカツ！アンコール』TOKYOおもちゃショー2026 
+ 先行試遊コーナー開催終了
+DESCRIPTION:DCD『アイカツ！アンコール』TOKYOおもちゃショ
+ ー2026出展の最終日。参加にはTOKYOおもちゃショー2026の
+ チケットが必要（中学生以下無料）、体験は無料で1回1
+ プレイのみ。\n\n区分: アイカツ！アンコール\n日程表記
+ : 8月30日(日) 9:00〜16:00 開催終了\n情報公開日: 2026-08-07\n
+ 情報源: X @aikatsu_dcd\n\nhttps://x.com/aikatsu_dcd\n\n― アイカツ
+ ！情報カレンダー（非公式ファンメイド）\nhttps://aikatsu
+ -info.github.io/aikatsu-calendar/
+URL:https://x.com/aikatsu_dcd
+CATEGORIES:アイカツ！アンコール
+LAST-MODIFIED:20260807T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260827-01@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260827
+DTEND;VALUE=DATE:20260828
+SUMMARY:『アイカツ！アンコール』公式サイトリニューア
+ ル、旧カード対応FAQを公開
+DESCRIPTION:10月稼働開始に向けて公式サイトをリニューア
+ ルし、ゲーム内容・サービスに関するFAQを公開。従来
+ のデータカードダスのカードは一部を除き新筐体でも
+ 引き続き使用可能（使用不可・動作保証外のカードも
+ 一部あり）。ただし従来の学生証（ICカード）・アイド
+ ルライセンス・デジタルアイドルライセンスは使用不
+ 可で、アンコールステージで遊ぶには『アイカツ！ア
+ ンコール』の新カードを最低1枚スキャンする必要があ
+ る。\n\n区分: アイカツ！アンコール\n日程表記: 8月27日 
+ 公式サイトリニューアル・FAQ公開\n情報公開日: 2026-08-27
+ \n情報源: でんふぁみこがめん\n\nhttps://news.denfaminicogamer.
+ jp/news/2608273v\n\n― アイカツ！情報カレンダー（非公式
+ ファンメイド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://news.denfaminicogamer.jp/news/2608273v
+CATEGORIES:アイカツ！アンコール
+LAST-MODIFIED:20260827T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260827-08@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260827
+DTEND;VALUE=DATE:20260828
+SUMMARY:『アイカツ！アンコール』橋本環奈さんとのコラ
+ ボCM公開
+DESCRIPTION:データカードダス『アイカツ！アンコール』の
+ レジェンドコラボパートナー・橋本環奈さんとのコラ
+ ボCMが解禁。\n\n区分: アイカツ！アンコール\n日程表記:
+  8月27日 コラボCM公開\n情報公開日: 2026-08-27\n情報源: X @a
+ ikatsu_dcd\n\nhttps://x.com/aikatsu_dcd/status/2092779243054985331\n\n― 
+ アイカツ！情報カレンダー（非公式ファンメイド）\nhtt
+ ps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://x.com/aikatsu_dcd/status/2092779243054985331
+CATEGORIES:アイカツ！アンコール
+LAST-MODIFIED:20260827T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260827-09@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260827
+DTEND;VALUE=DATE:20260828
+SUMMARY:『アイカツ！アンコール』1弾プロモーションビデ
+ オを公開
+DESCRIPTION:2026年10月スタートのデータカードダス『アイカ
+ ツ！アンコール』1弾のプロモーションビデオが公開さ
+ れた。\n\n区分: アイカツ！アンコール\n日程表記: 8月27
+ 日 プロモーションビデオ公開\n情報公開日: 2026-08-27\n情
+ 報源: X @aikatsu_dcd\n\nhttps://x.com/aikatsu_dcd/status/209285751660266
+ 3004\n\n― アイカツ！情報カレンダー（非公式ファンメ
+ イド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://x.com/aikatsu_dcd/status/2092857516602663004
+CATEGORIES:アイカツ！アンコール
+LAST-MODIFIED:20260827T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260901-01@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20261008
+DTEND;VALUE=DATE:20261009
+SUMMARY:『アイカツ！アンコール』10月8日 全国稼働開始
+DESCRIPTION:データカードダス『アイカツ！アンコール』が
+ 2026年10月8日（木）より全国の玩具店・百貨店/量販店・
+ アミューズメント施設等で稼働を開始します。「アイ
+ カツ！システム」を再現した新筐体デザイン＆新カー
+ ドデザインでの展開です。\n\n区分: アイカツ！アンコ
+ ール\n日程表記: 10月8日(木) 稼働開始\n情報公開日: 2026-0
+ 9-01\n情報源: 電撃オンライン\n\nhttps://dengekionline.com/articl
+ e/202605/73714\n\n― アイカツ！情報カレンダー（非公式フ
+ ァンメイド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://dengekionline.com/article/202605/73714
+CATEGORIES:アイカツ！アンコール
+LAST-MODIFIED:20260901T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260901-04@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260901
+DTEND;VALUE=DATE:20260902
+SUMMARY:『アイカツ！アンコール』「アイカツ！はじめよ
+ う」プレゼントキャンペーンページ公開
+DESCRIPTION:公式サイトのHP更新で、初心者向けの「アイカ
+ ツ！はじめよう」プレゼントキャンペーンページが公
+ 開。あわせて「アイカツ！アンコール 1弾特集」ページ
+ も公開された。\n\n区分: アイカツ！アンコール\n日程表
+ 記: 9月1日 公開\n情報公開日: 2026-09-01\n情報源: X @aikatsu_d
+ cd\n\nhttps://dcd.aikatsu.com/encore/\n\n― アイカツ！情報カレ
+ ンダー（非公式ファンメイド）\nhttps://aikatsu-info.github.io
+ /aikatsu-calendar/
+URL:https://dcd.aikatsu.com/encore/
+CATEGORIES:アイカツ！アンコール
+LAST-MODIFIED:20260901T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260901-05@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260901
+DTEND;VALUE=DATE:20260902
+SUMMARY:『アイカツ！アンコール』機能紹介：アイカツパ
+ スの作り方を公開
+DESCRIPTION:公式サイトのHP更新で、「アイカツパスを作ろ
+ う！」ページが公開。10月8日の全国稼働開始に向け、
+ アイカツパス（学生証）の作成方法を紹介。\n\n区分: 
+ アイカツ！アンコール\n日程表記: 9月1日 公開\n情報公
+ 開日: 2026-09-01\n情報源: X @aikatsu_dcd\n\nhttps://dcd.aikatsu.com/e
+ ncore/\n\n― アイカツ！情報カレンダー（非公式ファンメ
+ イド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://dcd.aikatsu.com/encore/
+CATEGORIES:アイカツ！アンコール
+LAST-MODIFIED:20260901T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>カレンダー購読UI デモ — アイカツ！情報カレンダー</title>
+<style>
+  /* ここは本体 aikatsu_calendar.html から持ってきた最小限のトークン。
+     本番に組み込むときはこのブロックは不要（本体の :root をそのまま使う）。 */
+  :root{
+    --bg:#fff6f9; --surface:#ffffff; --surface-muted:#fff0f6;
+    --ink:#2a1b28; --ink-soft:#7c6072; --ink-faint:#a98fa0; --line:#f4d9e6;
+    --accent:#e0176c; --accent-soft:#ffe1ee; --accent-contrast:#ffffff;
+    --shadow: 0 18px 40px -22px rgba(224,23,108,.35);
+    --font-gothic:"Hiragino Sans","Yu Gothic UI","YuGothic","Noto Sans JP",system-ui,-apple-system,sans-serif;
+    --font-round:"M PLUS Rounded 1c","Zen Maru Gothic","Hiragino Maru Gothic ProN","Hiragino Sans",sans-serif;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#150e1c; --surface:#20152c; --surface-muted:#2a1c3a;
+      --ink:#f7edf4; --ink-soft:#c3aac0; --ink-faint:#8a7290; --line:#3c2a4c;
+      --accent:#ff6fac; --accent-soft:#3a1f34; --accent-contrast:#1b0f18;
+      --shadow: 0 18px 40px -20px rgba(0,0,0,.6);
+    }
+  }
+  body{ margin:0; background:var(--bg); color:var(--ink); font-family:var(--font-gothic); }
+  .page{ max-width:960px; margin:0 auto; padding:24px 16px 80px; }
+  .demo-note{ background:var(--surface-muted); border:1px dashed var(--line); border-radius:12px;
+    padding:12px 14px; font-size:13px; color:var(--ink-soft); line-height:1.7; margin-bottom:20px; }
+  .demo-note code{ font-size:12px; }
+  header.top{ display:flex; gap:12px; align-items:center; margin-bottom:16px; }
+  header.top h1{ font-family:var(--font-round); font-size:20px; margin:0; }
+  .tabs-row{ display:flex; align-items:center; justify-content:space-between; gap:8px;
+    border-bottom:1px solid var(--line); padding-bottom:8px; margin-bottom:24px; }
+  .tabs{ display:flex; gap:6px; }
+  .tab-btn{ background:none; border:0; padding:8px 14px; border-radius:999px 999px 0 0;
+    font:inherit; font-size:14px; color:var(--ink-soft); cursor:pointer; }
+  .tab-btn[aria-selected="true"]{ color:var(--accent); font-weight:700; }
+</style>
+
+<!-- SUBSCRIBE:CSS:START -->
+<style>
+  /* ===== カレンダー購読ボタン / モーダル ===== */
+  /* サイズ感は .tab-btn（12px / パディング 7px 15px）に合わせてある */
+  .subscribe-btn{
+    appearance:none; display:inline-flex; align-items:center; gap:6px;
+    background:var(--accent); color:var(--accent-contrast);
+    border:1px solid var(--accent); border-radius:999px; padding:7px 14px;
+    font:inherit; font-family:var(--font-gothic); font-size:12px; font-weight:700; line-height:1;
+    cursor:pointer; white-space:nowrap;
+    transition:filter .15s ease;
+  }
+  .subscribe-btn:hover{ filter:brightness(1.06); }
+  .subscribe-btn:focus-visible{ outline:2px solid var(--accent); outline-offset:2px; }
+  .subscribe-btn svg{ width:14px; height:14px; }
+  @media (max-width:520px){
+    .subscribe-btn{ padding:6px 11px; font-size:10.5px; }
+    .subscribe-btn svg{ width:13px; height:13px; }
+    .subscribe-btn .subscribe-btn-label{ display:none; }
+  }
+
+  .sub-modal[hidden]{ display:none; }
+  .sub-modal{
+    position:fixed; inset:0; z-index:1000;
+    display:flex; align-items:center; justify-content:center;
+    padding:16px; background:rgba(0,0,0,.5);
+    overscroll-behavior:contain;
+  }
+  .sub-modal-panel{
+    background:var(--surface); color:var(--ink);
+    border:1px solid var(--line); border-radius:18px;
+    box-shadow:var(--shadow);
+    width:min(520px, 100%); max-height:calc(100dvh - 32px); overflow:auto;
+    padding:20px 20px 22px;
+  }
+  .sub-modal-head{ display:flex; align-items:flex-start; justify-content:space-between; gap:12px; margin-bottom:4px; }
+  .sub-modal-title{ font-family:var(--font-round); font-size:17px; font-weight:700; margin:0; }
+  .sub-modal-close{
+    background:none; border:0; color:var(--ink-faint); font-size:22px; line-height:1;
+    padding:4px 8px; cursor:pointer; border-radius:8px;
+  }
+  .sub-modal-close:hover{ background:var(--surface-muted); color:var(--ink); }
+  .sub-lead{ font-size:12.5px; color:var(--ink-soft); line-height:1.7; margin:0 0 14px; }
+
+  .sub-section-label{ font-size:12px; font-weight:700; color:var(--ink-soft); margin:16px 0 8px; }
+  .sub-feeds{ display:flex; flex-wrap:wrap; gap:6px; }
+  .sub-feed-btn{
+    background:var(--surface-muted); color:var(--ink-soft);
+    border:1px solid var(--line); border-radius:999px;
+    padding:6px 12px; font:inherit; font-size:12.5px; cursor:pointer;
+  }
+  .sub-feed-btn[aria-pressed="true"]{
+    background:var(--accent-soft); color:var(--accent); border-color:var(--accent); font-weight:700;
+  }
+  .sub-feed-desc{ font-size:12px; color:var(--ink-faint); margin:8px 0 0; line-height:1.6; min-height:1.6em; }
+
+  .sub-actions{ display:grid; gap:8px; margin-top:6px; }
+  .sub-action{
+    display:flex; align-items:center; gap:10px;
+    background:var(--surface-muted); color:var(--ink);
+    border:1px solid var(--line); border-radius:12px;
+    padding:11px 13px; font:inherit; font-size:13.5px; font-weight:600;
+    text-decoration:none; cursor:pointer;
+  }
+  .sub-action:hover{ border-color:var(--accent); }
+  .sub-action .sub-action-sub{ display:block; font-size:11.5px; font-weight:400; color:var(--ink-faint); margin-top:2px; }
+  .sub-action-ico{ flex:0 0 22px; width:22px; height:22px; display:grid; place-items:center; }
+  .sub-action-ico svg{ width:20px; height:20px; }
+  .sub-action-body{ flex:1 1 auto; min-width:0; }
+
+  .sub-url-row{ display:flex; gap:6px; align-items:stretch; }
+  .sub-url-input{
+    flex:1 1 auto; min-width:0;
+    background:var(--surface-muted); color:var(--ink-soft);
+    border:1px solid var(--line); border-radius:10px;
+    padding:9px 11px; font-size:12px; font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+  }
+  .sub-url-input:focus{ outline:2px solid var(--accent); outline-offset:1px; color:var(--ink); }
+  .sub-copy-btn{
+    flex:0 0 auto; background:var(--accent); color:var(--accent-contrast);
+    border:0; border-radius:10px; padding:0 14px; font:inherit; font-size:12.5px; font-weight:700; cursor:pointer;
+  }
+  .sub-copy-btn:hover{ filter:brightness(1.06); }
+  .sub-copy-btn.copied{ background:var(--surface-muted); color:var(--accent); border:1px solid var(--accent); }
+  .sub-hint{ font-size:11.5px; color:var(--ink-faint); line-height:1.7; margin:10px 0 0; }
+  .sub-hint a{ color:var(--accent); }
+</style>
+<!-- SUBSCRIBE:CSS:END -->
+</head>
+<body>
+<div class="page">
+
+  <div class="demo-note">
+    <strong>これは実証用のデモページです。</strong><br>
+    右上の「カレンダー購読」ボタンから、購読モーダルの挙動を確認できます。<br>
+    本番では <code>&lt;!-- SUBSCRIBE:CSS --&gt;</code> / <code>&lt;!-- SUBSCRIBE:HTML --&gt;</code> / <code>&lt;!-- SUBSCRIBE:JS --&gt;</code>
+    の3ブロックを <code>aikatsu_calendar.html</code> に貼り付けます（詳細は <code>docs/HANDOFF.md</code>）。<br>
+    リンク先の .ics はまだ存在しないため、押しても 404 になります。
+  </div>
+
+  <header class="top">
+    <svg width="40" height="40" viewBox="0 0 48 48" aria-hidden="true">
+      <circle cx="24" cy="24" r="23" fill="var(--accent-soft)"/>
+      <path d="M24 9 L27.2 20.2 L38.8 21.5 L28.8 28.3 L31.6 39.5 L24 32.4 L16.4 39.5 L19.2 28.3 L9.2 21.5 L20.8 20.2 Z" fill="var(--accent)"/>
+    </svg>
+    <h1>アイカツ！情報カレンダー</h1>
+  </header>
+
+  <div class="tabs-row">
+    <div class="tabs" role="tablist" aria-label="表示切り替え">
+      <button class="tab-btn" role="tab" aria-selected="true">カレンダー</button>
+      <button class="tab-btn" role="tab" aria-selected="false">トピックス</button>
+    </div>
+
+    <!-- SUBSCRIBE:HTML:START -->
+    <button class="subscribe-btn" id="subscribeBtn" type="button" aria-haspopup="dialog" aria-label="カレンダー購読" title="カレンダーアプリで購読">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 14v4M10 16h4"/>
+      </svg>
+      <span class="subscribe-btn-label">カレンダー購読</span>
+    </button>
+    <!-- SUBSCRIBE:HTML:END -->
+  </div>
+
+  <p style="color:var(--ink-faint);font-size:13px;">（ここに本体のカレンダーが入ります）</p>
+</div>
+
+<!-- SUBSCRIBE:MODAL:START -->
+<div class="sub-modal" id="subModal" role="dialog" aria-modal="true" aria-labelledby="subModalTitle" hidden>
+  <div class="sub-modal-panel" id="subModalPanel">
+    <div class="sub-modal-head">
+      <h2 class="sub-modal-title" id="subModalTitle">カレンダーを購読する</h2>
+      <button class="sub-modal-close" id="subModalClose" type="button" aria-label="閉じる">×</button>
+    </div>
+    <p class="sub-lead">
+      お使いのカレンダーアプリに登録すると、イベントやグッズの予定が自動で追加され、更新も反映されます。
+    </p>
+
+    <div class="sub-section-label">1. 購読する内容を選ぶ</div>
+    <div class="sub-feeds" id="subFeeds" role="group" aria-label="購読する内容"></div>
+    <p class="sub-feed-desc" id="subFeedDesc"></p>
+
+    <div class="sub-section-label">2. 追加する</div>
+    <div class="sub-actions">
+      <a class="sub-action" id="subGoogle" href="#" target="_blank" rel="noopener">
+        <span class="sub-action-ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18"/>
+          </svg>
+        </span>
+        <span class="sub-action-body">Google カレンダーに追加
+          <span class="sub-action-sub">Googleカレンダーの追加画面が開きます</span>
+        </span>
+      </a>
+      <a class="sub-action" id="subApple" href="#">
+        <span class="sub-action-ico">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M16.7 12.9c0-2.2 1.8-3.3 1.9-3.4-1-1.5-2.6-1.7-3.2-1.7-1.4-.1-2.7.8-3.3.8-.7 0-1.7-.8-2.8-.8-1.5 0-2.8.8-3.6 2.1-1.5 2.6-.4 6.5 1.1 8.6.7 1 1.6 2.2 2.7 2.1 1.1 0 1.5-.7 2.8-.7s1.7.7 2.8.7c1.2 0 1.9-1 2.6-2.1.8-1.2 1.2-2.3 1.2-2.4-.1 0-2.2-.9-2.2-3.2zM14.6 5.9c.6-.7 1-1.7.9-2.7-.9 0-2 .6-2.6 1.3-.5.6-1 1.6-.9 2.6 1 .1 2-.5 2.6-1.2z"/>
+          </svg>
+        </span>
+        <span class="sub-action-body">iPhone・iPad・Mac に追加
+          <span class="sub-action-sub">標準の「カレンダー」アプリが開きます</span>
+        </span>
+      </a>
+      <a class="sub-action" id="subOutlook" href="#" target="_blank" rel="noopener">
+        <span class="sub-action-ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/>
+          </svg>
+        </span>
+        <span class="sub-action-body">Outlook.com に追加
+          <span class="sub-action-sub">Web版Outlookの購読画面が開きます</span>
+        </span>
+      </a>
+      <a class="sub-action" id="subDownload" href="#" download>
+        <span class="sub-action-ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 3v12M7 11l5 5 5-5M4 20h16"/>
+          </svg>
+        </span>
+        <span class="sub-action-body">.ics ファイルをダウンロード
+          <span class="sub-action-sub">1回きりの取り込み用（自動更新はされません）</span>
+        </span>
+      </a>
+    </div>
+
+    <div class="sub-section-label">手動で登録する（URLをコピー）</div>
+    <div class="sub-url-row">
+      <input class="sub-url-input" id="subUrlInput" type="text" readonly spellcheck="false" aria-label="購読用URL">
+      <button class="sub-copy-btn" id="subCopyBtn" type="button">コピー</button>
+    </div>
+    <p class="sub-hint">
+      Googleアカウントを複数お使いの場合は、上のボタンだと意図しないアカウントに追加されることがあります。
+      その場合はこのURLをコピーして、追加したいアカウントの Googleカレンダー →
+      「他のカレンダー」＋ → 「URLで追加」に貼り付けてください。
+    </p>
+    <p class="sub-hint">
+      ※ 非公式のファンメイドカレンダーです。予定は変更・中止される場合があるため、最終的な情報は各公式サイトでご確認ください。
+    </p>
+  </div>
+</div>
+<!-- SUBSCRIBE:MODAL:END -->
+
+<!-- SUBSCRIBE:JS:START -->
+<script>
+(function(){
+  "use strict";
+
+  // .ics の配信先。GitHub Pages のパスに合わせる。
+  var FEED_BASE = "https://aikatsu-info.github.io/aikatsu-calendar/calendar/";
+
+  // build_ics.py の FEEDS と対応。増やす場合は両方に足すこと。
+  var FEEDS = [
+    { slug:"aikatsu-all",         label:"すべて",       desc:"イベント・グッズ・配信・誕生日・周年をすべて含みます。" },
+    { slug:"aikatsu-nobirthday",  label:"誕生日以外",   desc:"誕生日と周年を除いた、イベント／グッズ／配信などの予定だけを購読します。" },
+    { slug:"aikatsu-event",       label:"イベント",     desc:"ライブ・上映会・POP UP SHOP などのイベントのみ。" },
+    { slug:"aikatsu-goods",       label:"グッズ",       desc:"グッズの発売日・予約開始／締切のみ。" },
+    { slug:"aikatsu-game",        label:"アンコール",   desc:"『アイカツ！アンコール』関連の予定のみ。" },
+    { slug:"aikatsu-birthday",    label:"誕生日",       desc:"キャラクターの誕生日のみ（毎年繰り返し）。" }
+  ];
+
+  var current = FEEDS[0];
+
+  var btn        = document.getElementById("subscribeBtn");
+  var modal      = document.getElementById("subModal");
+  var panel      = document.getElementById("subModalPanel");
+  var closeBtn   = document.getElementById("subModalClose");
+  var feedsWrap  = document.getElementById("subFeeds");
+  var feedDesc   = document.getElementById("subFeedDesc");
+  var urlInput   = document.getElementById("subUrlInput");
+  var copyBtn    = document.getElementById("subCopyBtn");
+  var aGoogle    = document.getElementById("subGoogle");
+  var aApple     = document.getElementById("subApple");
+  var aOutlook   = document.getElementById("subOutlook");
+  var aDownload  = document.getElementById("subDownload");
+  if(!btn || !modal) return;
+
+  var lastFocused = null;
+
+  function httpsUrl(feed){ return FEED_BASE + feed.slug + ".ics"; }
+  function webcalUrl(feed){ return httpsUrl(feed).replace(/^https?:/, "webcal:"); }
+
+  function applyFeed(feed){
+    current = feed;
+    var https = httpsUrl(feed);
+    var webcal = webcalUrl(feed);
+    urlInput.value = https;
+    // Google: cid にURLエンコードした https URL を渡す。
+    // /u/0/ は付けない（ログイン中のアカウント選択をユーザーに委ねるため）。
+    aGoogle.href = "https://calendar.google.com/calendar/render?cid=" + encodeURIComponent(https);
+    aApple.href = webcal;
+    aOutlook.href = "https://outlook.live.com/calendar/0/addfromweb?url=" +
+      encodeURIComponent(https) + "&name=" + encodeURIComponent("アイカツ！情報カレンダー");
+    aDownload.href = https;
+    aDownload.setAttribute("download", feed.slug + ".ics");
+    feedDesc.textContent = feed.desc;
+    Array.prototype.forEach.call(feedsWrap.children, function(b){
+      b.setAttribute("aria-pressed", String(b.dataset.slug === feed.slug));
+    });
+    copyBtn.classList.remove("copied");
+    copyBtn.textContent = "コピー";
+  }
+
+  FEEDS.forEach(function(feed){
+    var b = document.createElement("button");
+    b.type = "button";
+    b.className = "sub-feed-btn";
+    b.dataset.slug = feed.slug;
+    b.textContent = feed.label;
+    b.setAttribute("aria-pressed", "false");
+    b.addEventListener("click", function(){ applyFeed(feed); });
+    feedsWrap.appendChild(b);
+  });
+  applyFeed(FEEDS[0]);
+
+  function openModal(){
+    lastFocused = document.activeElement;
+    modal.hidden = false;
+    document.body.style.overflow = "hidden";
+    closeBtn.focus();
+    document.addEventListener("keydown", onKeydown, true);
+  }
+  function closeModal(){
+    modal.hidden = true;
+    document.body.style.overflow = "";
+    document.removeEventListener("keydown", onKeydown, true);
+    if(lastFocused && lastFocused.focus) lastFocused.focus();
+  }
+  function onKeydown(e){
+    if(e.key === "Escape"){ e.preventDefault(); closeModal(); return; }
+    if(e.key !== "Tab") return;
+    var f = panel.querySelectorAll('a[href], button:not([disabled]), input, [tabindex]:not([tabindex="-1"])');
+    if(!f.length) return;
+    var first = f[0], last = f[f.length - 1];
+    if(e.shiftKey && document.activeElement === first){ e.preventDefault(); last.focus(); }
+    else if(!e.shiftKey && document.activeElement === last){ e.preventDefault(); first.focus(); }
+  }
+
+  btn.addEventListener("click", openModal);
+  closeBtn.addEventListener("click", closeModal);
+  modal.addEventListener("click", function(e){ if(e.target === modal) closeModal(); });
+
+  copyBtn.addEventListener("click", function(){
+    var text = urlInput.value;
+    function done(){
+      copyBtn.textContent = "コピーしました";
+      copyBtn.classList.add("copied");
+      setTimeout(function(){ copyBtn.textContent = "コピー"; copyBtn.classList.remove("copied"); }, 1800);
+    }
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(text).then(done, fallback);
+    } else { fallback(); }
+    function fallback(){
+      urlInput.focus();
+      urlInput.setSelectionRange(0, urlInput.value.length);
+      try{ document.execCommand("copy"); done(); }catch(e){ /* 手動選択に任せる */ }
+    }
+  });
+
+  // URLに #subscribe が付いていたら自動で開く（SNS等から誘導する用）
+  if(location.hash === "#subscribe") openModal();
+})();
+</script>
+<!-- SUBSCRIBE:JS:END -->
+</body>
+</html>

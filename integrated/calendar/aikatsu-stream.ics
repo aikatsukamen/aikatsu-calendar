@@ -1,0 +1,218 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//aikatsu-info//aikatsu-calendar//JA
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:アイカツ！配信
+X-WR-CALDESC:配信番組・一挙配信などの予定
+X-WR-TIMEZONE:Asia/Tokyo
+REFRESH-INTERVAL;VALUE=DURATION:PT6H
+X-PUBLISHED-TTL:PT6H
+SOURCE;VALUE=URI:https://aikatsu-info.github.io/aikatsu-calendar/calendar/a
+ ikatsu-stream.ics
+BEGIN:VEVENT
+UID:20260619-01@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260711
+DTEND;VALUE=DATE:20260712
+SUMMARY:特別番組「オールアイカツ！ストリーミングアワ
+ ー」を配信
+DESCRIPTION:エリオントがMCを務める生配信番組「オールア
+ イカツ！ストリーミングアワー」が実施されました。
+ 『アイカツ！』1st〜2ndシーズンのプレミアムレアドレ
+ ス投票結果発表やスペシャルステージなどが行われま
+ した。\n\n区分: 配信\n日程表記: 7月11日(土) 20:00〜21:30\n
+ 情報公開日: 2026-06-19\n情報源: アイカツアカデミー！公
+ 式サイト\n\nhttps://aikatsu-academy.com/2026/06/19/streaming_hour/\n\n
+ ― アイカツ！情報カレンダー（非公式ファンメイド）\
+ nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://aikatsu-academy.com/2026/06/19/streaming_hour/
+CATEGORIES:配信
+LAST-MODIFIED:20260619T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260725-13@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260709
+DTEND;VALUE=DATE:20260710
+SUMMARY:配信部プレゼンテーションライブを無料公開
+DESCRIPTION:配信部によるプレゼンテーションライブの映像
+ が無料公開されました。\n\n区分: 配信\n日程表記: 7月9
+ 日 公開\n情報公開日: 2026-07-09\n情報源: アイカツ！ポー
+ タル\n\nhttps://www.aikatsu.net/portal/topics/topics.php?id=23868\n\n―
+  アイカツ！情報カレンダー（非公式ファンメイド）\nht
+ tps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://www.aikatsu.net/portal/topics/topics.php?id=23868
+CATEGORIES:配信
+LAST-MODIFIED:20260725T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260725-25@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260816
+DTEND;VALUE=DATE:20260817
+SUMMARY:「2nd Anniversary LIVE」アーカイブ視聴チケットの購
+ 入期限
+DESCRIPTION:アイカツアカデミー！「2nd Anniversary LIVE」ライ
+ ブ＆アフタートークセットのアーカイブ視聴チケット
+ 購入は、8月16日(日)19:30までです。\n\n区分: 配信\n日程
+ 表記: 8月16日(日) 19:30 購入締切\n情報公開日: 2026-07-18\n
+ 情報源: X @aikatsu_acad\n\nhttps://x.com/aikatsu_acad\n\n― アイカ
+ ツ！情報カレンダー（非公式ファンメイド）\nhttps://aika
+ tsu-info.github.io/aikatsu-calendar/
+URL:https://x.com/aikatsu_acad
+CATEGORIES:配信
+LAST-MODIFIED:20260725T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260731-24@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260731
+DTEND;VALUE=DATE:20260801
+SUMMARY:「アイカツ！チャンネル」紅林珠璃 バースデーセ
+ レクション プレミア公開
+DESCRIPTION:紅林珠璃の誕生日を記念し、彼女のアイドル活
+ 動が印象的なエピソード計2話をセレクトした特集がア
+ イカツ！チャンネルでプレミア公開されました。\n\n区
+ 分: 配信\n日程表記: 7月31日(金) 20時 プレミア公開\n情報
+ 公開日: 2026-07-31\n情報源: X @aikatsu_anime\n\nhttps://x.com/aikats
+ u_anime\n\n― アイカツ！情報カレンダー（非公式ファン
+ メイド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://x.com/aikatsu_anime
+CATEGORIES:配信
+LAST-MODIFIED:20260731T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260731-27@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260802
+DTEND;VALUE=DATE:20260803
+SUMMARY:「アイカツアカデミー！2nd Anniversary LIVE」みどこ
+ ろ紹介 生配信
+DESCRIPTION:配信視聴チケット販売中の「アイカツアカデミ
+ ー！2nd Anniversary LIVE」のみどころを、エリオントによる
+ 生番組で紹介。\n\n区分: 配信\n日程表記: 8月2日(日) 20:00
+ 〜 生配信\n情報公開日: 2026-07-27\n情報源: X @aikatsu_acad\n\n
+ https://x.com/aikatsu_acad\n\n― アイカツ！情報カレンダー（
+ 非公式ファンメイド）\nhttps://aikatsu-info.github.io/aikatsu-cal
+ endar/
+URL:https://x.com/aikatsu_acad
+CATEGORIES:配信
+LAST-MODIFIED:20260731T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260801-05@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260201
+DTEND;VALUE=DATE:20260202
+SUMMARY:『アイカツ！×プリパラ THE MOVIE -出会いのキセキ
+ ！-』期間限定先行レンタル配信開始
+DESCRIPTION:各配信サービスにて、劇場公開作品の期間限定
+ 先行レンタル配信がスタート。\n\n区分: 配信\n日程表記
+ : 2026年2月1日(日) 配信開始\n情報公開日: 2026-01-26\n情報
+ 源: アイカツ！×プリパラ THE MOVIE 公式サイト\n\nhttps://ai
+ katsu-pripara-10movie.jp/\n\n― アイカツ！情報カレンダー（
+ 非公式ファンメイド）\nhttps://aikatsu-info.github.io/aikatsu-cal
+ endar/
+URL:https://aikatsu-pripara-10movie.jp/
+CATEGORIES:配信
+LAST-MODIFIED:20260801T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260816-01@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260816
+DTEND;VALUE=DATE:20260817
+SUMMARY:ABEMA『アイカツ！』全話無料一挙放送開始
+DESCRIPTION:ABEMA「アニメ毎週200作品無料祭」第3週『平成ガ
+ ールズアニメ特集』にて、TVアニメ『アイカツ！』1st〜
+ 4thシーズンと『劇場版アイカツ！』が全話無料一挙放
+ 送。放送後1週間は全話無料配信を継続。\n\n区分: 配信\
+ n日程表記: 8月16日(日) 深夜2時30分〜（ABEMA）\n情報公開
+ 日: 2026-08-14\n情報源: 電ファミニコゲーマー\n\nhttps://news
+ .denfaminicogamer.jp/news/260814v\n\n― アイカツ！情報カレンダ
+ ー（非公式ファンメイド）\nhttps://aikatsu-info.github.io/aikat
+ su-calendar/
+URL:https://news.denfaminicogamer.jp/news/260814v
+CATEGORIES:配信
+LAST-MODIFIED:20260816T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260827-10@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260827
+DTEND;VALUE=DATE:20260828
+SUMMARY:アイカツアカデミー！新PVを公開（TOKYOおもちゃシ
+ ョー2026）
+DESCRIPTION:本日より開催のTOKYOおもちゃショー2026『アイカ
+ ツ！アンコール』ブースにて、アイカツアカデミー！
+ の新プロジェクトPVが公開された。\n\n区分: 配信\n日程
+ 表記: 8月27日 新PV公開\n情報公開日: 2026-08-27\n情報源: X @
+ aikatsu_acad\n\nhttps://x.com/aikatsu_acad/status/2092796781193228616\n\n
+ ― アイカツ！情報カレンダー（非公式ファンメイド）\
+ nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://x.com/aikatsu_acad/status/2092796781193228616
+CATEGORIES:配信
+LAST-MODIFIED:20260827T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260827-11@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20260830
+DTEND;VALUE=DATE:20260831
+SUMMARY:アイカツアカデミー！エリオント×えのぐ 直前コ
+ ラボ配信決定
+DESCRIPTION:9月5日開催の「大絶響祭 2026 SUMMER 万里一空」を
+ 記念し、アイカツアカデミー！エリオントとえのぐの
+ 直前コラボ配信が決定。8月30日(日)19:00よりYouTubeで配信
+ 。\n\n区分: 配信\n日程表記: 8月30日(日) 19:00〜 配信\n情
+ 報公開日: 2026-08-24\n情報源: X @aikatsu_acad\n\nhttps://x.com/aika
+ tsu_acad/status/2091869888352825636\n\n― アイカツ！情報カレン
+ ダー（非公式ファンメイド）\nhttps://aikatsu-info.github.io/ai
+ katsu-calendar/
+URL:https://x.com/aikatsu_acad/status/2091869888352825636
+CATEGORIES:配信
+LAST-MODIFIED:20260827T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:20260901-03@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20261007
+DTEND;VALUE=DATE:20261008
+SUMMARY:特別番組「オールアイカツ！ストリーミングアワ
+ ー」第2回配信
+DESCRIPTION:「オールアイカツ！ストリーミングアワー」第
+ 2回が10月7日(水)20時より生配信。データカードダス『ア
+ イカツ！アンコール』のゲーム・カード紹介を中心に
+ 、アニメ情報や関連グッズ情報、参加型コーナー、ア
+ イドルによるミニステージなどが予定されています。\n
+ \n区分: 配信\n日程表記: 10月7日(水) 20:00〜 生配信\n情報
+ 公開日: 2026-09-01\n情報源: アイカツ！ポータル\n\nhttps://w
+ ww.aikatsu.net/portal/topics/topics.php?id=23752\n\n― アイカツ！情
+ 報カレンダー（非公式ファンメイド）\nhttps://aikatsu-info.
+ github.io/aikatsu-calendar/
+URL:https://www.aikatsu.net/portal/topics/topics.php?id=23752
+CATEGORIES:配信
+LAST-MODIFIED:20260901T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+END:VCALENDAR

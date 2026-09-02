@@ -1,0 +1,147 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//aikatsu-info//aikatsu-calendar//JA
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:アイカツ！周年
+X-WR-CALDESC:シリーズの周年記念日
+X-WR-TIMEZONE:Asia/Tokyo
+REFRESH-INTERVAL;VALUE=DURATION:PT6H
+X-PUBLISHED-TTL:PT6H
+SOURCE;VALUE=URI:https://aikatsu-info.github.io/aikatsu-calendar/calendar/a
+ ikatsu-anniversary.ics
+BEGIN:VEVENT
+UID:anv01@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20121008
+DTEND;VALUE=DATE:20121009
+RRULE:FREQ=YEARLY
+SUMMARY:🎉 アイカツ！ 放送開始記念日
+DESCRIPTION:2012年10月8日に放送が始まった『アイカツ！』
+ の放送開始記念日です。\n\n区分: 周年\n日程表記: 10月8
+ 日（毎年）\n情報公開日: 2026-07-30\n情報源: アイカツ！
+ ポータル\n\nhttps://www.aikatsu.net/portal/series/\n\n― アイカツ
+ ！情報カレンダー（非公式ファンメイド）\nhttps://aikatsu
+ -info.github.io/aikatsu-calendar/
+URL:https://www.aikatsu.net/portal/series/
+CATEGORIES:周年
+LAST-MODIFIED:20260730T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:anv02@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20141002
+DTEND;VALUE=DATE:20141003
+RRULE:FREQ=YEARLY
+SUMMARY:🎉 アイカツ！あかりGeneration 放送開始記念日
+DESCRIPTION:大空あかりが主人公の『アイカツ！』第3シー
+ ズン（あかりGeneration）が2014年10月2日に放送開始しまし
+ た。\n\n区分: 周年\n日程表記: 10月2日（毎年）\n情報公
+ 開日: 2026-07-30\n情報源: アイカツ！ポータル\n\nhttps://www.
+ aikatsu.net/portal/akari10th/\n\n― アイカツ！情報カレンダー
+ （非公式ファンメイド）\nhttps://aikatsu-info.github.io/aikatsu-
+ calendar/
+URL:https://www.aikatsu.net/portal/akari10th/
+CATEGORIES:周年
+LAST-MODIFIED:20260730T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:anv03@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20160407
+DTEND;VALUE=DATE:20160408
+RRULE:FREQ=YEARLY
+SUMMARY:🎉 アイカツスターズ！ 放送開始記念日
+DESCRIPTION:2016年4月7日に放送が始まった『アイカツスター
+ ズ！』の放送開始記念日です。\n\n区分: 周年\n日程表記
+ : 4月7日（毎年）\n情報公開日: 2026-07-30\n情報源: アイカ
+ ツ！ポータル\n\nhttps://www.aikatsu.net/portal/idol/aikatsustars-01.
+ html\n\n― アイカツ！情報カレンダー（非公式ファンメ
+ イド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://www.aikatsu.net/portal/idol/aikatsustars-01.html
+CATEGORIES:周年
+LAST-MODIFIED:20260730T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:anv04@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20180405
+DTEND;VALUE=DATE:20180406
+RRULE:FREQ=YEARLY
+SUMMARY:🎉 アイカツフレンズ！ 放送開始記念日
+DESCRIPTION:2018年4月5日に放送が始まった『アイカツフレン
+ ズ！』の放送開始記念日です。\n\n区分: 周年\n日程表記
+ : 4月5日（毎年）\n情報公開日: 2026-07-30\n情報源: アイカ
+ ツ！ポータル\n\nhttps://www.aikatsu.net/portal/idol/aikatsufriends-0
+ 1.html\n\n― アイカツ！情報カレンダー（非公式ファンメ
+ イド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://www.aikatsu.net/portal/idol/aikatsufriends-01.html
+CATEGORIES:周年
+LAST-MODIFIED:20260730T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:anv05@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20191005
+DTEND;VALUE=DATE:20191006
+RRULE:FREQ=YEARLY
+SUMMARY:🎉 アイカツオンパレード！ 放送開始記念日
+DESCRIPTION:2019年10月5日に放送が始まった『アイカツオン
+ パレード！』の放送開始記念日です。\n\n区分: 周年\n日
+ 程表記: 10月5日（毎年）\n情報公開日: 2026-07-30\n情報源: 
+ アイカツ！ポータル\n\nhttps://www.aikatsu.net/portal/idol/aikatsu
+ onparade.html\n\n― アイカツ！情報カレンダー（非公式フ
+ ァンメイド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://www.aikatsu.net/portal/idol/aikatsuonparade.html
+CATEGORIES:周年
+LAST-MODIFIED:20260730T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:anv06@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20210110
+DTEND;VALUE=DATE:20210111
+RRULE:FREQ=YEARLY
+SUMMARY:🎉 アイカツプラネット！ 放送開始記念日
+DESCRIPTION:2021年1月10日に放送が始まった『アイカツプラ
+ ネット！』の放送開始記念日です。\n\n区分: 周年\n日程
+ 表記: 1月10日（毎年）\n情報公開日: 2026-07-30\n情報源: ア
+ イカツ！ポータル\n\nhttps://www.aikatsu.net/portal/idol/aikatsupla
+ net.html\n\n― アイカツ！情報カレンダー（非公式ファン
+ メイド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://www.aikatsu.net/portal/idol/aikatsuplanet.html
+CATEGORIES:周年
+LAST-MODIFIED:20260730T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:anv07@aikatsu-calendar.aikatsu-info.github.io
+DTSTAMP:20260901T000000Z
+DTSTART;VALUE=DATE:20240727
+DTEND;VALUE=DATE:20240728
+RRULE:FREQ=YEARLY
+SUMMARY:🎉 アイカツアカデミー！ 配信開始記念日
+DESCRIPTION:2024年7月27日に配信を開始した『アイカツアカ
+ デミー！』の配信開始記念日です。\n\n区分: 周年\n日程
+ 表記: 7月27日（毎年）\n情報公開日: 2026-07-30\n情報源: ア
+ イカツ！ポータル\n\nhttps://www.aikatsu.net/portal/idol/aikatsuaca
+ demy.html\n\n― アイカツ！情報カレンダー（非公式ファン
+ メイド）\nhttps://aikatsu-info.github.io/aikatsu-calendar/
+URL:https://www.aikatsu.net/portal/idol/aikatsuacademy.html
+CATEGORIES:周年
+LAST-MODIFIED:20260730T000000Z
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+END:VCALENDAR

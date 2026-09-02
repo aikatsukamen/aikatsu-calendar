@@ -223,9 +223,11 @@
     var https = httpsUrl(feed);
     var webcal = webcalUrl(feed);
     urlInput.value = https;
-    // Google: cid にURLエンコードした https URL を渡す。
+    // Google: cid には webcal:// 形式を渡す。
+    // https:// を渡すと cid をカレンダーIDとして解釈しようとして
+    // 「カレンダーを追加できません。URL を確認してください。」で弾かれることがある。
     // /u/0/ は付けない（ログイン中のアカウント選択をユーザーに委ねるため）。
-    aGoogle.href = "https://calendar.google.com/calendar/render?cid=" + encodeURIComponent(https);
+    aGoogle.href = "https://calendar.google.com/calendar/render?cid=" + encodeURIComponent(webcal);
     aApple.href = webcal;
     aOutlook.href = "https://outlook.live.com/calendar/0/addfromweb?url=" +
       encodeURIComponent(https) + "&name=" + encodeURIComponent("アイカツ！情報カレンダー");

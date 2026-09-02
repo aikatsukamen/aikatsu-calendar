@@ -113,6 +113,9 @@ iCalendar の `SUMMARY` は静的なので、繰り返しルールのまま年�
 `tools/extract_snippet.py` で貼り付け用スニペットを、`tools/apply_subscribe_ui.py` で本体への適用を行える。
 
 - UI側の `FEEDS` と `tools/build_ics.py` の `FEEDS` は対応しているので、増減させるときは両方を直すこと。
+- Googleカレンダーの追加リンクは `render?cid=` に **`webcal://` のURLをエンコードして**渡している。
+  `https://` を渡すとカレンダーIDとして解釈され、
+  「カレンダーを追加できません。URL を確認してください。」で弾かれることがある。
 - **購読URLにドメインは一切埋め込んでいない。** `#subModal` の `data-feed-base`（既定 `calendar/`）を
   ページ自身のURL基準で解決している。`.ics` の置き場所を変えるときはこの属性だけを直す。
   ここをドメイン決め打ちに戻すと、フォーク先などで存在しないURLを購読させることになり、

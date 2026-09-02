@@ -167,8 +167,9 @@ UIの仕様:
 - タブ行の右端に「カレンダー購読」ボタン（狭い画面ではアイコンのみになる）。
 - 押すとモーダルが開き、**購読する内容を選択**（すべて／誕生日以外／イベント／グッズ／アンコール／誕生日）。
 - 追加ボタンは4つ:
-  - **Google カレンダー**: `https://calendar.google.com/calendar/render?cid=<encodeURIComponentしたhttps URL>`
-    （`/u/0/` は付けない。アカウント選択をユーザーに委ねるため）
+  - **Google カレンダー**: `https://calendar.google.com/calendar/render?cid=<encodeURIComponentしたwebcal:// URL>`
+    （`https://` を渡すとカレンダーIDとして解釈され「カレンダーを追加できません。URL を確認してください。」
+    で弾かれることがある。`/u/0/` は付けない。アカウント選択をユーザーに委ねるため）
   - **iPhone・iPad・Mac**: `webcal://` スキームのリンク
   - **Outlook.com**: `https://outlook.live.com/calendar/0/addfromweb?url=...&name=...`
   - **.ics ダウンロード**（1回きりの取り込み用）

@@ -34,6 +34,18 @@ docs/                       ← 適用済みの本体一式。本家のリポジ
 
 `data/items.json` と `aikatsu_calendar.html` の `ITEMS` には手を入れていません。
 
+## 各カレンダーへの追加リンクの形式
+
+| 追加先 | 渡すURL |
+|---|---|
+| Google カレンダー | `https://calendar.google.com/calendar/render?cid=` + URLエンコードした **`webcal://`** のURL |
+| iPhone・iPad・Mac | `webcal://` のURL |
+| Outlook.com | `https://outlook.live.com/calendar/0/addfromweb?url=` + URLエンコードした `https://` のURL |
+| 手動（コピー欄） | `https://` のURL |
+
+Google の `cid` に `https://` のURLを渡すと、カレンダーIDとして解釈されて
+「カレンダーを追加できません。URL を確認してください。」で弾かれることがあるため `webcal://` を渡しています。
+
 ## 配信先ドメインを埋め込まない
 
 購読URLはページ自身のURLから解決するので、コードにドメインは書かれていません。

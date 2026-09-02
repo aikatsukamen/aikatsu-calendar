@@ -178,7 +178,7 @@ index fccbf9e..d63a1af 100644
 +- `calendar/*.ics` — 上記から生成した iCalendar 形式（`tools/build_ics.py` / GitHub Actions が生成）
 +- `calendar/feeds.json` — 配信中のフィード一覧
 diff --git a/aikatsu_calendar.html b/aikatsu_calendar.html
-index 95bb10d..f730cad 100644
+index 95bb10d..d53ffdb 100644
 --- a/aikatsu_calendar.html
 +++ b/aikatsu_calendar.html
 @@ -507,6 +507,93 @@
@@ -371,7 +371,7 @@ index 95bb10d..f730cad 100644
  <script>
  (function(){
    "use strict";
-@@ -1848,3 +2017,126 @@
+@@ -1848,3 +2017,128 @@
    }
  })();
  </script>
@@ -422,9 +422,11 @@ index 95bb10d..f730cad 100644
 +    var https = httpsUrl(feed);
 +    var webcal = webcalUrl(feed);
 +    urlInput.value = https;
-+    // Google: cid にURLエンコードした https URL を渡す。
++    // Google: cid には webcal:// 形式を渡す。
++    // https:// を渡すと cid をカレンダーIDとして解釈しようとして
++    // 「カレンダーを追加できません。URL を確認してください。」で弾かれることがある。
 +    // /u/0/ は付けない（ログイン中のアカウント選択をユーザーに委ねるため）。
-+    aGoogle.href = "https://calendar.google.com/calendar/render?cid=" + encodeURIComponent(https);
++    aGoogle.href = "https://calendar.google.com/calendar/render?cid=" + encodeURIComponent(webcal);
 +    aApple.href = webcal;
 +    aOutlook.href = "https://outlook.live.com/calendar/0/addfromweb?url=" +
 +      encodeURIComponent(https) + "&name=" + encodeURIComponent("アイカツ！情報カレンダー");
@@ -1129,10 +1131,10 @@ index 0000000..461cce6
 +    sys.exit(main())
 diff --git a/web/subscribe-demo.html b/web/subscribe-demo.html
 new file mode 100644
-index 0000000..ba83739
+index 0000000..c2d7e04
 --- /dev/null
 +++ b/web/subscribe-demo.html
-@@ -0,0 +1,378 @@
+@@ -0,0 +1,380 @@
 +<!DOCTYPE html>
 +<html lang="ja">
 +<head>
@@ -1432,9 +1434,11 @@ index 0000000..ba83739
 +    var https = httpsUrl(feed);
 +    var webcal = webcalUrl(feed);
 +    urlInput.value = https;
-+    // Google: cid にURLエンコードした https URL を渡す。
++    // Google: cid には webcal:// 形式を渡す。
++    // https:// を渡すと cid をカレンダーIDとして解釈しようとして
++    // 「カレンダーを追加できません。URL を確認してください。」で弾かれることがある。
 +    // /u/0/ は付けない（ログイン中のアカウント選択をユーザーに委ねるため）。
-+    aGoogle.href = "https://calendar.google.com/calendar/render?cid=" + encodeURIComponent(https);
++    aGoogle.href = "https://calendar.google.com/calendar/render?cid=" + encodeURIComponent(webcal);
 +    aApple.href = webcal;
 +    aOutlook.href = "https://outlook.live.com/calendar/0/addfromweb?url=" +
 +      encodeURIComponent(https) + "&name=" + encodeURIComponent("アイカツ！情報カレンダー");
@@ -1513,10 +1517,10 @@ index 0000000..ba83739
 +</html>
 diff --git a/web/subscribe-snippet.html b/web/subscribe-snippet.html
 new file mode 100644
-index 0000000..4962a14
+index 0000000..2f006e4
 --- /dev/null
 +++ b/web/subscribe-snippet.html
-@@ -0,0 +1,301 @@
+@@ -0,0 +1,303 @@
 +<!--
 +  aikatsu_calendar.html への貼り付け用スニペット
 +  （web/subscribe-demo.html から tools/extract_snippet.py で自動生成）
@@ -1742,9 +1746,11 @@ index 0000000..4962a14
 +    var https = httpsUrl(feed);
 +    var webcal = webcalUrl(feed);
 +    urlInput.value = https;
-+    // Google: cid にURLエンコードした https URL を渡す。
++    // Google: cid には webcal:// 形式を渡す。
++    // https:// を渡すと cid をカレンダーIDとして解釈しようとして
++    // 「カレンダーを追加できません。URL を確認してください。」で弾かれることがある。
 +    // /u/0/ は付けない（ログイン中のアカウント選択をユーザーに委ねるため）。
-+    aGoogle.href = "https://calendar.google.com/calendar/render?cid=" + encodeURIComponent(https);
++    aGoogle.href = "https://calendar.google.com/calendar/render?cid=" + encodeURIComponent(webcal);
 +    aApple.href = webcal;
 +    aOutlook.href = "https://outlook.live.com/calendar/0/addfromweb?url=" +
 +      encodeURIComponent(https) + "&name=" + encodeURIComponent("アイカツ！情報カレンダー");
